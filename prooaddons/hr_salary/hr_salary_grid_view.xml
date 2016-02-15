@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="hr_salary_grid_view_tree" model="ir.ui.view">
+            <field name="name">hr.salary.tree</field>
+            <field name="model">hr.salary</field>
+            <field name="arch" type="xml">
+                <tree string="Special Pay Stub">
+                    <field name="name"/>
+                    <field name="start_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_salary_grid_view_form" model="ir.ui.view">
+            <field name="name">hr.salary.form</field>
+            <field name="model">hr.salary</field>
+            <field name="arch" type="xml">
+                <form string="Salary Grid">
+                    <group>
+                        <group>
+                            <field name="name"/>                   
+                            <field name="active"/>
+                        </group>
+                        <group>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
+                        </group>
+                    </group>
+                    <newline/>
+                    <notebook>
+                        <page string="Details">
+                            <field name="salary_ids" widget="one2many_list"  nolabel="1" mode="tree">
+                                <tree string="Salary Grid" editable='bottom'>  
+                                    <field name="name"/> 
+                                    <field name="category"/>
+                                    <field name="echelon"/>
+                                    <field name="amount"/>
+                                    <field name="duration"/>
+                                    <field name="parent_id"/>
+                                </tree> 
+                            </field>
+                        </page>
+                    </notebook>
+               
+                </form> 
+            </field> 
+        </record>
+        
+        
+        <record model="ir.actions.act_window" id="action_hr_salary_grid">
+            <field name="name">Salary grid</field>
+            <field name="res_model">hr.salary</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <menuitem id="menu_hr_salary_grid" name="Salary Grid" action="action_hr_salary_grid" parent="hr_payroll.payroll_configure" sequence="7" />
+        
+        <record id="hr_contract_select_grid_view_form" model="ir.ui.view">
+            <field name="name">hr.contract.select.grid.view.form</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='type_id']" position="after">
+                    <field name="grid" on_change="grid_change(grid,classification, context)"/> 
+                    <field name="classification" on_change="classification_change(classification, context)" domain="[('grid', '=', grid)]"/>
+                </xpath>
+            </field>
+        </record>
+        
+         <record model="ir.ui.view" id="classification_employee_form_view">
+            <field name="name">classification.employee.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='category_ids']" position="after">
+                    <label for="grid" class="oe_edit_only"/>
+                    <field name="grid" readonly="1"/> 
+                    <label for="classification" class="oe_edit_only"/>
+                    <field name="classification" readonly="1"/>                    
+                </xpath>
+                <notebook position="inside">
+                    <page string="History">
+                        <field name="history_ids" widget="one2many_list" colspan="4" nolabel="1" mode="tree" >
+                            <tree string="History" editable='bottom'>  
+                                <field name="name"/>                                                     
+                                <field name="grid"/> 
+                                <field name="classification"/>
+                                <field name="amount"/>
+                                <field name="date_approval"/>
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+ 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <report
+            id="action_report_canteen"
+            model="oschool.canteen.wizard"
+            string="Canteen Report"
+            report_type="qweb-pdf"
+            name="oschool.report_canteen"
+            file="oschool.report_canteen"
+            menu="False"
+        />
+
+        <record id="action_report_canteen" model="ir.actions.report.xml">
+            <field name="paperformat_id" ref="paperformat_transport"/>
+        </record>
+
+        </data>
+    </openerp>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="hr_contract_form_type">
+            <field name="name">hr.contract.view.form.type</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form" />
+            <field name="arch" type="xml">
+                <data>
+                    <field name="job_id" position="after">
+                        <field name="type"/>
+                        <field name="number_of_hours"/>
+                        <field name="number_of_days"/>
+                    </field>
+                </data>
+            </field>
+        </record>
+
+        <record id="hr_contract_info_view_form" model="ir.ui.view">
+            <field name="name">hr.contract.info.view.form</field>
+            <field name="model">hr.contract.type</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_type_view_form"/>
+            <field name="arch" type="xml">
+                <form string="Contract Type">
+                  <group>
+                    <field name="employee_cnss"/>                   
+                    <field name="boss_cnss"/>
+                    <field name="foprolos"/>
+                    <field name="tfp"/>
+                    <field name="exploit_code"/>            
+                    <field name="taxable"/>
+                  </group>
+                </form>
+            </field>
+        </record>
+    
+        <record id="hr_contract_info_view_tree" model="ir.ui.view">
+                <field name="name">hr.contract.info.view.tree</field>
+                <field name="model">hr.contract.type</field>
+                <field name="inherit_id" ref="hr_contract.hr_contract_type_view_tree"/>
+                <field name="arch" type="xml">
+                    <tree string="Contract Type">
+                        <field name="employee_cnss"/>                   
+                        <field name="boss_cnss"/>
+                        <field name="foprolos"/>
+                        <field name="tfp"/>
+                        <field name="exploit_code"/>            
+                        <field name="taxable"/>
+                    </tree>
+                </field>
+            </record>
+            
+    
+    
+    <record id="hr_contract_new_view_form" model="ir.ui.view">
+            <field name="name">hr.contract.new.view.form</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='type_id']" position="after">
+                    <field name="employee_cnss" invisible="1"/> 
+                    <field name="boss_cnss" invisible="1"/>
+                    <field name="foprolos" invisible="1"/> 
+                    <field name="tfp" invisible="1"/> 
+                    <field name="exploit_code" invisible="1"/>
+                    <field name="taxable" invisible="1"/>                   
+                </xpath>
+            </field>
+        </record>
+    
+        <record model="ir.ui.view" id="hr_employee_form_view_ref">
+            <field name="name">hr.employee.name</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form" />
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                    <field name="matricule"/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="hr_employee_tree_view_ref">
+            <field name="name">hr.employee.matricule</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_tree" />
+            <field name="arch" type="xml">
+                <field name="name" position="before">
+                    <field name="matricule"/>
+                </field>
+            </field>
+        </record>    
+ 
+    </data>
+</openerp>
+ 

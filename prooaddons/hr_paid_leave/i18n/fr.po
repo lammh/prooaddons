@@ -1,0 +1,53 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* hr_paid_leave
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-20150210\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-14 11:15+0000\n"
+"PO-Revision-Date: 2015-02-14 11:15+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_paid_leave
+#: model:ir.model,name:hr_paid_leave.model_hr_employee
+msgid "Employee"
+msgstr "Employé"
+
+#. module: hr_paid_leave
+#: sql_constraint:hr.holidays.status:0
+msgid "Holidays paid leave must be unique !"
+msgstr "Congé payé doivent être uniques!"
+
+#. module: hr_paid_leave
+#: model:ir.model,name:hr_paid_leave.model_hr_holidays_status
+msgid "Leave Type"
+msgstr "Type de congé"
+
+#. module: hr_paid_leave
+#: field:hr.holidays.status,paid_leave:0
+msgid "Paid Leave"
+msgstr "Congé payé"
+
+#. module: hr_paid_leave
+#: model:ir.model,name:hr_paid_leave.model_hr_payslip_run
+msgid "Payslip Batches"
+msgstr "Lots de bulletins de paie"
+
+#. module: hr_paid_leave
+#: field:hr.employee,remaining_paid_leaves:0
+msgid "Remaining Paid Leaves"
+msgstr "Durée congé payé"
+
+#. module: hr_paid_leave
+#: code:addons/hr_paid_leave/hr_paid_leave.py:43
+#, python-format
+msgid "Right to leave "
+msgstr "Droit de congé "
+

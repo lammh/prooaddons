@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+         <record model="ir.ui.view" id="oschool_student_ticket_presence_tree">
+            <field name="name">oschool_student_ticket_presence_tree</field>
+            <field name="model">oschool.ticket_presence</field>
+            <field name="arch" type="xml">
+                <tree string="Tree" editable="bottom">
+                    <field name="academic_year"
+                           on_change="academic_year_change(academic_year)"
+                           domain="[('state','=','current')]" options="{'no_create_edit': True, 'no_open': True}" />
+                    <field name="group_id" readonly="True"  />
+                    <field name="class_id"
+                           options="{'no_create_edit': True, 'no_open': True}"
+                            attrs="{'readonly': [('academic_year', '=', False)]}"/>
+                    <field name="student_id"
+                           on_change="student_change(student_id)"
+                           attrs="{'readonly': [('class_id', '=', False)]}" domain="[('class_id','=', class_id),('class_id','!=', False),('is_student','=', True),('active_student','=', True),('group_id','!=', False)]" options="{'no_create_edit': True, 'no_open': True}"/>
+                    <field name="period_id" attrs="{'readonly': [('student_id', '=', False)]}" options="{'no_create_edit': True, 'no_open': True}" />
+                    <field name="day" attrs="{'readonly': [('period_id', '=', False)]}" />
+                    <field name="canteen_tickets"
+                           attrs="{'readonly': [('day', '=', False)]}"
+                           options="{'no_create_edit': True, 'no_open': True}"/>
+                    <field name="oschool_tiket_id" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+         <record id="oschool_student_ticket_presence_search" model="ir.ui.view">
+            <field name="name">oschool.student.ticket.presence.search</field>
+            <field name="model">oschool.ticket_presence</field>
+            <field name="arch" type="xml">
+                <search string="Filter">
+                     <group expand="0" string="Group By...">
+                       <filter name="group_academic_year" string="Academic Year" context="{'group_by':'academic_year'}" />
+                       <filter name="group_class_id" string="Class" context="{'group_by':'class_id'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_oschool_ticket_presence_status" model="ir.actions.act_window">
+            <field name="name">ticket Presence</field>
+            <field name="res_model">oschool.ticket_presence</field>
+            <field name="view_id" ref="oschool_student_ticket_presence_tree"/>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree_oschool_ticket_presence_quickadd</field>
+        </record>
+
+        <menuitem
+            action="action_oschool_ticket_presence_status"
+            name="Ticket presence status"
+            id="oschool_ticket_presence_status_menu"
+            parent="oschool_presence_status_management_menu"
+            sequence="4"
+        />
+    </data>
+</openerp>

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="view_oschool_student_tree" model="ir.ui.view">
+            <field name="name">oschool.student.tree</field>
+            <field name="model">res.partner</field>
+            <field eval="8" name="priority"/>
+            <field name="arch" type="xml">
+                <tree string="Student" colors="grey:active_student==False;red:allow_registration==False">
+                    <field name="name"/>
+                    <field name="last_name"/>
+                    <field name="parent_id" string="Responsible"/>
+                    <field name="class_id"/>
+                    <field name="group_id"/>
+                    <field name="p_phone"/>
+                    <field name="p_phone2"/>
+                    <field name="p_mobile"/>
+                    <field name="p_mobile2"/>
+                    <field name="p_mail"/>
+
+                    <field name="active_student" invisible="1"/>
+                    <field name="allow_registration" invisible="0"/>
+                    <field name="ref" string="Student Reference"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_oschool_student_form" model="ir.ui.view">
+            <field name="name">oschool.student.form</field>
+            <field name="model">res.partner</field>
+            <field name="priority" eval="20" />
+            <field name="groups_id" />
+            <field name="arch" type="xml">
+                <form string="student" version="7.0">
+                    <sheet>
+                    <group string="Personal Information"/>
+                    <field name="is_student" invisible="1"/>
+                    <field name="property_product_pricelist" invisible="1"/>
+                    <field name="image" widget='image' class="oe_left oe_avatar" options='{"preview_image": "image_medium", "size":[90, 90]}'/>
+                    <div class="oe_title oe_left">
+                        <h2>
+                            <field name="name" default_focus="1" placeholder="First Name" />
+                        </h2>
+                        <h2>
+                            <field name="last_name" placeholder="Last Name" required="1"/>
+                        </h2>
+                        <h2>
+                            <field name="ref" placeholder="Identification Number" readonly="1" string="Inscription Number"/>
+                        </h2>
+                    </div>
+                    <div class="oe_right oe_button_box" name="buttons"> </div>
+                    <group string="General Information">
+                        <group>
+                            <field name="parent_id" string="Responsible" 
+                                   options="{'no_open': False,'no_quick_create':True,'no_create_edit':True}"
+                                   placeholder="Responsible" required="1"
+                                   domain="[('is_responsible', '=', True)]"
+                                   context="{'active_id': parent_id}"
+                                   on_change="onchange_address(use_parent_address, parent_id, context)"/>
+                            <field name="relationship_id" widget="selection" required="1" placeholder="Relationship" string="Relationship with responsible"/>
+                            <field name="birthdate" required="1" on_change="onchange_birthdate(birthdate, date)"/>
+                            <field name="country_id2" string="Nationality"/>
+                        </group>
+                        <group>
+                            <field name="date" required="1" placeholder="Admission Date" string="Admission Date"  on_change="onchange_birthdate(birthdate, date)"/>
+                            <field name="birthplace" placeholder="Birth place" string="Birth place"/>
+                            <field name="gender" required="1"/>
+                            <field name="active_student" groups="oschool.oschool_group_admin_scolarity"/>
+                            <field name="allow_registration" invisible="1"/>
+                            <field name="allow_registration" groups="oschool.oschool_group_admin_scolarity"/>
+                            <field name="allow_first_period_payment" groups="oschool.oschool_group_admin_scolarity"/>
+
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <label for="street" string="Address"/>
+                            <div>
+                               <div class="oe_edit_only">
+                                    <field name="use_parent_address" class="oe_inline"
+                                           on_change="onchange_address(use_parent_address, parent_id, context)"/>
+                                    <label string="Use Responsible Address"/>
+                                </div>
+                                <div>
+                                    <field name="street" placeholder="Street..." style="width: 75%%"/>
+                                    <field name="city" placeholder="City" style="width: 25%%"/>
+                                </div>
+                                <div class="address_format">
+                                    <field name="state_id" class="oe_no_button" placeholder="State" style="width: 35%%" options='{"no_open": True}' on_change="onchange_state(state_id)"/>
+                                    <field name="zip" placeholder="ZIP" style="width: 30%%"/>
+                                    <field name="country_id" placeholder="Country" style="width: 35%%" class="oe_no_button" options='{"no_open": True}'/>
+                                </div>
+                            </div>
+                        </group>
+                    </group>
+                    <notebook colspan="4">
+                        <page name="general_student" string="General">
+                            <group string="School Information">
+                                <field name="academic_year_id" readonly="1"  options='{"no_open": True}'/>
+                                <field name="group_id" readonly="1"  options='{"no_open": True}'/>
+                                <field name="class_id" domain="[('group','=', group_id)]"  options='{"no_open": True}'/>
+                            </group>
+                        </page>
+                        <page string="Education History">
+                            <field name="history_ids" colspan="4" nolabel="1" readonly="1">
+                                <tree string="Extra" editable="bottom">
+                                    <field name="name"/>
+                                    <field name="group_id"/>
+                                    <field name="class_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_oschool_student_search" model="ir.ui.view">
+            <field name="name">oschool.student.search</field>
+            <field name="model">res.partner</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <search string="student">
+                    <filter string="Active" name="active_student" domain="[('active_student', '=', 1)]" />
+                    <field name="name" 
+                           filter_domain="['|',('display_name','ilike',self),('ref','ilike',self)]"/>
+                    <field name="phone"/>
+                    <field name="mobile"/>
+                    <field name="group_id"/>
+                    <field name="class_id"/>
+                    <field name="parent_id" string="Responsible"/>
+                    <newline />
+                    <group expand="0" string="Group By...">
+                        <filter name="academic_year" string="Academic year" domain="[]" context="{'group_by':'academic_year_id'}" />
+                        <filter name="group" string="Group" domain="[]" context="{'group_by':'group_id'}" />
+                        <filter name="class" string="Class" domain="[]" context="{'group_by':'class_id'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_oschool_student_view">
+            <field name="name">Students</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_oschool_student_search" />
+            <field name="domain">[('is_student','=',1)]</field>
+            <field name="context">{'default_is_student':1,'default_active_student':1, 'search_default_active_student':1, 'search_default_group':1, 'search_default_class':1, 'search_default_academic_year':1}</field>
+        </record>
+        <record model="ir.actions.act_window.view" id="act_open_oschool_student_view_form">
+            <field name="act_window_id" ref="act_open_oschool_student_view" />
+            <field name="sequence" eval="20" />
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_oschool_student_form" />
+        </record>
+        <record model="ir.actions.act_window.view" id="act_open_oschool_student_view_tree">
+            <field name="act_window_id" ref="act_open_oschool_student_view" />
+            <field name="sequence" eval="10" />
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_oschool_student_tree" />
+        </record>
+
+        <menuitem id="menu_oschool_partner_student" sequence="1" parent="students_management_menu" action="act_open_oschool_student_view"/>
+
+        <record id="view_responsible_property_form" model="ir.ui.view">
+            <field name="name">oschool.responsible.student</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="view_oschool_responsible_form"/>
+            <field name="arch" type="xml">
+                <page name='internal_notes' position="before">
+                    <page string="Children (Students)" autofocus="autofocus">
+                        <field name="child_ids" mode="kanban" context="{'default_parent_id': active_id, 'default_street': street, 'default_street2': street2, 'default_city': city, 'default_state_id': state_id, 'default_zip': zip, 'default_country_id': country_id, 'default_is_student': True, 'default_active_student': True, 'default_use_parent_address': True, 'default_property_product_pricelist': property_product_pricelist}">
+                            <kanban>
+                                <field name="color"/>
+                                <field name="name"/>
+                                <field name="title"/>
+                                <field name="email"/>
+                                <field name="parent_id" string="Responsible"/>
+                                <field name="group_id"/>
+                                <field name="class_id"/>
+                                <field name="phone"/>
+                                <field name="street"/>
+                                <field name="street2"/>
+                                <field name="zip"/>
+                                <field name="city"/>
+                                <field name="country_id"/>
+                                <field name="mobile"/>
+                                <field name="state_id"/>
+                                <field name="has_image"/>
+                                <field name="is_student"/>
+                                <templates>
+                                    <t t-name="kanban-box">
+                                        <t t-set="color" t-value="kanban_color(record.color.raw_value)"/>
+                                        <div t-att-class="color + (record.title.raw_value == 1 ? ' oe_kanban_color_alert' : '')" style="position: relative">
+                                            <a t-if="! read_only_mode" type="delete" style="position: absolute; right: 0; padding: 4px; diplay: inline-block">X</a>
+                                            <div class="oe_module_vignette">
+                                            <a type="open">
+                                                 <t t-if="record.has_image.raw_value === true">
+                                                    <img t-att-src="kanban_image('res.partner', 'image_small', record.id.value)" class="oe_avatar oe_kanban_avatar_smallbox"/>
+                                                </t>
+                                                <t t-if="record.image and record.image.raw_value !== false">
+                                                    <img t-att-src="'data:image/png;base64,'+record.image.raw_value" class="oe_avatar oe_kanban_avatar_smallbox"/>
+                                                </t>
+                                                <t t-if="record.has_image.raw_value === false and (!record.image or record.image.raw_value === false)">
+                                                    <img t-att-src='_s + "/base/static/src/img/avatar.png"' class="oe_kanban_image oe_kanban_avatar_smallbox"/>
+                                                </t>
+                                            </a>
+                                                <div class="oe_module_desc">
+                                                    <div class="oe_kanban_box_content oe_kanban_color_bglight oe_kanban_color_border">
+                                                        <table class="oe_kanban_table">
+                                                            <tr>
+                                                                <td class="oe_kanban_title1" align="left" valign="middle">
+                                                                    <h4><a type="open"><field name="name"/> <field name="last_name"/></a></h4>
+                                                                    <div t-if="record.group_id.raw_value">Group: <field name="group_id"/></div>
+                                                                    <div t-if="record.class_id.raw_value">Class: <field name="class_id"/></div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </templates>
+                            </kanban>
+                            <form string="Student">
+                                <sheet>
+                    <group string="Personal Information"/>
+                    <field name="is_student" invisible="1"/>
+                                    <field name="state" invisible="1"/>
+                    <field name="property_product_pricelist" invisible="1"/>
+                    <field name="image" widget='image' class="oe_left oe_avatar" options='{"preview_image": "image_medium", "size":[90, 90]}'/>
+                    <div class="oe_title oe_left">
+                        <h2>
+                            <field name="name" default_focus="1" placeholder="First Name" />
+                        </h2>
+                        <h2>
+                            <field name="last_name" placeholder="Last Name" required="1"/>
+                        </h2>
+                        <h2>
+                            <field name="ref" placeholder="Identification Number" readonly="1" string="Inscription Number"/>
+                        </h2>
+                        <field name="parent_id" invisible="1"/>
+                    </div>
+                    <div class="oe_right oe_button_box" name="buttons_student"> </div>
+                    <group string="General Information">
+                        <group>
+                            <field name="relationship_id" widget="selection" required="1" placeholder="Relationship" string="Relationship with responsible"/>
+                            <field name="birthdate" required="1"  on_change="onchange_birthdate(birthdate, date)"/>
+                            <field name="country_id2" string="Nationality"/>
+                        </group>
+                        <group>
+                            <field name="date" required="1" placeholder="Admission Date" string="Admission Date"  on_change="onchange_birthdate(birthdate, date)"/>
+                            <field name="birthplace" placeholder="Birth place" string="Birth place"/>
+                            <field name="gender" required="1"/>
+                            <field name="active_student" groups="oschool.oschool_group_admin_scolarity"/>
+                            <field name="allow_registration" groups="oschool.oschool_group_admin_scolarity"/>
+                             <field name="allow_first_period_payment" groups="oschool.oschool_group_admin_scolarity"/>
+
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <label for="street" string="Address"/>
+                            <div>
+                               <div class="oe_edit_only">
+                                    <field name="use_parent_address" class="oe_inline"
+                                           on_change="onchange_address(use_parent_address, parent_id, context)"/>
+                                    <label string="Use Responsible Address"/>
+                                </div>
+                                <div>
+                                    <field name="street" placeholder="Street..." style="width: 75%%"/>
+                                    <field name="city" placeholder="City" style="width: 25%%"/>
+                                </div>
+                                <div class="address_format">
+                                    <field name="state_id" class="oe_no_button" placeholder="State" style="width: 35%%" options='{"no_open": True}' on_change="onchange_state(state_id)"/>
+                                    <field name="zip" placeholder="ZIP" style="width: 30%%"/>
+                                    <field name="country_id" placeholder="Country" style="width: 35%%" class="oe_no_button" options='{"no_open": True}'/>
+                                </div>
+                            </div>
+                        </group>
+                    </group>
+                    <notebook colspan="4">
+                        <page name="general_student" string="General">
+                            <group string="School Information">
+                            <field name="academic_year_id" readonly="1" options='{"no_open": True}'/>
+                            <field name="group_id" readonly="1"  options='{"no_open": True}'/>
+                            <field name="class_id" domain="[('group','=', group_id)]"  options='{"no_open": True}'/>
+                            </group>
+                        </page>
+                        <page string="Education History">
+                            <field name="history_ids" colspan="4" nolabel="1" readonly="1">
+                                <tree string="History" editable="bottom">
+                                    <field name="name"/>
+                                    <field name="group_id"/>
+                                    <field name="class_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    </sheet>
+                            </form>
+                        </field>
+                    </page>
+                </page>
+            </field>
+        </record>
+
+    </data>
+</openerp>

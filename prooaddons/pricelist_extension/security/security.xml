@@ -1,0 +1,7 @@
+<openerp>
+    <data noupdate="1">
+        <record id="group_limit_price_unit" model="res.groups">
+            <field name="name">Exceeded wholesale price sale</field>
+        </record>
+    </data>
+</openerp>

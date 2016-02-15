@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="view_oschool_extra_form" model="ir.ui.view">
+            <field name="name">oschool.extra</field>
+            <field name="model">product.product</field>
+            <field name="arch" type="xml">
+                <form string="Product">
+                    <sheet>
+                        <field name="id" invisible="True"/>
+                        <div class="oe_left" style="width: 500px;">
+                            <field name="image_medium" widget="image" class="oe_avatar oe_left"/>
+                            <div class="oe_title" style="width: 390px;">
+                                <label class="oe_edit_only" for="name" string="Product Name"/>
+                                <h1><field name="name" class="oe_inline"/></h1>
+                            </div>
+                        </div>
+                        <notebook>
+                            <page string="Information">
+                                <group colspan="4">
+                                    <group>
+                                        <field name="type" invisible="1"/>
+                                        <field name="list_price"/>
+                                    </group>
+                                    <group>
+                                        <field name="ticket"/>
+                                        <field name="ticket_type" attrs="{'invisible': [('ticket', '=', False)]}"/>
+                                        <field name="ticket_ref" attrs="{'invisible': [('ticket', '=', False)]}"/>
+                                    </group>
+                                    <newline/>
+                                    <group string="Stock and Expected Variations">
+                                        <label for="qty_available"/>
+                                        <div>
+                                            <field name="qty_available" class="oe_inline"/>
+                                            <button name="%(stock.action_view_change_product_quantity)d" string="⇒ Update" type="action" 
+                                                    class="oe_link"/>
+                                        </div>
+                                        <field name="virtual_available"/>
+                                    </group>
+                                    <group>
+                                        <field name="active"/>
+                                        <field name="default_code"/>
+                                    </group>
+                                </group>
+                                <group colspan="4">
+                                    <field name="company_id" groups="base.group_multi_company" widget="selection"/>
+                                </group>
+                                <field name="description" placeholder="describe the product characteristics..."/>
+                            </page>
+                            <page string="Procurements" groups="base.group_user" invisible="1">
+                                <group name="procurement">
+                                    <group name="general">
+                                        <field name="standard_price"/>
+                                    </group>
+                                    <group name="procurement_uom" groups="product.group_uom" string="Purchase">
+                                        <field name="uom_po_id"/>
+                                    </group>
+                                </group>
+                                <separator string="Suppliers"/>
+                                <field name="seller_ids"/>
+                                <separator string="Description for Suppliers"/>
+                                <field name="description_purchase" placeholder="This note will be displayed on requests for quotation..."/>
+                            </page>
+                            <page string="Inventory" invisible="1">
+                                <group name="inventory">
+                                     <group name="status" string="Status">
+                                        <field name="state"/>
+                                        <field name="product_manager"/>
+                                    </group>
+                                    <group name="weight" string="Weights" attrs="{'invisible':[('type','=','service')]}">
+                                        <field digits="(14, 3)" name="volume"/>
+                                        <field digits="(14, 3)" name="weight"/>
+                                        <field digits="(14, 3)" name="weight_net"/>
+                                    </group>
+                                </group>
+                                <group name="packaging" string="Packaging" attrs="{'invisible':[('type','=','service')]}" groups="product.group_stock_packaging" colspan="4">
+                                    <field name="packaging_ids" string="Configurations" context="{'tree_view_ref':'product.product_packaging_tree_view_product', 'form_view_ref': 'product.product_packaging_form_view_without_product'}"/>
+                                </group>
+                            </page>
+                            <page string="Sales"  invisible="1" name="sales">
+                                <group name="sale">
+                                    <group name="sale_condition" string="Sale Conditions" colspan="3">
+                                        <label for="warranty"/>
+                                        <div>
+                                            <field name="warranty" class="oe_inline"/> months
+                                        </div>
+                                    </group>
+                                    <group groups="product.group_uos" string="Unit of Measure">
+                                        <field name="uos_id"/>
+                                        <field name="uos_coeff"/>
+                                        <field name="mes_type"/>
+                                    </group>
+                                </group>
+                                <group name="website_and_pos" col="2">
+                                </group>
+                                <separator string="Description for Quotations"/>
+                                <field name="description_sale" placeholder="note to be displayed on quotations..."/>
+                            </page>
+                            <page string="Accounting" groups="account.group_account_invoice" invisible="1">
+                                <group invisible="1">
+                                    <label for="categ_id" string="Internal Category"/>
+                                    <div><field name="categ_id" colspan="3" nolabel="1"/></div>
+                                    <label for="pos_categ_id" string="POS Category"/>
+                                    <div><field name="pos_categ_id" colspan="3" nolabel="1"/></div>
+                                    <label for="school_product_type" string="POS Category"/>
+                                    <div><field name="school_product_type" colspan="3" nolabel="1"/></div>
+                                </group>
+                                <group name="properties">
+                                    <group>
+                                        <field name="property_account_income" domain="[('type','=','other')]" groups="account.group_account_user"/>
+                                        <field name="taxes_id" colspan="2" widget="many2many_tags"/>
+                                    </group>
+                                    <group>
+                                        <field name="property_account_expense" domain="[('type','=','other')]" groups="account.group_account_user"/>
+                                        <field name="supplier_taxes_id" colspan="2" widget="many2many_tags"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_oschool_extra_view">
+            <field name="name">Extras</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.product</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="search_view_id" ref="product.product_search_form_view" />
+            <field name="domain" eval="[('pos_categ_id', '=', ref('oschool_extra_pos_category'))]"/>
+            <field name="context" eval="{'search_default_filter_to_sell':1, 'default_type':'product', 'default_school_product_type':'extra','default_pos_categ_id':ref('oschool_extra_pos_category'),'default_categ_id':ref('product_category_extra'),'default_ticket_type':'single'}"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_oschool_extra_view_form">
+            <field name="act_window_id" ref="act_oschool_extra_view" />
+            <field name="sequence" eval="20" />
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_oschool_extra_form" />
+        </record>
+        <record model="ir.actions.act_window.view" id="act_oschool_extra_view_tree">
+            <field name="act_window_id" ref="act_oschool_extra_view" />
+            <field name="sequence" eval="10" />
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="product.product_product_tree_view" />
+        </record>
+        <record model="ir.actions.act_window.view" id="act_oschool_extra_view_kanban">
+            <field name="act_window_id" ref="act_oschool_extra_view" />
+            <field name="sequence" eval="0" />
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="product.product_kanban_view" />
+        </record>
+
+        <menuitem id="menu_oschool_extra" sequence="100" parent="extra_products_config_menu" action="act_oschool_extra_view"/>
+
+        <record id="view_student_form" model="ir.ui.view">
+            <field name="name">oschool.student.extra</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="view_oschool_student_form"/>
+            <field name="arch" type="xml">
+                <page name='general_student' position="after">
+                    <page string="Extra">
+                        <button name="extra_student" type="object" string="Add Extra"
+                                 attrs="{'invisible': ['|',('academic_year_id', '=', False),('state','=', 'new')]}"/>
+                        <field name="extra_ids" colspan="4" nolabel="1" readonly="1" domain="[('state_academic_year', '!=', 'closed')]"
+                               context="{'default_type': 'extra', 'default_academic_year_id':academic_year_id}">
+                            <tree string="Extra" editable="bottom"
+                                  colors="red:0>qty;orange:refunded; green:state=='paid'; green:state=='done';" >
+                                <field name="product_id"/>
+                                <field name="period_id" invisible="1"/>
+                                <field name="qty"/>
+                                <field name="create_date"/>
+                                <field name="order_id" readonly="1" options="{'no_open': True}"/>
+
+                                <button name="extra_refund" string="Refund" type="object" icon="STOCK_UNDO"
+                                        confirm="Are you sure you want to refund this record?"
+                                        groups="oschool.oschool_group_responsible_scolarity,oschool.oschool_group_admin_scolarity"/>
+                                <field name="type" invisible="1"/>
+                                <field name="academic_year_id" invisible="1"/>
+                                <field name="price_unit" />
+                                <field name="discount" groups="oschool.oschool_group_admin_scolarity"/>
+                                <field name="state_academic_year" invisible="1"/>
+                                 <field name="refunded" invisible="1"/>
+                                <field name="state" invisible="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Ticket">
+                        <button name="ticket_student" type="object" string="Add Ticket"
+                                 attrs="{'invisible': ['|',('academic_year_id', '=', False),('state','=', 'new')]}"/>
+                        <group>
+                            <group>
+                                <field name="ticket_ids" colspan="4" nolabel="1" readonly="1" domain="[('state_academic_year', '!=', 'closed')]"
+                                   context="{'default_type': 'extra', 'default_academic_year_id':academic_year_id}">
+                                <tree string="Ticket" editable="bottom"
+                                        colors="red:0>qty;orange:refunded; green:state=='paid'; green:state=='done';">
+                                        <field name="product_id" readonly="1" options="{'no_open': True}"/>
+                                        <field name="period_id" invisible="1"/>
+                                        <field name="t_from" />
+                                        <field name="t_to" />
+                                        <field name="ref" />
+                                        <field name="qty" readonly="1"/>
+                                        <field name="create_date" readonly="1"/>
+                                        <field name="order_id" readonly="1" options="{'no_open': True}"/>
+                                        <button name="ticket_refund" string="Refund" type="object" icon="STOCK_UNDO"
+                                                confirm="Are you sure you want to refund this record?"
+                                                groups="oschool.oschool_group_responsible_scolarity,oschool.oschool_group_admin_scolarity"/>
+                                        <field name="type" invisible="1"/>
+                                        <field name="academic_year_id" invisible="1"/>
+
+                                        <field name="state_academic_year" invisible="1"/>
+                                        <field name="refunded" invisible="1"/>
+                                        <field name="state" invisible="1"/>
+
+                                    </tree>
+                                </field>
+
+                            </group>
+
+                            <group>
+                                <field name="solde_ids" colspan="4" nolabel="1" readonly="1" >
+                                    <tree string="Solde" >
+                                            <field name="name" readonly="1" options="{'no_open': True}"/>
+                                            <field name="ticket_date_use" readonly="1" options="{'no_open': True}"/>
+                                            <field name="create_uid"></field>
+                                            <field name="write_uid"></field>
+                                    </tree>
+                                </field>
+
+                            </group>
+                        </group>
+
+                    </page>
+                </page>
+            </field>
+        </record>
+
+        <record id="view_responsible_student_form" model="ir.ui.view">
+            <field name="name">oschool.responsible.student.extra</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="view_responsible_property_form"/>
+            <field name="arch" type="xml">
+                <page name='general_student' position="after">
+                    <page string="Extra">
+                        <button name="extra_student" type="object" string="Add Extra"
+                               attrs="{'invisible': ['|',('academic_year_id', '=', False),('state','=', 'new')]}"/>
+                        <field name="extra_ids" colspan="4" nolabel="1" readonly="1" domain="[('state_academic_year', '!=', 'closed')]"
+                               context="{'default_type': 'extra', 'default_academic_year_id':academic_year_id}">
+                            <tree string="Extra" editable="bottom"
+                                    colors="red:0>qty;orange:refunded; green:state=='paid'; green:state=='done';">
+                                <field name="product_id" />
+                                <field name="period_id" invisible="1"/>
+                                <field name="qty"/>
+                                <field name="create_date"/>
+                                <field name="order_id" readonly="1" options="{'no_open': True}"/>
+                                <button name="extra_payment" string="Payment" type="object" icon="terp-dolar"
+                                        confirm="Are you sure you want to payment this record?"/>
+                                <button name="extra_refund" string="Refund" type="object" icon="STOCK_UNDO"
+                                        confirm="Are you sure you want to refund this record?"
+                                        groups="oschool.oschool_group_responsible_scolarity,oschool.oschool_group_admin_scolarity"/>
+                                <field name="type" invisible="1"/>
+                                <field name="academic_year_id" invisible="1"/>
+                                <field name="price_unit" />
+                                <field name="discount" groups="oschool.oschool_group_admin_scolarity"/>
+                                <field name="state_academic_year" invisible="1"/>
+                                <field name="refunded" invisible="1"/>
+                                <field name="state" invisible="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Ticket">
+                        <button name="ticket_student" type="object" string="Add Ticket"
+                                 attrs="{'invisible': ['|',('academic_year_id', '=', False),('state','=', 'new')]}"/>
+                        <group>
+                            <group>
+                                <field name="ticket_ids" colspan="4" nolabel="1" readonly="1" domain="[('state_academic_year', '!=', 'closed')]"
+                                   context="{'default_type': 'extra', 'default_academic_year_id':academic_year_id}">
+                                <tree string="Ticket" editable="bottom"
+                                        colors="red:0>qty;orange:refunded; green:state=='paid'; green:state=='done';">
+                                        <field name="product_id" readonly="1" options="{'no_open': True}"/>
+                                        <field name="t_from" />
+                                        <field name="t_to" />
+                                        <field name="ref" />
+                                        <field name="period_id" invisible="1"/>
+                                        <field name="qty" readonly="1"/>
+                                        <field name="create_date" readonly="1"/>
+                                        <field name="order_id" readonly="1" options="{'no_open': True}"/>
+                                        <button name="ticket_refund" string="Refund" type="object" icon="STOCK_UNDO"
+                                                confirm="Are you sure you want to refund this record?"
+                                                groups="oschool.oschool_group_responsible_scolarity,oschool.oschool_group_admin_scolarity"/>
+                                        <field name="type" invisible="1"/>
+                                        <field name="academic_year_id" invisible="1"/>
+
+                                        <field name="state_academic_year" invisible="1"/>
+                                        <field name="refunded" invisible="1"/>
+                                        <field name="state" invisible="1"/>
+                                    </tree>
+                                </field>
+
+                            </group>
+
+                            <group>
+                                <field name="solde_ids" colspan="4" nolabel="1" readonly="1" >
+                                    <tree string="Solde" >
+                                            <field name="name" readonly="1" options="{'no_open': True}"/>
+                                            <field name="ticket_date_use" readonly="1" options="{'no_open': True}"/>
+                                    </tree>
+                                </field>
+
+                            </group>
+                        </group>
+
+                    </page>
+                </page>
+            </field>
+        </record>
+
+    </data>
+</openerp>

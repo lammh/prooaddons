@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="oschool_bus_form_view">
+			<field name="name">bus.form</field>
+			<field name="model">oschool.bus</field>
+			<field name="arch" type="xml">
+				<form string="Bus Form">
+					<sheet>
+						<group>
+							<field name="name" />
+							<field name="type" />
+							<field name="seats" />
+						</group>
+						<notebook>
+							<page string="Description">
+								<label for="description" class="oe_edit_only" />
+								<field name="description" />
+							</page>
+							<!--<page string="Rsponsables">-->
+								<!--<field name="employee_ids" domain="['|',('job_id.name', 'ilike', 'Chauffeur'),('job_id.name', 'ilike', 'Hôtesse')]"/>-->
+							<!--</page>-->
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="oschool_bus_search_view">
+			<field name="name">bus.search</field>
+			<field name="model">oschool.bus</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+					<field name="type" />
+					<field name="seats" />
+				</search>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="oschool_bus_tree_view">
+			<field name="name">bus.tree</field>
+			<field name="model">oschool.bus</field>
+			<field name="arch" type="xml">
+				<tree string="Zone Tree">
+					<field name="name" />
+					<field name="type" />
+					<field name="seats" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="oschool_bus_list_action">
+			<field name="name">Bus</field>
+			<field name="res_model">oschool.bus</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Cliquez pour ajouter vos bus
+				</p>
+			</field>
+		</record>
+        <menuitem id="bus_list_management_menu" name="Bus" parent="transportation_config_menu"  action="oschool_bus_list_action"/>
+
+    </data>
+</openerp>

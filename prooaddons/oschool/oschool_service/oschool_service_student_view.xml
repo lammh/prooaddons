@@ -1,0 +1,78 @@
+<openerp>
+    <data>
+        <record id="view_oschool_student_service_form" model="ir.ui.view">
+            <field name="name">oschool.student.service</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="view_oschool_student_form"/>
+            <field name="arch" type="xml">
+                <page name='general_student' position="after">
+                    <page string="Service">
+                        <button name="service_student" type="object" string="Generate"
+                                    context="{'academic_year_id': academic_year_id}"
+                                    attrs="{'invisible': ['|',('academic_year_id', '=', False),('state','=', 'new')]}"/>
+                        <field name="service_ids" colspan="4" nolabel="1" readonly="1" domain="[('state_academic_year', '!=', 'closed')]">
+                            <tree string="service" editable="bottom" default_order="date_start"
+                                  colors="red:qty==-1;orange:refunded; green:state=='paid'; green:state=='done';">
+                                <field name="product_id_tmpl"/>
+                                <field name="academic_year_id"/>
+                                <field name="price_unit" />
+                                <field name="discount" groups="oschool.oschool_group_admin_scolarity"/>
+                                <field name="order_id"/>
+                                <button name="service_refund" string="Refund" type="object" icon="STOCK_UNDO"
+                                        confirm="Are you sure you want to refund this record?"
+                                        groups="oschool.oschool_group_responsible_scolarity,oschool.oschool_group_admin_scolarity"/>
+                                <field name="subscriber"/>
+                                <button name="update_service" string="Update" type="object" icon="gtk-refresh"
+                                        context="{'academic_year_id': academic_year_id}"
+                                        groups="oschool.oschool_group_responsible_scolarity,oschool.oschool_group_admin_scolarity"/>
+                                <field name="state_academic_year" invisible="1"/>
+                                <field name="date_start" invisible="1"/>
+                                <field name="qty" invisible="1"/>
+                                <field name="refunded" invisible="1"/>
+                                <field name="state" invisible="1"/>
+
+                            </tree>
+                        </field>
+                    </page>
+                </page>
+            </field>
+        </record>
+
+        <record id="view_oschool_responsible_student_service_form" model="ir.ui.view">
+            <field name="name">oschool.responsible.student.service</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="view_responsible_property_form"/>
+            <field name="arch" type="xml">
+                <page name='general_student' position="after">
+                    <page string="service">
+                        <button name="service_student" type="object" string="Generate"
+                                    context="{'academic_year_id': academic_year_id}"
+                                     attrs="{'invisible': ['|',('academic_year_id', '=', False),('state','=', 'new')]}"/>
+                        <field name="service_ids" colspan="4" nolabel="1" readonly="1" domain="[('state_academic_year', '!=', 'closed')]">
+                            <tree string="Service" editable="bottom" default_order="date_start"
+                                    colors="red:qty==-1;orange:refunded; green:state=='paid'; green:state=='done';">
+                                <field name="product_id_tmpl"/>
+                                <field name="academic_year_id"/>
+                                <field name="price_unit"/>
+                                <field name="discount" groups="oschool.oschool_group_admin_scolarity"/>
+                                <field name="order_id"/>
+                                <button name="service_refund" string="Refund" type="object" icon="STOCK_UNDO"
+                                        confirm="Are you sure you want to refund this record?"
+                                        groups="oschool.oschool_group_responsible_scolarity,oschool.oschool_group_admin_scolarity"/>
+                                <field name="subscriber"/>
+                                <button name="update_service" string="Update" type="object" icon="gtk-refresh"
+                                        context="{'academic_year_id': academic_year_id}"
+                                        groups="oschool.oschool_group_responsible_scolarity,oschool.oschool_group_admin_scolarity"/>
+                                <field name="state_academic_year" invisible="1"/>
+                                <field name="date_start" invisible="1"/>
+                                <field name="qty" invisible="1"/>
+                                 <field name="refunded" invisible="1"/>
+                                <field name="state" invisible="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                </page>
+            </field>
+        </record>
+    </data>
+</openerp>

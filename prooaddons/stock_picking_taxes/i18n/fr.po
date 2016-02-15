@@ -1,0 +1,82 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* stock_picking_taxes
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-20150904\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-29 11:28+0000\n"
+"PO-Revision-Date: 2015-09-29 11:28+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_picking_taxes
+#: field:stock.picking.tax,amount:0
+msgid "Amount"
+msgstr "Montant"
+
+#. module: stock_picking_taxes
+#: field:stock.picking.tax,base:0
+msgid "Base"
+msgstr "Base"
+
+#. module: stock_picking_taxes
+#: field:stock.picking.tax,create_uid:0
+msgid "Created by"
+msgstr "Crée par"
+
+#. module: stock_picking_taxes
+#: field:stock.picking.tax,create_date:0
+msgid "Created on"
+msgstr "Crée le"
+
+#. module: stock_picking_taxes
+#: help:stock.picking.tax,sequence:0
+msgid "Gives the sequence order when displaying a list of picking tax."
+msgstr "Donne l'ordre de séquence lors de l'affichage d'une liste d'impôt dans l'opération de manutention."
+
+#. module: stock_picking_taxes
+#: field:stock.picking.tax,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: stock_picking_taxes
+#: field:stock.picking.tax,write_uid:0
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: stock_picking_taxes
+#: field:stock.picking.tax,write_date:0
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: stock_picking_taxes
+#: field:stock.picking.tax,picking:0
+msgid "Picking"
+msgstr "Opération de manutention"
+
+#. module: stock_picking_taxes
+#: model:ir.model,name:stock_picking_taxes.model_stock_picking
+msgid "Picking List"
+msgstr "Liste de colisage"
+
+#. module: stock_picking_taxes
+#: field:stock.picking.tax,sequence:0
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: stock_picking_taxes
+#: field:stock.picking.tax,name:0
+msgid "Tax Description"
+msgstr "Nom de la taxe"
+
+#. module: stock_picking_taxes
+#: view:stock.picking:stock_picking_taxes.view_picking_form
+msgid "Taxes"
+msgstr "Taxes"
+

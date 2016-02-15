@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_hr_attandence_analysis_tree" model="ir.ui.view">
+            <field name="name">hr.attandence.analysis.tree</field>
+            <field name="model">hr.attandence.analysis</field>
+            <field name="arch" type="xml">
+                <tree string="Attendance" type="pivot">
+                    <field name="employee_id"/>
+                    <field name="date"/>
+                    <field name="action"/>
+                    <field name="hours"/>
+                </tree>
+            </field>
+        </record>
+
+    <record id="view_hr_attandence_analysis_search" model="ir.ui.view">
+        <field name="name">hr.attandence.analysis.search</field>
+        <field name="model">hr.attandence.analysis</field>
+        <field name="arch" type="xml">
+            <search string="Hr Attandence Analysis">
+                <field name="employee_id"/>
+                <field name="date"/>
+                <filter string="This Year" name="thisyear" domain="[('date','&lt;=', time.strftime('%%Y-12-31')),('date','&gt;=',time.strftime('%%Y-01-01'))]"/>
+                <filter string="This Month" name="thisyear" domain="[('date','&lt;=', time.strftime('%%Y-%%M-31')),('date','&gt;=',time.strftime('%%Y-%%M-01'))]"/>
+                <filter string="This Day" name="thisyear" domain="[('date','=', time.strftime('%%Y-%%M-%%D'))]"/>
+                <separator/>
+                <group expand="1" string="Group By">
+                    <filter string="Employee" name="employee" context="{'group_by':'employee_id'}"/>
+                    <separator orientation="vertical" />
+                    <filter string="Date" name="date" context="{'group_by':'date'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_hr_attandence_analysis" model="ir.actions.act_window">
+        <field name="name">Attendance Analysis Details</field>
+        <field name="res_model">hr.attandence.analysis</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="view_hr_attandence_analysis_tree"/>
+    </record>
+
+    <menuitem action="action_hr_attandence_analysis" id="menu_hr_attendance_analysis_tree" parent="hr.menu_hr_reporting" sequence="3"/>
+
+</data>
+</openerp>

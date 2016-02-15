@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <record model="oschool.trimester" id="oschool_first_trimester">
+            <field name="name">1er Trimsetre</field>
+        </record>
+        <record model="oschool.trimester" id="oschool_second_trimester">
+            <field name="name">2éme Trimsetre</field>
+        </record>
+        <record model="oschool.trimester" id="oschool_third_trimester">
+            <field name="name">3éme Trimsetre</field>
+        </record>
+
+        <record model="oschool.matiere.type" id="oschool_arabe_type">
+            <field name="name">العربية</field>
+            <field name="sequence" eval="1"/>
+        </record>
+        <record model="oschool.matiere.type" id="oschool_french_type">
+            <field name="name">Français</field>
+            <field name="sequence" eval="2"/>
+        </record>
+        <record model="oschool.matiere.type" id="oschool_english_type">
+            <field name="name">English</field>
+            <field name="sequence" eval="3"/>
+        </record>
+
+        <record model="oschool.matiere" id="oschool_english_matiere">
+            <field name="name">English</field>
+            <field name="type" ref='oschool_english_type'/>
+            <field name="sequence" eval="1"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_ecrit_matiere">
+            <field name="name">Écriture</field>
+            <field name="type" ref='oschool_french_type'/>
+            <field name="sequence" eval="3"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_dictee_matiere">
+            <field name="name">Dictée</field>
+            <field name="type" ref='oschool_french_type'/>
+            <field name="sequence" eval="4"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_e_texte_matiere">
+            <field name="name">E.texte</field>
+            <field name="type" ref='oschool_french_type'/>
+            <field name="sequence" eval="5"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_ecriture_matiere">
+            <field name="name">Ecriture</field>
+            <field name="type" ref='oschool_french_type'/>
+            <field name="sequence" eval="7"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_exp_eccrite_matiere">
+            <field name="name">Expression écrite</field>
+            <field name="type" ref='oschool_french_type'/>
+            <field name="sequence" eval="9"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_exp_orale_matiere">
+            <field name="name">Expression Orale</field>
+            <field name="type" ref='oschool_french_type'/>
+            <field name="sequence" eval="10"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_lecture_matiere">
+            <field name="name">Lecture</field>
+            <field name="type" ref='oschool_french_type'/>
+            <field name="sequence" eval="12"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_imla">
+            <field name="name">إمـلاء</field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="14"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_intej_kitebi">
+            <field name="name">انتاج كتابي</field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="15"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_ikadh_ilmi">
+            <field name="name">إيقاظ علمي </field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="16"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_tarbiya_madaniya">
+            <field name="name">تربية مدنية</field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="17"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_tarbiya_islamiya">
+            <field name="name">تربية إسلامية</field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="18"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_tarik">
+            <field name="name">تاريخ</field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="19"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_tawasol_chifahi">
+            <field name="name">تواصل شفوي</field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="22"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_tabir_chifahi">
+            <field name="name">تعبير كتابي</field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="23"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_jografiya">
+            <field name="name">جغرافيا</field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="24"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_math">
+            <field name="name">رياضيات</field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="25"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_kat">
+            <field name="name">خـطّ</field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="26"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_kiraa_wfahm">
+            <field name="name">قراءة و فهم</field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="27"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_kiraa">
+            <field name="name">قراءة</field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="29"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_koran">
+            <field name="name">قـرآن</field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="30"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_kawayd_loga">
+            <field name="name">قـواعد اللغة</field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="31"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_mahfoudhat">
+            <field name="name">محفوظات</field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="32"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_motala">
+            <field name="name">مطالعة</field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="33"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_nask">
+            <field name="name">نسخ</field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="34"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_tarbiya_takniya">
+            <field name="name">تربية تقنية</field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="35"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_tarbiya_tachkiliya">
+            <field name="name">تربية تشكيلية</field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="36"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_tarbiya_mousikiya">
+            <field name="name">تربية موسيقية</field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="37"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_tarbiya_badaniya">
+            <field name="name">تربية بدنية</field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="38"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_tarbiya_islamiya">
+            <field name="name">تربية إسلامية</field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="39"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_poeme">
+            <field name="name">Poéme</field>
+            <field name="type" ref='oschool_french_type'/>
+            <field name="sequence" eval="40"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_langue">
+            <field name="name">Langue</field>
+            <field name="type" ref='oschool_french_type'/>
+            <field name="sequence" eval="41"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_anglais_ecrit">
+            <field name="name">Anglais Ecrit</field>
+            <field name="type" ref='oschool_english_type'/>
+            <field name="sequence" eval="42"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_gram_cong">
+            <field name="name">Gram-Cong</field>
+            <field name="type" ref='oschool_french_type'/>
+            <field name="sequence" eval="43"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_orthographe">
+            <field name="name">Orthographe</field>
+            <field name="type" ref='oschool_french_type'/>
+            <field name="sequence" eval="44"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_vocabulaire">
+            <field name="name">Vocabulaire</field>
+            <field name="type" ref='oschool_french_type'/>
+            <field name="sequence" eval="45"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_kiraa_chafawiya">
+            <field name="name">قراءة شفوية</field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="46"/>
+        </record>
+        <record model="oschool.matiere" id="oschool_dirast_nass">
+            <field name="name">دراسة نص</field>
+            <field name="type" ref='oschool_arabe_type'/>
+            <field name="sequence" eval="49"/>
+        </record>
+
+    </data>
+</openerp>

@@ -1,0 +1,12 @@
+id,name,attendance_ids/name,attendance_ids/dayofweek,attendance_ids/hour_from,attendance_ids/hour_to
+__export__.resource_calendar_1,Régime 44 Heures,Lundi Matin,Lundi,8.5,12.5
+,,Lundi Après-midi,Lundi,13.5,17.5
+,,Mardi Matin,Mardi,8.5,12.5
+,,Mardi Après-midi,Mardi,13.5,17.5
+,,Mercredi Matin,Mercredi,8.5,12.5
+,,Mercredi Après-midi,Mercredi,13.5,17.5
+,,Jeudi Matin,Jeudi,8.5,12.5
+,,Jeudi Après-midi,Jeudi,13.5,17.5
+,,Vendredi Matin,Vendredi,8.5,12.5
+,,Vendredi Après-midi,Vendredi,13.5,17.5
+,,Samedi,Samedi,8.5,12.5

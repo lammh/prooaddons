@@ -1,0 +1,335 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mission_order
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-20150713\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-23 13:03+0000\n"
+"PO-Revision-Date: 2015-07-23 13:03+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "\" \" + $V{PAGE_NUMBER}"
+msgstr "\" \" + $V{PAGE_NUMBER}"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "\"Page \"+$V{PAGE_NUMBER}+\" de\""
+msgstr "\"Page \"+$V{PAGE_NUMBER}+\" de\""
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "\"Tél.: \" + $F{phone} + \"| Fax: \" + $F{fax} + \"| Numéro fiscal: \" + $F{vat}"
+msgstr "\"Tél.: \" + $F{phone} + \"| Fax: \" + $F{fax} + \"| Numéro fiscal: \" + $F{vat}"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "$F{city} + ' ' + $F{zip}"
+msgstr "$F{city} + ' ' + $F{zip}"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "$F{company}"
+msgstr "$F{company}"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "$F{country}"
+msgstr "$F{country}"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "$F{date_end}"
+msgstr "$F{date_end}"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "$F{date_start}"
+msgstr "$F{date_start}"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "$F{email}"
+msgstr "$F{email}"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "$F{employee}"
+msgstr "$F{employee}"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "$F{mission}"
+msgstr "$F{mission}"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "$F{name}"
+msgstr "$F{name}"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "$F{phone}"
+msgstr "$F{phone}"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "$F{product}"
+msgstr "$F{product}"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "$F{qty}"
+msgstr "$F{qty}"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "$F{route}"
+msgstr "$F{route}"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "$F{street}"
+msgstr "$F{street}"
+
+#. module: mission_order
+#: model:ir.actions.act_window,help:mission_order.action_missions
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                    Click to create a mission order.\n"
+"                </p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">\n"
+"                    Click to create a mission order.\n"
+"                </p>\n"
+"            "
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "Article"
+msgstr "Article"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "Au"
+msgstr "Au"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "BON DE SORTIE VEHICULE"
+msgstr "BON DE SORTIE VEHICULE"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "Chauffeur:"
+msgstr "Chauffeur:"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "City"
+msgstr "City"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "Country"
+msgstr "Country"
+
+#. module: mission_order
+#: field:fleet.vehicle,create_uid:0
+#: field:mission.order,create_uid:0
+msgid "Created by"
+msgstr "Created by"
+
+#. module: mission_order
+#: field:fleet.vehicle,create_date:0
+#: field:mission.order,create_date:0
+msgid "Created on"
+msgstr "Created on"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "Date Du"
+msgstr "Date Du"
+
+#. module: mission_order
+#: field:mission.order,date_end:0
+#: report:mission_order:0
+msgid "Date End"
+msgstr "Date Fin"
+
+#. module: mission_order
+#: field:mission.order,date_start:0
+msgid "Date Start"
+msgstr "Date Du"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "Email"
+msgstr "Email"
+
+#. module: mission_order
+#: view:mission.order:mission_order.view_mission_order_filter
+#: field:mission.order,employee_id:0
+#: report:mission_order:0
+msgid "Employee"
+msgstr "Employé"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "Fax"
+msgstr "Fax"
+
+#. module: mission_order
+#: view:mission.order:mission_order.view_mission_order_filter
+msgid "Group By"
+msgstr "Grouper Par"
+
+#. module: mission_order
+#: field:fleet.vehicle,id:0
+#: field:mission.order,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: mission_order
+#: field:fleet.vehicle,write_uid:0
+#: field:mission.order,write_uid:0
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: mission_order
+#: field:fleet.vehicle,write_date:0
+#: field:mission.order,write_date:0
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: mission_order
+#: field:mission.order,location_id:0
+msgid "Location"
+msgstr "Emplacement"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "Mail:"
+msgstr "Mail:"
+
+#. module: mission_order
+#: view:mission.order:mission_order.view_mission_order_filter
+msgid "Mission Month"
+msgstr "Date"
+
+#. module: mission_order
+#: model:ir.actions.act_window,name:mission_order.action_missions
+#: model:ir.ui.menu,name:mission_order.menu_action_misison_order_form
+#: view:mission.order:mission_order.view_mission_order_calendar
+#: view:mission.order:mission_order.view_mission_tree
+msgid "Mission Orders"
+msgstr "Ordre de Mission"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "Numéro"
+msgstr "Numéro"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "Parcours:"
+msgstr "Parcours:"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "Phone"
+msgstr "Tél."
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "Phone:"
+msgstr "Tél.:"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "Quantité"
+msgstr "Quantité"
+
+#. module: mission_order
+#: field:mission.order,name:0
+msgid "Ref"
+msgstr "Ref"
+
+#. module: mission_order
+#: field:mission.order,route:0
+#: report:mission_order:0
+msgid "Route"
+msgstr "Itinéraire"
+
+#. module: mission_order
+#: view:mission.order:mission_order.view_mission_form
+msgid "Sales Order"
+msgstr "Commande de vente"
+
+#. module: mission_order
+#: view:mission.order:mission_order.view_mission_order_filter
+msgid "Search Mission Order"
+msgstr "Recherche Ordre de Mission"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "Start Date"
+msgstr "Start Du"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "Street"
+msgstr "Rue"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "TIN"
+msgstr "TIN"
+
+#. module: mission_order
+#: view:mission.order:mission_order.view_mission_order_filter
+msgid "Vehicle"
+msgstr "Véhicule"
+
+#. module: mission_order
+#: field:mission.order,vehicle_id:0
+msgid "Vehicle id"
+msgstr "ID Véhicule"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "Véhicule:"
+msgstr "Véhicule:"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "Zip"
+msgstr "Code postal"
+
+#. module: mission_order
+#: model:ir.actions.report.xml,name:mission_order.mission_orders
+msgid "mission Order"
+msgstr "Ordre de mission"
+
+#. module: mission_order
+#: report:mission_order:0
+msgid "select rp.name as company, rp.street, rp.city, rp.zip, rco.name as country, rc.phone, rc.email, rp.fax, rp.vat, mo.name mission, mo.date_start, mo.date_end, he.name_related as employee, fv.name, mo.route, '[' || pp.default_code || '] ' || pp.name_template as product, sum(sk.qty) as Qty from mission_order mo inner join stock_location sl on sl.id = mo.location_id inner join hr_employee he on he.id = mo.employee_id inner join fleet_vehicle fv on fv.id = mo.vehicle_id inner join stock_quant sk on sk.location_id = sl.id inner join product_product pp on pp.id = sk.product_id inner join res_company rc on rc.id = sk.company_id inner join res_partner rp on rp.id = rc.partner_id left outer join res_country rco on rco.id = rp.country_id where mo.id=$P{mission_id} group by company, street, city, zip, country, rc.phone, rc.email, fax, vat, mo.name, mo.date_start, mo.date_end, he.name_related, fv.name, mo.route, product order by product"
+msgstr "select rp.name as company, rp.street, rp.city, rp.zip, rco.name as country, rc.phone, rc.email, rp.fax, rp.vat, mo.name mission, mo.date_start, mo.date_end, he.name_related as employee, fv.name, mo.route, '[' || pp.default_code || '] ' || pp.name_template as product, sum(sk.qty) as Qty from mission_order mo inner join stock_location sl on sl.id = mo.location_id inner join hr_employee he on he.id = mo.employee_id inner join fleet_vehicle fv on fv.id = mo.vehicle_id inner join stock_quant sk on sk.location_id = sl.id inner join product_product pp on pp.id = sk.product_id inner join res_company rc on rc.id = sk.company_id inner join res_partner rp on rp.id = rc.partner_id left outer join res_country rco on rco.id = rp.country_id where mo.id=$P{mission_id} group by company, street, city, zip, country, rc.phone, rc.email, fax, vat, mo.name, mo.date_start, mo.date_end, he.name_related, fv.name, mo.route, product order by product"
+
+#. module: mission_order
+#: field:fleet.vehicle,name:0
+msgid "vehicle"
+msgstr "Véhicule"
+

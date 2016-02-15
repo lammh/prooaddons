@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_mission_order_calendar" model="ir.ui.view">
+            <field name="name">mission.order.calendar</field>
+            <field name="model">mission.order</field>
+            <field name="arch" type="xml">
+                <calendar string="Mission Orders" color="vehicle_id" date_start="date_start" date_stop="date_end">
+                    <field name="employee_id"/>
+                    <field name="vehicle_id"/>
+                    <field name="route"/>
+                </calendar>
+            </field>
+        </record>
+
+        <record id="view_mission_tree" model="ir.ui.view">
+            <field name="name">mission.order.tree</field>
+            <field name="model">mission.order</field>
+            <field name="arch" type="xml">
+                <tree string="Mission Orders">
+                    <field name="name"/>
+                    <field name="employee_id"/>
+                    <field name="vehicle_id"/>
+                    <field name="date_start"/>
+                    <field name="date_end"/>
+                    <field name="route"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_mission_form" model="ir.ui.view">
+            <field name="name">mission.order.form</field>
+            <field name="model">mission.order</field>
+            <field name="arch" type="xml">
+                <form string="Sales Order">
+                    <sheet>
+                        <h1>
+                            <label for="name"/>
+                            <field name="name" class="oe_inline"/>
+                        </h1>
+                        <group>
+                            <field name="employee_id" options="{'no_quick_create':True}"/>
+                            <field name="location_id" widget="selection"/>
+                            <field name="vehicle_id" options="{'no_quick_create':True}"/>
+                            <field name="date_start"/>
+                            <field name="date_end"/>
+                            <field name="route"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_mission_order_filter" model="ir.ui.view">
+            <field name="name">mission.order.list.select</field>
+            <field name="model">mission.order</field>
+            <field name="arch" type="xml">
+                <search string="Search Mission Order">
+                    <field name="name"/>
+                    <field name="employee_id"/>
+                    <field name="vehicle_id" />
+                    <field name="date_start"/>
+                    <field name="date_end"/>
+                    <field name="route"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Vehicle" domain="[]" context="{'group_by':'vehicle_id'}"/>
+                        <filter string="Employee" domain="[]" context="{'group_by':'employee_id'}"/>
+                        <filter string="Mission Month" domain="[]" context="{'group_by':'date_start'}"/>
+                    </group>
+               </search>
+            </field>
+        </record>
+
+        <record id="action_missions" model="ir.actions.act_window">
+            <field name="name">Mission Orders</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mission.order</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name="search_view_id" ref="view_mission_order_filter"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a mission order.
+                </p>
+            </field>
+        </record>
+
+        <menuitem action="action_missions" id="menu_action_misison_order_form" parent="stock.menu_stock_warehouse_mgmt" sequence="5"/>
+
+    </data>
+</openerp>

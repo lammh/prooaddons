@@ -1,0 +1,8 @@
+id,name,model_id/id,group_id/id,perm_write,perm_read,perm_create,perm_unlink
+access_account_treasury_manager,treasury_accountant,treasury.model_account_treasury,account.group_account_user,1,1,1,1
+access_account_treasury_user,trasury_invoice,treasury.model_account_treasury,account.group_account_invoice,1,1,1,1
+access_account_vesement_manager,vesement_accountant,treasury.model_account_vesement,account.group_account_invoice,1,1,1,1
+access_account_treasury_type_manager,treasury_type,treasury.model_account_treasury_type,account.group_account_invoice,1,1,1,1
+access_account_vesement,account_vesement,treasury.model_account_vesement,account.group_account_invoice,1,1,1,1
+access_account_vesement_cash,account_vesement_cash,treasury.model_account_vesement_cash,account.group_account_invoice,1,1,1,1
+access_account_withdrawal_cash,account_withdrawal_cash,treasury.model_account_withdrawal_cash,account.group_account_invoice,1,1,1,1

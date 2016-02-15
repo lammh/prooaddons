@@ -1,0 +1,4027 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* oschool
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-06-01 17:01+0000\n"
+"PO-Revision-Date: 2015-06-04 09:23+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: oschool
+#: field:report.oschool.registrations,nbr:0
+msgid "# of Lines"
+msgstr "# de lignes"
+
+#. module: oschool
+#: view:pos.order:oschool.view_oschool_club_pos_form
+#: view:pos.order:oschool.view_oschool_extra_pos_form
+#: view:pos.order:oschool.view_oschool_registration_pos_form
+#: view:pos.order:oschool.view_oschool_service_pos_form
+#: view:pos.order:oschool.view_oschool_study_pos_form
+#: view:pos.order:oschool.view_oschool_transport_pos_form
+msgid "(update)"
+msgstr "(mise à jour)"
+
+#. module: oschool
+#: report:oschool.transport.presence:0
+msgid "***"
+msgstr "***"
+
+#. module: oschool
+#: report:oschool.transport.presence:0
+msgid "****"
+msgstr "****"
+
+#. module: oschool
+#: selection:oschool.ticket_presence,day:0
+msgid "10"
+msgstr "10"
+
+#. module: oschool
+#: selection:oschool.ticket_presence,day:0
+msgid "11"
+msgstr "11"
+
+#. module: oschool
+#: selection:oschool.ticket_presence,day:0
+msgid "12"
+msgstr "12"
+
+#. module: oschool
+#: selection:oschool.ticket_presence,day:0
+msgid "13"
+msgstr "13"
+
+#. module: oschool
+#: selection:oschool.ticket_presence,day:0
+msgid "14"
+msgstr "14"
+
+#. module: oschool
+#: selection:oschool.ticket_presence,day:0
+msgid "15"
+msgstr "15"
+
+#. module: oschool
+#: selection:oschool.ticket_presence,day:0
+msgid "16"
+msgstr "16"
+
+#. module: oschool
+#: selection:oschool.ticket_presence,day:0
+msgid "17"
+msgstr "17"
+
+#. module: oschool
+#: selection:oschool.ticket_presence,day:0
+msgid "18"
+msgstr "18"
+
+#. module: oschool
+#: selection:oschool.ticket_presence,day:0
+msgid "19"
+msgstr "19"
+
+#. module: oschool
+#: selection:oschool.ticket_presence,day:0
+msgid "20"
+msgstr "20"
+
+#. module: oschool
+#: selection:oschool.ticket_presence,day:0
+msgid "21"
+msgstr "21"
+
+#. module: oschool
+#: selection:oschool.ticket_presence,day:0
+msgid "22"
+msgstr "22"
+
+#. module: oschool
+#: selection:oschool.ticket_presence,day:0
+msgid "23"
+msgstr "23"
+
+#. module: oschool
+#: selection:oschool.ticket_presence,day:0
+msgid "24"
+msgstr "24"
+
+#. module: oschool
+#: selection:oschool.ticket_presence,day:0
+msgid "25"
+msgstr "25"
+
+#. module: oschool
+#: selection:oschool.ticket_presence,day:0
+msgid "26"
+msgstr "26"
+
+#. module: oschool
+#: selection:oschool.ticket_presence,day:0
+msgid "27"
+msgstr "27"
+
+#. module: oschool
+#: selection:oschool.ticket_presence,day:0
+msgid "28"
+msgstr "28"
+
+#. module: oschool
+#: selection:oschool.ticket_presence,day:0
+msgid "29"
+msgstr "29"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+msgid "2nd Responsible Details"
+msgstr "Détails 2ème responsable"
+
+#. module: oschool
+#: selection:oschool.ticket_presence,day:0
+msgid "30"
+msgstr "30"
+
+#. module: oschool
+#: selection:oschool.ticket_presence,day:0
+msgid "31"
+msgstr "31"
+
+#. module: oschool
+#: model:ir.actions.act_window,help:oschool.classes_list_action
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Click to add new class</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Cliquer pour ajouter une nouvelle "
+"classe</p>\n"
+
+#. module: oschool
+#: model:ir.actions.act_window,help:oschool.groups_list_action
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Click to add new group</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Cliquer pour ajouter un nouveau "
+"groupe</p>\n"
+
+#. module: oschool
+#: model:ir.actions.act_window,help:oschool.action_bus_to_zone_list
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour affecter vos bus aux "
+"zones</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour affecter vos bus aux "
+"zones</p>\n"
+"            "
+
+#. module: oschool
+#: model:ir.actions.act_window,help:oschool.action_category_study_list
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter les études</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter des études</p>\n"
+
+#. module: oschool
+#: model:ir.actions.act_window,help:oschool.academic_year_list_action
+#: model:ir.actions.act_window,help:oschool.fiscal_year_list_action
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter une nouvelle "
+"année soclaire</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter une nouvelle "
+"année scolaire</p>\n"
+
+#. module: oschool
+#: model:ir.actions.act_window,help:oschool.oschool_bus_list_action
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter vos bus\n"
+"</p>\n"
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter vos bus\n"
+"</p>\n"
+
+#. module: oschool
+#: model:ir.actions.act_window,help:oschool.action_oschool_parents_categories_list
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter vos catégorie de "
+"dossiers</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter une nouvelle "
+"catégorie de dossier</p>\n"
+
+#. module: oschool
+#: model:ir.actions.act_window,help:oschool.action_bus_driver_form
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter vos chauffeurs</"
+"p>\n"
+"\t\t\t"
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter vos chauffeurs</"
+"p>\n"
+"\t\t\t"
+
+#. module: oschool
+#: model:ir.actions.act_window,help:oschool.action_category_club_list
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter vos clubs</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter un nouveau club</"
+"p>\n"
+
+#. module: oschool
+#: model:ir.actions.act_window,help:oschool.action_category_inscription_list
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter vos dates "
+"d'inscription</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter une nouvelle "
+"session d'inscription</p>\n"
+
+#. module: oschool
+#: model:ir.actions.act_window,help:oschool.action_oschool_access_group_list
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter vos groupes</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter un nouveau "
+"groupe</p>\n"
+
+#. module: oschool
+#: model:ir.actions.act_window,help:oschool.action_bus_hostess_form
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter vos hotesses</p>\n"
+"\t\t\t"
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter vos hotesses</p>\n"
+"\t\t\t"
+
+#. module: oschool
+#: model:ir.actions.act_window,help:oschool.action_category_route_list
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter vos routes</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter un nouveau "
+"trajet</p>\n"
+
+#. module: oschool
+#: model:ir.actions.act_window,help:oschool.action_category_service_list
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter vos services</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter un nouveau "
+"service</p>\n"
+
+#. module: oschool
+#: model:ir.actions.act_window,help:oschool.action_oschool_access_user_list
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter vos utilisateurs</"
+"p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter un nouvel "
+"utilisateur</p>\n"
+
+#. module: oschool
+#: model:ir.actions.act_window,help:oschool.oschool_zone_list_action
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter vos zones\n"
+"</p>\n"
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Cliquez pour ajouter vos zones\n"
+"</p>\n"
+""
+
+#. module: oschool
+#: selection:oschool.student_canteen_presence,status:0
+#: selection:oschool.student_club_presence,status:0
+#: selection:oschool.student_restaurant_presence,status:0
+msgid "Absent"
+msgstr "Absent"
+
+#. module: oschool
+#: field:oschool.history,name:0
+#: view:oschool.ticket_presence:oschool.oschool_student_ticket_presence_search
+#: view:pos.category:oschool.product_category_service_search
+#: view:pos.category:oschool.product_category_study_search
+#: view:pos.order.line:oschool.view_oschool_event_registration_search
+#: view:pos.order.line:oschool.view_oschool_registration_search
+#: field:res.partner,academic_year_id:0
+msgid "Academic Year"
+msgstr "Année scolaire"
+
+
+
+
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.act_oschool_refund_view
+#: model:ir.ui.menu,name:oschool.menu_oschool_refund
+msgid "Refund Analysis"
+msgstr "Analyse de remboursement"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.act_oschool_payment_view
+#: model:ir.ui.menu,name:oschool.menu_oschool_payment
+msgid "List of unpaid"
+msgstr "Liste des impayés"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.act_oschool_subscription_view
+#: model:ir.ui.menu,name:oschool.menu_oschool_subscription
+msgid "Subscription Analysis"
+msgstr "Liste des abonnés"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.act_refund_multiple_subscription_view
+#: model:ir.ui.menu,name:oschool.menu_refund_multiple_subscription
+msgid "Refund multiple subscription"
+msgstr "Retour multiple des abonnements"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.transport_affect_bus_to_zone_menu
+msgid "Assign bus to zone"
+msgstr "Assigner bus à une zone"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.action_oschool_cashbook
+#: model:ir.ui.menu,name:oschool.oschool_cashbook_menu
+msgid "Cashbook"
+msgstr "journal de caisses"
+
+#. modules: point_of_sale, stock
+#: field:pos.config,picking_type_id:0
+#: field:pos.order,picking_type_id:0
+#: field:procurement.rule,picking_type_id:0
+#: field:stock.move,picking_type_id:0
+#: view:stock.picking:stock.view_picking_internal_search
+#: field:stock.picking,picking_type_id:0
+#: view:stock.picking.type:stock.view_pickingtype_filter
+msgid "Picking Type"
+msgstr ""
+
+#. module: oschool
+#: field:res.partner,allow_first_period_payment:0
+msgid "Allow payment for the first period only"
+msgstr "Autoriser le paiement de la première période seulement"
+
+#. module: oschool
+#: field:oschool.config.settings,check_minimum_age_registration:0
+msgid "Check Minimum age registration"
+msgstr "Vérifiez l'âge minimum pour l'inscription"
+
+#. module: oschool
+#: field:account.period,apply_price_list:0
+msgid "Apply price list"
+msgstr "Appliquer la liste des prix"
+
+#. module: oschool
+#: field:oschool.ticket,ticket_date_use:0
+msgid "Date of use"
+msgstr "Date d'utilisation"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+msgid "Study Payment"
+msgstr "Paiement des études"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+msgid "Service Payment"
+msgstr "Paiement des services"
+
+#. module: oschool
+#: code:addons/oschool/oschool_responsible/oschool_responsible.py:66
+#: code:addons/oschool/oschool_responsible/oschool_responsible.py:90
+#: view:res.partner:oschool.view_oschool_responsible_form
+#, python-format
+msgid "Extra Payment"
+msgstr "Paiement des extras"
+
+#. module: oschool
+#: field:res.partner,nbre_child:0
+msgid "Number of active children"
+msgstr "Nombre d'enfants actifs"
+
+#. module: oschool
+#. openerp-web
+#: code:addons/oschool/static/src/xml/oschool_student_service_presence_quickadd.xml:29
+#: code:addons/oschool/static/src/xml/oschool_student_transport_presence_quickadd.xml:29
+#, python-format
+msgid "Print attendance report"
+msgstr "Imprimer le rapport de présence"
+
+#. module: oschool
+#: field:pos.category,stop_date_registration:0
+#: field:product.template,event_stop_date_registration:0
+msgid "End Registration Date"
+msgstr "Date de fin d'inscription"
+
+#. module: oschool
+#: field:pos.category,start_date_registration:0
+#: field:product.template,event_start_date_registration:0
+msgid "Start Registration Date"
+msgstr "Date début d'inscription"
+
+#. modules: account, resource, product, project, analytic, oschool
+#: field:account.aged.trial.balance,date_to:0
+#: field:account.balance.report,date_to:0
+#: field:account.central.journal,date_to:0
+#: field:account.common.account.report,date_to:0
+#: field:account.common.journal.report,date_to:0
+#: field:account.common.partner.report,date_to:0
+#: field:account.common.report,date_to:0
+#: field:account.fiscalyear,date_stop:0
+#: field:account.general.journal,date_to:0
+#: field:account.installer,date_stop:0
+#: field:account.partner.balance,date_to:0
+#: field:account.partner.ledger,date_to:0
+#: field:account.print.journal,date_to:0
+#: field:account.report.general.ledger,date_to:0
+#: field:account.vat.declaration,date_to:0
+#: field:accounting.report,date_to:0
+#: field:accounting.report,date_to_cmp:0
+#: view:account.analytic.account:analytic.view_account_analytic_account_form
+#: field:oschool.academic_year,date_stop:0
+#: field:oschool.assign_bus_to_zone,stop_date:0
+#: field:oschool.transport_presence_report,end_date:0
+#: field:pos.category,date_stop:0
+#: field:product.template,event_date_stop:0
+#: field:product.pricelist.version,date_end:0
+#: view:project.project:project.edit_project
+#: field:project.task.history,end_date:0
+#: field:project.task.history.cumulative,end_date:0
+#: field:resource.calendar.leaves,date_to:0
+msgid "End Date"
+msgstr "Date de fin"
+
+#. modules: account, resource, product, project, analytic, oschool
+#: field:account.aged.trial.balance,date_from:0
+#: field:account.balance.report,date_from:0
+#: field:account.central.journal,date_from:0
+#: field:account.common.account.report,date_from:0
+#: field:account.common.journal.report,date_from:0
+#: field:account.common.partner.report,date_from:0
+#: field:account.common.report,date_from:0
+#: field:account.fiscalyear,date_start:0
+#: field:account.general.journal,date_from:0
+#: field:account.installer,date_start:0
+#: field:account.partner.balance,date_from:0
+#: field:account.partner.ledger,date_from:0
+#: field:account.print.journal,date_from:0
+#: field:account.report.general.ledger,date_from:0
+#: field:account.subscription,date_start:0
+#: field:account.vat.declaration,date_from:0
+#: field:accounting.report,date_from:0
+#: field:accounting.report,date_from_cmp:0
+#: field:account.analytic.account,date_start:0
+#: field:oschool.academic_year,date_start:0
+#: field:oschool.assign_bus_to_zone,start_date:0
+#: field:oschool.history,date_start:0
+#: field:oschool.transport_presence_report,start_date:0
+#: field:pos.category,date_start:0
+#: field:product.template,event_date_start:0
+#: field:product.pricelist.version,date_start:0
+#: view:project.project:project.edit_project
+#: field:resource.calendar.leaves,date_from:0
+msgid "Start Date"
+msgstr "Date de début"
+
+#. module: oschool
+#: field:oschool.groups,number_of_places:0
+#: field:product.template,event_place_number:0
+msgid "Number of places"
+msgstr "Nombre de places"
+
+#. modules: product, oschool, stock
+#: view:product.product:oschool.view_oschool_extra_form
+#: view:product.template:product.product_template_form_view
+#: field:stock.inventory.line,product_name:0
+msgid "Product Name"
+msgstr "Nom de l'article"
+
+#. modules: oschool, stock
+#: view:product.product:oschool.view_oschool_extra_form
+#: view:product.template:stock.view_template_property_form
+msgid "Stock and Expected Variations"
+msgstr "Stock et variations prévues"
+
+#. module: stock
+#: field:product.product,qty_available:0
+#: field:product.template,qty_available:0
+msgid "Quantity On Hand"
+msgstr "Quantité en main"
+
+#. module: stock
+#: field:product.product,virtual_available:0
+msgid "Forecast Quantity"
+msgstr "Quantité Prévisionnelle"
+
+#. modules: account, point_of_sale
+#: view:cash.box.in:account.cash_box_in_form
+#: model:ir.actions.act_window,name:account.action_cash_box_in
+#: model:ir.actions.act_window,name:point_of_sale.action_pos_box_in
+msgid "Put Money In"
+msgstr "Faire une entrée de liquidité"
+
+#. modules: account, point_of_sale
+#: view:cash.box.out:account.cash_box_out_form
+#: model:ir.actions.act_window,name:account.action_cash_box_out
+#: model:ir.actions.act_window,name:point_of_sale.action_pos_box_out
+msgid "Take Money Out"
+msgstr "Retirer de l'argent"
+
+
+#. modules: product, stock_account, oschool, point_of_sale, sale
+#. openerp-web
+#: view:pos.category:oschool.product_category_inscription_form
+#: field:pos.category,price:0
+#: view:pos.order.line:oschool.view_oschool_payment_tree
+#: view:pos.order.line:oschool.view_oschool_registration_tree
+#: field:pos.order.line,registration_price:0
+#: view:report.oschool.registrations:oschool.view_report_oschool_registrations_cashier_tree
+#: view:report.oschool.registrations:oschool.view_report_oschool_registrations_tree
+#: view:res.partner:oschool.view_oschool_responsible_student_registration_form
+#: view:res.partner:oschool.view_oschool_student_registration_form
+#: code:addons/point_of_sale/static/src/xml/pos.xml:167
+#: view:website:point_of_sale.report_detailsofsales
+#: view:website:point_of_sale.report_receipt
+#: view:website:point_of_sale.report_saleslines
+#: field:product.product,price:0
+#: field:product.template,price:0
+#: view:website:sale.report_saleorder_document
+#: field:stock.change.standard.price,new_price:0
+#, python-format
+msgid "Price"
+msgstr "Prix"
+
+
+
+#. module: oschool
+#: view:oschool.academic_year:oschool.academic_year_form_view
+msgid "Academic Year Form"
+msgstr "Formulaire année scolaire"
+
+#. module: oschool
+#: view:oschool.academic_year:oschool.academic_year_tree_view
+msgid "Academic Year Tree"
+msgstr "Liste des années scolaires"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.academic_year_management_menu
+#: field:oschool.payment,academic_year_id:0
+#: field:oschool.student_canteen_presence,academic_year:0
+#: field:oschool.student_club_presence,academic_year:0
+#: field:oschool.student_restaurant_presence,academic_year:0
+#: field:oschool.student_transport_presence,academic_year:0
+#: field:oschool.ticket_presence,academic_year:0
+#: field:pos.category,academic_year:0 field:pos.order.line,academic_year_id:0
+#: field:product.product,academic_year:0
+#: field:product.template,academic_year:0
+#: field:report.oschool.registrations,academic_year_id:0
+msgid "Academic year"
+msgstr "Année scolaire"
+
+#. module: oschool
+#: view:product.product:oschool.view_oschool_extra_form
+msgid "Accounting"
+msgstr "Comptabilité"
+
+#. module: oschool
+#: view:pos.order:oschool.view_oschool_club_pos_form
+#: view:pos.order:oschool.view_oschool_extra_pos_form
+#: view:pos.order:oschool.view_oschool_registration_pos_form
+#: view:pos.order:oschool.view_oschool_service_pos_form
+#: view:pos.order:oschool.view_oschool_study_pos_form
+#: view:pos.order:oschool.view_oschool_transport_pos_form
+msgid "Accounting Information"
+msgstr "Informations comptables"
+
+#. module: oschool
+#: field:oschool.config.settings,module_portal:0
+msgid "Activate the customer portal"
+msgstr "Activate the customer portal"
+
+#. module: oschool
+#: view:pos.config:oschool.view_oschool_pos_config_search
+#: view:res.partner:oschool.view_oschool_student_search
+#: field:res.partner,active_student:0
+msgid "Active"
+msgstr "Actif"
+
+#. module: oschool
+#: view:oschool.extra.add:oschool.view_oschool_extra_wizard
+#: view:oschool.ticket.add:oschool.view_oschool_ticket_wizard
+msgid "Add"
+msgstr "Ajouter"
+
+#. module: oschool
+#: code:addons/oschool/oschool_extra/oschool_extra.py:85
+#: view:oschool.extra.add:oschool.view_oschool_extra_wizard
+#: view:oschool.ticket.add:oschool.view_oschool_ticket_wizard
+#: view:res.partner:oschool.view_responsible_student_form
+#: view:res.partner:oschool.view_student_form
+#, python-format
+msgid "Add Extra"
+msgstr "Ajouter Extra"
+
+#. module: oschool
+#: code:addons/oschool/oschool_extra/oschool_extra.py:113
+#: view:res.partner:oschool.view_responsible_student_form
+#: view:res.partner:oschool.view_student_form
+#, python-format
+msgid "Add Ticket"
+msgstr "Ajouter ticket"
+
+#. module: oschool
+#: model:ir.model,name:oschool.model_oschool_extra_add
+msgid "Add extra"
+msgstr "Ajouter Extra"
+
+#. module: oschool
+#: model:ir.model,name:oschool.model_oschool_ticket_add
+msgid "Add ticket"
+msgstr "Ajouter ticket"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_student_form
+#: view:res.partner:oschool.view_responsible_property_form
+msgid "Address"
+msgstr "Adresse"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_student_form
+#: view:res.partner:oschool.view_responsible_property_form
+msgid "Admission Date"
+msgstr "Date d'admission"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.action_bus_to_zone_list
+msgid "Affect Bus To Zone"
+msgstr "Assigner un bus à une zone"
+
+#. module: oschool
+#: field:oschool.config.settings,alias_domain:0
+msgid "Alias Domain"
+msgstr "Alias Domain"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.oschool_action_pos_all_orders
+#: model:ir.ui.menu,name:oschool.oschool_menu_point_ofsale
+msgid "All orders"
+msgstr "Toutes les commandes"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.oschool_action_pos_all_sessions
+#: model:ir.ui.menu,name:oschool.oschool_menu_pos_session_all
+msgid "All sessions"
+msgstr "Toutes les sessions caisses"
+
+#. module: oschool
+#: field:oschool.config.settings,module_share:0
+msgid "Allow documents sharing"
+msgstr "Allow documents sharing"
+
+#. module: oschool
+#: field:oschool.config.settings,auth_signup_uninvited:0
+msgid "Allow external users to sign up"
+msgstr "Allow external users to sign up"
+
+#. module: oschool
+#: field:res.partner,allow_registration:0
+msgid "Allow registration"
+msgstr "Autoriser l'inscription"
+
+#. module: oschool
+#: field:oschool.config.settings,module_google_calendar:0
+msgid "Allow the users to synchronize their calendar  with Google Calendar"
+msgstr "Allow the users to synchronize their calendar with Google Calendar"
+
+#. module: oschool
+#: field:oschool.config.settings,module_base_import:0
+msgid "Allow users to import data from CSV files"
+msgstr "Allow users to import data from CSV files"
+
+#. module: oschool
+#: view:pos.order:oschool.oschool_pos_pos_tree
+msgid "Amount total"
+msgstr "Montant total"
+
+#. module: oschool
+#: view:oschool.config.settings:oschool.oschool_view_general_configuration
+msgid "Apply"
+msgstr "Apply"
+
+#. module: oschool
+#: view:res.partner:oschool.view_responsible_student_form
+#: view:res.partner:oschool.view_student_form
+msgid "Are you sure you want to payment this record?"
+msgstr "Etes vous sûr de vouloir payer ce service?"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_student_club_form
+#: view:res.partner:oschool.view_oschool_responsible_student_event_registration_form
+#: view:res.partner:oschool.view_oschool_responsible_student_registration_form
+#: view:res.partner:oschool.view_oschool_responsible_student_service_form
+#: view:res.partner:oschool.view_oschool_responsible_student_study_form
+#: view:res.partner:oschool.view_oschool_responsible_student_transportation_form
+#: view:res.partner:oschool.view_oschool_student_club_form
+#: view:res.partner:oschool.view_oschool_student_event_registration_form
+#: view:res.partner:oschool.view_oschool_student_registration_form
+#: view:res.partner:oschool.view_oschool_student_service_form
+#: view:res.partner:oschool.view_oschool_student_study_form
+#: view:res.partner:oschool.view_oschool_student_transportation_form
+#: view:res.partner:oschool.view_responsible_student_form
+#: view:res.partner:oschool.view_student_form
+msgid "Are you sure you want to refund this record?"
+msgstr "Etes vous sûr de vouloir retourner ce service?"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.transport_affect_bus_to_zone_menu
+msgid "Assign bus to zone"
+msgstr "Assigner un bus à une zone"
+
+#. module: oschool
+#: field:oschool.config.settings,module_google_drive:0
+msgid "Attach Google documents to any record"
+msgstr "Attach Google documents to any record"
+
+#. module: oschool
+#: report:oschool.transport.presence:0
+msgid "Au"
+msgstr "Au"
+
+#. module: oschool
+#: view:pos.config:oschool.view_oschool_pos_config_form
+msgid "Available Payment Methods"
+msgstr "Moyens de paiement disponibles"
+
+#. module: oschool
+#: field:oschool.history,average:0 field:res.partner,average:0
+msgid "Average"
+msgstr "Moyenne"
+
+#. module: oschool
+#: field:report.oschool.registrations,average_price:0
+msgid "Average Price"
+msgstr "Prix moyen"
+
+#. module: oschool
+#: field:pos.make.payment,bank_source:0
+msgid "Bank Source"
+msgstr "Banque Source"
+
+#. module: oschool
+#: model:ir.model,name:oschool.model_account_bank_statement_line
+msgid "Bank Statement Line"
+msgstr "Ligne de relevé de banque"
+
+#. module: oschool
+#: view:hr.employee:oschool.view_bus_driver_form
+#: view:hr.employee:oschool.view_bus_hostess_form
+msgid "Birth"
+msgstr "Naissance"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_student_form
+#: view:res.partner:oschool.view_responsible_property_form
+msgid "Birth place"
+msgstr "Lieu de naissance"
+
+#. module: oschool
+#: code:addons/oschool/oschool_registration/oschool_registration.py:180
+#, python-format
+msgid "Birthdate must be before %s"
+msgstr "La date de naissance doit être avant le %s"
+
+#. module: oschool
+#: code:addons/oschool/oschool_student/oschool_student.py:114
+#, python-format
+msgid "Birthdate must be before admission date."
+msgstr "La date de naissance doit être antérieure à la date d'admission."
+
+#. module: oschool
+#: field:res.partner,birthplace:0
+msgid "Birthplace"
+msgstr "Lieu de naissance"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.oschool_bus_list_action
+#: model:ir.ui.menu,name:oschool.bus_list_management_menu
+#: field:oschool.assign_bus_to_zone,bus:0
+msgid "Bus"
+msgstr "Bus"
+
+#. module: oschool
+#: view:oschool.bus:oschool.oschool_bus_form_view
+msgid "Bus Form"
+msgstr "Formulaire bus"
+
+#. module: oschool
+#: field:oschool.bus_schedule,name:0
+msgid "Bus schedule"
+msgstr "Horaires des bus"
+
+#. module: oschool
+#: field:oschool.assign_bus_to_zone,bus_schedule_driver:0
+msgid "Bus schedule driver"
+msgstr "Bus schedule driver"
+
+#. module: oschool
+#: field:oschool.driver_hostess_assignment,bus_to_zone_id:0
+msgid "Bus to zone id"
+msgstr "Bus to zone id"
+
+#. module: oschool
+#: code:addons/oschool/oschool_student/oschool_student.py:198
+#: code:addons/oschool/oschool_student/oschool_student.py:202
+#, python-format
+msgid "Can not delete the order line %s"
+msgstr "Can not delete the order line %s"
+
+#. module: oschool
+#: view:oschool.club.generate:oschool.view_oschool_club_generate
+#: view:oschool.club.update:oschool.view_oschool_club_wizard
+#: view:oschool.config.settings:oschool.oschool_view_general_configuration
+#: view:oschool.extra.add:oschool.view_oschool_extra_wizard
+#: view:oschool.payment:oschool.view_payment_dialog_form
+#: view:oschool.service.generate:oschool.view_oschool_service_generate
+#: view:oschool.service.update:oschool.view_oschool_service_wizard
+#: view:oschool.study.update:oschool.view_oschool_study_wizard
+#: view:oschool.ticket.add:oschool.view_oschool_ticket_wizard
+#: view:pos.order.line:oschool.view_student_registration_dialog_form
+#: view:pos.order.line.generate:oschool.view_oschool_pos_line_generate
+#: view:pos.order.line.update:oschool.view_oschool_pos_line_wizard
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: oschool
+#: selection:pos.order.line,state_order:0
+#: selection:report.oschool.registrations,state:0
+msgid "Cancelled"
+msgstr "Annulé"
+
+#. module: oschool
+#: code:addons/oschool/oschool_student/oschool_student.py:90
+#, python-format
+msgid "Cannot delete a %s"
+msgstr "Impossible de supprimer %s"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.action_oschool_canteen_presence_status
+msgid "Canteen Presence"
+msgstr "Presence panier"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.oschool_canteen_presence_status_menu
+msgid "Canteen presence status"
+msgstr "Etat presence panier"
+
+#. module: oschool
+#: field:account.journal,cash:0 field:oschool.payment,cash:0
+#: field:pos.category,cash:0 field:product.template,cash:0
+#: field:res.partner,cash:0
+msgid "Cash"
+msgstr "Cash"
+
+#. module: oschool
+#: view:res.users:oschool.oschool_access_user_form
+msgid "Cash register"
+msgstr "Point de vente"
+
+#. module: oschool
+#: view:report.oschool.registrations:oschool.view_report_oschool_registrations_cashier_tree
+#: view:report.oschool.registrations:oschool.view_report_oschool_registrations_search
+#: view:report.oschool.registrations:oschool.view_report_oschool_registrations_tree
+msgid "Cashier"
+msgstr "Caissier(e)"
+
+#. module: oschool
+#: field:res.users,location_id:0
+msgid "Cashier Location"
+msgstr "Location de caisse"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+msgid "Category"
+msgstr "Catégorie"
+
+#. module: oschool
+#: view:pos.category:oschool.product_category_service_form
+#: field:pos.category,product_category:0
+#: view:product.product:oschool.product_event_form
+msgid "Category Type"
+msgstr "Type de catégorie"
+
+#. modules: product, oschool
+#: view:pos.category:oschool.product_category_service_form
+#: field:pos.category,product_category:0
+#: view:product.product:oschool.product_event_form
+#: field:product.category,type:0
+msgid "Category Type"
+msgstr "Type de catégorie"
+
+
+#. module: oschool
+#: field:pos.order.line,product_category_id:0
+msgid "Category of Product"
+msgstr "Category of Product"
+
+#. module: oschool
+#: report:oschool.transport.presence:0
+msgid "Chauffeur :"
+msgstr "Chauffeur :"
+
+#. module: oschool
+#: field:pos.make.payment,check_holder:0
+msgid "Check holder"
+msgstr "Propriétaire du chèque"
+
+#. module: oschool
+#: field:account.bank.statement.line,check_number:0
+#: field:pos.make.payment,check_number:0
+msgid "Check number"
+msgstr "Numéro de chèque"
+
+#. module: oschool
+#: view:res.partner:oschool.view_responsible_property_form
+msgid "Children (Students)"
+msgstr "Enfants (élèves)"
+
+#. module: oschool
+#: code:addons/oschool/oschool_registration/oschool_registration.py:190
+#, python-format
+msgid "Choose Registration Type first."
+msgstr "Veuillez d'abord choisir le type d'inscription s'il vous plaît."
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+#: view:res.partner:oschool.view_oschool_student_form
+#: view:res.partner:oschool.view_responsible_property_form
+msgid "City"
+msgstr "Ville"
+
+#. module: oschool
+#: field:res.partner,city2:0
+msgid "City 2"
+msgstr "Cité"
+
+#. module: oschool
+#: field:oschool.history,class_id:0
+#: field:oschool.student_canteen_presence,class_id:0
+#: field:oschool.student_restaurant_presence,class_id:0
+#: view:oschool.ticket_presence:oschool.oschool_student_ticket_presence_search
+#: field:oschool.ticket_presence,class_id:0
+#: view:pos.order.line:oschool.view_oschool_registration_search
+#: field:pos.order.line,class_id:0
+#: view:report.oschool.registrations:oschool.view_report_oschool_registrations_search
+#: field:report.oschool.registrations,class_id:0
+#: view:res.partner:oschool.view_oschool_student_search
+#: field:res.partner,class_id:0
+msgid "Class"
+msgstr "Classe"
+
+#. module: oschool
+#. openerp-web
+#: code:addons/oschool/static/src/xml/oschool_student_service_presence_quickadd.xml:9
+#, python-format
+msgid "Class :"
+msgstr "Classe :"
+
+#. module: oschool
+#: view:oschool.classes:oschool.view_class_tree_view_search
+msgid "Class Search"
+msgstr "Rechercher une classe"
+
+#. module: oschool
+#: code:addons/oschool/oschool_club/oschool_club.py:40
+#: code:addons/oschool/oschool_extra/oschool_extra.py:81
+#: code:addons/oschool/oschool_extra/oschool_extra.py:109
+#: code:addons/oschool/oschool_service/oschool_service.py:42
+#: code:addons/oschool/oschool_study/oschool_study.py:45
+#, python-format
+msgid "Class of student missing"
+msgstr "L'élève n'est assigné à aucune classe"
+
+#. module: oschool
+#: view:res.partner:oschool.view_responsible_property_form
+msgid "Class:"
+msgstr "Classe"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.classes_management_menu
+#: field:oschool.groups,class_ids:0
+msgid "Classes"
+msgstr "Classes"
+
+#. module: oschool
+#: view:oschool.classes:oschool.class_tree_view
+msgid "Classes Tree"
+msgstr "Liste des classes"
+
+#. module: oschool
+#: field:oschool.classes,name:0
+msgid "Classroom designation"
+msgstr "Libellé classe"
+
+#. module: oschool
+#: view:pos.session.opening:oschool.oschool_pos_session_opening_form_view
+msgid "Close Session"
+msgstr "Fermer la session"
+
+#. module: oschool
+#: selection:oschool.academic_year,state:0
+msgid "Closed"
+msgstr "Fermé"
+
+#. module: oschool
+#: field:oschool.club.generate,club_id:0
+#: model:pos.category,name:oschool.oschool_club_pos_category
+#: selection:pos.category,school_product_type:0
+#: model:product.category,name:oschool.oschool_club_product_category
+#: selection:product.template,school_product_type:0
+#: view:res.partner:oschool.view_oschool_responsible_student_club_form
+#: view:res.partner:oschool.view_oschool_student_club_form
+msgid "Club"
+msgstr "Club"
+
+#. module: oschool
+#. openerp-web
+#: code:addons/oschool/static/src/xml/oschool_student_club_presence_quickadd.xml:8
+#, python-format
+msgid "Club :"
+msgstr "Club :"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.action_oschool_club_presence_status
+msgid "Club Presence"
+msgstr "Presence dans les club"
+
+#. module: oschool
+#: field:oschool.student_club_presence,club_id:0
+msgid "Club id"
+msgstr "Club id"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.oschool_club_presence_status_menu
+msgid "Club presence status"
+msgstr "Etat de presence dans les club"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.action_category_club_list
+#: model:ir.ui.menu,name:oschool.clubs_list_management_menu
+#: view:pos.category:oschool.product_category_club_tree
+#: field:res.partner,club_ids:0
+msgid "Clubs"
+msgstr "Clubs"
+
+#. module: oschool
+#: field:oschool.academic_year,code:0 field:oschool.classes,code:0
+#: field:oschool.groups,code:0
+#: view:pos.category:oschool.product_category_club_form
+#: view:pos.category:oschool.product_category_route_form
+#: view:pos.category:oschool.product_category_service_form
+msgid "Code"
+msgstr "Code"
+
+#. module: oschool
+#: model:ir.model,name:oschool.model_res_company
+msgid "Companies"
+msgstr "Sociétés"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.configuration_menu
+#: view:res.company:oschool.view_company_min_age_form
+msgid "Configuration"
+msgstr "Configuration"
+
+#. module: oschool
+#: code:addons/oschool/oschool_treasury/oschool_treasury.py:100
+#, python-format
+msgid "Configuration Error!"
+msgstr "Error Configuration!"
+
+#. module: oschool
+#: view:product.product:oschool.view_oschool_extra_form
+msgid "Configurations"
+msgstr "Configurations"
+
+#. module: oschool
+#: view:pos.session:oschool.oschool_pos_session_form
+msgid "Continue Selling"
+msgstr "Continuer la vente"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+#: view:res.partner:oschool.view_oschool_student_form
+#: view:res.partner:oschool.view_responsible_property_form
+msgid "Country"
+msgstr "Pays"
+
+#. module: oschool
+#: field:res.partner,country_id2:0
+msgid "Country 2"
+msgstr "Pays"
+
+#. module: oschool
+#: field:oschool.academic_year,create_uid:0
+#: field:oschool.assign_bus_to_zone,create_uid:0
+#: field:oschool.bus,create_uid:0 field:oschool.bus_schedule,create_uid:0
+#: field:oschool.classes,create_uid:0 field:oschool.club.generate,create_uid:0
+#: field:oschool.club.update,create_uid:0
+#: field:oschool.config.settings,create_uid:0
+#: field:oschool.driver_hostess_assignment,create_uid:0
+#: field:oschool.extra.add,create_uid:0 field:oschool.groups,create_uid:0
+#: field:oschool.history,create_uid:0 field:oschool.payment,create_uid:0
+#: field:oschool.service.generate,create_uid:0
+#: field:oschool.service.update,create_uid:0
+#: field:oschool.shuttle,create_uid:0
+#: field:oschool.student_canteen_presence,create_uid:0
+#: field:oschool.student_club_presence,create_uid:0
+#: field:oschool.student_restaurant_presence,create_uid:0
+#: field:oschool.student_transport_presence,create_uid:0
+#: field:oschool.study.update,create_uid:0 field:oschool.ticket,create_uid:0
+#: field:oschool.ticket.add,create_uid:0
+#: field:oschool.ticket_presence,create_uid:0
+#: field:oschool.transport_presence_report,create_uid:0
+#: field:oschool.zone,create_uid:0 field:pos.order.line.generate,create_uid:0
+#: field:pos.order.line.update,create_uid:0
+#: field:res.partner.relationship,create_uid:0
+msgid "Created by"
+msgstr "Crée par"
+
+#. module: oschool
+#: field:oschool.academic_year,create_date:0
+#: field:oschool.assign_bus_to_zone,create_date:0
+#: field:oschool.bus,create_date:0 field:oschool.bus_schedule,create_date:0
+#: field:oschool.classes,create_date:0
+#: field:oschool.club.generate,create_date:0
+#: field:oschool.club.update,create_date:0
+#: field:oschool.config.settings,create_date:0
+#: field:oschool.driver_hostess_assignment,create_date:0
+#: field:oschool.extra.add,create_date:0 field:oschool.groups,create_date:0
+#: field:oschool.history,create_date:0 field:oschool.payment,create_date:0
+#: field:oschool.service.generate,create_date:0
+#: field:oschool.service.update,create_date:0
+#: field:oschool.shuttle,create_date:0
+#: field:oschool.student_canteen_presence,create_date:0
+#: field:oschool.student_club_presence,create_date:0
+#: field:oschool.student_restaurant_presence,create_date:0
+#: field:oschool.student_transport_presence,create_date:0
+#: field:oschool.study.update,create_date:0 field:oschool.ticket,create_date:0
+#: field:oschool.ticket.add,create_date:0
+#: field:oschool.ticket_presence,create_date:0
+#: field:oschool.transport_presence_report,create_date:0
+#: field:oschool.zone,create_date:0
+#: field:pos.order.line.generate,create_date:0
+#: field:pos.order.line.update,create_date:0
+#: field:res.partner.relationship,create_date:0
+msgid "Created on"
+msgstr "Crée le"
+
+#. module: oschool
+#: field:pos.make.payment,check_creation_date:0
+msgid "Creation Date"
+msgstr "Creation Date"
+
+#. module: oschool
+#: view:oschool.academic_year:oschool.academic_year_form_view
+#: selection:oschool.academic_year,state:0
+msgid "Current"
+msgstr "En cours"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.oschool_pos_session_management_menu
+msgid "Daily operations"
+msgstr "Opérations journalières"
+
+#. module: oschool
+#: field:report.oschool.registrations,date:0
+msgid "Date Order"
+msgstr "Date d'inscription"
+
+#. module: oschool
+#: field:oschool.ticket,date_use:0
+msgid "Date of use"
+msgstr "Date d'utilisation"
+
+#. module: oschool
+#: view:oschool.driver_hostess_assignment:oschool.view_oschool_driver_hostess_assignment_search
+#: field:oschool.driver_hostess_assignment,day:0
+#: field:oschool.student_canteen_presence,day:0
+#: field:oschool.student_canteen_presence,day_num:0
+#: field:oschool.student_club_presence,day:0
+#: field:oschool.student_club_presence,day_num:0
+#: field:oschool.student_restaurant_presence,day:0
+#: field:oschool.student_restaurant_presence,day_num:0
+#: view:oschool.student_transport_presence:oschool.oschool_student_transport_presence_search
+#: field:oschool.student_transport_presence,day:0
+#: field:oschool.student_transport_presence,dayNum:0
+#: field:oschool.ticket_presence,day:0
+msgid "Day"
+msgstr "Jour"
+
+#. module: oschool
+#. openerp-web
+#: code:addons/oschool/static/src/xml/oschool_student_club_presence_quickadd.xml:20
+#: code:addons/oschool/static/src/xml/oschool_student_service_presence_quickadd.xml:21
+#: code:addons/oschool/static/src/xml/oschool_student_transport_presence_quickadd.xml:21
+#, python-format
+msgid "Day :"
+msgstr "Jour :"
+
+#. module: oschool
+#: view:oschool.bus:oschool.oschool_bus_form_view
+#: field:oschool.bus,description:0 field:oschool.zone,description:0
+msgid "Description"
+msgstr "Description"
+
+#. module: oschool
+#: view:product.product:oschool.view_oschool_extra_form
+msgid "Description for Quotations"
+msgstr "Description for Quotations"
+
+#. module: oschool
+#: view:product.product:oschool.view_oschool_extra_form
+msgid "Description for Suppliers"
+msgstr "Description for Suppliers"
+
+#. module: oschool
+#: field:oschool.academic_year,name:0
+msgid "Designation"
+msgstr "Designation"
+
+#. module: oschool
+#: field:oschool.assign_bus_to_zone,driver:0
+#: view:oschool.driver_hostess_assignment:oschool.view_oschool_driver_hostess_assignment_search
+#: field:oschool.driver_hostess_assignment,driver:0
+msgid "Driver"
+msgstr "Chauffeur"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.action_bus_driver_form
+msgid "Driver Information"
+msgstr "Information chauffeur"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.action_driver_hostess_assignment_list
+#: model:ir.ui.menu,name:oschool.transport_driver_hostess_assignment_menu
+msgid "Driver and hostess assignment"
+msgstr "Affectation des chauffeurs et des hôtesses"
+
+#. module: oschool
+#: report:oschool.transport.presence:0
+msgid "Du"
+msgstr "Du"
+
+#. module: oschool
+#: field:pos.make.payment,check_due_date:0
+msgid "Due Date"
+msgstr "Date d'échéance"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_student_form
+#: view:res.partner:oschool.view_responsible_property_form
+msgid "Education History"
+msgstr "Historique scolaire"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+msgid "Email Address"
+msgstr "E-mail"
+
+#. module: oschool
+#: model:ir.model,name:oschool.model_hr_employee
+msgid "Employee"
+msgstr "Employé"
+
+#. module: oschool
+#: field:oschool.config.settings,auth_signup_reset_password:0
+msgid "Enable password reset from Login page"
+msgstr "Enable password reset from Login page"
+
+#. module: oschool
+#: field:oschool.academic_year,date_stop:0
+#: field:oschool.assign_bus_to_zone,stop_date:0
+#: field:oschool.transport_presence_report,end_date:0
+#: field:pos.category,date_stop:0 field:product.product,event_date_stop:0
+msgid "End Date"
+msgstr "Date de fin"
+
+#. module: oschool
+#: field:pos.category,stop_date_registration:0
+#: field:product.product,event_stop_date_registration:0
+msgid "End Registration Date"
+msgstr "Date de fin d'inscription"
+
+#. module: oschool
+#: field:oschool.student_transport_presence,error:0
+msgid "Error"
+msgstr "Erreur"
+
+#. module: oschool
+#: code:addons/oschool/oschool.py:353 code:addons/oschool/oschool.py:358
+#: code:addons/oschool/oschool.py:381
+#: code:addons/oschool/oschool_club/oschool_club.py:108
+#: code:addons/oschool/oschool_extra/oschool_extra.py:190
+#: code:addons/oschool/oschool_extra/oschool_extra.py:258
+#: code:addons/oschool/oschool_registration/oschool_registration.py:85
+#: code:addons/oschool/oschool_service/oschool_service.py:110
+#: code:addons/oschool/oschool_student/oschool_student.py:222
+#: code:addons/oschool/oschool_student/oschool_student.py:256
+#: code:addons/oschool/oschool_student/oschool_student.py:260
+#: code:addons/oschool/oschool_study/oschool_study.py:118
+#: code:addons/oschool/oschool_transportation/oschool_transportation.py:381
+#: code:addons/oschool/oschool_treasury/oschool_treasury.py:113
+#, python-format
+msgid "Error!"
+msgstr "Erreur!"
+
+#. module: oschool
+#: model:pos.category,name:oschool.oschool_event_pos_category
+#: selection:pos.category,school_product_type:0
+#: view:pos.order.line:oschool.view_oschool_event_registration_form
+#: view:pos.order.line:oschool.view_oschool_event_registration_tree
+#: model:product.category,name:oschool.oschool_event_product_category
+#: selection:product.template,school_product_type:0
+#: view:res.partner:oschool.view_oschool_responsible_student_event_registration_form
+#: view:res.partner:oschool.view_oschool_student_event_registration_form
+msgid "Event"
+msgstr "Évènement"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.act_oschool_event_registration_view
+#: model:ir.ui.menu,name:oschool.menu_oschool_event_registration
+#: view:pos.order.line:oschool.view_oschool_event_registration_tree
+msgid "Event Registration"
+msgstr "Inscription à l'évènement"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.events_list_management_menu
+msgid "Events"
+msgstr "Évènements"
+
+#. module: oschool
+#: field:pos.category,excluded_services_ids:0
+msgid "Excluded services"
+msgstr "Services exclus"
+
+#. module: oschool
+#: model:pos.category,name:oschool.oschool_extra_pos_category
+#: selection:pos.category,school_product_type:0
+#: model:product.category,name:oschool.product_category_extra
+#: selection:product.template,school_product_type:0
+#: view:res.partner:oschool.view_oschool_student_form
+#: view:res.partner:oschool.view_responsible_student_form
+#: view:res.partner:oschool.view_student_form
+msgid "Extra"
+msgstr "Extra"
+
+#. module: oschool
+#: view:pos.order:oschool.view_oschool_club_pos_form
+#: view:pos.order:oschool.view_oschool_extra_pos_form
+#: view:pos.order:oschool.view_oschool_registration_pos_form
+#: view:pos.order:oschool.view_oschool_service_pos_form
+#: view:pos.order:oschool.view_oschool_study_pos_form
+#: view:pos.order:oschool.view_oschool_transport_pos_form
+msgid "Extra Info"
+msgstr "Info complémentaire"
+
+#. module: oschool
+#: field:res.partner,extra_ids:0
+msgid "Extra list"
+msgstr "Liste des Extras"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.act_oschool_extra_view
+#: model:ir.ui.menu,name:oschool.menu_oschool_extra
+msgid "Extras"
+msgstr "Extras"
+
+#. module: oschool
+#: model:res.partner.relationship,name:oschool.relationship_father
+msgid "Father"
+msgstr "Père"
+
+#. module: oschool
+#: selection:res.partner,gender:0
+msgid "Female"
+msgstr "Feminin"
+
+#. module: oschool
+#: view:oschool.ticket_presence:oschool.oschool_student_ticket_presence_search
+msgid "Filter"
+msgstr "Filter"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+#: view:res.partner:oschool.view_oschool_student_form
+#: view:res.partner:oschool.view_responsible_property_form
+msgid "First Name"
+msgstr "Prénom"
+
+#. module: oschool
+#: field:oschool.groups,primary:0
+msgid "First year of primary school"
+msgstr "1ère année de base"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+msgid "Firstname"
+msgstr "Prénom"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.fiscal_year_management_menu
+msgid "Fiscal year"
+msgstr "Année comptable"
+
+#. module: oschool
+#: code:addons/oschool/oschool_registration/oschool_registration.py:184
+#: code:addons/oschool/oschool_registration/oschool_registration.py:196
+#, python-format
+msgid "Full Group."
+msgstr "Groupe complet. Le nombre maximum d'inscription est atteint."
+
+#. module: oschool
+#: model:product.category,name:oschool.oschool_service_garderie_product_category
+msgid "Garderie"
+msgstr "Garderie"
+
+#. module: oschool
+#: field:res.partner,gender:0
+msgid "Gender"
+msgstr "Sexe"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+#: view:res.partner:oschool.view_oschool_student_form
+#: view:res.partner:oschool.view_responsible_property_form
+msgid "General"
+msgstr "Général"
+
+#. module: oschool
+#: view:pos.order:oschool.view_oschool_club_pos_form
+#: view:pos.order:oschool.view_oschool_extra_pos_form
+#: view:pos.order:oschool.view_oschool_registration_pos_form
+#: view:pos.order:oschool.view_oschool_service_pos_form
+#: view:pos.order:oschool.view_oschool_study_pos_form
+#: view:pos.order:oschool.view_oschool_transport_pos_form
+#: view:res.partner:oschool.view_oschool_responsible_form
+#: view:res.partner:oschool.view_oschool_student_form
+#: view:res.partner:oschool.view_responsible_property_form
+msgid "General Information"
+msgstr "Informations générales"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.action_oschool_general_configuration
+#: model:ir.ui.menu,name:oschool.menu_general_configuration
+#: view:oschool.config.settings:oschool.oschool_view_general_configuration
+msgid "General Settings"
+msgstr "Paramètres généraux"
+
+#. module: oschool
+#: view:oschool.club.generate:oschool.view_oschool_club_generate
+#: view:oschool.service.generate:oschool.view_oschool_service_generate
+#: view:pos.order.line.generate:oschool.view_oschool_pos_line_generate
+#: view:res.partner:oschool.view_oschool_responsible_student_club_form
+#: view:res.partner:oschool.view_oschool_responsible_student_service_form
+#: view:res.partner:oschool.view_oschool_responsible_student_study_form
+#: view:res.partner:oschool.view_oschool_responsible_student_transportation_form
+#: view:res.partner:oschool.view_oschool_student_club_form
+#: view:res.partner:oschool.view_oschool_student_service_form
+#: view:res.partner:oschool.view_oschool_student_study_form
+#: view:res.partner:oschool.view_oschool_student_transportation_form
+msgid "Generate"
+msgstr "Générer les périodes"
+
+#. module: oschool
+#: code:addons/oschool/oschool_club/oschool_club.py:43
+#: model:ir.model,name:oschool.model_oschool_club_generate
+#, python-format
+msgid "Generate Club"
+msgstr "Generate Club"
+
+#. module: oschool
+#: model:ir.model,name:oschool.model_pos_order_line_generate
+msgid "Generate Pos Order Line"
+msgstr "Generate Pos Order Line"
+
+#. module: oschool
+#: code:addons/oschool/oschool_service/oschool_service.py:45
+#: model:ir.model,name:oschool.model_oschool_service_generate
+#, python-format
+msgid "Generate Service"
+msgstr "Générer les Services"
+
+#. module: oschool
+#: code:addons/oschool/oschool_transportation/oschool_transportation.py:292
+#, python-format
+msgid "Generate Transport"
+msgstr "Générer Transport"
+
+#. module: oschool
+#: view:oschool.assign_bus_to_zone:oschool.view_bus_to_zone_form
+msgid "Generate assignment"
+msgstr "Générer les affectations"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.extra_products_config_menu
+msgid "Gestion des extra scolaire"
+msgstr "Gestion des extra scolaire"
+
+#. module: oschool
+#: help:oschool.config.settings,module_portal:0
+msgid "Give your customers access to their documents."
+msgstr "Give your customers access to their documents."
+
+#. module: oschool
+#: model:res.partner.relationship,name:oschool.relationship_grandfather
+msgid "Grand Father"
+msgstr "Grand père"
+
+#. module: oschool
+#: model:res.partner.relationship,name:oschool.relationship_grandmother
+msgid "Grand Mother"
+msgstr "Grand mère"
+
+#. module: oschool
+#: view:oschool.classes:oschool.view_class_tree_view_search
+#: field:oschool.history,group_id:0
+#: view:oschool.student_transport_presence:oschool.oschool_student_transport_presence_search
+#: field:oschool.student_transport_presence,group_id:0
+#: view:pos.order.line:oschool.view_oschool_registration_search
+#: field:pos.order.line,group_id:0
+#: field:report.oschool.registrations,group_id:0
+#: view:res.partner:oschool.view_oschool_student_search
+#: field:res.partner,group_id:0
+#: view:res.users:oschool.oschool_access_user_form
+msgid "Group"
+msgstr "Groupe"
+
+#. module: oschool
+#: view:oschool.classes:oschool.view_class_tree_view_search
+#: view:oschool.student_transport_presence:oschool.oschool_student_transport_presence_search
+#: view:pos.order.line:oschool.view_oschool_event_registration_search
+#: view:pos.order.line:oschool.view_oschool_registration_search
+#: view:report.oschool.registrations:oschool.view_report_oschool_registrations_search
+msgid "Group By"
+msgstr "Grouper par"
+
+#. module: oschool
+#: view:oschool.driver_hostess_assignment:oschool.view_oschool_driver_hostess_assignment_search
+#: view:oschool.ticket_presence:oschool.oschool_student_ticket_presence_search
+#: view:res.partner:oschool.view_oschool_responsible_search
+#: view:res.partner:oschool.view_oschool_student_search
+msgid "Group By..."
+msgstr "Grouper par..."
+
+#. module: oschool
+#: sql_constraint:oschool.groups:0
+msgid "Group code must be unique"
+msgstr "Le code du groupe doit être unique"
+
+#. module: oschool
+#: field:oschool.groups,name:0
+msgid "Group designation"
+msgstr "Libellé groupe"
+
+#. module: oschool
+#: view:res.partner:oschool.view_responsible_property_form
+msgid "Group:"
+msgstr "Groupe"
+
+#. module: oschool
+#: field:oschool.classes,group:0 field:pos.category,groups:0
+msgid "Groupe"
+msgstr "Groupe"
+
+#. module: oschool
+#. openerp-web
+#: code:addons/oschool/static/src/xml/oschool.xml:14
+#, python-format
+msgid "Groupe :"
+msgstr "Groupe :"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.action_oschool_access_group_list
+#: model:ir.ui.menu,name:oschool.groups_management_menu
+msgid "Groups"
+msgstr "Groupes"
+
+#. module: oschool
+#: view:oschool.groups:oschool.groups_tree_view
+msgid "Groups Tree"
+msgstr "Liste des groupes"
+
+#. module: oschool
+#: view:pos.category:oschool.product_category_club_form
+#: view:pos.category:oschool.product_category_route_form
+#: view:pos.category:oschool.product_category_service_form
+#: view:pos.category:oschool.product_category_study_form
+msgid "Générer les mois"
+msgstr "Générer les périodes"
+
+#. module: oschool
+#: view:pos.category:oschool.product_category_inscription_form
+msgid "Générer les types d'inscription"
+msgstr "Générer les types d'inscription"
+
+#. module: oschool
+#: view:res.partner:oschool.view_responsible_property_form
+#: field:res.partner,history_ids:0
+msgid "History"
+msgstr "Historique"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+#: field:res.partner,history_payments:0
+msgid "History Payment"
+msgstr "Historique des payments"
+
+#. module: oschool
+#: field:oschool.assign_bus_to_zone,hostess:0
+#: view:oschool.driver_hostess_assignment:oschool.view_oschool_driver_hostess_assignment_search
+#: field:oschool.driver_hostess_assignment,hostess:0
+msgid "Hostess"
+msgstr "Hôtesses"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.action_bus_hostess_form
+msgid "Hostess Information"
+msgstr "Information hôtesses"
+
+#. module: oschool
+#: report:oschool.transport.presence:0
+msgid "Hotesse :"
+msgstr "Hotesse :"
+
+#. module: oschool
+#: field:oschool.academic_year,id:0 field:oschool.assign_bus_to_zone,id:0
+#: field:oschool.bus,id:0 field:oschool.bus_schedule,id:0
+#: field:oschool.classes,id:0 field:oschool.club.generate,id:0
+#: field:oschool.club.update,id:0 field:oschool.config.settings,id:0
+#: field:oschool.driver_hostess_assignment,id:0 field:oschool.extra.add,id:0
+#: field:oschool.groups,id:0 field:oschool.history,id:0
+#: field:oschool.payment,id:0 field:oschool.service.generate,id:0
+#: field:oschool.service.update,id:0 field:oschool.shuttle,id:0
+#: field:oschool.student_canteen_presence,id:0
+#: field:oschool.student_club_presence,id:0
+#: field:oschool.student_restaurant_presence,id:0
+#: field:oschool.student_transport_presence,id:0
+#: field:oschool.study.update,id:0 field:oschool.ticket,id:0
+#: field:oschool.ticket.add,id:0 field:oschool.ticket_presence,id:0
+#: field:oschool.transport_presence_report,id:0 field:oschool.zone,id:0
+#: field:pos.order.line.generate,id:0 field:pos.order.line.update,id:0
+#: field:report.oschool.registrations,id:0 field:res.partner.relationship,id:0
+msgid "ID"
+msgstr "Identifiant"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_student_form
+#: view:res.partner:oschool.view_responsible_property_form
+msgid "Identification Number"
+msgstr "Identifiant"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+msgid "Identifier Number"
+msgstr "Identifiant"
+
+#. module: oschool
+#: help:oschool.config.settings,auth_signup_uninvited:0
+msgid "If unchecked, only invited users may sign up."
+msgstr "If unchecked, only invited users may sign up."
+
+#. module: oschool
+#: help:oschool.config.settings,alias_domain:0
+msgid ""
+"If you have setup a catch-all email domain redirected to the Odoo server, "
+"enter the domain name here."
+msgstr ""
+"If you have setup a catch-all email domain redirected to the Odoo server, "
+"enter the domain name here."
+
+#. module: oschool
+#: field:res.partner,image2:0
+msgid "Image 2"
+msgstr "Carte d’identité parent"
+
+#. module: oschool
+#: view:pos.config:oschool.view_oschool_pos_config_search
+msgid "Inactive"
+msgstr "Inactif"
+
+#. module: oschool
+#: view:product.product:oschool.view_oschool_extra_form
+msgid "Information"
+msgstr "Information"
+
+#. module: oschool
+#: code:addons/oschool/oschool.py:159
+#: model:ir.actions.act_window,name:oschool.action_category_inscription_list
+#: view:pos.category:oschool.product_category_inscription_form
+#: view:pos.category:oschool.product_category_inscription_tree
+#: model:pos.category,name:oschool.oschool_inscription_pos_category
+#: model:product.category,name:oschool.oschool_inscription_product_category
+#, python-format
+msgid "Inscription"
+msgstr "Inscription"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_student_form
+#: view:res.partner:oschool.view_responsible_property_form
+msgid "Inscription Number"
+msgstr "Numéro d'inscription"
+
+#. module: oschool
+#: view:pos.category:oschool.product_category_inscription_form
+msgid "Inscription Type"
+msgstr "Type d'inscription"
+
+#. module: oschool
+#: view:product.product:oschool.view_oschool_extra_form
+msgid "Internal Category"
+msgstr "Catégorie interne"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+msgid "Internal Notes"
+msgstr "Notes internes"
+
+#. module: oschool
+#: code:addons/oschool/oschool_student/oschool_student.py:90
+#, python-format
+msgid "Invalid Action!"
+msgstr "Action invalide!"
+
+#. module: oschool
+#: view:product.product:oschool.view_oschool_extra_form
+msgid "Inventory"
+msgstr "Inventaire"
+
+#. module: oschool
+#: selection:pos.order.line,state_order:0
+msgid "Invoiced"
+msgstr "Facturé"
+
+#. module: oschool
+#: field:res.users,is_cashier:0
+msgid "Is Cashier"
+msgstr "Caissier(e)"
+
+#. module: oschool
+#: field:res.partner,is_responsible:0
+msgid "Is Responsible"
+msgstr "Responsable"
+
+#. module: oschool
+#: field:res.partner,is_student:0
+msgid "Is Student"
+msgstr "Élève"
+
+#. module: oschool
+#: field:account.journal,is_check:0
+msgid "Is check"
+msgstr "Chèque"
+
+#. module: oschool
+#: report:oschool.transport.presence:0
+msgid "Jeudi"
+msgstr "Jeudi"
+
+#. module: oschool
+#: model:ir.model,name:oschool.model_account_journal
+msgid "Journal"
+msgstr "Journal"
+
+#. module: oschool
+#: view:pos.config:oschool.view_oschool_pos_config_form
+msgid "Journals"
+msgstr "Journaux"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+#: view:res.partner:oschool.view_oschool_student_form
+#: view:res.partner:oschool.view_responsible_property_form
+#: field:res.partner,last_name:0
+msgid "Last Name"
+msgstr "Nom"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_student_tree
+msgid "Name"
+msgstr "Prénom"
+
+#. module: oschool
+#: field:oschool.academic_year,write_uid:0
+#: field:oschool.assign_bus_to_zone,write_uid:0 field:oschool.bus,write_uid:0
+#: field:oschool.bus_schedule,write_uid:0 field:oschool.classes,write_uid:0
+#: field:oschool.club.generate,write_uid:0
+#: field:oschool.club.update,write_uid:0
+#: field:oschool.config.settings,write_uid:0
+#: field:oschool.driver_hostess_assignment,write_uid:0
+#: field:oschool.extra.add,write_uid:0 field:oschool.groups,write_uid:0
+#: field:oschool.history,write_uid:0 field:oschool.payment,write_uid:0
+#: field:oschool.service.generate,write_uid:0
+#: field:oschool.service.update,write_uid:0 field:oschool.shuttle,write_uid:0
+#: field:oschool.student_canteen_presence,write_uid:0
+#: field:oschool.student_club_presence,write_uid:0
+#: field:oschool.student_restaurant_presence,write_uid:0
+#: field:oschool.student_transport_presence,write_uid:0
+#: field:oschool.study.update,write_uid:0 field:oschool.ticket,write_uid:0
+#: field:oschool.ticket.add,write_uid:0
+#: field:oschool.ticket_presence,write_uid:0
+#: field:oschool.transport_presence_report,write_uid:0
+#: field:oschool.zone,write_uid:0 field:pos.order.line.generate,write_uid:0
+#: field:pos.order.line.update,write_uid:0
+#: field:res.partner.relationship,write_uid:0
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: oschool
+#: field:oschool.academic_year,write_date:0
+#: field:oschool.assign_bus_to_zone,write_date:0
+#: field:oschool.bus,write_date:0 field:oschool.bus_schedule,write_date:0
+#: field:oschool.classes,write_date:0 field:oschool.club.generate,write_date:0
+#: field:oschool.club.update,write_date:0
+#: field:oschool.config.settings,write_date:0
+#: field:oschool.driver_hostess_assignment,write_date:0
+#: field:oschool.extra.add,write_date:0 field:oschool.groups,write_date:0
+#: field:oschool.history,write_date:0 field:oschool.payment,write_date:0
+#: field:oschool.service.generate,write_date:0
+#: field:oschool.service.update,write_date:0
+#: field:oschool.shuttle,write_date:0
+#: field:oschool.student_canteen_presence,write_date:0
+#: field:oschool.student_club_presence,write_date:0
+#: field:oschool.student_restaurant_presence,write_date:0
+#: field:oschool.student_transport_presence,write_date:0
+#: field:oschool.study.update,write_date:0 field:oschool.ticket,write_date:0
+#: field:oschool.ticket.add,write_date:0
+#: field:oschool.ticket_presence,write_date:0
+#: field:oschool.transport_presence_report,write_date:0
+#: field:oschool.zone,write_date:0 field:pos.order.line.generate,write_date:0
+#: field:pos.order.line.update,write_date:0
+#: field:res.partner.relationship,write_date:0
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+msgid "Lastname"
+msgstr "Nom"
+
+#. module: oschool
+#: sql_constraint:oschool.classes:0
+msgid "Le code de la classe doit etre unique"
+msgstr "Le code de la classe doit être unique"
+
+#. module: oschool
+#: field:hr.employee,licence_no:0
+msgid "Licence No"
+msgstr "Numéro de permis de conduire"
+
+#. module: oschool
+#: field:oschool.ticket,line_id:0
+msgid "Line"
+msgstr "Ligne"
+
+#. module: oschool
+#: field:oschool.payment,line_ids:0
+msgid "Lines"
+msgstr "Lignes"
+
+#. module: oschool
+#: model:ir.model,name:oschool.model_pos_order_line
+msgid "Lines of Point of Sale"
+msgstr "Lignes de Points de Vente"
+
+#. module: oschool
+#: report:oschool.transport.presence:0
+msgid "Liste de transport"
+msgstr "Liste de transport"
+
+#. module: oschool
+#: view:pos.category:oschool.product_category_club_form
+msgid "Liste par mois"
+msgstr "Liste par mois"
+
+#. module: oschool
+#: report:oschool.transport.presence:0
+msgid "Lundi"
+msgstr "Lundi"
+
+#. module: oschool
+#: selection:res.partner,gender:0
+msgid "Male"
+msgstr "Masculin"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.transport_diver_management_menu
+msgid "Manage Drivers"
+msgstr "Gestion des chauffeurs"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.transport_hostess_management_menu
+msgid "Manage Hostesses"
+msgstr "Gestion des hôtesses"
+
+#. module: oschool
+#: field:oschool.config.settings,module_multi_company:0
+msgid "Manage multiple companies"
+msgstr "Gérer plusieurs Sociétés"
+
+#. module: oschool
+#: report:oschool.transport.presence:0
+msgid "Mardi"
+msgstr "Mardi"
+
+#. module: oschool
+#: view:oschool.academic_year:oschool.academic_year_form_view
+msgid "Mark as closed"
+msgstr "Marquer fermée"
+
+#. module: oschool
+#: report:oschool.transport.presence:0
+msgid "Mercredi"
+msgstr "Mercredi"
+
+#. module: oschool
+#: field:res.company,min_age:0
+msgid "Min Birthdate"
+msgstr "Age minimum d'inscription en 1ère année"
+
+#. module: oschool
+#: field:oschool.config.settings,registration_min_age_month:0
+msgid "Minimum number of months"
+msgstr "Nombre maximum de mois"
+
+#. module: oschool
+#: field:oschool.config.settings,registration_min_age_year:0
+msgid "Minimum number of years"
+msgstr "Nombre maximum d'années"
+
+#. module: oschool
+#: view:pos.category:oschool.product_category_club_form
+#: view:pos.category:oschool.product_category_route_form
+#: view:pos.category:oschool.product_category_service_form
+#: view:pos.category:oschool.product_category_study_form
+#: field:pos.category,services_ids:0
+msgid "Months"
+msgstr "Mois"
+
+#. module: oschool
+#: view:pos.category:oschool.product_category_route_form
+#: view:pos.category:oschool.product_category_service_form
+#: view:pos.category:oschool.product_category_study_form
+msgid "Months List"
+msgstr "Liste des mois"
+
+#. module: oschool
+#: model:res.partner.relationship,name:oschool.relationship_mother
+msgid "Mother"
+msgstr "Mère"
+
+#. module: oschool
+#: report:oschool.registration:0
+msgid ""
+"NB :En cas d'annulation d'inscription ce montant ne peut pas être remboursé."
+msgstr ""
+"NB. : En cas d'annulation d'inscription ce montant ne peut pas être "
+"remboursé."
+
+#. module: oschool
+#: field:oschool.assign_bus_to_zone,name:0
+#: field:oschool.student_canteen_presence,student_id:0
+#: field:oschool.student_club_presence,student_id:0
+#: field:oschool.student_restaurant_presence,student_id:0
+#: field:oschool.student_transport_presence,student_id:0
+#: field:oschool.transport_presence_report,name:0
+#: field:res.partner.relationship,name:0
+msgid "Name"
+msgstr "Parenté"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_student_form
+#: view:res.partner:oschool.view_responsible_property_form
+msgid "Nationality"
+msgstr "Nationalité"
+
+#. module: oschool
+#: report:oschool.transport.presence:0
+msgid "Nbr voyage"
+msgstr "Nombre voyage"
+
+#. module: oschool
+#: selection:oschool.academic_year,state:0
+#: selection:pos.order.line,state_order:0
+#: selection:report.oschool.registrations,state:0
+msgid "New"
+msgstr "Nouveau"
+
+#. module: oschool
+#: view:pos.session.opening:oschool.oschool_pos_session_opening_form_view
+msgid "New Session"
+msgstr "Nouvelle session"
+
+#. module: oschool
+#: view:oschool.classes:oschool.class_form_view
+msgid "New class form"
+msgstr "Formulaire nouvelle classe"
+
+#. module: oschool
+#: view:oschool.groups:oschool.groups_form_view
+msgid "New group form"
+msgstr "Formulaire nouveau groupe"
+
+#. module: oschool
+#: code:addons/oschool/oschool_registration/oschool_registration.py:166
+#, python-format
+msgid "No allow student registration."
+msgstr "Interdire l'inscription"
+
+#. module: oschool
+#: code:addons/oschool/oschool_responsible/wizard/oschool_responsible_payment.py:44
+#, python-format
+msgid "No matching record found"
+msgstr "Pas de résultat."
+
+#. module: oschool
+#: code:addons/oschool/oschool_student/oschool_student.py:222
+#, python-format
+msgid "No registration journal type"
+msgstr "Journal d'inscription inexistant"
+
+#. module: oschool
+#: report:oschool.transport.presence:0
+msgid "Nom"
+msgstr "Nom"
+
+#. module: oschool
+#: code:addons/oschool/oschool_extra/wizard/oschool_extra.py:41
+#: code:addons/oschool/oschool_extra/wizard/oschool_extra.py:73
+#, python-format
+msgid ""
+"Not enough stock!: \n"
+"\n"
+" You plan to sell %.2f but you only have %.2f available !\n"
+"The real stock is %.2f. (without reservations)"
+msgstr ""
+"Stock non suffisant!: \n"
+"\n"
+" Vous planifier de vendre %.2f mais vous avez seulement %.2f disponible !\n"
+"Le stock réel est %.2f. (sans reservations)"
+
+#. module: oschool
+#: view:oschool.ticket_presence:oschool.oschool_student_ticket_presence_search
+msgid "Not paid Ticket"
+msgstr "Ticket non payé"
+
+#. module: oschool
+#: selection:oschool.student_canteen_presence,status:0
+#: selection:oschool.ticket_presence,ticket_status:0
+msgid "Not paid ticket"
+msgstr "Ticket non payé"
+
+#. module: oschool
+#: view:pos.order:oschool.view_oschool_club_pos_form
+#: view:pos.order:oschool.view_oschool_extra_pos_form
+#: view:pos.order:oschool.view_oschool_registration_pos_form
+#: view:pos.order:oschool.view_oschool_service_pos_form
+#: view:pos.order:oschool.view_oschool_study_pos_form
+#: view:pos.order:oschool.view_oschool_transport_pos_form
+msgid "Notes"
+msgstr "Notes"
+
+#. module: oschool
+#: report:oschool.transport.presence:0
+msgid "Num"
+msgstr "Num"
+
+#. module: oschool
+#: field:oschool.groups,number_of_places:0
+#: field:product.product,event_place_number:0
+msgid "Number of places"
+msgstr "Nombre de places"
+
+#. module: oschool
+#: field:oschool.bus,seats:0
+msgid "Number of seats"
+msgstr "Nombre de places"
+
+#. module: oschool
+#: model:res.groups,name:oschool.oschool_group_responsible_scolarity
+msgid "OSchool Responsable Scolarity"
+msgstr "Responsable scolarité"
+
+#. module: oschool
+#: model:ir.model,name:oschool.model_report_oschool_registrations
+msgid "OSchool registrations Statistics"
+msgstr "Statistiques d'inscriptions"
+
+#. module: oschool
+#: view:pos.order.line:oschool.view_oschool_event_registration_form
+#: view:pos.order.line:oschool.view_oschool_registration_form
+#: view:pos.order.line:oschool.view_student_registration_dialog_form
+msgid "Order"
+msgstr "Paiement"
+
+#. module: oschool
+#: field:pos.order.line,state_order:0
+msgid "Order State"
+msgstr "État du paiement "
+
+#. module: oschool
+#: view:pos.order:oschool.view_oschool_club_pos_form
+#: view:pos.order:oschool.view_oschool_extra_pos_form
+#: view:pos.order:oschool.view_oschool_registration_pos_form
+#: view:pos.order:oschool.view_oschool_service_pos_form
+#: view:pos.order:oschool.view_oschool_study_pos_form
+#: view:pos.order:oschool.view_oschool_transport_pos_form
+msgid "Order lines"
+msgstr "Lignes de commande"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.action_report_oschool_registrations_all
+#: model:ir.ui.menu,name:oschool.menu_report_oschool_registrations_all
+msgid "Orders Analysis"
+msgstr "Analyse des ventes"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.action_report_oschool_registrations_cashier
+#: model:ir.ui.menu,name:oschool.menu_report_oschool_registrations_cashier
+msgid "Orders Analysis cashier"
+msgstr "Orders Analysis cashier"
+
+#. module: oschool
+#: view:oschool.config.settings:oschool.oschool_view_general_configuration
+msgid "Oschool minimum Age Registration"
+msgstr "Âge minimal d'inscription en 1ère année de base"
+
+#. module: oschool
+#: field:oschool.student_canteen_presence,oschool_tiket_id:0
+#: field:oschool.ticket_presence,oschool_tiket_id:0
+msgid "Oschool tiket id"
+msgstr "Tiket id"
+
+#. module: oschool
+#: model:res.partner.relationship,name:oschool.relationship_other
+msgid "Other"
+msgstr "Autre"
+
+#. module: oschool
+#: view:product.product:oschool.view_oschool_extra_form
+msgid "POS Category"
+msgstr "Category PDV"
+
+#. module: oschool
+#: view:report.oschool.registrations:oschool.view_report_oschool_registrations_search
+msgid "POS ordered created during current year"
+msgstr "Commandes créées pendant l'année courante"
+
+#. module: oschool
+#: view:report.oschool.registrations:oschool.view_report_oschool_registrations_search
+msgid "POS ordered created the current day"
+msgstr "Commandes créées pendant la journée courante"
+
+#. module: oschool
+#: selection:product.template,ticket_type:0
+msgid "Pack"
+msgstr "Pack"
+
+#. module: oschool
+#: view:product.product:oschool.view_oschool_extra_form
+msgid "Packaging"
+msgstr "Packaging"
+
+#. module: oschool
+#: selection:pos.order.line,state_order:0
+msgid "Paid"
+msgstr "Payé"
+
+#. module: oschool
+#: view:oschool.ticket_presence:oschool.oschool_student_ticket_presence_search
+msgid "Paid Ticket"
+msgstr "Ticket payé"
+
+#. module: oschool
+#: selection:oschool.student_canteen_presence,status:0
+#: selection:oschool.ticket_presence,ticket_status:0
+msgid "Paid ticket"
+msgstr "Ticket payé"
+
+#. module: oschool
+#: model:product.category,name:oschool.oschool_service_panier_product_category
+msgid "Panier"
+msgstr "Panier"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.school_parents_categories_list_menu
+msgid "Parents categories"
+msgstr "Catégorie de parent"
+
+#. module: oschool
+#: model:ir.model,name:oschool.model_res_partner
+#: field:report.oschool.registrations,partner_id:0
+#: field:report.oschool.registrations,student_id:0
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: oschool
+#: field:oschool.config.settings,pay_septembre_juin_together:0
+msgid "Pay September and June together"
+msgstr "Payer la prémière et la dérnière périodes ensemble"
+
+#. module: oschool
+#: selection:report.oschool.registrations,state:0
+msgid "Payed"
+msgstr "Payé"
+
+#. module: oschool
+#: code:addons/oschool/oschool_responsible/oschool_responsible.py:35
+#: code:addons/oschool/oschool_responsible/wizard/oschool_responsible_payment.py:70
+#: view:oschool.config.settings:oschool.oschool_view_general_configuration
+#: view:oschool.payment:oschool.view_payment_dialog_form
+#: view:pos.order:oschool.view_oschool_club_pos_form
+#: view:pos.order:oschool.view_oschool_extra_pos_form
+#: view:pos.order:oschool.view_oschool_registration_pos_form
+#: view:pos.order:oschool.view_oschool_service_pos_form
+#: view:pos.order:oschool.view_oschool_study_pos_form
+#: view:pos.order:oschool.view_oschool_transport_pos_form
+#: view:res.partner:oschool.view_oschool_responsible_form
+#: view:res.partner:oschool.view_responsible_student_form
+#: view:res.partner:oschool.view_student_form
+#, python-format
+msgid "Payment"
+msgstr "Paiement"
+
+#. module: oschool
+#: code:addons/oschool/oschool_extra/oschool_extra.py:157
+#, python-format
+msgid "Payment Extra"
+msgstr "Payment Extra"
+
+#. module: oschool
+#: code:addons/oschool/oschool_registration/oschool_registration.py:144
+#: view:pos.order:oschool.view_oschool_extra_pos_form
+#, python-format
+msgid "Payment Registration"
+msgstr "Paiement des inscriptions"
+
+#. module: oschool
+#: view:report.oschool.registrations:oschool.view_report_oschool_registrations_cashier_tree
+#: view:report.oschool.registrations:oschool.view_report_oschool_registrations_tree
+msgid "Payment method"
+msgstr "Méthode de paiement"
+
+#. module: oschool
+#: view:pos.order:oschool.view_oschool_club_pos_form
+#: view:pos.order:oschool.view_oschool_extra_pos_form
+#: view:pos.order:oschool.view_oschool_registration_pos_form
+#: view:pos.order:oschool.view_oschool_service_pos_form
+#: view:pos.order:oschool.view_oschool_study_pos_form
+#: view:pos.order:oschool.view_oschool_transport_pos_form
+msgid "Payments"
+msgstr "Paiements"
+
+#. module: oschool
+#: field:oschool.academic_year,period_ids:0
+#: view:oschool.payment:oschool.view_payment_dialog_form
+#: field:oschool.payment,period_id:0
+#: field:oschool.student_canteen_presence,period_id:0
+#: field:oschool.student_club_presence,period_id:0
+#: field:oschool.student_restaurant_presence,period_id:0
+#: field:oschool.student_transport_presence,period_id:0
+#: field:oschool.ticket_presence,period_id:0 field:pos.order.line,period_id:0
+msgid "Period"
+msgstr "Période"
+
+#. module: oschool
+#. openerp-web
+#: code:addons/oschool/static/src/xml/oschool_student_club_presence_quickadd.xml:14
+#: code:addons/oschool/static/src/xml/oschool_student_service_presence_quickadd.xml:15
+#: code:addons/oschool/static/src/xml/oschool_student_transport_presence_quickadd.xml:15
+#, python-format
+msgid "Period :"
+msgstr "Periode :"
+
+#. module: oschool
+#: field:oschool.club.generate,period_ids:0
+#: field:oschool.service.generate,period_ids:0
+#: field:pos.order.line.generate,period_ids:0
+msgid "Periods"
+msgstr "Periodes"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+msgid "Personal Address"
+msgstr "Adresse personnelle"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+#: view:res.partner:oschool.view_oschool_student_form
+#: view:res.partner:oschool.view_responsible_property_form
+msgid "Personal Information"
+msgstr "Information personnelle"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+msgid "Phone 1"
+msgstr "Tél.1"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+msgid "Phone 2"
+msgstr "Tél. 2"
+
+#. module: oschool
+#: code:addons/oschool/oschool_club/oschool_club.py:97
+#: code:addons/oschool/oschool_extra/oschool_extra.py:179
+#: code:addons/oschool/oschool_extra/oschool_extra.py:247
+#: code:addons/oschool/oschool_registration/oschool_registration.py:74
+#: code:addons/oschool/oschool_service/oschool_service.py:99
+#: code:addons/oschool/oschool_study/oschool_study.py:107
+#, python-format
+msgid "Please select another line because it Refunded."
+msgstr "Veuillez selectionner une autre ligne. Cette article a été remboursé."
+
+#. module: oschool
+#: code:addons/oschool/oschool_club/oschool_club.py:65
+#: code:addons/oschool/oschool_service/oschool_service.py:67
+#: code:addons/oschool/oschool_study/oschool_study.py:77
+#: code:addons/oschool/oschool_transportation/oschool_transportation.py:339
+#, python-format
+msgid "Please select another line because it have a order."
+msgstr ""
+"Veuillez selectionner une autre ligne. Cet article est attaché à une "
+"commande."
+
+#. module: oschool
+#: code:addons/oschool/oschool_club/oschool_club.py:91
+#: code:addons/oschool/oschool_extra/oschool_extra.py:175
+#: code:addons/oschool/oschool_extra/oschool_extra.py:243
+#: code:addons/oschool/oschool_registration/oschool_registration.py:68
+#: code:addons/oschool/oschool_service/oschool_service.py:93
+#: code:addons/oschool/oschool_study/oschool_study.py:101
+#: code:addons/oschool/oschool_transportation/oschool_transportation.py:366
+#, python-format
+msgid "Please select another line because it not have a order."
+msgstr ""
+"Veuillez selectionner une autre ligne. Cet article est attaché à une "
+"commande."
+
+#. module: oschool
+#: code:addons/oschool/oschool_club/oschool_club.py:95
+#: code:addons/oschool/oschool_extra/oschool_extra.py:177
+#: code:addons/oschool/oschool_extra/oschool_extra.py:245
+#: code:addons/oschool/oschool_registration/oschool_registration.py:72
+#: code:addons/oschool/oschool_service/oschool_service.py:97
+#: code:addons/oschool/oschool_study/oschool_study.py:105
+#: code:addons/oschool/oschool_transportation/oschool_transportation.py:370
+#, python-format
+msgid "Please select another line because it not payed."
+msgstr "Veuillez selectionner une autre ligne. Cet article n'est pas payé."
+
+#. module: oschool
+#: code:addons/oschool/oschool_club/oschool_club.py:93
+#: code:addons/oschool/oschool_service/oschool_service.py:95
+#: code:addons/oschool/oschool_study/oschool_study.py:103
+#: code:addons/oschool/oschool_transportation/oschool_transportation.py:368
+#, python-format
+msgid "Please select another line because it not subscriber."
+msgstr ""
+"Veuillez selectionner une autre ligne. L'élève n'est pas abonné à ce service."
+
+#. module: oschool
+#: code:addons/oschool/oschool_club/oschool_club.py:67
+#: code:addons/oschool/oschool_service/oschool_service.py:69
+#: code:addons/oschool/oschool_study/oschool_study.py:79
+#: code:addons/oschool/oschool_transportation/oschool_transportation.py:341
+#, python-format
+msgid "Please select another line because period is closed."
+msgstr "Veuillez selectionner une autre ligne. La periode associée est fermée."
+
+#. module: oschool
+#: code:addons/oschool/oschool_registration/oschool_registration.py:70
+#, python-format
+msgid "Please select another registration because it not draft academic year."
+msgstr "Please select another registration because it not draft academic year."
+
+#. module: oschool
+#: view:oschool.student_transport_presence:oschool.oschool_transport_presence_status_form_view
+msgid "PoS Session Opening"
+msgstr "Ouverture session PDV"
+
+#. module: oschool
+#: model:ir.model,name:oschool.model_pos_order
+msgid "Point of Sale"
+msgstr "Point de Vente"
+
+#. module: oschool
+#: view:report.oschool.registrations:oschool.view_report_oschool_registrations_graph
+#: view:report.oschool.registrations:oschool.view_report_oschool_registrations_search
+msgid "Point of Sale Analysis"
+msgstr "Analyse des points de vente."
+
+#. module: oschool
+#: view:pos.config:oschool.view_oschool_pos_config_search
+msgid "Point of Sale Config"
+msgstr "Configuration du point de vente"
+
+#. module: oschool
+#: view:pos.config:oschool.view_oschool_pos_config_form
+#: view:pos.config:oschool.view_oschool_pos_config_tree
+msgid "Point of Sale Configuration"
+msgstr "Paramétrage du point de vente"
+
+#. module: oschool
+#: model:ir.model,name:oschool.model_pos_make_payment
+msgid "Point of Sale Payment"
+msgstr "Paiement du ticket"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.action_oschool_pos_config_pos
+#: model:ir.ui.menu,name:oschool.menu_oschool_pos_config_pos
+msgid "Point of Sales"
+msgstr "Point de vente"
+
+#. module: oschool
+#: field:account.treasury,pos_order:0
+msgid "Pos order"
+msgstr "Pos order"
+
+#. module: oschool
+#: selection:pos.order.line,state_order:0
+msgid "Posted"
+msgstr "Posted"
+
+#. module: oschool
+#: field:oschool.student_canteen_presence,status:0
+#: field:oschool.student_club_presence,status:0
+#: field:oschool.student_restaurant_presence,status:0
+#: field:oschool.student_transport_presence,bus_schedule:0
+msgid "Presence"
+msgstr "Presence"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.oschool_presence_status_management_menu
+msgid "Presence status"
+msgstr "Suivi Presence"
+
+#. module: oschool
+#: selection:oschool.student_canteen_presence,status:0
+#: selection:oschool.student_club_presence,status:0
+#: selection:oschool.student_restaurant_presence,status:0
+msgid "Present"
+msgstr "Present"
+
+#. module: oschool
+#: view:pos.category:oschool.product_category_inscription_form
+#: field:pos.category,price:0 field:pos.order.line,registration_price:0
+#: view:report.oschool.registrations:oschool.view_report_oschool_registrations_cashier_tree
+#: view:report.oschool.registrations:oschool.view_report_oschool_registrations_tree
+msgid "Price"
+msgstr "Prix"
+
+#. module: oschool
+#: model:ir.model,name:oschool.model_product_pricelist_item
+msgid "Pricelist item"
+msgstr "Élément de la liste de prix"
+
+#. module: oschool
+#: view:product.product:oschool.view_oschool_extra_form
+msgid "Procurements"
+msgstr "Procurements"
+
+#. module: oschool
+#: model:ir.model,name:oschool.model_product_product
+#: field:oschool.extra.add,product_id:0
+#: field:oschool.student_canteen_presence,product_id:0
+#: field:oschool.student_club_presence,product_id:0
+#: field:oschool.student_restaurant_presence,product_id:0
+#: field:oschool.student_transport_presence,product_id:0
+#: field:oschool.ticket.add,product_id:0
+#: view:product.product:oschool.view_oschool_extra_form
+#: field:report.oschool.registrations,product_id:0
+msgid "Product"
+msgstr "Article"
+
+#. module: oschool
+#: field:report.oschool.registrations,product_categ_id:0
+msgid "Product Category"
+msgstr "Product Category"
+
+#. module: oschool
+#: view:product.product:oschool.view_oschool_extra_form
+msgid "Product Name"
+msgstr "Product Name"
+
+#. module: oschool
+#: field:report.oschool.registrations,product_qty:0
+msgid "Product Quantity"
+msgstr "Product Quantity"
+
+#. module: oschool
+#: model:ir.model,name:oschool.model_product_template
+msgid "Product Template"
+msgstr "Modèle d'article"
+
+#. module: oschool
+#: view:pos.order:oschool.view_oschool_club_pos_form
+#: view:pos.order:oschool.view_oschool_extra_pos_form
+#: view:pos.order:oschool.view_oschool_registration_pos_form
+#: view:pos.order:oschool.view_oschool_service_pos_form
+#: view:pos.order:oschool.view_oschool_study_pos_form
+#: view:pos.order:oschool.view_oschool_transport_pos_form
+msgid "Products"
+msgstr "Articles"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+msgid "Profession"
+msgstr "Profession"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+msgid "Professional Address"
+msgstr "Adresse Professionnelle"
+
+#. module: oschool
+#: model:ir.model,name:oschool.model_pos_category
+msgid "Public Category"
+msgstr "Public Category"
+
+#. module: oschool
+#: view:product.product:oschool.view_oschool_extra_form
+msgid "Purchase"
+msgstr "Achat"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+msgid "Put an internal note..."
+msgstr "Saisir une note interne..."
+
+#. module: oschool
+#: field:oschool.extra.add,qty:0 field:oschool.ticket.add,qty:0
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: oschool
+#: view:pos.order:oschool.view_oschool_club_pos_form
+#: view:pos.order:oschool.view_oschool_extra_pos_form
+#: view:pos.order:oschool.view_oschool_registration_pos_form
+#: view:pos.order:oschool.view_oschool_service_pos_form
+#: view:pos.order:oschool.view_oschool_study_pos_form
+#: view:pos.order:oschool.view_oschool_transport_pos_form
+msgid "Re-Print"
+msgstr "Réimprimer"
+
+#. module: oschool
+#: field:pos.make.payment,check_reception_date:0
+msgid "Reception Date"
+msgstr "Date de reception"
+
+#. module: oschool
+#: field:oschool.ticket,ref:0 field:oschool.ticket.add,ref:0
+msgid "Ref"
+msgstr "Ref"
+
+#. module: oschool
+#: sql_constraint:res.partner:0
+msgid "Ref already exists"
+msgstr "Un résponsable avec ce numéro de carte d'identité existe déjà."
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_student_club_form
+#: view:res.partner:oschool.view_oschool_responsible_student_event_registration_form
+#: view:res.partner:oschool.view_oschool_responsible_student_registration_form
+#: view:res.partner:oschool.view_oschool_responsible_student_service_form
+#: view:res.partner:oschool.view_oschool_responsible_student_study_form
+#: view:res.partner:oschool.view_oschool_responsible_student_transportation_form
+#: view:res.partner:oschool.view_oschool_student_club_form
+#: view:res.partner:oschool.view_oschool_student_event_registration_form
+#: view:res.partner:oschool.view_oschool_student_registration_form
+#: view:res.partner:oschool.view_oschool_student_service_form
+#: view:res.partner:oschool.view_oschool_student_study_form
+#: view:res.partner:oschool.view_oschool_student_transportation_form
+#: view:res.partner:oschool.view_responsible_student_form
+#: view:res.partner:oschool.view_student_form
+msgid "Refund"
+msgstr "Rembourser"
+
+#. module: oschool
+#: code:addons/oschool/oschool_club/oschool_club.py:128
+#, python-format
+msgid "Refund Club"
+msgstr "Rembourser abonnement club"
+
+#. module: oschool
+#: code:addons/oschool/oschool_extra/oschool_extra.py:210
+#, python-format
+msgid "Refund Extra"
+msgstr "Rembourser abonnement extra"
+
+#. module: oschool
+#: code:addons/oschool/oschool_registration/oschool_registration.py:103
+#, python-format
+msgid "Refund Registration"
+msgstr "Refund Registration"
+
+#. module: oschool
+#: code:addons/oschool/oschool_service/oschool_service.py:130
+#, python-format
+msgid "Refund Service"
+msgstr "Rembourser abonnement service"
+
+#. module: oschool
+#: code:addons/oschool/oschool_study/oschool_study.py:138
+#, python-format
+msgid "Refund Study"
+msgstr "Rembourser abonnement étude"
+
+#. module: oschool
+#: code:addons/oschool/oschool_extra/oschool_extra.py:278
+#, python-format
+msgid "Refund Ticket"
+msgstr "Rembourser ticket"
+
+#. module: oschool
+#: code:addons/oschool/oschool_transportation/oschool_transportation.py:401
+#, python-format
+msgid "Refund Transport"
+msgstr "Rembourser abonnement transport"
+
+#. module: oschool
+#: field:pos.order.line,refunded:0
+msgid "Refunded"
+msgstr "Remboursé"
+
+#. module: oschool
+#: field:account.journal,registration:0
+#: model:ir.actions.act_window,name:oschool.act_oschool_registration_view
+#: model:ir.ui.menu,name:oschool.menu_oschool_registration
+#: selection:pos.category,school_product_type:0
+#: view:pos.order.line:oschool.view_oschool_event_registration_form
+#: view:pos.order.line:oschool.view_oschool_event_registration_search
+#: view:pos.order.line:oschool.view_oschool_registration_form
+#: view:pos.order.line:oschool.view_oschool_registration_search
+#: view:pos.order.line:oschool.view_oschool_registration_tree
+#: view:pos.order.line:oschool.view_student_registration_dialog_form
+#: selection:product.template,school_product_type:0
+#: view:res.partner:oschool.view_oschool_responsible_student_registration_form
+#: view:res.partner:oschool.view_oschool_student_registration_form
+msgid "Registration"
+msgstr "Inscription"
+
+#. module: oschool
+#: field:res.partner,event_registration_ids:0
+#: field:res.partner,registration_ids:0
+msgid "Registration List"
+msgstr "Liste des inscriptions"
+
+#. module: oschool
+#: model:ir.actions.report.xml,name:oschool.report_oschool_registration
+msgid "Registration Receipt"
+msgstr "Reçu d'inscription"
+
+#. module: oschool
+#: code:addons/oschool/oschool_registration/oschool_registration.py:37
+#, python-format
+msgid "Registration Student"
+msgstr "Inscription de l'élève"
+
+#. module: oschool
+#: view:pos.order.line:oschool.view_oschool_registration_form
+#: view:pos.order.line:oschool.view_oschool_registration_tree
+#: view:pos.order.line:oschool.view_student_registration_dialog_form
+msgid "Registration Type"
+msgstr "Type d'inscription"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.inscription_list_management_menu
+msgid "Registrations"
+msgstr "Inscriptions"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.res_partner_relationship_action
+#: model:ir.ui.menu,name:oschool.relationship_management_menu
+#: view:res.partner:oschool.view_oschool_student_form
+#: view:res.partner:oschool.view_responsible_property_form
+#: field:res.partner,relationship_id:0
+#: view:res.partner.relationship:oschool.res_partner_relationship_form
+#: view:res.partner.relationship:oschool.res_partner_relationship_tree
+msgid "Relationship"
+msgstr "Parenté"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_student_form
+#: view:res.partner:oschool.view_responsible_property_form
+msgid "Relationship with responsible"
+msgstr "Parenté avec le responsable"
+
+#. module: oschool
+#: field:pos.order.line,remaining_places:0
+msgid "Remaining places"
+msgstr "Nombre de places restantes"
+
+#. module: oschool
+#: view:pos.order.line:oschool.view_oschool_registration_form
+#: view:pos.order.line:oschool.view_student_registration_dialog_form
+msgid "Remaining places:"
+msgstr "Nombre de places restantes"
+
+#. module: oschool
+#: field:oschool.config.settings,font:0
+msgid "Report Font"
+msgstr "Report Font"
+
+#. module: oschool
+#: view:oschool.academic_year:oschool.academic_year_form_view
+msgid "Reset to current"
+msgstr "Rétablir l'état \"En cours\""
+
+#. module: oschool
+#: view:oschool.academic_year:oschool.academic_year_form_view
+msgid "Reset to new"
+msgstr "Rétablir l'état \"Nouveau\""
+
+#. module: oschool
+#: view:oschool.driver_hostess_assignment:oschool.view_oschool_driver_hostess_assignment_search
+#: field:oschool.payment,responsible_id:0
+#: view:pos.order.line:oschool.view_oschool_event_registration_search
+#: view:pos.order.line:oschool.view_oschool_registration_search
+#: field:pos.order.line,parent_id:0
+#: view:res.partner:oschool.view_oschool_responsible_form
+#: view:res.partner:oschool.view_oschool_responsible_search
+#: view:res.partner:oschool.view_oschool_responsible_tree
+#: view:res.partner:oschool.view_oschool_student_form
+#: view:res.partner:oschool.view_oschool_student_search
+#: view:res.partner:oschool.view_oschool_student_tree
+#: view:res.partner:oschool.view_responsible_property_form
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+msgid "Responsible 1 Email"
+msgstr "E-mail Responsable 1"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+#: view:res.partner:oschool.view_oschool_responsible_search
+#: view:res.partner:oschool.view_oschool_responsible_tree
+msgid "Responsible 1 Tel. 1"
+msgstr "Tél. 1 Responsable 1"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+#: view:res.partner:oschool.view_oschool_responsible_search
+#: view:res.partner:oschool.view_oschool_responsible_tree
+msgid "Responsible 1 Tel. 2"
+msgstr "Tél. 2 Responsable 1"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+msgid "Responsible 1 profession"
+msgstr "Profession Responsable 1"
+
+#. module: oschool
+#: field:res.partner,email2:0
+msgid "Responsible 2 Email"
+msgstr "E-mail Responsable 2"
+
+#. module: oschool
+#: field:res.partner,name2:0
+msgid "Responsible 2 Firstname"
+msgstr "Prénom Responsable 2"
+
+#. module: oschool
+#: field:res.partner,function2:0
+msgid "Responsible 2 Job Position"
+msgstr "Profession Responsable 2"
+
+#. module: oschool
+#: field:res.partner,last_name2:0
+msgid "Responsible 2 Lastname 2"
+msgstr "Nom Responsable 2"
+
+#. module: oschool
+#: field:res.partner,phone2:0
+msgid "Responsible 2 Tel. 1"
+msgstr "Tél. 1 Responsable 2"
+
+#. module: oschool
+#: field:res.partner,mobile2:0
+msgid "Responsible 2 Tel. 2"
+msgstr "Tél. 2 Responsable 2"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_tree
+msgid "Responsible Identifier"
+msgstr "Identificateur Responsable"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.act_open_oschool_responsible_view
+#: model:ir.ui.menu,name:oschool.menu_oschool_partner_responsible
+msgid "Responsibles"
+msgstr "Responsables"
+
+#. module: oschool
+#: model:product.category,name:oschool.oschool_service_restaurant_product_category
+msgid "Restaurant"
+msgstr "Restaurant"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.action_oschool_restaurant_presence_status
+msgid "Restaurant Presence"
+msgstr "Presence Restaurant"
+
+#. module: oschool
+#: field:product.template,ticket:0
+msgid "Restaurant Ticket"
+msgstr "Ticket Restaurant"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.oschool_restaurant_presence_status_menu
+msgid "Restaurant presence status"
+msgstr "Status presence restaurant"
+
+#. module: oschool
+#: view:pos.session.opening:oschool.oschool_pos_session_opening_form_view
+msgid "Resume Session"
+msgstr "Reprendre la session"
+
+#. module: oschool
+#: field:oschool.student_transport_presence,route_id:0
+#: field:pos.order.line.generate,transport_id:0
+#: field:pos.order.line.update,transport_id:0
+msgid "Route"
+msgstr "Route"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.routes_list_management_menu
+#: field:res.partner,route_ids:0
+msgid "Routes"
+msgstr "Routes"
+
+#. module: oschool
+#: code:addons/oschool/oschool.py:171
+#, python-format
+msgid "Rénscription"
+msgstr "Réinscription"
+
+#. module: oschool
+#: view:product.product:oschool.view_oschool_extra_form
+msgid "Sale Conditions"
+msgstr "Conditions de vente"
+
+#. module: oschool
+#: view:product.product:oschool.view_oschool_extra_form
+msgid "Sales"
+msgstr "Ventes"
+
+#. module: oschool
+#: field:report.oschool.registrations,user_id:0
+msgid "Salesperson"
+msgstr "Vendeur"
+
+#. module: oschool
+#: field:oschool.driver_hostess_assignment,bus_schedule:0
+msgid "Schedule"
+msgstr "Horaire"
+
+#. module: oschool
+#: field:pos.order.line,bus_schedules:0
+#: field:pos.order.line.generate,bus_schedule_generate:0
+#: field:pos.order.line.update,bus_schedule_wizard:0
+msgid "Schedules"
+msgstr "Horaires"
+
+#. module: oschool
+#: view:res.company:oschool.view_company_min_age_form
+msgid "School"
+msgstr "École"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_student_form
+#: view:res.partner:oschool.view_responsible_property_form
+msgid "School Information"
+msgstr "Information scolaire"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.main_oschool_menu
+msgid "School Management"
+msgstr "Gestion de l'école"
+
+#. module: oschool
+#: field:pos.category,school_product_type:0
+#: field:product.template,school_product_type:0
+msgid "School product type"
+msgstr "School product type"
+
+#. module: oschool
+#: code:addons/oschool/oschool_student/oschool_student.py:244
+#, python-format
+msgid "School year with the current state already exist"
+msgstr "Une année scolaire avec l'état \"En cours\" existe déjà."
+
+#. module: oschool
+#: view:pos.category:oschool.product_category_study_search
+msgid "Search Study"
+msgstr "Rechercher des études"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.security_menu
+msgid "Security"
+msgstr "Sécurité"
+
+#. module: oschool
+#: field:oschool.bus,name:0
+msgid "Serial"
+msgstr "Numéro de série"
+
+#. module: oschool
+#: field:oschool.service.generate,service_id:0
+#: model:pos.category,name:oschool.oschool_service_pos_category
+#: selection:pos.category,school_product_type:0
+#: model:product.category,name:oschool.oschool_service_product_category
+#: selection:product.template,school_product_type:0
+#: view:res.partner:oschool.view_oschool_responsible_student_service_form
+#: view:res.partner:oschool.view_oschool_student_service_form
+msgid "Service"
+msgstr "Service"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.action_category_service_list
+#: model:ir.ui.menu,name:oschool.services_list_management_menu
+#: view:pos.category:oschool.product_category_service_search
+#: view:pos.category:oschool.product_category_service_tree
+#: field:res.partner,service_ids:0
+msgid "Services"
+msgstr "Services"
+
+#. module: oschool
+#: code:addons/oschool/oschool.py:331
+#, python-format
+msgid "Session"
+msgstr "Session"
+
+#. module: oschool
+#: help:oschool.config.settings,font:0
+msgid ""
+"Set the font into the report header, it will be used as default font in the "
+"RML reports of the user company"
+msgstr ""
+"Set the font into the report header, it will be used as default font in the "
+"RML reports of the user company"
+
+#. module: oschool
+#: view:pos.config:oschool.view_oschool_pos_config_form
+msgid "Set to Active"
+msgstr "Activer"
+
+#. module: oschool
+#: view:pos.config:oschool.view_oschool_pos_config_form
+msgid "Set to Deprecated"
+msgstr "Marquer comme obsolète"
+
+#. module: oschool
+#: view:pos.config:oschool.view_oschool_pos_config_form
+msgid "Set to Inactive"
+msgstr "Rendre inactif"
+
+#. module: oschool
+#: help:oschool.config.settings,module_share:0
+msgid "Share or embbed any screen of Odoo."
+msgstr "Share or embbed any screen of Odoo."
+
+#. module: oschool
+#: field:oschool.shuttle,name:0 field:oschool.shuttle,number_shuttle:0
+#: field:oschool.student_transport_presence,shuttle:0
+#: field:pos.category,shuttle:0
+msgid "Shuttle"
+msgstr "Type de navette"
+
+#. module: oschool
+#: selection:product.template,ticket_type:0
+msgid "Single"
+msgstr "Single"
+
+#. module: oschool
+#: field:oschool.academic_year,date_start:0
+#: field:oschool.assign_bus_to_zone,start_date:0
+#: field:oschool.history,date_start:0
+#: field:oschool.transport_presence_report,start_date:0
+#: field:pos.category,date_start:0 field:product.product,event_date_start:0
+msgid "Start Date"
+msgstr "Date début"
+
+#. module: oschool
+#: sql_constraint:oschool.academic_year:0 sql_constraint:pos.category:0
+msgid "Start Date Must be Below End Date"
+msgstr "La date de fin d'inscription doit être supérieure à la date de début"
+
+#. module: oschool
+#: sql_constraint:pos.category:0
+msgid "Start Date Registration Must be Below End Date registration"
+msgstr "La date de fin d'inscription doit être supérieure à la date de début"
+
+#. module: oschool
+#: field:pos.category,start_date_registration:0
+#: field:product.product,event_start_date_registration:0
+msgid "Start Registration Date"
+msgstr "Date début d'inscription"
+
+#. module: oschool
+#: field:pos.order.line,date_start:0
+msgid "Start of Period"
+msgstr "Début de période"
+
+#. module: oschool
+#: field:oschool.academic_year,state:0
+#: view:res.partner:oschool.view_oschool_responsible_form
+#: view:res.partner:oschool.view_oschool_responsible_search
+#: view:res.partner:oschool.view_oschool_student_form
+#: view:res.partner:oschool.view_responsible_property_form
+msgid "State"
+msgstr "État"
+
+#. module: oschool
+#: field:res.partner,state_id2:0
+msgid "State 2"
+msgstr "State 2"
+
+#. module: oschool
+#: field:pos.order.line,state_academic_year:0
+msgid "State Academic year"
+msgstr "État de l'année scolaire"
+
+#. module: oschool
+#: field:report.oschool.registrations,statement_id:0
+msgid "Statement"
+msgstr "Statement"
+
+#. module: oschool
+#: field:account.treasury,statement_id:0
+msgid "Statement id"
+msgstr "Statement id"
+
+#. module: oschool
+#: view:pos.order:oschool.view_oschool_club_pos_form
+#: view:pos.order:oschool.view_oschool_extra_pos_form
+#: view:pos.order:oschool.view_oschool_registration_pos_form
+#: view:pos.order:oschool.view_oschool_service_pos_form
+#: view:pos.order:oschool.view_oschool_study_pos_form
+#: view:pos.order:oschool.view_oschool_transport_pos_form
+msgid "Statement lines"
+msgstr "Mouvements de caisse"
+
+#. module: oschool
+#: view:product.product:oschool.view_oschool_extra_form
+#: field:report.oschool.registrations,state:0
+msgid "Status"
+msgstr "État"
+
+#. module: oschool
+#: view:product.product:oschool.view_oschool_extra_form
+msgid "Stock and Expected Variations"
+msgstr "Stock and Expected Variations"
+
+#. module: oschool
+#: sql_constraint:pos.category:0
+msgid "Stop Date Registration Must be Below End Date"
+msgstr "La date de fin d'inscription doit être supérieure à la date de début"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+#: view:res.partner:oschool.view_oschool_student_form
+#: view:res.partner:oschool.view_responsible_property_form
+msgid "Street..."
+msgstr "Rue..."
+
+#. module: oschool
+#: field:oschool.history,student_id:0 field:oschool.payment,student_id:0
+#: field:oschool.service.generate,student_id:0
+#: view:oschool.student_transport_presence:oschool.oschool_student_transport_presence_search
+#: field:oschool.ticket_presence,student_id:0 field:pos.order,student_id:0
+#: view:pos.order.line:oschool.view_oschool_event_registration_search
+#: view:pos.order.line:oschool.view_oschool_registration_search
+#: field:pos.order.line,student_id:0
+#: view:report.oschool.registrations:oschool.view_report_oschool_registrations_cashier_tree
+#: view:report.oschool.registrations:oschool.view_report_oschool_registrations_tree
+#: view:res.partner:oschool.view_oschool_student_tree
+#: view:res.partner:oschool.view_responsible_property_form
+msgid "Student"
+msgstr "Élève"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_student_tree
+msgid "Student Reference"
+msgstr "Identificateur de l'élève"
+
+#. module: oschool
+#: sql_constraint:pos.order.line:0
+msgid "Student already registered for this event"
+msgstr "L'élève est déjà inscrit à cet évènement"
+
+#. module: oschool
+#: code:addons/oschool/oschool_registration/oschool_registration.py:172
+#, python-format
+msgid "Student already registered."
+msgstr "L'élève est déjà inscrit"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.act_open_oschool_student_view
+#: model:ir.ui.menu,name:oschool.menu_oschool_partner_student
+msgid "Students"
+msgstr "Élèves"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.students_management_menu
+msgid "Students Management"
+msgstr "Gestion des élèves"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.study_list_management_menu
+#: view:oschool.club.update:oschool.view_oschool_club_wizard
+#: view:oschool.service.update:oschool.view_oschool_service_wizard
+#: view:oschool.study.update:oschool.view_oschool_study_wizard
+#: model:pos.category,name:oschool.oschool_study_pos_category
+#: selection:pos.category,school_product_type:0
+#: model:product.category,name:oschool.oschool_study_product_category
+#: selection:product.template,school_product_type:0
+#: view:res.partner:oschool.view_oschool_responsible_student_study_form
+#: view:res.partner:oschool.view_oschool_student_study_form
+msgid "Study"
+msgstr "Études"
+
+#. module: oschool
+#: field:res.partner,study_ids:0
+msgid "Study List"
+msgstr "Liste des études"
+
+#. module: oschool
+#: code:addons/oschool/oschool_study/oschool_study.py:43
+#, python-format
+msgid "Study already exist for %s."
+msgstr " La période d'étude existe déjà pour %s."
+
+#. module: oschool
+#: field:oschool.club.update,subscriber:0
+#: field:oschool.service.update,subscriber:0
+#: field:oschool.study.update,subscriber:0 field:pos.order.line,subscriber:0
+#: field:pos.order.line.update,subscriber:0
+msgid "Subscriber"
+msgstr "Abonné"
+
+#. module: oschool
+#: field:product.template,subscription_month:0
+msgid "Subscription Month"
+msgstr "Mois d'inscription"
+
+#. module: oschool
+#: view:product.product:oschool.view_oschool_extra_form
+msgid "Suppliers"
+msgstr "Fournisseurs"
+
+#. module: oschool
+#: field:oschool.config.settings,auth_signup_template_user_id:0
+msgid "Template user for new users created through signup"
+msgstr "Template user for new users created through signup"
+
+#. module: oschool
+#: code:addons/oschool/oschool_service/wizard/oschool_service.py:74
+#: code:addons/oschool/oschool_service/wizard/oschool_service.py:76
+#, python-format
+msgid "The %s and %s services can not be set in %s."
+msgstr "The %s and %s services can not be set in %s."
+
+#. module: oschool
+#: code:addons/oschool/oschool_club/wizard/oschool_club.py:68
+#, python-format
+msgid "The %s club already exist in %s."
+msgstr "Le club %s existe déjà dans %s."
+
+#. module: oschool
+#: code:addons/oschool/oschool_service/wizard/oschool_service.py:72
+#, python-format
+msgid "The %s service already exist in %s."
+msgstr "Le service %s existe déjà dans %s."
+
+#. module: oschool
+#: sql_constraint:oschool.driver_hostess_assignment:0
+msgid "The bus can not be assigned more than once for the same period"
+msgstr ""
+"Le bus ne peut pas être assigné plus qu'une fois pendant la même période"
+
+#. module: oschool
+#: sql_constraint:oschool.academic_year:0
+msgid "The code must be unique"
+msgstr "Le code de l'année scolaire doit être unique"
+
+#. module: oschool
+#: sql_constraint:oschool.driver_hostess_assignment:0
+msgid "The driver can not have multiple assignments at the same time"
+msgstr "Le chauffeur ne peux pas avoir plus d'une affectation en même temps"
+
+#. module: oschool
+#: sql_constraint:oschool.driver_hostess_assignment:0
+msgid "The hostess can not have multiple assignments at the same time"
+msgstr "Une hôtesse ne peux pas avoir plus d'une affectation en même temps."
+
+#. module: oschool
+#: code:addons/oschool/oschool_transportation/wizard/oschool_transport.py:43
+#: code:addons/oschool/oschool_transportation/wizard/oschool_transport.py:82
+#, python-format
+msgid "The number of shuttle must be equal to %s."
+msgstr "Le nombre de navettes doit être égal à %s."
+
+#. module: oschool
+#: sql_constraint:product.template:0
+msgid "The record must be unique by year"
+msgstr "Le produit doit être unique pour une année scolaire"
+
+#. module: oschool
+#: sql_constraint:product.template:0
+msgid "The registration must be unique by year"
+msgstr "L'inscription doit être unique par année scolaire"
+
+#. module: oschool
+#: sql_constraint:oschool.bus:0
+msgid "The serial must be unique"
+msgstr "Le numéro de série du bus doit être unique"
+
+#. module: oschool
+#: code:addons/oschool/oschool.py:359
+#, python-format
+msgid "The type of the journal for your payment method should be bank or cash "
+msgstr ""
+"Le type de journal pour votre méthode de paiement doit être Banque ou Cash"
+
+#. module: oschool
+#: sql_constraint:oschool.zone:0
+msgid "The zone must be unique"
+msgstr "Le code de la zone doit être unique"
+
+#. module: oschool
+#: code:addons/oschool/oschool_registration/oschool_registration.py:208
+#: code:addons/oschool/oschool_student/oschool_student.py:190
+#, python-format
+msgid "There is no period defined for this date: %s."
+msgstr "Il n'y a pas de période définie pour la date: %s."
+
+#. module: oschool
+#: code:addons/oschool/oschool_treasury/oschool_treasury.py:99
+#, python-format
+msgid ""
+"There is no receivable account defined to make payment for the partner: \"%s"
+"\" (id:%d)."
+msgstr ""
+"There is no receivable account defined to make payment for the partner: \"%s"
+"\" (id:%d)."
+
+#. module: oschool
+#: code:addons/oschool/oschool_treasury/oschool_treasury.py:97
+#, python-format
+msgid "There is no receivable account defined to make payment."
+msgstr "There is no receivable account defined to make payment."
+
+#. module: oschool
+#: code:addons/oschool/oschool_club/oschool_club.py:38
+#: code:addons/oschool/oschool_extra/oschool_extra.py:79
+#: code:addons/oschool/oschool_extra/oschool_extra.py:107
+#: code:addons/oschool/oschool_service/oschool_service.py:40
+#: code:addons/oschool/oschool_study/oschool_study.py:41
+#: code:addons/oschool/oschool_transportation/oschool_transportation.py:286
+#, python-format
+msgid "There is no registration paid for this academic year: %s."
+msgstr "Il n'y a pas d'inscription payée pour l'année scolaire: %s."
+
+#. module: oschool
+#: code:addons/oschool/oschool_study/oschool_study.py:37
+#, python-format
+msgid "There is no study defined for this academic year: %s."
+msgstr "Il n'y a pas d'études définies pour l'année scolaire: %s."
+
+#. module: oschool
+#: help:oschool.config.settings,auth_signup_reset_password:0
+msgid "This allows users to trigger a password reset from the Login page."
+msgstr "This allows users to trigger a password reset from the Login page."
+
+#. module: oschool
+#: help:res.partner,image2:0
+msgid ""
+"This field holds the image used as avatar for this contact, limited to "
+"1024x1024px"
+msgstr ""
+"This field holds the image used as avatar for this contact, limited to "
+"1024x1024px"
+
+#. module: oschool
+#: help:oschool.config.settings,module_google_calendar:0
+msgid "This installs the module google_calendar."
+msgstr "This installs the module google_calendar."
+
+#. module: oschool
+#: help:oschool.config.settings,module_google_drive:0
+msgid "This installs the module google_docs."
+msgstr "This installs the module google_docs."
+
+#. module: oschool
+#: view:product.product:oschool.view_oschool_extra_form
+msgid "This note will be displayed on requests for quotation..."
+msgstr "This note will be displayed on requests for quotation..."
+
+#. module: oschool
+#: field:oschool.student_canteen_presence,canteen_tickets:0
+#: field:oschool.ticket_presence,tickets:0
+#: view:res.partner:oschool.view_responsible_student_form
+#: view:res.partner:oschool.view_student_form
+msgid "Ticket"
+msgstr "Ticket"
+
+#. module: oschool
+#: field:res.partner,ticket_ids:0
+msgid "Ticket list"
+msgstr "Liste des tickets"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.oschool_ticket_presence_status_menu
+msgid "Ticket presence status"
+msgstr "Suivi Ticket"
+
+#. module: oschool
+#: field:product.template,ticket_type:0
+msgid "Ticket type"
+msgstr "Type Ticket"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+msgid "Title"
+msgstr "Titre"
+
+#. module: oschool
+#: field:oschool.zone,name:0
+msgid "Titre"
+msgstr "Titre"
+
+#. module: oschool
+#: view:report.oschool.registrations:oschool.view_report_oschool_registrations_search
+msgid "To day"
+msgstr "Aujourd'hui"
+
+#. module: oschool
+#: code:addons/oschool/oschool_club/oschool_club.py:108
+#: code:addons/oschool/oschool_extra/oschool_extra.py:190
+#: code:addons/oschool/oschool_extra/oschool_extra.py:258
+#: code:addons/oschool/oschool_registration/oschool_registration.py:85
+#: code:addons/oschool/oschool_service/oschool_service.py:110
+#: code:addons/oschool/oschool_study/oschool_study.py:118
+#: code:addons/oschool/oschool_transportation/oschool_transportation.py:381
+#, python-format
+msgid ""
+"To return product(s), you need to open a session that will be used to "
+"register the refund."
+msgstr ""
+"Pour retourner le service, vous avez besoin d'ouvrir une session qui sera "
+"utilisée pour effectuer le remboursement."
+
+#. module: oschool
+#: view:oschool.payment:oschool.view_payment_dialog_form
+msgid "Total"
+msgstr "Total"
+
+#. module: oschool
+#: field:report.oschool.registrations,price_total:0
+msgid "Total Price"
+msgstr "Prix Total"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.tracking_management_menu
+msgid "Tracking Oschool"
+msgstr "Suivi Oschool"
+
+
+#. module: oschool
+#: view:oschool.club.generate:oschool.view_oschool_club_generate
+#: view:oschool.service.generate:oschool.view_oschool_service_generate
+#: model:pos.category,name:oschool.oschool_transport_pos_category
+#: selection:pos.category,school_product_type:0
+#: view:pos.order.line.generate:oschool.view_oschool_pos_line_generate
+#: view:pos.order.line.update:oschool.view_oschool_pos_line_wizard
+#: model:product.category,name:oschool.oschool_transport_product_category
+#: selection:product.template,school_product_type:0
+msgid "Transport"
+msgstr "Transport"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.action_oschool_transport_presence_status
+msgid "Transport Presence"
+msgstr "Presence transport"
+
+#. module: oschool
+#: view:pos.order:oschool.view_oschool_club_pos_form
+#: view:pos.order:oschool.view_oschool_registration_pos_form
+#: view:pos.order:oschool.view_oschool_service_pos_form
+#: view:pos.order:oschool.view_oschool_study_pos_form
+#: view:pos.order:oschool.view_oschool_transport_pos_form
+msgid "Transport Refund"
+msgstr "Remboursement transport"
+
+#. module: oschool
+#: model:ir.actions.report.xml,name:oschool.report_transport_presence
+msgid "Transport Report"
+msgstr "Rapport transport"
+
+#. module: oschool
+#: field:oschool.transport_presence_report,transport_presence:0
+msgid "Transport presence"
+msgstr "Presence transport"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.oschool_transport_presence_status_menu
+msgid "Transport presence status"
+msgstr "Etat de presence transport"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_student_transportation_form
+#: view:res.partner:oschool.view_oschool_student_transportation_form
+msgid "Transportation"
+msgstr "Transport"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.transportation_config_menu
+msgid "Transportation Management"
+msgstr "Gestion du transport"
+
+
+
+#. module: oschool
+#: view:oschool.student_canteen_presence:oschool.oschool_student_canteen_presence_tree
+#: view:oschool.student_club_presence:oschool.oschool_student_club_presence_tree
+#: view:oschool.student_restaurant_presence:oschool.oschool_student_restaurant_presence_tree
+#: view:oschool.student_transport_presence:oschool.oschool_student_transport_presence_tree
+#: view:oschool.ticket_presence:oschool.oschool_student_ticket_presence_tree
+msgid "Tree"
+msgstr "Tree"
+
+#. module: oschool
+#: view:product.pricelist:oschool.oschool_parents_categories_list_tree
+msgid "Tree Category folder"
+msgstr "Liste des catégories parents"
+
+#. module: oschool
+#: view:pos.category:oschool.product_category_club_tree
+msgid "Tree Club"
+msgstr "Liste des clubs"
+
+#. module: oschool
+#: view:pos.category:oschool.product_category_inscription_tree
+msgid "Tree Inscription"
+msgstr "Liste des inscriptions"
+
+#. module: oschool
+#: view:pos.category:oschool.product_category_service_search
+#: view:pos.category:oschool.product_category_service_tree
+#: view:res.groups:oschool.oschool_access_group_tree
+#: view:res.users:oschool.oschool_access_user_tree
+msgid "Tree Service"
+msgstr "Liste des services"
+
+#. module: oschool
+#: view:pos.session:oschool.oschool_pos_session_tree
+msgid "Tree Sessions"
+msgstr "Liste des sessions"
+
+#. module: oschool
+#: view:product.product:oschool.product_event_tree
+msgid "Tree event"
+msgstr "Tree event"
+
+#. module: oschool
+#: view:account.fiscalyear:oschool.fiscal_year_tree_view
+msgid "Tree fiscal Year"
+msgstr "Liste des années comptables"
+
+#. module: oschool
+#: view:pos.order:oschool.oschool_pos_pos_tree
+msgid "Tree orders"
+msgstr "Liste des inscriptions"
+
+#. module: oschool
+#: view:pos.category:oschool.product_category_route_tree
+msgid "Tree route"
+msgstr "Liste des trajets"
+
+#. module: oschool
+#: view:pos.category:oschool.product_category_study_tree
+msgid "Tree study"
+msgstr "Liste des études"
+
+#. module: oschool
+#: view:account.fiscalyear:oschool.fiscal_year_form_view
+#: view:hr.employee:oschool.view_bus_driver_form
+#: view:hr.employee:oschool.view_bus_hostess_form
+#: view:product.pricelist.item:oschool.oschool_product_pricelist_item_form_view
+#: view:stock.change.product.qty:oschool.view_oschool_product_quantity_form
+msgid "True"
+msgstr "Oui"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.tutors_management_menu
+msgid "Tutors Management"
+msgstr "Gestion des parents"
+
+#. module: oschool
+#: field:oschool.bus,type:0 field:oschool.student_transport_presence,type:0
+#: field:oschool.ticket_presence,ticket_status:0 field:pos.order.line,type:0
+#: view:product.product:oschool.product_event_form
+msgid "Type"
+msgstr "Type"
+
+#. module: oschool
+#: report:oschool.transport.presence:0
+msgid "Tél"
+msgstr "Tél"
+
+#. module: oschool
+#: code:addons/oschool/oschool_student/oschool_student.py:198
+#: code:addons/oschool/oschool_student/oschool_student.py:202
+#, python-format
+msgid "Unable to Delete!"
+msgstr "Unable to Delete!"
+
+#. module: oschool
+#: view:product.product:oschool.view_oschool_extra_form
+msgid "Unit of Measure"
+msgstr "Unité de mesure"
+
+#. module: oschool
+#: view:oschool.club.update:oschool.view_oschool_club_wizard
+#: view:oschool.service.update:oschool.view_oschool_service_wizard
+#: view:oschool.study.update:oschool.view_oschool_study_wizard
+#: view:pos.order.line.update:oschool.view_oschool_pos_line_wizard
+#: view:res.partner:oschool.view_oschool_responsible_student_club_form
+#: view:res.partner:oschool.view_oschool_responsible_student_service_form
+#: view:res.partner:oschool.view_oschool_responsible_student_transportation_form
+#: view:res.partner:oschool.view_oschool_student_club_form
+#: view:res.partner:oschool.view_oschool_student_service_form
+#: view:res.partner:oschool.view_oschool_student_study_form
+#: view:res.partner:oschool.view_oschool_student_transportation_form
+msgid "Update"
+msgstr "Mise à jour"
+
+#. module: oschool
+#: code:addons/oschool/oschool_club/oschool_club.py:71
+#: model:ir.model,name:oschool.model_oschool_club_update
+#, python-format
+msgid "Update Club"
+msgstr "Mettre à jour Club"
+
+#. module: oschool
+#: model:ir.model,name:oschool.model_pos_order_line_update
+msgid "Update Pos Order Line"
+msgstr "Update Pos Order Line"
+
+#. module: oschool
+#: code:addons/oschool/oschool_service/oschool_service.py:73
+#: model:ir.model,name:oschool.model_oschool_service_update
+#, python-format
+msgid "Update Service"
+msgstr "Mettre à jour Service"
+
+#. module: oschool
+#: code:addons/oschool/oschool_study/oschool_study.py:81
+#: model:ir.model,name:oschool.model_oschool_study_update
+#, python-format
+msgid "Update Study"
+msgstr "Mettre à jour étude"
+
+#. module: oschool
+#: code:addons/oschool/oschool_transportation/oschool_transportation.py:343
+#, python-format
+msgid "Update Transport"
+msgstr "Mettre à jour transport"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_student_form
+#: view:res.partner:oschool.view_responsible_property_form
+msgid "Use Responsible Address"
+msgstr "Utiliser l'adresse du responsable"
+
+#. module: oschool
+#: field:oschool.config.settings,module_auth_oauth:0
+msgid ""
+"Use external authentication providers, sign in with google, facebook, ..."
+msgstr ""
+"Use external authentication providers, sign in with google, facebook, ..."
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.action_oschool_access_user_list
+#: model:ir.model,name:oschool.model_res_users
+#: model:ir.ui.menu,name:oschool.userss_list_management_menu
+msgid "Users"
+msgstr "Utilisateurs"
+
+#. module: oschool
+#: report:oschool.transport.presence:0
+msgid "Vendredi"
+msgstr "Vendredi"
+
+#. module: oschool
+#: view:pos.session.opening:oschool.oschool_pos_session_opening_form_view
+msgid "Votre caisse"
+msgstr "Votre caisse"
+
+#. module: oschool
+#: code:addons/oschool/oschool_club/oschool_club.py:38
+#: code:addons/oschool/oschool_club/oschool_club.py:40
+#: code:addons/oschool/oschool_club/oschool_club.py:65
+#: code:addons/oschool/oschool_club/oschool_club.py:67
+#: code:addons/oschool/oschool_club/oschool_club.py:91
+#: code:addons/oschool/oschool_club/oschool_club.py:93
+#: code:addons/oschool/oschool_club/oschool_club.py:95
+#: code:addons/oschool/oschool_club/oschool_club.py:97
+#: code:addons/oschool/oschool_club/wizard/oschool_club.py:68
+#: code:addons/oschool/oschool_extra/oschool_extra.py:79
+#: code:addons/oschool/oschool_extra/oschool_extra.py:81
+#: code:addons/oschool/oschool_extra/oschool_extra.py:107
+#: code:addons/oschool/oschool_extra/oschool_extra.py:109
+#: code:addons/oschool/oschool_extra/oschool_extra.py:175
+#: code:addons/oschool/oschool_extra/oschool_extra.py:177
+#: code:addons/oschool/oschool_extra/oschool_extra.py:179
+#: code:addons/oschool/oschool_extra/oschool_extra.py:243
+#: code:addons/oschool/oschool_extra/oschool_extra.py:245
+#: code:addons/oschool/oschool_extra/oschool_extra.py:247
+#: code:addons/oschool/oschool_extra/wizard/oschool_extra.py:41
+#: code:addons/oschool/oschool_extra/wizard/oschool_extra.py:73
+#: code:addons/oschool/oschool_registration/oschool_registration.py:68
+#: code:addons/oschool/oschool_registration/oschool_registration.py:70
+#: code:addons/oschool/oschool_registration/oschool_registration.py:72
+#: code:addons/oschool/oschool_registration/oschool_registration.py:74
+#: code:addons/oschool/oschool_registration/oschool_registration.py:166
+#: code:addons/oschool/oschool_registration/oschool_registration.py:172
+#: code:addons/oschool/oschool_registration/oschool_registration.py:180
+#: code:addons/oschool/oschool_registration/oschool_registration.py:184
+#: code:addons/oschool/oschool_registration/oschool_registration.py:190
+#: code:addons/oschool/oschool_registration/oschool_registration.py:196
+#: code:addons/oschool/oschool_registration/oschool_registration.py:208
+#: code:addons/oschool/oschool_responsible/wizard/oschool_responsible_payment.py:44
+#: code:addons/oschool/oschool_responsible/wizard/oschool_responsible_payment.py:53
+#: code:addons/oschool/oschool_service/oschool_service.py:40
+#: code:addons/oschool/oschool_service/oschool_service.py:42
+#: code:addons/oschool/oschool_service/oschool_service.py:67
+#: code:addons/oschool/oschool_service/oschool_service.py:69
+#: code:addons/oschool/oschool_service/oschool_service.py:93
+#: code:addons/oschool/oschool_service/oschool_service.py:95
+#: code:addons/oschool/oschool_service/oschool_service.py:97
+#: code:addons/oschool/oschool_service/oschool_service.py:99
+#: code:addons/oschool/oschool_service/wizard/oschool_service.py:72
+#: code:addons/oschool/oschool_service/wizard/oschool_service.py:74
+#: code:addons/oschool/oschool_service/wizard/oschool_service.py:76
+#: code:addons/oschool/oschool_student/oschool_student.py:114
+#: code:addons/oschool/oschool_student/oschool_student.py:190
+#: code:addons/oschool/oschool_study/oschool_study.py:37
+#: code:addons/oschool/oschool_study/oschool_study.py:41
+#: code:addons/oschool/oschool_study/oschool_study.py:43
+#: code:addons/oschool/oschool_study/oschool_study.py:45
+#: code:addons/oschool/oschool_study/oschool_study.py:50
+#: code:addons/oschool/oschool_study/oschool_study.py:77
+#: code:addons/oschool/oschool_study/oschool_study.py:79
+#: code:addons/oschool/oschool_study/oschool_study.py:101
+#: code:addons/oschool/oschool_study/oschool_study.py:103
+#: code:addons/oschool/oschool_study/oschool_study.py:105
+#: code:addons/oschool/oschool_study/oschool_study.py:107
+#: code:addons/oschool/oschool_transportation/oschool_transportation.py:286
+#: code:addons/oschool/oschool_transportation/oschool_transportation.py:339
+#: code:addons/oschool/oschool_transportation/oschool_transportation.py:341
+#: code:addons/oschool/oschool_transportation/oschool_transportation.py:366
+#: code:addons/oschool/oschool_transportation/oschool_transportation.py:368
+#: code:addons/oschool/oschool_transportation/oschool_transportation.py:370
+#: code:addons/oschool/oschool_transportation/wizard/oschool_transport.py:43
+#: code:addons/oschool/oschool_transportation/wizard/oschool_transport.py:82
+#, python-format
+msgid "Warning!"
+msgstr "Alerte!"
+
+#. module: oschool
+#: constraint:pos.order.line:0
+msgid ""
+"Warning!\n"
+"No remaining Places."
+msgstr "Aucune place n'est disponible dans ce groupe."
+
+#. module: oschool
+#: field:pos.make.payment,is_warranty_check:0
+msgid "Warranty check"
+msgstr "Chèque de garantie"
+
+#. module: oschool
+#: view:product.product:oschool.view_oschool_extra_form
+msgid "Weights"
+msgstr "Weights"
+
+#. module: oschool
+#: help:oschool.config.settings,module_multi_company:0
+msgid ""
+"Work in multi-company environments, with appropriate security access between "
+"companies.\n"
+"-This installs the module multi_company."
+msgstr ""
+"Work in multi-company environments, with appropriate security access between "
+"companies.\n"
+"-This installs the module multi_company."
+
+#. module: oschool
+#: view:report.oschool.registrations:oschool.view_report_oschool_registrations_search
+msgid "Year"
+msgstr "Année"
+
+#. module: oschool
+#: code:addons/oschool/oschool_student/oschool_student.py:260
+#, python-format
+msgid ""
+"You cannot close this academic year, because %s %s have not paid status."
+msgstr ""
+"Vous ne pouvez pas fermer cette année scolaire parceque %s %s n'a pas l'état "
+"\"Payé\"."
+
+#. module: oschool
+#: code:addons/oschool/oschool_student/oschool_student.py:256
+#, python-format
+msgid "You cannot close this academic year, because %s have not paid status."
+msgstr ""
+"Vous ne pouvez pas fermer cette année scolaire parceque %s %s n'a pas l'état "
+"\"Payé\"."
+
+#. module: oschool
+#: code:addons/oschool/oschool.py:382
+#, python-format
+msgid ""
+"You cannot use the session of another users. This session is owned by %s. "
+"Please first close this one to use this point of sale."
+msgstr ""
+"Vous ne pouvez pas utliser une session d'un autre utilisateur. Cette session "
+"appartient à %s. Veuillez d'abord fermer cette session pour pouvoir "
+"l'utiliser."
+
+#. module: oschool
+#: code:addons/oschool/oschool_treasury/oschool_treasury.py:113
+#, python-format
+msgid "You have to open at least one cashbox."
+msgstr "Vous devez ouvrir au moin une caisse."
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.oschool_action_pos_session_opening
+#: model:ir.ui.menu,name:oschool.oschool_menu_pos_session_opening
+msgid "Your Session"
+msgstr "Votre session"
+
+#. module: oschool
+#: code:addons/oschool/oschool.py:354
+#, python-format
+msgid ""
+"Your ending balance is too different from the theoretical cash closing "
+"(%.2f), the maximum allowed is: %.2f. You can contact your manager to force "
+"it."
+msgstr ""
+"Your ending balance is too different from the theoretical cash closing "
+"(%.2f), the maximum allowed is: %.2f. You can contact your manager to force "
+"it."
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_form
+#: view:res.partner:oschool.view_oschool_student_form
+#: view:res.partner:oschool.view_responsible_property_form
+msgid "ZIP"
+msgstr "Code postal"
+
+#. module: oschool
+#: field:res.partner,zip2:0
+msgid "Zip 2"
+msgstr "Code postal"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.oschool_zone_list_action
+#: field:oschool.assign_bus_to_zone,zone:0
+#: view:oschool.student_transport_presence:oschool.oschool_student_transport_presence_search
+#: field:oschool.transport_presence_report,bus_to_zone_id:0
+#: field:pos.category,zone:0
+msgid "Zone"
+msgstr "Zone"
+
+#. module: oschool
+#. openerp-web
+#: code:addons/oschool/static/src/xml/oschool.xml:8
+#: code:addons/oschool/static/src/xml/oschool_student_transport_presence_quickadd.xml:9
+#, python-format
+msgid "Zone :"
+msgstr "Zone :"
+
+#. module: oschool
+#: view:oschool.zone:oschool.oschool_zone_form_view
+msgid "Zone Form"
+msgstr "Formulaire zone"
+
+#. module: oschool
+#: view:oschool.bus:oschool.oschool_bus_tree_view
+#: view:oschool.zone:oschool.oschool_zone_tree_view
+msgid "Zone Tree"
+msgstr "Liste de zones"
+
+#. module: oschool
+#: model:ir.ui.menu,name:oschool.zone_list_management_menu
+msgid "Zones"
+msgstr "Zones"
+
+#. module: oschool
+#: report:oschool.transport.presence:0
+msgid "Zone :"
+msgstr "Zone :"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.academic_year_list_action
+msgid "academic_year"
+msgstr "Année scolaire"
+
+#. module: oschool
+#: view:pos.session:oschool.oschool_pos_session_form
+msgid "bottom"
+msgstr "bottom"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.classes_list_action
+msgid "classes"
+msgstr "Classes"
+
+#. module: oschool
+#: view:product.product:oschool.view_oschool_extra_form
+msgid "describe the product characteristics..."
+msgstr "describe the product characteristics..."
+
+#. module: oschool
+#: view:account.fiscalyear:oschool.fiscal_year_tree_view
+msgid "fiscal year"
+msgstr "Année comptable"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.fiscal_year_list_action
+msgid "fiscal_year"
+msgstr "Année comptable"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.groups_list_action
+msgid "groups"
+msgstr "Groupes"
+
+#. module: oschool
+#: field:report.oschool.registrations,bank_journal_id:0
+msgid "journal"
+msgstr "Journal"
+
+#. module: oschool
+#: view:product.product:oschool.view_oschool_extra_form
+msgid "months"
+msgstr "Mois"
+
+#. module: oschool
+#: view:product.product:oschool.view_oschool_extra_form
+msgid "note to be displayed on quotations..."
+msgstr "note to be displayed on quotations..."
+
+#. module: oschool
+#: view:oschool.club.generate:oschool.view_oschool_club_generate
+#: view:oschool.club.update:oschool.view_oschool_club_wizard
+#: view:oschool.config.settings:oschool.oschool_view_general_configuration
+#: view:oschool.extra.add:oschool.view_oschool_extra_wizard
+#: view:oschool.payment:oschool.view_payment_dialog_form
+#: view:oschool.service.generate:oschool.view_oschool_service_generate
+#: view:oschool.service.update:oschool.view_oschool_service_wizard
+#: view:oschool.study.update:oschool.view_oschool_study_wizard
+#: view:oschool.ticket.add:oschool.view_oschool_ticket_wizard
+#: view:pos.order.line:oschool.view_student_registration_dialog_form
+#: view:pos.order.line.generate:oschool.view_oschool_pos_line_generate
+#: view:pos.order.line.update:oschool.view_oschool_pos_line_wizard
+msgid "or"
+msgstr "Ou"
+
+#. module: oschool
+#: model:res.groups,name:oschool.oschool_group_admin_scolarity
+msgid "oschool Admin Scolarity"
+msgstr "Administrateur scolarité"
+
+#. module: oschool
+#: model:res.groups,name:oschool.oschool_group_cashier_scolarity
+msgid "oschool Cashier Scolarity"
+msgstr "Caissier"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.action_product_event_list
+msgid "oschool events"
+msgstr "Evenements"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.action_oschool_parents_categories_list
+msgid "parents_categories"
+msgstr "Catégories de parents"
+
+#. module: oschool
+#: code:addons/oschool/oschool_responsible/wizard/oschool_responsible_payment.py:53
+#, python-format
+msgid "period %s is not paid"
+msgstr "La période %s n'est pas payée"
+
+#. module: oschool
+#: code:addons/oschool/oschool_study/oschool_study.py:50
+#, python-format
+msgid "period %s not exist."
+msgstr "La période %s n'existe pas."
+
+#. module: oschool
+#: field:pos.category,place_number:0
+msgid "place number"
+msgstr "Nombre de places"
+
+#. module: oschool
+#: code:addons/oschool/oschool_student/oschool_student.py:87
+#, python-format
+msgid "responsible"
+msgstr "Responsable"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.action_category_route_list
+msgid "routes"
+msgstr "Trajets"
+
+#. module: oschool
+#: view:pos.make.payment:oschool.oschool_view_pos_payment
+#: view:product.pricelist.item:oschool.oschool_product_pricelist_item_form_view
+msgid "selection"
+msgstr "Sélection"
+
+#. module: oschool
+#: field:product.template,inscription_sequence:0
+msgid "sequence"
+msgstr "Séquence"
+
+#. module: oschool
+#: view:res.partner:oschool.view_oschool_responsible_student_service_form
+#: view:res.partner:oschool.view_oschool_student_service_form
+msgid "service"
+msgstr "Service"
+
+#. module: oschool
+#: code:addons/oschool/oschool_student/oschool_student.py:84
+#: view:res.partner:oschool.view_oschool_student_form
+#: view:res.partner:oschool.view_oschool_student_search
+#, python-format
+msgid "student"
+msgstr "Élève"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.action_category_study_list
+msgid "studies"
+msgstr "Études"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.action_oschool_ticket_presence_status
+msgid "ticket Presence"
+msgstr "Suivi ticket"
+
+#. module: oschool
+#: model:ir.actions.act_window,name:oschool.action_oschool_student_transport_presence_tree_all_tree
+msgid "transport Presence"
+msgstr "Presence transport"
+
+#. module: oschool
+#: view:pos.order:oschool.oschool_pos_pos_form
+#: view:pos.session:oschool.oschool_pos_session_form
+#: view:pos.session.opening:oschool.oschool_pos_session_opening_form_view
+msgid "{\"no_open\": True }"
+msgstr "{\"no_open\": True }"
+
+#. module: oschool
+#: view:pos.make.payment:oschool.oschool_view_pos_payment
+msgid "{'invisible': [('is_check', '=', True)]}"
+msgstr "{'invisible': [('is_check', '=', True)]}"
+
+#. module: oschool
+#: view:product.product:oschool.view_oschool_extra_form
+msgid "⇒ Update"
+msgstr "⇒ Mettre à jour"

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="sequence_monthly_view">
+            <field name="model">ir.sequence</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="base.sequence_view" />
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[@string='Sequence']/group" position="after">
+                    <group col="4" string="Monthly" attrs="{'invisible': [('implementation','!=', 'standard')]}">
+                        <field name="monthly"/>
+                        <newline/>
+                        <field name="january"/>
+                        <field name="february"/>
+                        <field name="march"/>
+                        <field name="april"/>
+                        <field name="may"/>
+                        <field name="june"/>
+                        <field name="july"/>
+                        <field name="august"/>
+                        <field name="september"/>
+                        <field name="october"/>
+                        <field name="november"/>
+                        <field name="december"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+ 
+    </data>
+</openerp>
+

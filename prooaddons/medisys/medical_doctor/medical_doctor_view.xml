@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_medical_doctor_tree" model="ir.ui.view">
+            <field name="name">medical.doctor.tree</field>
+            <field name="model">medical.doctor</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="medical doctor">
+                    <field name="name" />
+                    <field name="code" />
+                    <field name="specialty" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_medical_doctor_form" model="ir.ui.view">
+            <field name="name">medical.doctor.form</field>
+            <field name="model">medical.doctor</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="medical doctor">
+                  <sheet>
+                    <group colspan="4" >
+                        <field name="supplier" invisible="1"/>
+                        <field name="is_doctor" invisible="1"/>
+                        <field name="code" />
+                        <field name="name"/>
+                        <field name="specialty" options="{'no_open': False,'no_quick_create':True,'no_create_edit':True}"/>
+                        <field name="property_account_payable" options="{'no_quick_create':True,'no_create_edit':False}"/>
+                        <field name="debit"/>
+                    </group>
+                    <notebook>
+                        <page string="Bank">
+                            <field name="bank_ids" context="{'default_partner_id': active_id, 'form_view_ref': 'base.view_partner_bank_form'}">
+                                <tree string="Bank Details">
+                                    <field name="state" invisible="1"/>
+                                    <field name="sequence" invisible="1"/>
+                                    <field name="acc_number"/>
+                                    <field name="bank_name"/>
+                                    <field name="owner_name"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Info">
+                            <field name="info" colspan="4" nolabel="1"/>
+                        </page>
+                    </notebook>
+                  </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_medical_doctor_search" model="ir.ui.view">
+            <field name="name">medical.doctor.search</field>
+            <field name="model">medical.doctor</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <search string="medical doctor">
+                    <field name="name" />
+                    <field name="code" />
+                    <field name="specialty" />
+                    <field name="info" />
+                    <newline />
+                    <group expand="0" string="Group By...">
+                        <filter string="Extra info" domain="[]" context="{'group_by':'info'}" />
+                        <filter string="Name" domain="[]" context="{'group_by':'name'}" />
+                        <filter string="ID" domain="[]" context="{'group_by':'code'}" />
+                        <filter string="Specialty" domain="[]"    context="{'group_by':'specialty'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_medical_doctor_view">
+            <field name="name">Doctor</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">medical.doctor</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_medical_doctor_search" />
+            <field name="domain">[]</field>
+            <field name="context">{'default_is_doctor':1,'default_supplier':1,'default_customer':0}</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_medical_doctor_view_form">
+            <field name="act_window_id" ref="act_open_medical_doctor_view" />
+            <field name="sequence" eval="20" />
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_medical_doctor_form" />
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_medical_doctor_view_tree">
+            <field name="act_window_id" ref="act_open_medical_doctor_view" />
+            <field name="sequence" eval="10" />
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_medical_doctor_tree" />
+        </record>
+
+        <menuitem id="medical_doctor" name="Doctor" parent="medical_menu_doctor"
+            sequence="10" action="act_open_medical_doctor_view" />
+
+    </data>
+</openerp>

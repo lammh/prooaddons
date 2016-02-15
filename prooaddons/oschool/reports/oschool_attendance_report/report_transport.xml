@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+<template id="report_transport">
+    <t t-call="report.html_container">
+
+            <div class="page">
+                <style type="text/css">
+                   table, th , td{margin-left:auto;margin-right:auto;margin-top:30px;
+                    border: 1px solid #A1A1A1;font-size : 0.9em;padding-right : 10px;padding-left : 10px;}
+                    td.grey{background : grey;}
+                    td.groupe{font-size : 1.1em; text-align : center;}
+                    td.h8, th.h8{border-left: 4px solid black;}
+                    td.h16, th.h16{border-right: 4px solid black;}
+               </style>
+            <t t-foreach="data['periods']" t-as="periode">
+                <div class="row">
+                    <div class="col-xs-12" style="font-size : 1.5em;text-align : center;">
+                        <strong>Zone:</strong>
+                         <span t-esc="data['zone']"/>
+                    </div>
+                </div>
+                <div class="row" style="display: inline-block;float:left;">
+                    <div class="col-xs-7">
+                        <strong>Driver:</strong>
+                         <span t-esc="periode['driver']"/>
+                    </div>
+                    <div class="col-xs-7">
+                        <strong>Hostess:</strong>
+                         <span t-esc="periode['hostess']"/>
+                    </div>
+                </div>
+                <div class="row" style="display: inline-block;float:right;">
+                    <div class="col-xs-7">
+                        <strong>Date start:</strong>
+                        <span t-esc="periode['date_start']"/>
+                    </div>
+                    <div class="col-xs-7">
+                        <strong>Date stop:</strong>
+                         <span t-esc="periode['date_stop']"/>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th rowspan="2">N°</th>
+                                <th rowspan="2">Nom et prénom</th>
+                                <th rowspan="2">N° v</th>
+                                <th rowspan="2">Téléphone</th>
+                                <th class="h8" colspan="4">Lundi</th>
+                                <th class="h8" colspan="4">Mardi</th>
+                                <th class="h8" colspan="4">Merecredi</th>
+                                <th class="h8" colspan="4">Jeudi</th>
+                                <th class="h8 h16" colspan="4">Vendredi</th>
+                            </tr>
+                            <tr class="heure">
+                                 <t t-foreach="[1,2,3,4,5]" t-as="i">
+                                    <th class="h8">8</th>
+                                    <th >12</th>
+                                    <th >14</th>
+                                    <th class="h16">16</th>
+                                </t>
+
+
+                            </tr>
+                        </thead>
+                     <tbody>
+                         <t t-foreach="data['presence']" t-as="presences">
+                            <tr>
+                                <td class="groupe" colspan="24"><strong t-esc="presences['group'].name"/></td>
+                            </tr>
+                         <t t-foreach="presences['presence']" t-as="presence">
+                            <tr>
+                                <td ><strong t-esc="presence_index + 1"/></td>
+
+                                <td >
+                                    <strong><t t-esc="presence.student_id.name"/>
+                                    <t t-esc="presence.student_id.last_name"/></strong>
+                                </td>
+                                <td ><strong hidden="hidden" t-esc="presence.type_navette"/>
+                                <strong t-esc="presence.code_navette"/></td>
+                                <td><strong t-esc="presence.phone"/></td>
+
+                                <!-- 1 for monday Tuesday -->
+                                 <t t-foreach="[1,2]" t-as="i">
+                                    <!-- 8h -->
+                                    <t t-if="presence.h8"><td class="h8"> </td></t>
+                                    <t t-if="not presence.h8"><td class="grey h8"></td></t>
+                                    <!-- 12h -->
+                                    <t t-if="presence.h12"><td > </td></t>
+                                    <t t-if="not presence.h12"><td class="grey"></td></t>
+                                    <!-- 14h -->
+                                    <t t-if="presence.h14"><td > </td></t>
+                                    <t t-if="not presence.h14"><td class="grey"></td></t>
+                                    <!-- 16h -->
+                                    <t t-if="presence.h16"><td class="h16"> </td></t>
+                                    <t t-if="not presence.h16"><td class="grey h16"></td></t>
+                                    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+                                </t>
+
+                                <!-- 3 Wednesday -->
+                                <!-- 8h -->
+                                <t t-if="presence.h8"><td class=" h8"> </td></t>
+                                <t t-if="not presence.h8"><td class="grey h8"></td></t>
+                                <!-- 12h -->
+                                <t t-if="presence.h12 or presence.h16"><td > </td></t>
+                                <t t-if="not presence.h12 and not presence.h16"><td class="grey"></td></t>
+                                <!-- 14h -->
+                                <td class="grey"></td>
+                                <td class="grey h16"></td>
+                                <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+
+                                <!-- 1 for tuesday  friday -->
+                                 <t t-foreach="[1,2]" t-as="i">
+                                    <!-- 8h -->
+                                    <t t-if="presence.h8"><td class="h8"> </td></t>
+                                    <t t-if="not presence.h8"><td class="grey h8"></td></t>
+                                    <!-- 12h -->
+                                    <t t-if="presence.h12"><td > </td></t>
+                                    <t t-if="not presence.h12"><td class="grey"></td></t>
+                                    <!-- 14h -->
+                                    <t t-if="presence.h14"><td > </td></t>
+                                    <t t-if="not presence.h14"><td class="grey"></td></t>
+                                    <!-- 16h -->
+                                    <t t-if="presence.h16"><td class="h16"> </td></t>
+                                    <t t-if="not presence.h16"><td class="grey h16"></td></t>
+                                    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+                                </t>
+                            </tr>
+                        </t>
+                         </t>
+                     </tbody>
+
+                    </table>
+                </div>
+            <p style="page-break-after:always;">   </p>
+            </t>
+            </div>
+        </t>
+</template>
+</data>
+</openerp>

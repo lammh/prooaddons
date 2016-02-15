@@ -1,0 +1,304 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* customer_statement
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-20150713\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-08-15 12:10+0000\n"
+"PO-Revision-Date: 2015-08-15 12:10+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: customer_statement
+#: report:statement_general:0
+#: report:statement_general_detail:0
+msgid "\"Du \" + $P{date_start} + \" Au \" + $P{date_end}"
+msgstr "\"Du \" + $P{date_start} + \" Au \" + $P{date_end}"
+
+#. module: customer_statement
+#: report:statement_general:0
+#: report:statement_general_detail:0
+msgid "\"Solde de \" + $F{partner}"
+msgstr "\"Solde de \" + $F{partner}"
+
+#. module: customer_statement
+#: report:statement_general:0
+#: report:statement_general_detail:0
+msgid "$F{credit}"
+msgstr "$F{credit}"
+
+#. module: customer_statement
+#: report:statement_general:0
+#: report:statement_general_detail:0
+msgid "$F{date}"
+msgstr "$F{date}"
+
+#. module: customer_statement
+#: report:statement_general:0
+#: report:statement_general_detail:0
+msgid "$F{debit}"
+msgstr "$F{debit}"
+
+#. module: customer_statement
+#: report:statement_general:0
+#: report:statement_general_detail:0
+msgid "$F{description}"
+msgstr "$F{description}"
+
+#. module: customer_statement
+#: report:statement_general:0
+#: report:statement_general_detail:0
+msgid "$F{number}"
+msgstr "$F{number}"
+
+#. module: customer_statement
+#: report:statement_general_detail:0
+msgid "$F{price_unit}"
+msgstr "$F{price_unit}"
+
+#. module: customer_statement
+#: report:statement_general:0
+#: report:statement_general_detail:0
+msgid "$F{solde}"
+msgstr "$F{solde}"
+
+#. module: customer_statement
+#: view:statement.general.report:customer_statement.view_statement_general_report_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: customer_statement
+#: field:statement.general.report,create_uid:0
+msgid "Created by"
+msgstr "Creé par"
+
+#. module: customer_statement
+#: field:statement.general.report,create_date:0
+#: report:statement_general:0
+#: report:statement_general_detail:0
+msgid "Created on"
+msgstr "Creé le"
+
+#. module: customer_statement
+#: field:account.statement.report,credit:0
+#: field:account.statement.report.general,credit:0
+msgid "Credit"
+msgstr "Crédit"
+
+#. module: customer_statement
+#: report:statement_general:0
+#: report:statement_general_detail:0
+msgid "Crédit"
+msgstr "Crédit"
+
+#. module: customer_statement
+#: report:statement_general:0
+#: report:statement_general_detail:0
+msgid "Customer"
+msgstr "Client"
+
+#. module: customer_statement
+#: model:ir.model,name:customer_statement.model_account_statement_report
+#: model:ir.model,name:customer_statement.model_account_statement_report_general
+msgid "Customer Statement"
+msgstr "Solde Client"
+
+#. module: customer_statement
+#: view:account.statement.report:customer_statement.view_account_statement_report_search
+#: view:account.statement.report:customer_statement.view_account_statement_report_tree
+#: view:account.statement.report.general:customer_statement.view_account_statement_report_general_search
+#: view:account.statement.report.general:customer_statement.view_account_statement_report_general_tree
+msgid "Customer Statement Analysis"
+msgstr "Analyse Solde Client"
+
+#. module: customer_statement
+#: view:account.statement.report:customer_statement.view_account_statement_report_search
+#: field:account.statement.report,date:0
+#: view:account.statement.report.general:customer_statement.view_account_statement_report_general_search
+#: field:account.statement.report.general,date:0
+#: report:statement_general:0
+#: report:statement_general_detail:0
+msgid "Date"
+msgstr "Date"
+
+#. module: customer_statement
+#: field:account.statement.report,debit:0
+#: field:account.statement.report.general,debit:0
+msgid "Debit"
+msgstr "Débit"
+
+#. module: customer_statement
+#: field:account.statement.report,description:0
+#: field:account.statement.report.general,description:0
+#: report:statement_general:0
+#: report:statement_general_detail:0
+msgid "Description"
+msgstr "Description"
+
+#. module: customer_statement
+#: view:statement.general.report:customer_statement.view_statement_general_report_form
+msgid "Details"
+msgstr "Détails"
+
+#. module: customer_statement
+#: report:statement_general:0
+#: report:statement_general_detail:0
+msgid "Débit"
+msgstr "Débit"
+
+#. module: customer_statement
+#: field:statement.general.report,date_end:0
+msgid "End date"
+msgstr "Date Fin"
+
+#. module: customer_statement
+#: report:statement_general:0
+#: report:statement_general_detail:0
+msgid "Expiration Date"
+msgstr "Expiration Date"
+
+#. module: customer_statement
+#: model:ir.actions.act_window,name:customer_statement.act_account_statement_general_partner_relation
+msgid "General statement"
+msgstr "Solde Generale"
+
+#. module: customer_statement
+#: view:statement.general.report:customer_statement.view_statement_general_report_form
+msgid "Global"
+msgstr "Global"
+
+#. module: customer_statement
+#: view:account.statement.report:customer_statement.view_account_statement_report_search
+#: view:account.statement.report.general:customer_statement.view_account_statement_report_general_search
+msgid "Group By"
+msgstr "Grouper Par"
+
+#. module: customer_statement
+#: field:account.statement.report,id:0
+#: field:account.statement.report.general,id:0
+#: field:statement.general.report,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: customer_statement
+#: field:account.statement.report,partner_id:0
+#: field:account.statement.report.general,partner_id:0
+msgid "ID Partner"
+msgstr "ID Partenaire"
+
+#. module: customer_statement
+#: field:statement.general.report,write_uid:0
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: customer_statement
+#: field:statement.general.report,write_date:0
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: customer_statement
+#: view:account.statement.report:customer_statement.view_account_statement_report_search
+#: field:account.statement.report,number:0
+#: view:account.statement.report.general:customer_statement.view_account_statement_report_general_search
+#: field:account.statement.report.general,number:0
+#: report:statement_general:0
+#: report:statement_general_detail:0
+msgid "Number"
+msgstr "Numéro"
+
+#. module: customer_statement
+#: report:statement_general:0
+#: report:statement_general_detail:0
+msgid "Numéro"
+msgstr "Numéro"
+
+#. module: customer_statement
+#: report:statement_general_detail:0
+msgid "P.U."
+msgstr "P.U."
+
+#. module: customer_statement
+#: view:account.statement.report:customer_statement.view_account_statement_report_search
+#: field:account.statement.report,partner:0
+#: view:account.statement.report.general:customer_statement.view_account_statement_report_general_search
+#: field:account.statement.report.general,partner:0
+#: field:statement.general.report,name:0
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: customer_statement
+#: field:account.statement.report,price_unit:0
+msgid "Price"
+msgstr "Prix Unitaire"
+
+#. module: customer_statement
+#: model:ir.actions.report.xml,name:customer_statement.statement_general
+#: model:ir.model,name:customer_statement.model_statement_general_report
+msgid "Report Statement General"
+msgstr "Rapport Solde Generale"
+
+#. module: customer_statement
+#: model:ir.actions.report.xml,name:customer_statement.statement_general_detail
+msgid "Report Statement General details"
+msgstr "Rapport Solde détails"
+
+#. module: customer_statement
+#: view:statement.general.report:customer_statement.view_statement_general_report_form
+msgid "Show sample wizard"
+msgstr "Show sample wizard"
+
+#. module: customer_statement
+#: field:account.statement.report,solde:0
+#: field:account.statement.report.general,solde:0
+#: report:statement_general:0
+#: report:statement_general_detail:0
+msgid "Solde"
+msgstr "Solde"
+
+#. module: customer_statement
+#: field:statement.general.report,date_start:0
+msgid "Start date"
+msgstr "date début"
+
+#. module: customer_statement
+#: model:ir.actions.act_window,name:customer_statement.act_account_statement_partner_relation
+msgid "Statement"
+msgstr "Solde détails"
+
+#. module: customer_statement
+#: model:ir.actions.act_window,name:customer_statement.act_statement_general_report
+msgid "Statement Report"
+msgstr "Rapport solde"
+
+#. module: customer_statement
+#: model:ir.actions.act_window,name:customer_statement.action_statement_general_report_view
+msgid "Statement general report"
+msgstr "rapport solde generale"
+
+#. module: customer_statement
+#: view:account.statement.report:customer_statement.view_account_statement_report_search
+#: view:account.statement.report.general:customer_statement.view_account_statement_report_general_search
+msgid "This Year"
+msgstr "Cette année"
+
+#. module: customer_statement
+#: report:statement_general_detail:0
+msgid "Unit Price"
+msgstr "Prix unitaire"
+
+#. module: customer_statement
+#: report:statement_general:0
+msgid "select id, partner_id, partner, date, description, number, debit, credit, create_date, solde from account_statement_report_general where partner_id = $P{partner_id} and date between to_date($P{date_start}, 'YYYY-MM-DD') and to_date($P{date_end}, 'YYYY-MM-DD') union all select id, partner_id, partner, null date, 'Solde' description, '' number, 0 debit, 0 credit, null create_date, (select sum(debit-credit) from account_statement_report_general where partner_id = $P{partner_id} and date < to_date($P{date_start}, 'YYYY-MM-DD')) solde from account_statement_report_general where partner_id = $P{partner_id} and id = (select min (id) from account_statement_report_general where partner_id = $P{partner_id})"
+msgstr "select id, partner_id, partner, date, description, number, debit, credit, create_date, solde from account_statement_report_general where partner_id = $P{partner_id} and date between to_date($P{date_start}, 'YYYY-MM-DD') and to_date($P{date_end}, 'YYYY-MM-DD') union all select id, partner_id, partner, null date, 'Solde' description, '' number, 0 debit, 0 credit, null create_date, (select sum(debit-credit) from account_statement_report_general where partner_id = $P{partner_id} and date < to_date($P{date_start}, 'YYYY-MM-DD')) solde from account_statement_report_general where partner_id = $P{partner_id} and id = (select min (id) from account_statement_report_general where partner_id = $P{partner_id})"
+
+#. module: customer_statement
+#: report:statement_general_detail:0
+msgid "select id, partner_id, partner, date, description, number, debit, credit, price_unit, create_date, solde from account_statement_report where partner_id = $P{partner_id} and date between to_date($P{date_start}, 'YYYY-MM-DD') and to_date($P{date_end}, 'YYYY-MM-DD') union all select id, partner_id, partner, null date, 'Solde' description, '' number, 0 debit, 0 credit, 0 price_unit, null create_date, (select sum(debit-credit) from account_statement_report_general where partner_id = $P{partner_id} and date < to_date($P{date_start}, 'YYYY-MM-DD')) solde from account_statement_report_general where partner_id = $P{partner_id} and id = (select min (id) from account_statement_report_general where partner_id = $P{partner_id})"
+msgstr "select id, partner_id, partner, date, description, number, debit, credit, price_unit, create_date, solde from account_statement_report where partner_id = $P{partner_id} and date between to_date($P{date_start}, 'YYYY-MM-DD') and to_date($P{date_end}, 'YYYY-MM-DD') union all select id, partner_id, partner, null date, 'Solde' description, '' number, 0 debit, 0 credit, 0 price_unit, null create_date, (select sum(debit-credit) from account_statement_report_general where partner_id = $P{partner_id} and date < to_date($P{date_start}, 'YYYY-MM-DD')) solde from account_statement_report_general where partner_id = $P{partner_id} and id = (select min (id) from account_statement_report_general where partner_id = $P{partner_id})"
+

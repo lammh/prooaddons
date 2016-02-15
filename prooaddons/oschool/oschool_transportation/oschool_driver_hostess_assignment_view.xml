@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <!-- Hostess Information Tree View -->
+        <record model="ir.ui.view" id="view_driver_hostess_assignment_tree">
+            <field name="name">driver.hostess.assignment.tree</field>
+            <field name="model">oschool.driver_hostess_assignment</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="bus_to_zone_id"/>
+
+                    <field name="driver"/>
+                    <field name="hostess"/>
+                    <field name="day"/>
+                    <field name="bus_schedule"/>
+                </tree>
+            </field>
+        </record>
+
+          <record id="view_oschool_driver_hostess_assignment_search" model="ir.ui.view">
+            <field name="name">oschool.driver_hostess_assignment.search</field>
+            <field name="model">oschool.driver_hostess_assignment</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <search string="Responsible">
+                    <group expand="0" string="Group By...">
+                        <filter string="Day" name="day"  context="{'group_by':'day'}" />
+                        <filter string="Driver" name="driver"  context="{'group_by':'driver'}" />
+                        <filter string="Hostess" name="hostess"  context="{'group_by':'hostess'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_driver_hostess_assignment_list">
+            <field name="name">Driver and hostess assignment</field>
+            <field name="res_model">oschool.driver_hostess_assignment</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_oschool_driver_hostess_assignment_search" />
+            <field name="context">{'search_default_day':1}</field>
+        </record>
+
+
+
+        <record model="ir.actions.act_window.view" id="action_driver_hostess_assignment_tree">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_driver_hostess_assignment_tree"/>
+            <field name="act_window_id" ref="action_driver_hostess_assignment_list"/>
+
+        </record>
+        <menuitem id="transport_driver_hostess_assignment_menu" name="Driver and hostess assignment" parent="transportation_config_menu"
+                  action="action_driver_hostess_assignment_list"/>
+    </data>
+</openerp>

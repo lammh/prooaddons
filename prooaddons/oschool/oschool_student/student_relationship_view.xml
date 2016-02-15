@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="res_partner_relationship_form">
+            <field name="name">res.partner.relationship.form</field>
+            <field name="model">res.partner.relationship</field>
+            <field name="priority">21</field>
+            <field name="arch" type="xml">
+                <form string="Relationship">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="res_partner_relationship_tree">
+            <field name="name">res.partner.relationship.tree</field>
+            <field name="model">res.partner.relationship</field>
+            <field name="arch" type="xml">
+                <tree string="Relationship">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="res_partner_relationship_action">
+            <field name="name">Relationship</field>
+            <field name="res_model">res.partner.relationship</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="relationship_management_menu" parent="configuration_menu" action="res_partner_relationship_action"/>
+
+    </data>
+</openerp>

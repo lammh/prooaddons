@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_fleet_vehicle_user,Fleet.vehicle.user,model_fleet_vehicle,stock.group_stock_user,1,0,0,0
+access_fleet_vehicle_manage,Fleet.vehicle.manage,model_fleet_vehicle,stock.group_stock_manager,1,1,1,1
+access_fleet_vehicle_user,mission.order.user,model_fleet_vehicle,stock.group_stock_user,1,1,1,0
+access_mission_order_manage,mission.order.manage,model_mission_order,stock.group_stock_manager,1,1,1,1

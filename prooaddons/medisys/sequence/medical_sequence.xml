@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <!-- Sequences for medisys.patient -->
+        <record id="seq_type_medisys_patient" model="ir.sequence.type">
+            <field name="name">medisys Patient</field>
+            <field name="code">medisys.patient</field>
+        </record>
+
+        <record id="seq_medisys_patient" model="ir.sequence">
+            <field name="name">medisys Patient</field>
+            <field name="code">medisys.patient</field>
+            <field name="prefix">P%(y)s</field>
+            <field name="padding">5</field>
+        </record>
+
+    </data>
+</openerp>

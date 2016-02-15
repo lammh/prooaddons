@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="template" xml:space="preserve">
+    
+    <t t-name="OschoolClubPresenceQuickAdd">
+        <div class="oe_oschool_quickadd ui-toolbar" style="margin-bottom:0px;">
+            <div class="oe_form_dropdown_section">
+                <h4>Club :</h4>
+                <select class="oe_oschool_select_club" >
+
+                </select>
+            </div>
+            <div class="oe_form_dropdown_section">
+                <h4>Period :</h4>
+                <select class="oe_oschool_select_period" >
+
+                </select>
+            </div>
+            <div class="oe_form_dropdown_section">
+                <h4>Day :</h4>
+                <select class="oe_oschool_select_day" >
+
+                </select>
+            </div>
+
+        </div>
+    </t>
+</templates>

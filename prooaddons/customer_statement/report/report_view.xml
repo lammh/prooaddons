@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_statement_general_report_form" model="ir.ui.view">
+            <field name="name">statement.general.report.form</field>
+            <field name="model">statement.general.report</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+            <form string="Show sample wizard">
+                <group>
+                    <field name="name" invisible="1"/>
+                    <field name="date_start"/>
+                    <field name="date_end"/>
+                </group>
+                <group colspan="4" col="6">
+                    <button icon="gtk-cancel" special="cancel" string="Cancel"/>
+                    <button icon="terp-gtk-go-back-rtl" string="Global" name="launch" type="object"/>
+                    <button icon="STOCK_JUMP_TO" string="Details" name="launch_detail" type="object"/>
+                </group>
+            </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_statement_general_report_view">
+            <field name="name">Statement general report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">statement.general.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="domain">[]</field>
+            <field name="target">new</field>
+        </record>
+
+        <act_window
+                id="act_statement_general_report"
+                name="Statement Report"
+                res_model="statement.general.report"
+                src_model="res.partner"
+                view_mode="form"
+                target="new"/>
+    </data>
+</openerp>

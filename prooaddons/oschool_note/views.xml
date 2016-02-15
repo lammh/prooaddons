@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <menuitem id="main_oschool_note_menu" name="School Note Management" groups="oschool_group_note"/>
+        <menuitem id="note_menu" name="Note" parent="main_oschool_note_menu" groups="oschool_group_note"/>
+        <menuitem id="configuration_note_menu" name="Configuration" parent="main_oschool_note_menu" groups="oschool_group_note,oschool.oschool_group_admin_scolarity"/>
+
+        <record model="ir.ui.view" id="oschool_trimester_form_view">
+            <field name="name">oschool.trimester.form</field>
+            <field name="model">oschool.trimester</field>
+            <field name="arch" type="xml">
+                <form string="Trimester Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="oschool_trimester_tree_view">
+            <field name="name">oschool.trimester.tree</field>
+            <field name="model">oschool.trimester</field>
+            <field name="arch" type="xml">
+                <tree string="Trimester Tree">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="oschool_trimester_action">
+            <field name="name">Trimester</field>
+            <field name="res_model">oschool.trimester</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="oschool_trimester_menu" parent="configuration_note_menu" action="oschool_trimester_action" sequence="1"/>
+
+        <record model="ir.ui.view" id="oschool_matiere_type_form_view">
+            <field name="name">oschool.matiere.type.form</field>
+            <field name="model">oschool.matiere.type</field>
+            <field name="arch" type="xml">
+                <form string="Matiere Type Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="sequence"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="oschool_matiere_type_tree_view">
+            <field name="name">oschool.matiere.type.tree</field>
+            <field name="model">oschool.matiere.type</field>
+            <field name="arch" type="xml">
+                <tree string="Matiere Type Tree">
+                    <field name="name"/>
+                    <field name="sequence"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="oschool_matiere_type_action">
+            <field name="name">Matiere Type</field>
+            <field name="res_model">oschool.matiere.type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="oschool_matiere_type_menu" parent="configuration_note_menu" action="oschool_matiere_type_action" sequence="2"/>
+
+        <record model="ir.ui.view" id="oschool_matiere_form_view">
+            <field name="name">oschool.matiere.form</field>
+            <field name="model">oschool.matiere</field>
+            <field name="arch" type="xml">
+                <form string="Matiere Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="type" widget="selection"/>
+                            <field name="sequence"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="oschool_matiere_tree_view">
+            <field name="name">oschool.matiere.tree</field>
+            <field name="model">oschool.matiere</field>
+            <field name="arch" type="xml">
+                <tree string="Matiere Tree">
+                    <field name="name"/>
+                    <field name="type"/>
+                    <field name="sequence"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="oschool_matiere_search_view" model="ir.ui.view">
+            <field name="name">oschool.matiere.search</field>
+            <field name="model">oschool.matiere</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <search string="Matiere">
+                    <field name="name"/>
+                    <field name="type"/>
+                    <newline />
+                    <group expand="0" string="Group By...">
+                        <filter name="type" string="Type" domain="[]" context="{'group_by':'type'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="oschool_matiere_action">
+            <field name="name">Matiere</field>
+            <field name="res_model">oschool.matiere</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="oschool_matiere_menu" parent="configuration_note_menu" action="oschool_matiere_action" sequence="3"/>
+
+        <record model="ir.ui.view" id="oschool_matiere_group_form_view">
+            <field name="name">oschool.matiere.group.form</field>
+            <field name="model">oschool.matiere.group</field>
+            <field name="arch" type="xml">
+                <form string="Matiere Group Form">
+                    <sheet>
+                        <group>
+                            <field name="sequence"/>
+                            <field name="group_id" options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"/>
+                            <field name="matiere_id" options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"/>
+                        </group>
+                        <group col="6">
+                            <field name="details_ids" nolabel="1" colspan="4">
+                                <tree editable="bottom">
+                                    <field name="trimester_id" readonly="1"/>
+                                    <field name="coefficient"/>
+                                    <field name="mandatory"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="oschool_matiere_group_tree_view">
+            <field name="name">oschool.matiere.group.tree</field>
+            <field name="model">oschool.matiere.group</field>
+            <field name="arch" type="xml">
+                <tree string="Matiere Group Tree">
+                    <field name="name"/>
+                    <field name="sequence"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="oschool_matiere_group_search_view" model="ir.ui.view">
+            <field name="name">oschool.matiere.group.search</field>
+            <field name="model">oschool.matiere.group</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <search string="Matiere Groupe">
+                    <field name="group_id"/>
+                    <field name="matiere_id"/>
+                    <newline />
+                    <group expand="0" string="Group By...">
+                        <filter name="group" string="Group" domain="[]" context="{'group_by':'group_id'}" />
+                        <filter name="matiere" string="Matiere" domain="[]" context="{'group_by':'matiere_id'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="oschool_matiere_group_action">
+            <field name="name">Matiere Group</field>
+            <field name="res_model">oschool.matiere.group</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'search_default_group':1}</field>
+        </record>
+
+        <menuitem id="oschool_matiere_group_menu" parent="configuration_note_menu" action="oschool_matiere_group_action" sequence="4"/>
+
+        <record model="ir.ui.view" id="oschool_note_form_view">
+            <field name="name">oschool.note.form</field>
+            <field name="model">oschool.note</field>
+            <field name="arch" type="xml">
+                <form string="Note Form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="academic_year" on_change="onchange_note(academic_year, class_id, matiere_id)"
+                                       options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"/>
+                                <field name="trimester_id" options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"/>
+                                <field name="group_id" on_change="onchange_note(academic_year, class_id, matiere_id)"
+                                       options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"/>
+                            </group>
+                            <group>
+                                <field name="class_id" on_change="onchange_note(academic_year, class_id, matiere_id)" domain="[('group','=', group_id)]"
+                                       options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"/>
+                                <field name="matiere_id" on_change="onchange_note(academic_year, class_id, matiere_id)" domain="[('group_id','=', group_id)]"
+                                       options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"/>
+                            </group>
+                            <div class="oe_form_field" style="color:red;text-align:center">
+                                <h4>Note Min <field name="note_min" style="width:20%%"/></h4>
+                            </div>
+                            <div class="oe_form_field" style="color:green;text-align:center">
+                                <h4>Note Max <field name="note_max" style="width:20%%"/></h4>
+                            </div>
+                            <div class="oe_form_field" style="text-align:center">
+                                <h4>Average <field name="average" style="width:20%%"/></h4>
+                            </div>
+                        </group>
+                        <group>
+                            <field name="details_ids" nolabel="1" colspan="4">
+                                <tree editable="bottom">
+                                    <field name="student_id" readonly="1"/>
+                                    <field name="matiere_group" readonly="1"/>
+                                    <field name="note"/>
+                                    <field name="absent"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="oschool_note_tree_view">
+            <field name="name">oschool.note.tree</field>
+            <field name="model">oschool.note</field>
+            <field name="arch" type="xml">
+                <tree string="Note Tree">
+                    <field name="name"/>
+                    <field name="matiere_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="oschool_note_action">
+            <field name="name">Note</field>
+            <field name="res_model">oschool.note</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="oschool_note_menu" parent="note_menu" action="oschool_note_action" sequence="1"/>
+
+	 </data>
+</openerp>

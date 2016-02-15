@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <!-- Contract Types -->
+        <record id="hr_contract_type_cdi" model="hr.contract.type">
+            <field name="name">CDI</field>
+            <field eval = "9.180" name="employee_cnss"/>
+            <field eval = "16.570" name="boss_cnss"/>
+            <field eval = "1" name="foprolos"/>
+            <field eval = "2" name="tfp"/>
+            <field eval="1" name="taxable"/>
+            <field name="exploit_code">00</field>
+        </record>
+
+        <record id="hr_contract_type_cdd" model="hr.contract.type">
+            <field name="name">CDD</field>
+            <field eval = "9.180" name="employee_cnss"/>
+            <field eval = "16.570" name="boss_cnss"/>
+            <field eval = "1" name="foprolos"/>
+            <field eval = "2" name="tfp"/>
+            <field eval="1" name="taxable"/>
+            <field name="exploit_code">00</field>
+        </record>
+
+        <record id="hr_contract_type_cavis" model="hr.contract.type">
+            <field name="name">CAVIS</field>
+            <field eval = "9.180" name="employee_cnss"/>
+            <field eval = "16.570" name="boss_cnss"/>
+            <field eval = "1" name="foprolos"/>
+            <field eval = "2" name="tfp"/>
+            <field eval="1" name="taxable"/>
+            <field name="exploit_code">00</field>
+        </record>
+
+        <record id="hr_contract_type_cef0" model="hr.contract.type">
+            <field name="name">CEF 0</field>
+            <field eval = "0.000" name="employee_cnss"/>
+            <field eval = "0.000" name="boss_cnss"/>
+            <field eval = "1" name="foprolos"/>
+            <field eval = "2" name="tfp"/>
+            <field eval="0" name="taxable"/>
+            <field name="exploit_code">06</field>
+        </record>
+
+        <record id="hr_contract_type_cef1" model="hr.contract.type">
+            <field name="name">CEF 1</field>
+            <field eval = "9.180" name="employee_cnss"/>
+            <field eval = "0.500" name="boss_cnss"/>
+            <field eval = "1" name="foprolos"/>
+            <field eval = "2" name="tfp"/>
+            <field eval="1" name="taxable"/>
+            <field name="exploit_code">06</field>
+        </record>
+
+        <record id="hr_contract_type_cef2" model="hr.contract.type">
+            <field name="name">CEF 2</field>
+            <field eval = "9.180" name="employee_cnss"/>
+            <field eval = "0.500" name="boss_cnss"/>
+            <field eval = "1" name="foprolos"/>
+            <field eval = "2" name="tfp"/>
+            <field eval="1" name="taxable"/>
+            <field name="exploit_code">06</field>
+        </record>
+
+        <record id="hr_contract_type_sivp0" model="hr.contract.type">
+            <field name="name">SIVP 0</field>
+            <field eval = "0.000" name="employee_cnss"/>
+            <field eval = "0.000" name="boss_cnss"/>
+            <field eval = "0" name="foprolos"/>
+            <field eval = "0" name="tfp"/>
+            <field eval="0" name="taxable"/>
+            <field name="exploit_code">06</field>
+        </record>
+
+        <record id="hr_contract_type_sivp1" model="hr.contract.type">
+            <field name="name">SIVP 1</field>
+            <field eval = "9.180" name="employee_cnss"/>
+            <field eval = "0.500" name="boss_cnss"/>
+            <field eval = "1" name="foprolos"/>
+            <field eval = "2" name="tfp"/>
+            <field eval="1" name="taxable"/>
+            <field name="exploit_code">06</field>
+        </record>
+
+        <record id="hr_contract_type_sivp2" model="hr.contract.type">
+            <field name="name">SIVP 2</field>
+            <field eval = "9.180" name="employee_cnss"/>
+            <field eval = "0.500" name="boss_cnss"/>
+            <field eval = "1" name="foprolos"/>
+            <field eval = "2" name="tfp"/>
+            <field eval="1" name="taxable"/>
+            <field name="exploit_code">06</field>
+        </record>
+
+        <record id="hr_contract_type_sivp3" model="hr.contract.type">
+            <field name="name">SIVP 3</field>
+            <field eval = "9.180" name="employee_cnss"/>
+            <field eval = "2.910" name="boss_cnss"/>
+            <field eval = "1" name="foprolos"/>
+            <field eval = "2" name="tfp"/>
+            <field eval="1" name="taxable"/>
+            <field name="exploit_code">06</field>
+        </record>
+
+        <record id="hr_contract_type_sivp4" model="hr.contract.type">
+            <field name="name">SIVP 4</field>
+            <field eval = "9.180" name="employee_cnss"/>
+            <field eval = "5.320" name="boss_cnss"/>
+            <field eval = "1" name="foprolos"/>
+            <field eval = "2" name="tfp"/>
+            <field eval="1" name="taxable"/>
+            <field name="exploit_code">06</field>
+        </record>
+
+        <record id="hr_contract_type_sivp5" model="hr.contract.type">
+            <field name="name">SIVP 5</field>
+            <field eval = "9.180" name="employee_cnss"/>
+            <field eval = "7.730" name="boss_cnss"/>
+            <field eval = "1" name="foprolos"/>
+            <field eval = "2" name="tfp"/>
+            <field eval="1" name="taxable"/>
+            <field name="exploit_code">06</field>
+        </record>
+
+        <record id="hr_contract_type_sivp6" model="hr.contract.type">
+            <field name="name">SIVP 6</field>
+            <field eval = "9.180" name="employee_cnss"/>
+            <field eval = "10.140" name="boss_cnss"/>
+            <field eval = "1" name="foprolos"/>
+            <field eval = "2" name="tfp"/>
+            <field eval="1" name="taxable"/>
+            <field name="exploit_code">06</field>
+        </record>
+
+        <record id="hr_contract_type_sivp7" model="hr.contract.type">
+            <field name="name">SIVP 7</field>
+            <field eval = "9.180" name="employee_cnss"/>
+            <field eval = "12.550" name="boss_cnss"/>
+            <field eval = "1" name="foprolos"/>
+            <field eval = "2" name="tfp"/>
+            <field eval="1" name="taxable"/>
+            <field name="exploit_code">06</field>
+        </record>
+
+        <record id="hr_contract_type_ca" model="hr.contract.type">
+            <field name="name">CONTRAT APPRENTISSAGE</field>
+            <field eval = "0.000" name="employee_cnss"/>
+            <field eval = "0.000" name="boss_cnss"/>
+            <field eval = "1" name="foprolos"/>
+            <field eval = "2" name="tfp"/>
+            <field eval="0" name="taxable"/>
+            <field name="exploit_code">06</field>
+        </record>
+
+        <record id="hr_contract_type_cides" model="hr.contract.type">
+            <field name="name">CIDES</field>
+            <field eval = "9.180" name="employee_cnss"/>
+            <field eval = "0.500" name="boss_cnss"/>
+            <field eval = "1" name="foprolos"/>
+            <field eval = "2" name="tfp"/>
+            <field eval="1" name="taxable"/>
+            <field name="exploit_code">06</field>
+        </record>
+
+    </data>
+</openerp>

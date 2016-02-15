@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_statement_extrait_report_form" model="ir.ui.view">
+            <field name="name">statement.extrait.report.form</field>
+            <field name="model">statement.extrait.report</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+            <form string="Show sample wizard">
+                <group>
+                    <field name="name" />
+                    <field name="date_start"/>
+                    <field name="date_end"/>
+                </group>
+                <group colspan="4" col="6">
+                    <button icon="terp-gtk-go-back-rtl" string="Imprimer" name="launch" type="object"/>
+                    <button icon="gtk-cancel" special="cancel" string="Cancel"/>
+                </group>
+            </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_statement_extrait_report_view">
+            <field name="name">Rapport Extrait de compte</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">statement.extrait.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="domain">[]</field>
+            <field name="target">new</field>
+        </record>
+
+        <act_window
+                id="act_statement_extrait_report"
+                name="Extrait de compte"
+                res_model="statement.extrait.report"
+                src_model="res.partner"
+                view_mode="form"
+                target="new"/>
+                
+        <menuitem name="Extrait de compte" parent="account.menu_finance_bank_and_cash" id="account_extrait"
+                  action="action_statement_extrait_report_view"/>                
+                
+                
+    </data>
+</openerp>

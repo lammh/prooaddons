@@ -1,0 +1,116 @@
+<openerp>
+    <data>
+
+        <!--  Begin Initial Data -->
+
+        <!--  End Initial Data -->
+
+        <record model="ir.ui.view" id="product_category_study_form">
+            <field name="name">study.form</field>
+            <field name="model">pos.category</field>
+            <field name="inherit_id" ref="point_of_sale.product_pos_category_form_view"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <xpath expr="/form/sheet" position="before">
+                    <header>
+                        <button name="generate_months_study" type="object" string="Générer les mois"/>
+                    </header>
+                </xpath>
+                <field name="image_medium" position="replace"/>
+                <field name="parent_id" position="replace"/>
+                <field name="sequence" position="replace"/>
+                <field name="name" position="replace"/>
+                <xpath expr="/form/sheet" position="inside">
+                    <group>
+                        <group>
+                            <field name="parent_id" invisible="True"/>
+                            <field name="school_product_type" invisible="True"/>
+                            <field name="product_category" invisible="True"/>
+                            <field name="name"/>
+                            <field name="academic_year" required="True"/>
+
+                        </group>
+                        <group>
+                            <field name="groups" required="True"/>
+                            <field name="price" required="True"/>
+                            <field name="cash"/>
+                        </group>
+                    </group>
+                    <notebook colspan="2">
+                        <page string="Months List">
+                            <field name="services_ids" nolabel="1">
+                                <tree string="Months" editable="bottom" create="false" default_order="id">
+                                    <field name="name"/>
+                                    <!--<field name="subscription_month" string="Code" readonly="True"/>-->
+                                    <field name="list_price"/>
+                                    <field name="id" invisible="1"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                    </notebook>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="product_category_study_tree">
+            <field name="name">study.view</field>
+            <field name="model">pos.category</field>
+            <field name="arch" type="xml">
+                <tree string="Tree study">
+                    <field name="name"/>
+                    <field name="groups"/>
+                    <field name="academic_year"/>
+                    <field name="price"/>
+                    <field name="cash"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="product_category_study_search">
+            <field name="name">study.search</field>
+            <field name="model">pos.category</field>
+            <field name="arch" type="xml">
+                <search string="Search Study">
+                    <field name="name"/>
+                    <field name="groups"/>
+                    <field name="academic_year"/>
+                    <field name="price"/>
+                    <field name="cash"/>
+                    <filter name="group_academic_year" string="Academic Year" context="{'group_by':'academic_year'}" />
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_category_study_list">
+            <field name="name">studies</field>
+            <field name="res_model">pos.category</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context"
+                   eval="{'default_parent_id':ref('oschool_study_pos_category'),'default_product_category':ref('oschool_study_product_category'),'default_school_product_type':'study', 'search_default_group_academic_year':1}"/>
+            <field name="domain" eval="[('parent_id', '=', ref('oschool_study_pos_category'))]"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Cliquez pour ajouter les études</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_view_study">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="product_category_study_form"/>
+            <field name="act_window_id" ref="action_category_study_list"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_view_study2">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="product_category_study_tree"/>
+            <field name="act_window_id" ref="action_category_study_list"/>
+        </record>
+
+        <menuitem id="study_list_management_menu" name="Study" parent="configuration_menu"
+                  action="action_category_study_list"/>
+    </data>
+</openerp>

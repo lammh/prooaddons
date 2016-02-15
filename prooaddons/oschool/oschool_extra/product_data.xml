@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <record id="product_category_extra" model="product.category">
+            <field name="name">Extra</field>
+        </record>
+        <record id="oschool_extra_pos_category" model="pos.category">
+            <field name="name">Extra</field>
+            <field name="company_id"></field>
+        </record>
+    </data>
+</openerp>

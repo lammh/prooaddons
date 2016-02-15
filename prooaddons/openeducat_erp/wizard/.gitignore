@@ -1,0 +1,13 @@
+/__init__.pyc
+/admission_analysis_wizard.pyc
+/book_request_queue.pyc
+/exam_seating_arrangement.pyc
+/generate_roll_number.pyc
+/generate_time_table.pyc
+/issue_book.pyc
+/op_all_student_wizard.pyc
+/return_book.pyc
+/student_attendance_report.pyc
+/student_hall_tickets_wizard.pyc
+/student_migrate.pyc
+/time_table_report.pyc

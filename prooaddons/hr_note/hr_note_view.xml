@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+         <record id="hr_note_form_view" model="ir.ui.view">
+            <field name="name">hr.note.form</field>
+            <field name="model">hr.note</field>
+            <field name="arch" type="xml">
+                <form string="Premium Note">
+	                 <field name="name"/>
+	                 <field name="note"/>
+                 </form>
+            </field>
+        </record>
+        <record id="hr_note_tree_view" model="ir.ui.view">
+            <field name="name">hr.note.tree</field>
+            <field name="model">hr.note</field>
+            <field name="arch" type="xml">
+                <tree string="Premium Note">
+	                 <field name="name"/>
+	                 <field name="note"/>
+                 </tree>
+            </field>
+        </record>
+        <record id="action_premium_note" model="ir.actions.act_window">
+             <field name="name">Premium Note</field>
+             <field name="res_model">hr.note</field>
+             <field name="type">ir.actions.act_window</field>
+             <field name="view_type">form</field>
+             <field name="view_mode">tree,form</field>
+         </record>
+
+
+         <menuitem action="action_premium_note" name="Premium Note" id="menu_premium_note" parent="hr_payroll.payroll_configure"/>
+       
+         <record model="ir.ui.view" id="employee_note_form_view">
+            <field name="name">hr.employee.note.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Premium Notes">
+                        <field name="note_ids" widget="one2many_list" colspan="4" nolabel="1" mode="tree" >
+                            <tree string="Notes" editable='bottom'>  
+	                            <field name="note"/>                                                     
+	                            <field name="year"/> 
+                            </tree> 
+                        </field>
+                    </page>
+                </notebook>
+            </field>
+        </record>   
+         
+         
+         
+         
+         
+     </data>
+</openerp>
+    

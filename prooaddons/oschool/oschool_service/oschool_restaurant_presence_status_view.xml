@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="oschool_student_restaurant_presence_tree">
+            <field name="name">oschool_student_restaurant_presence_tree</field>
+            <field name="model">oschool.student_restaurant_presence</field>
+            <field name="arch" type="xml">
+                <tree string="Tree" editable="top" delete="false">
+                    <field name="student_id" readonly="True"/>
+                    <field name="group_id"></field>
+                    <field name="class_id" readonly="True"/>
+                    <field name="period_id" readonly="True"/>
+                    <field name="day" readonly="True"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_oschool_restaurant_presence_status" model="ir.actions.act_window">
+            <field name="name">Restaurant Presence</field>
+            <field eval="1" name="sequence"/>
+            <field name="res_model">oschool.student_restaurant_presence</field>
+            <field name="view_id" ref="oschool_student_restaurant_presence_tree"/>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree_oschool_restaurant_presence_quickadd</field>
+        </record>
+
+        <!--<record id="action_oschool_restaurant_presence_tree" model="ir.actions.act_window.view">-->
+            <!--<field eval="1" name="sequence"/>-->
+            <!--<field name="view_id" ref="oschool_student_restaurant_presence_tree"/>-->
+            <!--<field name="act_window_id" ref="action_oschool_restaurant_presence_status"/>-->
+        <!--</record>-->
+
+        <menuitem
+                action="action_oschool_restaurant_presence_status"
+                name="Restaurant presence status"
+                icon="STOCK_JUSTIFY_FILL"
+                id="oschool_restaurant_presence_status_menu"
+                parent="oschool_presence_status_management_menu"
+                sequence="2"
+                />
+    </data>
+</openerp>

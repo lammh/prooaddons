@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="product_category_inscription_form">
+            <field name="name">inscription.form</field>
+            <field name="model">pos.category</field>
+            <field name="inherit_id" ref="point_of_sale.product_pos_category_form_view"/>
+            <field name="mode">primary</field>
+            <field name="priority">20</field>
+            <field name="arch" type="xml">
+                <xpath expr="/form/sheet" position="before">
+                    <header>
+                        <button name="generate_inscriptions" type="object" string="Générer les types d'inscription"/>
+                    </header>
+                </xpath>
+                <field name="image_medium" position="replace"/>
+                <field name="parent_id" position="replace"/>
+                <field name="sequence" position="replace"/>
+                <field name="name" position="replace"/>
+                <xpath expr="/form/sheet" position="inside">
+                    <group>
+                        <group>
+                            <field name="parent_id" invisible="True"/>
+                            <field name="school_product_type" invisible="True"/>
+                            <field name="product_category" invisible="True"/>
+                            <field name="name"></field>
+                            <field name="academic_year" required="True"/>
+                        </group>
+                        <group>
+                            <field name="date_start" required="True"/>
+                            <field name="date_stop" required="True"/>
+                        </group>
+                    </group>
+                    <notebook colspan="2">
+                        <page string="Inscription Type">
+                            <field name="services_ids" nolabel="1">
+                                <tree string="Inscription" editable="bottom" create="false">
+                                    <field name="name" />
+                                    <field name="list_price" string="Price"/>
+                                    <field name="inscription_sequence" readonly="1"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="product_category_inscription_tree">
+            <field name="name">inscription.view</field>
+            <field name="model">pos.category</field>
+            <field name="arch" type="xml">
+                <tree string="Tree Inscription">
+                    <field name="name" string="Inscription"/>
+                    <field name="academic_year"/>
+                    <field name="date_start"/>
+                    <field name="date_stop"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_category_inscription_list">
+            <field name="name">Inscription</field>
+            <field name="res_model">pos.category</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain" eval="[('parent_id', '=', ref('oschool_inscription_pos_category'))]"/>
+            <field name="context" eval="{'default_parent_id':ref('oschool_inscription_pos_category'),'default_product_category':ref('oschool_inscription_product_category'),'default_school_product_type':'registration'}"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Cliquez pour ajouter vos dates d'inscription</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_view_inscription">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="product_category_inscription_form"/>
+            <field name="act_window_id" ref="action_category_inscription_list"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_view_inscription2">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="product_category_inscription_tree"/>
+            <field name="act_window_id" ref="action_category_inscription_list"/>
+        </record>
+
+        <menuitem id="inscription_list_management_menu" name="Registrations" parent="configuration_menu"
+                  action="action_category_inscription_list"/>
+    </data>
+</openerp>

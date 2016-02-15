@@ -1,0 +1,26 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#   * crm_claim_sequence
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 6.1\n"
+"Report-Msgid-Bugs-To: support@openerp.com\n"
+"POT-Creation-Date: 2014-02-15 19:56+0000\n"
+"PO-Revision-Date: 2014-02-15 19:56+0000\n"
+"Last-Translator: Mariano Ruiz <mrsarm@gmail.com>\n"
+"Language-Team: Enterprise Objects Consulting\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_claim_sequence
+#: field:crm.claim,number:0
+msgid "Number"
+msgstr "Número"
+
+#. module: crm_claim_sequence
+#: constraint:crm.claim:0
+msgid "The Number must be unique per Company"
+msgstr "El Número debe ser único por Compañía"

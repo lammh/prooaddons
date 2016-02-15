@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <record id="relationship_father" model="res.partner.relationship">
+            <field name="name">Father</field>
+        </record>
+        <record id="relationship_mother" model="res.partner.relationship">
+            <field name="name">Mother</field>
+        </record>
+        <record id="relationship_grandfather" model="res.partner.relationship">
+            <field name="name">Grand Father</field>
+        </record>
+        <record id="relationship_grandmother" model="res.partner.relationship">
+            <field name="name">Grand Mother</field>
+        </record>
+        <record id="relationship_other" model="res.partner.relationship">
+            <field name="name">Other</field>
+        </record>
+    </data>
+</openerp>

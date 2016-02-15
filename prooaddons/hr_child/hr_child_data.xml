@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data noupdate="1">
+        <record id="hr_deduction_data" model="hr.deduction">
+            <field eval="150.0" name="name"/>
+            <field eval="90.0" name="first_child"/>
+            <field eval="75.0" name="second_child"/>
+            <field eval="60.0" name="third_child"/>
+            <field eval="45.0" name="fourth_child"/>
+        </record>
+
+    </data>
+</openerp>
+

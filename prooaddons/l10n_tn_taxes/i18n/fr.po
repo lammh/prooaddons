@@ -1,0 +1,272 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* l10n_tn_taxes
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-20150713\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-20 12:58+0000\n"
+"PO-Revision-Date: 2015-07-20 12:58+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_tn_taxes
+#: model:ir.model,name:l10n_tn_taxes.model_account_voucher
+msgid "Accounting Voucher"
+msgstr "Justificatif comptable"
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_vendor_deduction_form
+msgid "Allocation"
+msgstr "Allocation"
+
+#. module: l10n_tn_taxes
+#: field:account.invoice,amount_in_word:0
+msgid "Amount in Word"
+msgstr "Montant en lettre"
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_cashier_deduction_form
+#: view:account.voucher:l10n_tn_taxes.view_vendor_deduction_form
+msgid "Are you sure to unreconcile and cancel this record ?"
+msgstr "Êtes-vous sûr de vouloir délettrer et annuler cette entrée?"
+
+#. module: l10n_tn_taxes
+#: field:account.config.settings,withholding_auto:0
+msgid "Automatic Calculation Withholding"
+msgstr "Calcul du Retenue à la source automatique"
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_vendor_deduction_form
+msgid "Cancel Receipt"
+msgstr "Annuler le reçu."
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_cashier_deduction_form
+msgid "Cancel Voucher"
+msgstr "Annuler ce bon."
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_cashier_deduction_form
+msgid "Credits"
+msgstr "Crédits"
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_cashier_deduction_form
+msgid "Currency Options"
+msgstr "Options de la devise"
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_vendor_deduction_form
+msgid "Customer"
+msgstr "Client"
+
+#. module: l10n_tn_taxes
+#: model:ir.actions.act_window,name:l10n_tn_taxes.action_payment_deduction
+#: model:ir.actions.act_window,name:l10n_tn_taxes.action_vendor_deduction
+#: model:ir.ui.menu,name:l10n_tn_taxes.menu_action_payment_deduction
+#: model:ir.ui.menu,name:l10n_tn_taxes.menu_action_vendor_deduction
+msgid "Deduction At Source"
+msgstr "Retenue à la source"
+
+#. module: l10n_tn_taxes
+#: code:addons/l10n_tn_taxes/withholding.py:66
+#, python-format
+msgid "Error!"
+msgstr "Erreur!"
+
+#. module: l10n_tn_taxes
+#: field:res.partner,fodec:0
+msgid "FODEC"
+msgstr "FODEC"
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_cashier_deduction_form
+msgid "Internal Notes"
+msgstr "Notes internes"
+
+#. module: l10n_tn_taxes
+#: model:ir.model,name:l10n_tn_taxes.model_account_invoice
+msgid "Invoice"
+msgstr "Facture"
+
+#. module: l10n_tn_taxes
+#: model:ir.model,name:l10n_tn_taxes.model_account_invoice_tax
+msgid "Invoice Tax"
+msgstr "Taxe"
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_vendor_deduction_form
+msgid "Invoices and outstanding transactions"
+msgstr "Factures et transactions exceptionnelles"
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_cashier_deduction_form
+#: view:account.voucher:l10n_tn_taxes.view_vendor_deduction_form
+#: model:ir.model,name:l10n_tn_taxes.model_account_move_line
+msgid "Journal Items"
+msgstr "Écritures comptables"
+
+#. module: l10n_tn_taxes
+#: code:addons/l10n_tn_taxes/taxes.py:155
+#, python-format
+msgid "No tax stamp tax types."
+msgstr "Type Taxe Timbre Fiscal inexistant."
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_vendor_deduction_form
+msgid "Paid Amount"
+msgstr "Montant payé"
+
+#. module: l10n_tn_taxes
+#: model:ir.model,name:l10n_tn_taxes.model_res_partner
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: l10n_tn_taxes
+#: field:res.partner,partner_registry:0
+msgid "Partner Registry"
+msgstr "Registre de commerce"
+
+#. module: l10n_tn_taxes
+#: field:res.partner,wht_payable_id:0
+msgid "Payable Withholding"
+msgstr "Retenue à payer"
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_cashier_deduction_form
+#: view:account.voucher:l10n_tn_taxes.view_vendor_deduction_form
+msgid "Payment Information"
+msgstr "Information sur le paiement"
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_cashier_deduction_form
+#: view:account.voucher:l10n_tn_taxes.view_vendor_deduction_form
+msgid "Payment Method"
+msgstr "Méthode de paiement"
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_cashier_deduction_form
+msgid "Payment Options"
+msgstr "Options de paiement"
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_cashier_deduction_form
+#: view:account.voucher:l10n_tn_taxes.view_vendor_deduction_form
+msgid "Payment Ref"
+msgstr "Ref. du règlement"
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_vendor_deduction_form
+msgid "Receipt Withholding"
+msgstr "Retenue Reçu"
+
+#. module: l10n_tn_taxes
+#: field:res.partner,wht_receivable_id:0
+msgid "Receivable Withholding"
+msgstr "Retenue à recevoir"
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_cashier_deduction_form
+#: view:account.voucher:l10n_tn_taxes.view_vendor_deduction_form
+msgid "Set to Draft"
+msgstr "Mettre à l'état \"Brouillon\""
+
+#. module: l10n_tn_taxes
+#: field:res.partner,stamp_exemption:0
+msgid "Stamp Tax Exemption"
+msgstr "Exonoration Timbre Fiscal"
+
+#. module: l10n_tn_taxes
+#: code:addons/l10n_tn_taxes/withholding.py:66
+#, python-format
+msgid "Sum line different to amount."
+msgstr "Somme des lines different du montant."
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_cashier_deduction_form
+msgid "Supplier"
+msgstr "Fournisseur"
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_cashier_deduction_form
+msgid "Supplier Invoices and Outstanding transactions"
+msgstr "Factures fournisseurs et transactions exceptionnelles"
+
+#. module: l10n_tn_taxes
+#: model:ir.model,name:l10n_tn_taxes.model_account_tax
+msgid "Tax"
+msgstr "Taxes"
+
+#. module: l10n_tn_taxes
+#: view:res.partner:l10n_tn_taxes.view_partner_property_form_taxes
+msgid "Tax Information"
+msgstr "Informations sur les Taxes"
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_cashier_deduction_form
+#: view:account.voucher:l10n_tn_taxes.view_vendor_deduction_form
+msgid "Total Allocation"
+msgstr "Allocation totale"
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_cashier_deduction_form
+#: view:account.voucher:l10n_tn_taxes.view_vendor_deduction_form
+msgid "Total Withholding"
+msgstr "Total Retenue"
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_cashier_deduction_form
+#: view:account.voucher:l10n_tn_taxes.view_vendor_deduction_form
+msgid "Unreconcile"
+msgstr "Annuler le rapprochement"
+
+#. module: l10n_tn_taxes
+#: field:res.partner,vat_exemption:0
+msgid "VAT Exemption"
+msgstr "Exonoration TVA"
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_cashier_deduction_form
+#: view:account.voucher:l10n_tn_taxes.view_vendor_deduction_form
+msgid "Validate"
+msgstr "Valider"
+
+#. module: l10n_tn_taxes
+#: model:ir.model,name:l10n_tn_taxes.model_account_voucher_line
+msgid "Voucher Lines"
+msgstr "Lignes de justificatif"
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_cashier_deduction_form
+msgid "Voucher Payment"
+msgstr "Règlement fournisseur"
+
+#. module: l10n_tn_taxes
+#: field:account.move.line,withholding:0
+#: field:account.voucher,withholding:0
+#: field:account.voucher.line,withholding:0
+msgid "Withholding"
+msgstr "Retenue"
+
+#. module: l10n_tn_taxes
+#: field:account.voucher.line,amount_withholding:0
+msgid "Withholding Amount"
+msgstr "Montant de la Retenue"
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_cashier_deduction_form
+#: view:account.voucher:l10n_tn_taxes.view_vendor_deduction_form
+msgid "e.g. 003/10"
+msgstr "par exemple: 003/10"
+
+#. module: l10n_tn_taxes
+#: view:account.voucher:l10n_tn_taxes.view_cashier_deduction_form
+#: view:account.voucher:l10n_tn_taxes.view_vendor_deduction_form
+msgid "e.g. Invoice SAJ/0042"
+msgstr "ex: la facture SAJ/0042"

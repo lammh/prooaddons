@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_sale_lots" model="ir.ui.view">
+                <field name="name">Sale Production Lot</field>
+                <field name="model">sale.production.lot</field>
+                <field name="arch" type="xml">
+                <form string="Sale Production Lot">
+                    <field name="lots">
+                        <tree string="Serial Numbers" editable="bottom">
+                            <field name="prodlot_id"/>
+                            <field name="quantity" />
+                        </tree>
+                    </field>
+                    <footer>
+                        <button name="sale_lot" string="Generate" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+                </field>
+            </record>
+
+            <record id="action_sale_lots" model="ir.actions.act_window">
+                <field name="name">Sale Production Lot</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">sale.production.lot</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">form</field>
+                <field name="target">new</field>
+                <field name="context">{'form_view_ref': False}</field>
+            </record>
+
+        <record id="view_sale_order_lot_form" model="ir.ui.view">
+            <field name="name">sale.order.lot.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form" />
+            <field name="arch" type="xml">
+                <notebook position="before">
+                    <button name="%(action_sale_lots)d" string="Sale Production Lot" type="action" icon="STOCK_PREFERENCES" states="draft"/>
+                </notebook>
+            </field>
+        </record>
+
+    </data>
+</openerp>

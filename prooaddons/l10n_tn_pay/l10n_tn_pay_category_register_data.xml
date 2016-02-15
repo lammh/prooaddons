@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data noupdate="1">
+
+    <record id="hr_payroll.BASIC" model="hr.salary.rule.category">
+        <field name="name">Salaire de base</field>
+        <field name="code">BASE</field>
+        <field name="is_stub" eval="True"/>
+        <field name="parent_id" eval="False"/>
+    </record>    
+
+    <record id="hr_payroll.BSP" model="hr.salary.rule.category">
+        <field name="name">Bordereau Spécial de paie</field>
+        <field name="code">BSP</field>
+        <field name="is_stub" eval="True"/>
+        <field name="parent_id" eval="False"/>
+    </record>  
+    <record id="hr_payroll.IRRPT" model="hr.salary.rule.category">
+        <field name="name">IRPP Test</field>
+        <field name="code">IRPP T</field>
+        <field name="parent_id" eval="False"/>
+    </record>   
+    <record id="hr_payroll.ARRON" model="hr.salary.rule.category">
+        <field name="name">ARRONDISSEMENT</field>
+        <field name="code">ARRON</field>
+        <field name="parent_id" eval="False"/>
+    </record>
+    <record id="hr_payroll.AVANCE" model="hr.salary.rule.category">
+        <field name="name">AVANCE</field>
+        <field name="code">AVANCE</field>
+        <field name="is_stub" eval="True"/>
+        <field name="parent_id" eval="False"/>
+    </record> 
+    <record id="hr_payroll.TAXGROS" model="hr.salary.rule.category">
+        <field name="name">Brut Imposable</field>
+        <field name="code">TAXGROSS</field>
+        <field name="parent_id" eval="False"/>
+    </record> 
+    <record id="hr_payroll.COMP" model="hr.salary.rule.category">
+        <field name="name">Cotisations Patronales</field>
+        <field name="code">COMP</field>
+        <field name="parent_id" eval="False"/>
+    </record> 
+    <record id="hr_payroll.DED" model="hr.salary.rule.category">
+        <field name="name">Deduction</field>
+        <field name="code">DED</field>
+        <field name="parent_id" eval="False"/>
+    </record> 
+    <record id="hr_payroll.DEDIRPP" model="hr.salary.rule.category">
+        <field name="name">Déduction d'impôt</field>
+        <field name="code">DEDIRPP</field>
+        <field name="parent_id" eval="False"/>
+    </record> 
+    <record id="hr_payroll.INDM" model="hr.salary.rule.category">
+        <field name="name">Indemnite</field>
+        <field name="code">INDM</field>
+    <field name="is_prime" eval="True"/>
+        <field name="parent_id" eval="False"/>
+    </record> 
+    <record id="hr_payroll.PRESENCE" model="hr.salary.rule.category">
+        <field name="name">Présence</field>
+        <field name="code">PRESENCE</field>
+        <field name="is_stub" eval="True"/>
+        <field name="parent_id" eval="False"/>
+    </record> 
+    <record id="hr_payroll.NET" model="hr.salary.rule.category">
+        <field name="name">Prime</field>
+        <field name="code">Pm</field>
+        <field name="is_prime" eval="True"/>
+        <field name="parent_id" eval="False"/>
+    </record> 
+    <record id="hr_payroll.PV" model="hr.salary.rule.category">
+        <field name="name">Prime BSP</field>
+        <field name="code">PSB</field>
+        <field name="is_stub" eval="True"/>
+        <field name="parent_id" eval="False"/>
+    </record> 
+    <record id="hr_payroll.NET" model="hr.salary.rule.category">
+        <field name="name">Salaire Net</field>
+        <field name="code">NET</field>
+        <field name="is_loan" eval="True"/>
+        <field name="parent_id" eval="False"/>
+    </record> 
+    <record id="hr_payroll.BRUT" model="hr.salary.rule.category">
+        <field name="name">Salaire Brut</field>
+        <field name="code">BRUT</field>
+        <field name="parent_id" eval="False"/>
+    </record> 
+     <record id="hr_payroll.STC" model="hr.salary.rule.category">
+        <field name="name">STC</field>
+        <field name="code">STC</field>
+        <field name="parent_id" eval="False"/>
+    </record> 
+     <record id="hr_payroll.trimp" model="hr.salary.rule.category">
+        <field name="name">Tranche d'impôt</field>
+        <field name="code">TRANCHEIMPO</field>
+        <field name="parent_id" eval="False"/>
+    </record> 
+
+    <record id="TOTAL" model="hr.salary.rule.category">
+        <field name="name">Cout total pour l'entreprise</field>
+        <field name="code">TOTAL</field>
+        <field name="parent_id" eval="False"/>
+    </record>
+    
+    <record id="C_IMP" model="hr.salary.rule.category">
+        <field name="name">Cumul Imposable</field>
+        <field name="code">C_IMP</field>
+        <field name="parent_id" eval="False"/>
+    </record>
+    
+    <record id="C_IMPAN" model="hr.salary.rule.category">
+        <field name="name">Cumul Imposable Annuel</field>
+        <field name="code">C_IMPAN</field>
+        <field name="parent_id" eval="False"/>
+    </record>
+    
+    <record id="C_IMPDED" model="hr.salary.rule.category">
+        <field name="name">Cumul Imposable Aprés Déduction</field>
+        <field name="code">C_IMPDED</field>
+        <field name="parent_id" eval="False"/>
+    </record>
+    
+    <record id="RETENUES" model="hr.salary.rule.category">
+        <field name="name">Total Retenues</field>
+        <field name="code">RETENUES</field>
+        <field name="parent_id" eval="False"/>
+    </record>
+    
+    <record id="SALC" model="hr.salary.rule.category">
+        <field name="name">Total Charges Salariales</field>
+        <field name="code">SALC</field>
+        <field name="parent_id" ref="RETENUES"/>
+    </record>
+    
+    <record id="IRPP" model="hr.salary.rule.category">
+        <field name="name">IRPP</field>
+        <field name="code">IRPP</field>
+        <field name="parent_id" ref="RETENUES"/>
+        
+    </record>
+
+    <record id="C_IMPAN_A_D" model="hr.salary.rule.category">
+        <field name="name">Cumul Imposable Aprés Déduction</field>
+        <field name="code">C_IMPDED</field>
+        <field name="parent_id" eval="False"/>
+    </record>    
+    
+    <record id="pret" model="hr.salary.rule.category">
+        <field name="name">pret</field>
+        <field name="code">pret</field>
+        <field name="parent_id" eval="False"/>
+    </record>   
+    
+     <!-- Contribution Register  -->
+
+    <record id="hr_CNSS_register" model="hr.contribution.register">
+        <field name="name">La Caisse Nationale de Sécurité Sociale</field>
+    </record>
+
+   <record id="hr_retraite_register" model="hr.contribution.register">
+        <field name="name">Organisme de retraite complementaire</field>
+    </record>
+
+    <record id="hr_cci_register" model="hr.contribution.register">
+        <field name="name">Chambre du commerce et de l'industrie</field>
+    </record>
+
+    <record id="hr_prevoyance_register" model="hr.contribution.register">
+        <field name="name">Organisme de prevoyance</field>
+    </record>
+    <record id="hr_TFP" model="hr.contribution.register">
+        <field name="name">TFP</field>
+    </record>
+    <record id="hr_FOPROLOS" model="hr.contribution.register">
+        <field name="name">FOPROLOS</field>
+    </record>
+    <record id="hr_IRPP" model="hr.contribution.register">
+        <field name="name">IRPP</field>
+    </record>
+    <record id="hr_CNSS_S" model="hr.contribution.register">
+        <field name="name">CNSS SALARIALE</field>
+    </record>
+    <record id="hr_CNSS_P" model="hr.contribution.register">
+        <field name="name">CNSS PATRONALE</field>
+    </record>
+    <record id="hr_BRUT" model="hr.contribution.register">
+        <field name="name">SALAIRE BRUT</field>
+    </record>
+    <record id="hr_BRUT_PDG" model="hr.contribution.register">
+        <field name="name">SALAIRE BRUT PDG</field>
+    </record>
+    <record id="hr_BRUT_SIVP" model="hr.contribution.register">
+        <field name="name">SALAIRE BRUT SIVP</field>
+    </record>
+    <record id="hr_IMPOSABLE" model="hr.contribution.register">
+        <field name="name">SALAIRE IMPOSABLE</field>
+    </record>
+  </data>
+</openerp>
+ 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="report_header_custom" inherit_id="stock.report_picking">
+            <xpath expr="//div[@class='page']" position="inside">
+                <em><span t-field="o.note"/></em>
+            </xpath>
+        </template>
+    </data>
+</openerp>

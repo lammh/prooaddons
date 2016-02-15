@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_inventory_lot_form" model="ir.ui.view">
+            <field name="name">stock.inventory.lot.form</field>
+            <field name="model">stock.inventory</field>
+            <field name="inherit_id" ref="stock.view_inventory_form" />
+            <field name="arch" type="xml">
+                <field name="filter" position="after">
+                    <field name="lot" attrs="{'invisible': [('state', '!=', 'confirm')]}"/>
+                    <button name="lot_integration" string="Integration" type="object" attrs="{'invisible': [('state', '!=', 'confirm')]}"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

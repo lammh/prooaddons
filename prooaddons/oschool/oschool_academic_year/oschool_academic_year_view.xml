@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="academic_year_form_view">
+            <field name="name">academic_year.form</field>
+            <field name="model">oschool.academic_year</field>
+            <field name="priority">21</field>
+            <field name="arch" type="xml">
+                <form string="Academic Year Form">
+                    <header>
+                         <button name="action_new" type="object"
+                                string="Reset to new"
+                                states="current"/>
+                        <button name="action_current" type="object"
+                                string="Current" states="new"
+                                class="oe_highlight"/>
+                        <button name="action_current" type="object"
+                                string="Reset to current" states="closed"
+                                class="oe_highlight"/>
+                        <button name="action_closed" type="object"
+                                string="Mark as closed" states="current"
+                                class="oe_highlight"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="code"/>
+                            </group>
+                            <group>
+                                <field name="date_start"/>
+                                <field name="date_stop"/>
+                                <!--<field name="academic_year_state"/>-->
+                            </group>
+                        </group>
+                        <label for="period_ids"/>
+                        <field name="period_ids">
+                            <tree editable="top">
+                                <field name="name"/>
+                                <field name="apply_price_list"/>
+                            </tree>
+                        </field>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="academic_year_tree_view">
+            <field name="name">academic_year.tree</field>
+            <field name="model">oschool.academic_year</field>
+            <field name="arch" type="xml">
+                <tree string="Academic Year Tree"
+                      colors="blue:state=='current';red:state=='closed'">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="date_start"/>
+                    <field name="date_stop"/>
+                    <field name="state"/>
+                    <field name="company_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="academic_year_list_action">
+            <field name="name">academic_year</field>
+            <field name="res_model">oschool.academic_year</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Cliquez pour ajouter une nouvelle année soclaire</p>
+            </field>
+        </record>
+
+        <menuitem id="academic_year_management_menu" name="Academic year" parent="configuration_menu"
+                  action="academic_year_list_action"/>
+
+    </data>
+</openerp>

@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.1269722013523684"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="18"/>
+	<queryString>
+		<![CDATA[select name,company_id,register_id,codexp,year,date,period from hr_cnss]]>
+	</queryString>
+	<field name="name" class="java.lang.String"/>
+	<field name="company_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[Company]]></fieldDescription>
+	</field>
+	<field name="register_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[Contribution Register]]></fieldDescription>
+	</field>
+	<field name="codexp" class="java.lang.String">
+		<fieldDescription><![CDATA[Exploit Code]]></fieldDescription>
+	</field>
+	<field name="year" class="java.lang.Integer"/>
+	<field name="date" class="java.sql.Date">
+		<fieldDescription><![CDATA[Expiration Date]]></fieldDescription>
+	</field>
+	<field name="period" class="java.lang.String">
+		<fieldDescription><![CDATA[Periods]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="183" splitType="Stretch">
+			<line>
+				<reportElement x="480" y="182" width="301" height="1"/>
+			</line>
+			<line>
+				<reportElement x="296" y="182" width="140" height="1"/>
+			</line>
+			<line>
+				<reportElement x="252" y="69" width="1" height="113"/>
+			</line>
+			<line>
+				<reportElement x="21" y="135" width="231" height="1"/>
+			</line>
+			<line>
+				<reportElement x="133" y="101" width="1" height="81"/>
+			</line>
+			<line>
+				<reportElement x="296" y="115" width="140" height="1"/>
+			</line>
+			<line>
+				<reportElement x="296" y="69" width="140" height="1"/>
+			</line>
+			<line>
+				<reportElement x="21" y="100" width="231" height="1"/>
+			</line>
+			<line>
+				<reportElement x="21" y="69" width="1" height="113"/>
+			</line>
+			<line>
+				<reportElement x="780" y="69" width="1" height="113"/>
+			</line>
+			<line>
+				<reportElement x="22" y="68" width="230" height="1"/>
+			</line>
+			<line>
+				<reportElement x="479" y="69" width="1" height="113"/>
+			</line>
+			<line>
+				<reportElement x="22" y="182" width="231" height="1"/>
+			</line>
+			<line>
+				<reportElement x="479" y="68" width="301" height="1"/>
+			</line>
+			<line>
+				<reportElement x="436" y="69" width="1" height="113"/>
+			</line>
+			<line>
+				<reportElement x="295" y="69" width="1" height="113"/>
+			</line>
+			<staticText>
+				<reportElement x="325" y="74" width="100" height="20"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Code d'exlpoitation ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="112" width="64" height="20"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Trimestre : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="152" width="40" height="20"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Année : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="525" y="49" width="224" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOM ET ADRESSE DE L’EMPLOYEUR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="79" width="100" height="20"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[N° Employeur :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="114" width="100" height="20"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[BR :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="155" width="100" height="20"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Page N° :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="121" width="100" height="20"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Matricule fiscal ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="241" y="3" width="524" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DECLARATION TRIMESTRIELLE DES SALARIES ET DES SALAIRES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="272" y="23" width="534" height="20"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[doit être remise à la Caisse sous peine de pénalités dans les 15 premiers jours qui suivent le trimestre.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="5" width="219" height="30"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="7" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[
+MINISTERE DES AFFAIRES SOCIALES, DE LA SOLIDARIT
+                 ET DES TUNISIENS A L’ETRANGER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="35" width="173" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[CAISSE NATIONALE DE SECURITE SOCIALE
+49. Av. TAIEB MHIRI - TUNIS- Tel : 71. 796. 744]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-7" y="5" width="211" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[                     	  REPUBLIQUE TUNISIENNE]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="94" splitType="Stretch">
+			<line>
+				<reportElement x="22" y="8" width="759" height="1"/>
+			</line>
+			<line>
+				<reportElement x="21" y="92" width="759" height="1"/>
+			</line>
+			<line>
+				<reportElement x="21" y="9" width="1" height="81"/>
+			</line>
+			<line>
+				<reportElement x="780" y="9" width="1" height="81"/>
+			</line>
+			<line>
+				<reportElement x="54" y="9" width="1" height="83"/>
+			</line>
+			<line>
+				<reportElement x="140" y="9" width="1" height="84"/>
+			</line>
+			<line>
+				<reportElement x="332" y="9" width="1" height="81"/>
+			</line>
+			<line>
+				<reportElement x="370" y="9" width="1" height="81"/>
+			</line>
+			<line>
+				<reportElement x="423" y="9" width="1" height="81"/>
+			</line>
+			<line>
+				<reportElement x="676" y="9" width="1" height="81"/>
+			</line>
+			<line>
+				<reportElement x="676" y="35" width="104" height="1"/>
+			</line>
+			<line>
+				<reportElement x="423" y="58" width="253" height="1"/>
+			</line>
+			<line>
+				<reportElement x="506" y="58" width="1" height="32"/>
+			</line>
+			<line>
+				<reportElement x="590" y="59" width="1" height="30"/>
+			</line>
+			<staticText>
+				<reportElement x="23" y="41" width="31" height="40"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[   N° Ordre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="58" y="41" width="90" height="31"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[MATRICULE DE
+     L’ASSURE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="122" y="75" width="26" height="16"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[clé]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="45" width="148" height="14"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[IDENTITE DU SALARIE (1)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="39" width="30" height="50"/>
+				<text><![CDATA[  N°
+ chez
+l’Emp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="373" y="41" width="55" height="43"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[    Categ
+Profession
+     nelle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="482" y="19" width="173" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[REMUNERATION MENSUELLE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="568" y="39" width="135" height="20"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Reports des Montants]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="434" y="64" width="71" height="20"/>
+				<textElement>
+					<font fontName="Arial" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1 er mois]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="511" y="64" width="76" height="20"/>
+				<textElement>
+					<font fontName="Arial" isBold="false"/>
+				</textElement>
+				<text><![CDATA[2 ème mois]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="600" y="64" width="79" height="20"/>
+				<textElement>
+					<font fontName="Arial" isBold="false"/>
+				</textElement>
+				<text><![CDATA[3 ème mois]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="494" y="79" width="14" height="13"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[D]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="581" y="79" width="14" height="13"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[D]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="666" y="79" width="14" height="13"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[D]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="691" y="13" width="100" height="20"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[TOTAL GENERAL]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="120" splitType="Stretch">
+			<line>
+				<reportElement x="780" y="-3" width="1" height="35"/>
+			</line>
+			<line>
+				<reportElement x="332" y="-3" width="1" height="34"/>
+			</line>
+			<line>
+				<reportElement x="370" y="-3" width="1" height="34"/>
+			</line>
+			<line>
+				<reportElement x="423" y="-3" width="1" height="34"/>
+			</line>
+			<line>
+				<reportElement x="506" y="-3" width="1" height="34"/>
+			</line>
+			<line>
+				<reportElement x="590" y="-5" width="1" height="36"/>
+			</line>
+			<line>
+				<reportElement x="676" y="-3" width="1" height="34"/>
+			</line>
+			<line>
+				<reportElement x="140" y="-3" width="1" height="34"/>
+			</line>
+			<line>
+				<reportElement x="54" y="-3" width="1" height="34"/>
+			</line>
+			<line>
+				<reportElement x="21" y="31" width="759" height="1"/>
+			</line>
+			<line>
+				<reportElement x="21" y="-3" width="1" height="34"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="23" y="11" width="535" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[Certifié sincère et conforme à nos documents comptables et arrêté à la somme de : (en toutes lettres) (2)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="21" y="26" width="459" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="591" y="7" width="100" height="20"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total à reporter]]></text>
+			</staticText>
+			<line>
+				<reportElement x="688" y="3" width="100" height="1"/>
+			</line>
+			<line>
+				<reportElement x="688" y="23" width="100" height="1"/>
+			</line>
+			<line>
+				<reportElement x="688" y="3" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="788" y="3" width="1" height="20"/>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="23" y="10" width="558" height="41"/>
+				<textElement>
+					<font fontName="Arial" size="7" isBold="true" isUnderline="false"/>
+					<paragraph lineSpacing="Double"/>
+				</textElement>
+				<text><![CDATA[(1) l’identité doit être conforme à la carte d’assuré ou à l’extrait de naissance.
+(2) L’arrêté doit correspondre au total des salaires déclarés pendant le trimestre (à indiquer sur la dernière page).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="581" y="-10" width="207" height="22"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Fait à ........................... le ...........................20]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="637" y="32" width="122" height="16"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(sur toutes les pages)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="579" y="15" width="221" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cachet et signature de l’Entreprise]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

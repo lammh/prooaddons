@@ -1,0 +1,265 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* purchase_pharmacy_stewardship
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-20150618\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-06-26 13:09+0000\n"
+"PO-Revision-Date: 2015-06-26 13:09+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.actions.act_window,help:purchase_pharmacy_stewardship.stewardship_action_partner_supplier_form
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                Click to add a contact in your address book.\n"
+"              </p><p>\n"
+"                Odoo helps you easily track all activities related to\n"
+"                a supplier: discussions, history of purchases,\n"
+"                documents, etc.\n"
+"              </p>\n"
+"            "
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.actions.act_window,help:purchase_pharmacy_stewardship.stewardship_purchase_pricelist_version_action
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                Click to add a pricelist version.\n"
+"              </p><p>\n"
+"                There can be more than one version of a pricelist, each of\n"
+"                these must be valid during a certain period of time. Some\n"
+"                examples of versions: Main Prices, 2010, 2011, Summer Sales,\n"
+"                etc.\n"
+"              </p>\n"
+"            "
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.actions.act_window,help:purchase_pharmacy_stewardship.stewardship_purchase_form_action
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                Click to create a quotation that will be converted into a purchase order.\n"
+"            </p><p>\n"
+"                Use this menu to search within your purchase orders by\n"
+"                references, supplier, products, etc. For each purchase order,\n"
+"                you can track the related discussion with the supplier, control\n"
+"                the products received and control the supplier invoices.\n"
+"            </p>\n"
+"        "
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.actions.act_window,help:purchase_pharmacy_stewardship.stewardship_purchase_rfq
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                Click to create a request for quotation.\n"
+"              </p><p>\n"
+"                The quotation contains the history of the discussion/negotiation\n"
+"                you had with your supplier. Once confirmed, a request for\n"
+"                quotation is converted into a purchase order.\n"
+"              </p><p>\n"
+"                Most propositions of purchase orders are created automatically\n"
+"                by Odoo based on inventory needs.\n"
+"              </p>\n"
+"            "
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.actions.act_window,help:purchase_pharmacy_stewardship.stewardship_action_invoice_pending
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"            Click to create a draft invoice.\n"
+"          </p><p>\n"
+"            Use this menu to control the invoices to be received from your\n"
+"            supplier. Odoo generates draft invoices from your purchase\n"
+"            orders or receipts, according to your settings.\n"
+"          </p><p>\n"
+"            Once you receive a supplier invoice, you can match it with the\n"
+"            draft invoice and validate it.\n"
+"          </p>\n"
+"        "
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.actions.act_window,help:purchase_pharmacy_stewardship.stewardship_product_normal_action_puchased
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"            Click to define a new product.\n"
+"          </p><p>\n"
+"            You must define a product for everything you purchase, whether\n"
+"            it's a physical product, a consumable or services you buy to\n"
+"            subcontractants.\n"
+"          </p><p>\n"
+"            The product form contains detailed information to improve the\n"
+"            purchase process: prices, procurement logistics, accounting data,\n"
+"            available suppliers, etc.\n"
+"          </p>\n"
+"        "
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.actions.act_window,help:purchase_pharmacy_stewardship.stewardship_purchase_line_form_action2
+msgid "<p>\n"
+"                Here you can track all the lines of purchase orders where the\n"
+"                invoicing is \"Based on Purchase Order Lines\", and for which you\n"
+"                have not received a supplier invoice yet. You can generate a\n"
+"                draft supplier invoice based on the lines from this list.\n"
+"            </p>\n"
+"        "
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.menu_stewardship_purchase_partner_cat
+msgid "Address Book"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.menu_stewardship_purchase_config_purchase
+msgid "Configuration"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.menu_stewardship_action_picking_tree_in_move
+msgid "Incoming  Products"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.menu_stewardship_procurement_management_inventory
+msgid "Incoming Products"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.menu_stewardship_procurement_management_invoice
+msgid "Invoice Control"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.actions.act_window,name:purchase_pharmacy_stewardship.stewardship_action_invoice_pending
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.menu_stewardship_procurement_management_pending_invoice
+msgid "On Draft Invoices"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.actions.act_window,name:purchase_pharmacy_stewardship.stewardship_purchase_line_form_action2
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.menu_stewardship_purchase_line_order_draft
+msgid "On Purchase Order Lines"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.model,name:purchase_pharmacy_stewardship.model_res_partner
+msgid "Partner"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.menu_stewardship_partner_categories_in_form
+msgid "Partner Tags"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: field:product.category,pharmacy:0
+#: field:product.template,pharmacy:0
+#: field:purchase.order,pharmacy:0
+#: field:res.partner,pharmacy:0
+msgid "Pharmacy"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.menu_stewardship_product_pricelist_action2_purchase_type
+msgid "Price Types"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.actions.act_window,name:purchase_pharmacy_stewardship.stewardship_purchase_pricelist_version_action
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.menu_stewardship_stewardship_purchase_pricelist_version_action
+msgid "Pricelist Versions"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.menu_stewardship_product_pricelist_action2_purchase
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.menu_stewardship_purchase_config_pricelist
+msgid "Pricelists"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.actions.act_window,name:purchase_pharmacy_stewardship.stewardship_product_category_action_form
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.menu_stewardship_product_category_config_purchase
+msgid "Product Categories"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.model,name:purchase_pharmacy_stewardship.model_product_category
+msgid "Product Category"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.model,name:purchase_pharmacy_stewardship.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.actions.act_window,name:purchase_pharmacy_stewardship.stewardship_product_normal_action_puchased
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.menu_stewardship_procurement_management_product
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.menu_stewardship_procurement_partner_contact_form
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.menu_stewardship_product_in_config_purchase
+msgid "Products"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.menu_stewardship_product_by_category_purchase_form
+msgid "Products by Category"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.menu_stewardship_procurement_management
+msgid "Purchase"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.model,name:purchase_pharmacy_stewardship.model_purchase_order
+msgid "Purchase Order"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.actions.act_window,name:purchase_pharmacy_stewardship.stewardship_purchase_form_action
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.menu_stewardship_purchase_form_action
+msgid "Purchase Orders"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.purchase_stewardship_menu
+msgid "Purchases Stewardship"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.actions.act_window,name:purchase_pharmacy_stewardship.stewardship_purchase_rfq
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.menu_stewardship_purchase_rfq
+msgid "Requests for Quotation"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: field:product.category,stewardship:0
+#: field:product.template,stewardship:0
+#: field:purchase.order,stewardship:0
+#: field:res.partner,stewardship:0
+msgid "Stewardship"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.actions.act_window,name:purchase_pharmacy_stewardship.stewardship_action_partner_supplier_form
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.menu_stewardship_procurement_management_supplier_name
+msgid "Suppliers"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.menu_stewardship_purchase_uom_categ_form_action
+msgid "Unit of Measure Categories"
+msgstr ""
+
+#. module: purchase_pharmacy_stewardship
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.menu_stewardship_purchase_unit_measure_purchase
+#: model:ir.ui.menu,name:purchase_pharmacy_stewardship.menu_stewardship_purchase_uom_form_action
+msgid "Units of Measure"
+msgstr ""
+

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="oschool_parents_categories_list_form">
+            <field name="name">parents_categories.form</field>
+            <field name="model">product.pricelist</field>
+            <field name="inherit_id" ref="product.product_pricelist_view"/>
+            <field name="type">form</field>
+            <field name="mode">primary</field>
+            <field name="priority">22</field>
+            <field name="arch" type="xml">
+                <form position="attributes">
+                    <attribute name="delete">false</attribute>
+                </form>
+                <field name="type" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="currency_id" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="company_id" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="oschool_parents_categories_formx">
+            <field name="name">parents_categories.form</field>
+            <field name="model">product.pricelist.version</field>
+            <field name="inherit_id" ref="product.product_pricelist_version_form_view"/>
+            <!--<field name="mode">primary</field>-->
+            <field name="priority">22</field>
+            <field name="arch" type="xml">
+                <xpath expr="/form/group/group/field[@name='pricelist_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="/form/group/group/field[@name='date_start']" position="attributes">
+                    <attribute name="required">1</attribute>
+                </xpath>
+                <xpath expr="/form/group/group/field[@name='date_end']" position="attributes">
+                    <attribute name="required">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="oschool_product_pricelist_item_tree_view" model="ir.ui.view">
+            <field name="name">oscholl.product.pricelist.item.tree</field>
+            <field name="model">product.pricelist.item</field>
+            <field name="inherit_id" ref="product.product_pricelist_item_tree_view"/>
+            <!--<field name="mode">primary</field>-->
+            <field name="priority">22</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <field name="sequence" position="replace"/>
+                <field name="name" position="replace"/>
+                <field name="product_id" position="replace"/>
+                <field name="product_tmpl_id" position="replace"/>
+                <field name="base" position="replace"/>
+                <field name="min_quantity" position="replace"/>
+                <field name="categ_id" position="after">
+                     <field name="price_discount"/>
+                     <field name="price_surcharge"/>
+                </field>
+
+
+            </field>
+        </record>
+
+
+        <record id="oschool_product_pricelist_item_form_view" model="ir.ui.view">
+            <field name="name">product.pricelist.item.form</field>
+            <field name="model">product.pricelist.item</field>
+            <field name="inherit_id" ref="product.product_pricelist_item_form_view"/>
+            <!--<field name="mode">primary</field>-->
+            <!--<field name="priority">21</field>-->
+            <field name="arch" type="xml">
+                <xpath expr="/form/h1/field[@name='name']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="/form/label[@for='name']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="/form/group/field[@name='categ_id']" position="attributes">
+                    <attribute name="widget">selection</attribute>
+                    <attribute name="required">True</attribute>
+                </xpath>
+                <xpath expr="/form/group/field[@name='product_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="/form/group/field[@name='product_tmpl_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="/form/group/field[@name='min_quantity']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <!--<xpath expr="/form/group/field[@name='sequence']" position="attributes">-->
+                <!--<attribute name="invisible">1</attribute>-->
+                <!--</xpath>-->
+                <xpath expr="/form/group/field[@name='base']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="/form/group/field[@name='base_pricelist_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="/form/group/field[@name='price_round']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="/form/group/field[@name='price_min_margin']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="/form/group/field[@name='price_max_margin']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="oschool_parents_categories_list_tree">
+            <field name="name">parents_categories_list.tree</field>
+            <field name="model">product.pricelist</field>
+            <field name="arch" type="xml">
+                <tree string="Tree Category folder" delete="false">
+                    <field name="name"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_oschool_parents_categories_list">
+            <field name="name">parents_categories</field>
+            <field name="res_model">product.pricelist</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context" eval="{'default_type':'sale'}"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Cliquez pour ajouter vos catégorie de dossiers</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_oschool_parents_categories_form">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="oschool_parents_categories_list_form"/>
+            <field name="act_window_id" ref="action_oschool_parents_categories_list"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_oschool_parents_categories_tree">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="oschool_parents_categories_list_tree"/>
+            <field name="act_window_id" ref="action_oschool_parents_categories_list"/>
+        </record>
+
+        <menuitem id="school_parents_categories_list_menu" name="Parents categories"
+                  parent="configuration_menu" action="action_oschool_parents_categories_list"/>
+    </data>
+</openerp>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="template" xml:space="preserve">
+    
+    <t t-name="OschoolTransportPresence">
+        <div class="oe_account_quickadd ui-toolbar" style="margin-bottom:0px;">
+            <div class="oe_form_dropdown_section">
+                <h4>Zone :</h4>
+                <select class="oe_account_select_zone">
+                    
+                </select>
+            </div>
+            <div class="oe_form_dropdown_section">
+                <h4>Groupe :</h4>
+                <select class="oe_account_select_group" >
+                    
+                </select>
+            </div>
+
+
+        </div>
+    </t>
+
+</templates>

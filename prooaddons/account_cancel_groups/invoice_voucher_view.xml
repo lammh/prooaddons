@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="invoice_form_cancel_inherit_group" model="ir.ui.view">
+            <field name="name">invoice.form.cancel.inherit.group</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account_cancel.invoice_form_cancel_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='invoice_cancel']" position="replace">
+                    <button name="invoice_cancel" states="draft,proforma2,sale,open" string="Cancel Invoice" groups="account_cancel_groups.group_account_cancel"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="invoice_supplier_cancel_form_inherit_group" model="ir.ui.view">
+            <field name="name">invoice.supplier.cancel.form.inherit.group</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account_cancel.invoice_supplier_cancel_form_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='invoice_cancel']" position="replace">
+                    <button name="invoice_cancel" states="draft,proforma2,sale,open" string="Cancel Invoice" groups="account_cancel_groups.group_account_cancel"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="bank_statement_cancel_form_inherit_group" model="ir.ui.view">
+            <field name="name">bank.statement.cancel.form.inherit.group</field>
+            <field name="model">account.bank.statement</field>
+            <field name="inherit_id" ref="account_cancel.bank_statement_cancel_form_inherit"/>
+            <field name="arch" type="xml">
+                <field name="line_ids" position="attributes">
+                    <attribute name="options">{'reload_on_button': true}</attribute>
+                </field>
+                <xpath expr="//field[@name='bank_account_id']" position="after">
+                    <button name="cancel" attrs="{'invisible': [('journal_entry_id', '=', False)]}" string="Cancel" type="object" icon="gtk-undo" groups="account_cancel_groups.group_account_cancel"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_vendor_payment_form_group" model="ir.ui.view">
+            <field name="name">account.voucher.payment.form.inherit.group</field>
+            <field name="model">account.voucher</field>
+            <field name="inherit_id" ref="account_voucher.view_vendor_payment_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@string='Unreconcile']" position="replace">
+                    <button name="cancel_voucher" string="Unreconcile" type="object" states="posted" groups="account_cancel_groups.group_account_cancel"
+                            invisible="context.get('line_type', False)" confirm="Are you sure to unreconcile and cancel this record ?"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_vendor_receipt_form_group" model="ir.ui.view">
+            <field name="name">account.voucher.receipt.form.inherit.group</field>
+            <field name="model">account.voucher</field>
+            <field name="inherit_id" ref="account_voucher.view_vendor_receipt_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@string='Unreconcile']" position="replace">
+                    <button name="cancel_voucher" string="Unreconcile" type="object" states="posted" groups="account_cancel_groups.group_account_cancel"
+                            confirm="Are you sure to unreconcile and cancel this record ?"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_vendor_deduction_form_group" model="ir.ui.view">
+            <field name="name">account.voucher.deduction.form.group</field>
+            <field name="model">account.voucher</field>
+            <field name="inherit_id" ref="l10n_tn_taxes.view_vendor_deduction_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@string='Unreconcile']" position="replace">
+                    <button name="cancel_voucher" string="Unreconcile" type="object" states="posted" groups="account_cancel_groups.group_account_cancel"
+                            confirm="Are you sure to unreconcile and cancel this record ?"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_cashier_deduction_form_group" model="ir.ui.view">
+            <field name="name">account.voucher.cashier.form.group</field>
+            <field name="model">account.voucher</field>
+            <field name="inherit_id" ref="l10n_tn_taxes.view_cashier_deduction_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@string='Unreconcile']" position="replace">
+                    <button name="cancel_voucher" string="Unreconcile" type="object" states="posted" invisible="context.get('line_type', False)"
+                            groups="account_cancel_groups.group_account_cancel" confirm="Are you sure to unreconcile and cancel this record ?"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

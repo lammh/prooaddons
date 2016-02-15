@@ -1,0 +1,1 @@
+import oschool_configuration

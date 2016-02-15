@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_payment_dialog_form">
+            <field name="name">Payment Wizard</field>
+            <field name="model">oschool.payment</field>
+            <field name="arch" type="xml">
+                <form string="Payment">
+                    <group>
+                        <field name="responsible_id" invisible="1"/>
+                        <field name="academic_year_id" on_change="onchange_period(student_id,period_ids,cash,academic_year_id,all,context)"/>
+                        <field name="all"/>
+                        <field name="student_id" on_change="onchange_period(student_id,period_ids,cash,academic_year_id,all,context)"
+                               options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"
+                               attrs="{'invisible':[('all','=',True)], 'required':[('all','=',False)]}"
+                               String="Student"/>
+                        <field name="period_ids" domain="['&amp;', '&amp;', '('state','=','draft'), ('special','=', False), ('id', 'in', academic_year_id.period_ids)]"
+                               options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"
+                               on_change="onchange_period(student_id,period_ids,cash,academic_year_id,all,context)" string="Period" required="1"
+                                widget="many2many_tags"/>
+                        <field name="cash" on_change="onchange_period(student_id,period_ids,cash,academic_year_id,all,context)"/>
+                        <field name="amount"/>
+                        <field name="line_ids" colspan="4" nolabel="1" readonly="1">
+                            <tree>
+                                <field name="product_id"/>
+                                <field name="qty"/>
+                                <field name="create_date"/>
+                                <field name="price_subtotal_incl" sum="Total"/>
+                            </tree>
+                        </field>
+                    </group>
+                    <footer>
+                        <div attrs="{'invisible':[('all','=',False)]}">
+                            <button name="button_payment_global" string="Payment" class="oe_highlight" type="object"/> or
+                        </div>
+                        <div attrs="{'invisible':[('all','=',True)]}">
+                            <button name="button_payment" string="Payment" class="oe_highlight" type="object"/> or
+                        </div>
+                        <div>
+                            <button string="Cancel" class="oe_link" special="cancel"/>
+                        </div>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_extra_payment_dialog_form">
+            <field name="name">Extra Payment Wizard</field>
+            <field name="model">oschool.extra.payment</field>
+            <field name="arch" type="xml">
+                <form string="Payment">
+                    <group>
+                        <field name="responsible_id" invisible="1"/>
+                        <field name="academic_year_id" on_change="onchange_period(student_id,period_ids,cash,academic_year_id)"/>
+                        <field name="student_id" on_change="onchange_period(student_id,period_ids,cash,academic_year_id)"
+                               options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"
+                               required="1" String="Student"/>
+                        <field name="period_ids" domain="[('state','=','draft'), ('special','=', False)]"
+                               options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"
+                               on_change="onchange_period(student_id,period_ids,cash,academic_year_id)" string="Period" required="1"
+                                widget="many2many_tags"/>
+                        <field name="cash" on_change="onchange_period(student_id,period_ids,cash,academic_year_id)"/>
+                        <field name="line_ids" colspan="4" nolabel="1" readonly="1">
+                            <tree>
+                                <field name="product_id"/>
+                                <field name="qty"/>
+                                <field name="create_date"/>
+                                <field name="price_unit" sum="Total"/>
+                            </tree>
+                        </field>
+                    </group>
+                    <footer>
+                        <button name="button_payment" string="Payment" class="oe_highlight" type="object"/> or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_study_payment_dialog_form">
+            <field name="name">Study Payment Wizard</field>
+            <field name="model">oschool.study.payment</field>
+            <field name="arch" type="xml">
+                <form string="Payment">
+                    <group>
+                        <field name="responsible_id" invisible="1"/>
+                        <field name="academic_year_id" on_change="onchange_period(student_id,period_ids,cash,academic_year_id)"/>
+                        <field name="student_id" on_change="onchange_period(student_id,period_ids,cash,academic_year_id)"
+                               options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"
+                               required="1" String="Student"/>
+                        <field name="period_ids" domain="[('state','=','draft'), ('special','=', False)]"
+                               options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"
+                               on_change="onchange_period(student_id,period_ids,cash,academic_year_id)" string="Period" required="1"
+                                widget="many2many_tags"/>
+                        <field name="cash" on_change="onchange_period(student_id,period_ids,cash,academic_year_id)"/>
+                        <field name="line_ids" colspan="4" nolabel="1" readonly="1">
+                            <tree>
+                                <field name="product_id"/>
+                                <field name="qty"/>
+                                <field name="create_date"/>
+                                <field name="price_unit" sum="Total"/>
+                            </tree>
+                        </field>
+                    </group>
+                    <footer>
+                        <button name="button_payment" string="Payment" class="oe_highlight" type="object"/> or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_period_payment_dialog_form">
+            <field name="name">Period Payment Wizard</field>
+            <field name="model">oschool.period.payment</field>
+            <field name="arch" type="xml">
+                <form string="Payment">
+                    <group>
+                        <field name="responsible_id" invisible="1"/>
+                        <field name="academic_year_id" on_change="onchange_period(student_id,period_ids,academic_year_id)"/>
+                        <field name="student_id" on_change="onchange_period(student_id,period_ids,academic_year_id)"
+                               options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"
+                               required="1" String="Student"/>
+                        <field name="period_ids" domain="[('state','=','draft'), ('special','=', False)]"
+                               options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"
+                               on_change="onchange_period(student_id,period_ids,academic_year_id)" string="Period" required="1"
+                                widget="many2many_tags"/>
+                        <field name="cash" on_change="onchange_period(student_id,period_ids,academic_year_id)"/>
+                        <field name="line_ids" colspan="4" nolabel="1" readonly="1">
+                            <tree>
+                                <field name="product_id"/>
+                                <field name="qty"/>
+                                <field name="create_date"/>
+                                <field name="price_unit" sum="Total"/>
+                            </tree>
+                        </field>
+                    </group>
+                    <footer>
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!--
+    Resource: product.price.type
+    -->
+        <record id="wholesale_price" model="product.price.type">
+            <field name="name">Wholesale Price</field>
+            <field name="field">wholesale_price</field>
+        </record>
+        <record id="details_price" model="product.price.type">
+            <field name="name">Details Price</field>
+            <field name="field">details_price</field>
+        </record>
+        <record id="cash_price" model="product.price.type">
+            <field name="name">Cash Price</field>
+            <field name="field">cash_price</field>
+        </record>
+
+                <!--
+    Price list
+    -->
+
+        <record id="list1" model="product.pricelist">
+            <field name="name">Wholesale Pricelist</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="ver1" model="product.pricelist.version">
+            <field name="pricelist_id" ref="list1"/>
+            <field name="name">Default Wholesale Pricelist Version</field>
+        </record>
+        <record id="item1" model="product.pricelist.item">
+            <field name="price_version_id" ref="ver1"/>
+            <field name="base" ref="wholesale_price"/>
+            <field name="sequence">1000</field>
+            <field name="name">Default Wholesale Pricelist Line</field>
+        </record>
+
+        <record id="list2" model="product.pricelist">
+            <field name="name">Details Pricelist</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="ver2" model="product.pricelist.version">
+            <field name="pricelist_id" ref="list2"/>
+            <field name="name">Default Details Pricelist Version</field>
+        </record>
+        <record id="item2" model="product.pricelist.item">
+            <field name="price_version_id" ref="ver2"/>
+            <field name="base" ref="details_price"/>
+            <field name="sequence">1000</field>
+            <field name="name">Default Details Pricelist Line</field>
+        </record>
+
+        <record id="list3" model="product.pricelist">
+            <field name="name">Cash Pricelist</field>
+            <field name="type">sale</field>
+        </record>
+        <record id="ver3" model="product.pricelist.version">
+            <field name="pricelist_id" ref="list3"/>
+            <field name="name">Default Cash Pricelist Version</field>
+        </record>
+        <record id="item3" model="product.pricelist.item">
+            <field name="price_version_id" ref="ver3"/>
+            <field name="base" ref="cash_price"/>
+            <field name="sequence">1000</field>
+            <field name="name">Default Cash Pricelist Line</field>
+        </record>
+
+
+    </data>
+</openerp>

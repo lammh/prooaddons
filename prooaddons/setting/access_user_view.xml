@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <menuitem name="Setting"
+            id="menu_setting_root"
+            groups="group_setting"
+            sequence="600"/>
+
+        <record model="ir.ui.view" id="access_user_form">
+            <field name="name">access_user.form</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_simple_form"/>
+            <field name="mode">primary</field>
+            <field name="priority">20</field>
+            <field name="arch" type="xml">
+
+                <xpath expr="/form/sheet/group/div" position="attributes">
+                    <attribute name="attrs"></attribute>
+                </xpath>
+                <xpath expr="/form/sheet/group/div" position="replace"/>
+                <xpath expr="/form/sheet/group/label" position="before">
+                    <field name="active"/>
+                    <field name="password" password="True"/>
+                </xpath>
+                <xpath expr="/form/sheet/group/label" position="after">
+                    <div>
+                        <field name="groups_id" widget="many2many_tags" string="Group" options="{'no_create_edit':'1'}" style="display: inline;"
+                                domain="['&amp;','&amp;','&amp;',('id','!=',%(account.group_account_user)d),('id','!=',%(account.group_account_manager)d),('id','!=',%(analytic.group_analytic_accounting)d),('category_id','!=',%(base.module_category_administration)d)]"/>
+                    </div>
+                </xpath>
+                <xpath expr="/form/sheet/group/label" position="attributes">
+                    <attribute name="attrs"></attribute>
+                </xpath>
+
+                 <xpath expr="/form/sheet/group/field[@name='fax']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="access_user_tree">
+            <field name="name">access_user.view</field>
+            <field name="model">res.users</field>
+            <field name="arch" type="xml">
+                <tree string="Tree Users">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_access_user_list">
+            <field name="name">Users</field>
+            <field name="res_model">res.users</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain" eval="[('id', '>', 1)]"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Cliquez pour ajouter vos utilisateurs</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_view_user">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="access_user_form"/>
+            <field name="act_window_id" ref="action_access_user_list"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_view_user2">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="access_user_tree"/>
+            <field name="act_window_id" ref="action_access_user_list"/>
+        </record>
+
+        <menuitem id="users_menu2" name="Users" parent="menu_setting_root"/>
+
+        <menuitem id="users_list_management_menu2" name="Users" parent="users_menu2"
+                  action="action_access_user_list"/>
+
+        <menuitem id="company_menu2" name="Company" parent="menu_setting_root"/>
+
+        <menuitem action="base.action_res_company_form" id="menu_action_res_company_form2" parent="company_menu2"/>
+
+        <menuitem id="attachment_menu" name="Attachment" parent="menu_setting_root"/>
+
+        <menuitem action="base.action_attachment" id="menu_action_attachment2" parent="attachment_menu"/>
+    </data>
+</openerp>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="mission_orders" model="ir.actions.report.xml">
+            <field name="name">mission Order</field>
+            <field name="type">ir.actions.report.xml</field>
+            <field name="model">mission.order</field>
+            <field name="report_name">mission_order</field>
+            <field name="report_rml">jasper_reports/custom_reports/mission_order.jrxml</field>
+            <field name="report_type">pdf</field>
+            <field name="jasper_report">True</field>
+            <field name="jasper_output">pdf</field>
+        </record>
+
+        <record id="mission_orders_xls" model="ir.actions.report.xml">
+            <field name="name">mission Order xls</field>
+            <field name="type">ir.actions.report.xml</field>
+            <field name="model">mission.order</field>
+            <field name="report_name">mission_order_xls</field>
+            <field name="report_rml">jasper_reports/custom_reports/mission_order.jrxml</field>
+            <field name="report_type">pdf</field>
+            <field name="jasper_report">True</field>
+            <field name="jasper_output">xls</field>
+        </record>
+
+    </data>
+</openerp>

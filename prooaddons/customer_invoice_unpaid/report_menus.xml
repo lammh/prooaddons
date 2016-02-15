@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="customer_invoice_unpaid" model="ir.actions.report.xml">
+            <field name="name">Report Customer Invoice Unpaid</field>
+            <field name="type">ir.actions.report.xml</field>
+            <field name="model">customer.invoice.unpaid</field>
+            <field name="report_name">customer_invoice_unpaid</field>
+            <field name="report_rml">jasper_reports/custom_reports/invoice_unpaid_residual.jrxml</field>
+            <field name="report_type">pdf</field>
+            <field name="jasper_report">True</field>
+            <field name="jasper_output">pdf</field>
+        </record>
+        
+    </data>
+</openerp>   

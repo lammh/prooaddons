@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="view_oschool_payment_wizard" model="ir.ui.view">
+            <field name="name">Payment Report</field>
+            <field name="model">oschool.payment.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Payment Report">
+                    <field name="academic_year_id" />
+                    <field name="period_id"
+                           options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"
+                           on_change="onchange_period(academic_year_id)" string="Period" />
+
+                    <footer>
+                        <button name="print_report" string="Print payment report" type="object" class="oe_highlight"
+                                context="{'academic_year_id': academic_year_id,'period_id': period_id}" />
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+
+
+        <record id="action_oschool_payment_wizard" model="ir.actions.act_window">
+            <field name="name">Payment Report</field>
+            <field eval="1" name="sequence"/>
+            <field name="res_model">oschool.payment.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+
+        <menuitem
+            action="action_oschool_payment_wizard"
+            name="Payment Report"
+            id="oschool_payment_wizard_menu"
+            parent="tracking_management_menu"
+            sequence="4"
+        />
+
+        <report
+            id="action_payment_report"
+            model="oschool.payment.wizard"
+            string="Payment Report"
+            report_type="qweb-pdf"
+            name="oschool.payment_report"
+            file="oschool.payment_report"
+            menu="False"
+        />
+         <record id="action_payment_report" model="ir.actions.report.xml">
+            <field name="paperformat_id" ref="paperformat_today_payment_recipt"/>
+        </record>
+
+        </data>
+    </openerp>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+         <record model="ir.ui.view" id="oschool_student_service_presence_tree">
+            <field name="name">oschool_student_service_presence_tree</field>
+            <field name="model">oschool.student_services_presence</field>
+            <field eval="1" name="priority"/>
+            <field name="arch" type="xml">
+                <tree string="Tree" editable="top" delete="false">
+
+                <!--<tree string="Tree" editable="bottom" create="false">-->
+                    <field name="student_id" readonly="True" />
+                    <field name="day" readonly="True" />
+                    <field name="group_id" readonly="True"  />
+                    <field name="class_id" readonly="True"  />
+                    <!--<field name="day_num" readonly="True"  invisible="1"/>-->
+                    <field name="period_id" readonly="True"   invisible="0"/>
+                    <field name="product_id" readonly="True"   invisible="0"/>
+                </tree>
+            </field>
+        </record>
+        <!--<record model="ir.ui.view" id="oschool_student_service_presence_tree">-->
+            <!--<field name="name">oschool_student_service_presence_tree</field>-->
+            <!--<field name="model">oschool.student_service_presence</field>-->
+            <!--<field eval="1" name="priority"/>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<tree string="Tree" create="true" on_write="on_create_write" editable="top" >-->
+                    <!--<field name="student_id" />-->
+                    <!--<field name="day" />-->
+                    <!--<field name="academic_year" />-->
+                    <!--<field name="group_id"/>-->
+                    <!--<field name="zone_id"/>-->
+                    <!--<field name="bus_schedule"/>-->
+                <!--</tree>-->
+            <!--</field>-->
+        <!--</record>-->
+
+
+        <!--<record id="oschool_student_service_presence_search" model="ir.ui.view">-->
+            <!--<field name="name">oschool.student_service_presence.search</field>-->
+            <!--<field name="model">oschool.student_service_presence</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<search string="">-->
+                    <!--<field name="student_id"/>-->
+                    <!--<field name="day"/>-->
+                    <!--<field name="group_id"/>-->
+                    <!--<field name="class_id"/>-->
+                    <!--<field name="academic_year"/>-->
+                    <!--<group expand="1" string="Group By">-->
+                        <!--<filter string="Student" name="student" context="{'group_by':'student_id'}"/>-->
+                        <!--<filter string="Day" name="day" context="{'group_by':'day'}"/>-->
+                        <!--<filter string="Zone" name="zone" context="{'group_by':'zone_id'}"/>-->
+                         <!--<filter string="Group" name="group" context="{'group_by':'group_id'}"/>-->
+                    <!--</group>-->
+                <!--</search>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <record id="action_oschool_student_service_presence_tree_all_tree" model="ir.actions.act_window">
+            <field name="name">Service Presence</field>
+            <field name="res_model">oschool.student_services_presence</field>
+            <field name="view_id" ref="oschool_student_service_presence_tree"/>
+        </record>
+
+        <record id="action_oschool_service_presence_status" model="ir.actions.act_window">
+            <field name="name">service Presence</field>
+            <field name="res_model">oschool.student_services_presence</field>
+            <field name="view_id" ref="oschool_student_service_presence_tree"/>
+            <field name="context" >{}</field>
+            <field name="view_mode">tree_oschool_service_presence_quickadd</field>
+        </record>
+        <menuitem
+            action="action_oschool_service_presence_status"
+            name="service presence status"
+            icon="STOCK_JUSTIFY_FILL"
+            id="oschool_service_presence_status_menu"
+            parent="oschool_presence_status_management_menu"
+            sequence="2"
+        />
+    </data>
+</openerp>

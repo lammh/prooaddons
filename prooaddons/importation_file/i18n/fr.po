@@ -1,0 +1,54 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* importation_file
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-20150713\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-08 16:08+0000\n"
+"PO-Revision-Date: 2015-10-08 16:08+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: importation_file
+#: view:account.invoice:importation_file.account_invoice_importation_view
+msgid "Cancel Import"
+msgstr "Cancel Import"
+
+#. module: importation_file
+#: code:addons/importation_file/importation_file.py:41
+#: code:addons/importation_file/importation_file.py:48
+#: code:addons/importation_file/importation_file.py:54
+#, python-format
+msgid "Error!"
+msgstr "Error!"
+
+#. module: importation_file
+#: view:account.invoice:importation_file.account_invoice_importation_view
+msgid "Import Folder"
+msgstr "Import Folder"
+
+#. module: importation_file
+#: model:ir.model,name:importation_file.model_account_invoice
+msgid "Invoice"
+msgstr "Facture"
+
+#. module: importation_file
+#: code:addons/importation_file/importation_file.py:54
+#, python-format
+msgid "You cannot cancel an invoice which is partially paid or paid. You need to unreconcile related payment entries first."
+msgstr "Vous ne pouvez pas annuler une facture qui est partiellement payée ou payée. Vous devez d'abord annuler le lettrage des lignes de paiement correspondantes."
+
+#. module: importation_file
+#: code:addons/importation_file/importation_file.py:41
+#, python-format
+msgid "You cannot modify a posted entry of this journal.\n"
+"First you should set the journal to allow cancelling entries."
+msgstr "You cannot modify a posted entry of this journal.\n"
+"First you should set the journal to allow cancelling entries."
+

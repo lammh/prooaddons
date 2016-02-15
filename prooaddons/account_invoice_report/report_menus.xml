@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="statement_general" model="ir.actions.report.xml">
+            <field name="name">Report Statement General</field>
+            <field name="type">ir.actions.report.xml</field>
+            <field name="model">statement.general.report</field>
+            <field name="report_name">statement_general</field>
+            <field name="report_rml">jasper_reports/custom_reports/statement_general.jrxml</field>
+            <field name="report_type">pdf</field>
+            <field name="jasper_report">True</field>
+            <field name="jasper_output">pdf</field>
+        </record>
+
+        <record id="statement_general_detail" model="ir.actions.report.xml">
+            <field name="name">Report Statement General details</field>
+            <field name="type">ir.actions.report.xml</field>
+            <field name="model">statement.general.report</field>
+            <field name="report_name">statement_general_detail</field>
+            <field name="report_rml">jasper_reports/custom_reports/statement_general_detail.jrxml</field>
+            <field name="report_type">pdf</field>
+            <field name="jasper_report">True</field>
+            <field name="jasper_output">pdf</field>
+        </record>
+        
+    </data>
+</openerp>   

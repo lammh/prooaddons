@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="view_oschool_cashbook_wizard" model="ir.ui.view">
+            <field name="name">Cash Book</field>
+            <field name="model">oschool.cashbook.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Cash Book">
+                    <group>
+                        <group>
+                            <field name="date_start" />
+                        </group>
+                        <group>
+                            <field name="date_stop" />
+                        </group>
+                        <group>
+                            <field name="checkout_wizard" widget="many2many_tags" options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"/>
+                        </group>
+                    </group>
+
+                    <footer>
+                        <button name="print_report" string="Print cash book" type="object" class="oe_highlight"  context="{'date_start': date_start,'date_stop': date_stop}" />
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+
+
+        <record id="action_oschool_cashbook" model="ir.actions.act_window">
+            <field name="name">Cashbook</field>
+            <field eval="1" name="sequence"/>
+            <field name="res_model">oschool.cashbook.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+
+        <menuitem
+            action="action_oschool_cashbook"
+            name="Cashbook"
+            id="oschool_cashbook_menu"
+            parent="tracking_management_menu"
+            sequence="4"
+        />
+
+        <report
+            id="action_report_cashbook"
+            model="oschool.cashbook.wizard"
+            string="Cashbook Report"
+            report_type="qweb-pdf"
+            name="oschool.report_cashbook"
+            file="oschool.report_cashbook"
+            menu="False"
+        />
+         <record id="action_report_cashbook" model="ir.actions.report.xml">
+            <field name="paperformat_id" ref="paperformat_today_payment_recipt"/>
+        </record>
+
+        </data>
+    </openerp>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="account_extrait" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="87"/>
+	<parameter name="date_start" class="java.lang.String"/>
+	<parameter name="date_end" class="java.lang.String"/>
+	<parameter name="account_id" class="java.lang.Integer"/>
+	<parameter name="compte_num" class="java.lang.String"/>
+	<parameter name="compte_name" class="java.lang.String"/>
+	<parameter name="param_credit" class="java.lang.Double"/>
+	<parameter name="param_debit" class="java.lang.Double"/>
+	<queryString>
+		<![CDATA[SELECT
+  account_move_line.date as Date,
+  account_period.code as Period,
+  account_journal.code as Jal,
+  account_move.name as Piece,
+  account_move_line.ref as Ref,
+  account_move_line.name as Libelle,
+  account_move_line.debit as Debit,
+  account_move_line.credit as Credit,
+  account_move_line.reconcile_ref as Lettre
+FROM
+  public.account_move,
+  public.account_move_line,
+  public.account_journal,
+  public.account_period
+WHERE
+  account_move_line.move_id = account_move.id AND
+  account_journal.id = account_move_line.journal_id AND
+  account_period.id = account_move_line.period_id AND
+  account_move_line.account_id = $P{account_id}   AND
+  account_move_line.date >=   to_date($P{date_start}, 'YYYY-MM-DD')  AND
+  account_move_line.date <=   to_date($P{date_end}, 'YYYY-MM-DD')
+ORDER BY
+  account_move.date]]>
+	</queryString>
+	<field name="date" class="java.sql.Date">
+		<fieldDescription><![CDATA[Expiration Date]]></fieldDescription>
+	</field>
+	<field name="period" class="java.lang.String">
+		<fieldDescription><![CDATA[Periods]]></fieldDescription>
+	</field>
+	<field name="jal" class="java.lang.String"/>
+	<field name="piece" class="java.lang.String"/>
+	<field name="ref" class="java.lang.String">
+		<fieldDescription><![CDATA[Ref.]]></fieldDescription>
+	</field>
+	<field name="libelle" class="java.lang.String"/>
+	<field name="debit" class="java.math.BigDecimal"/>
+	<field name="credit" class="java.math.BigDecimal"/>
+	<field name="lettre" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="37" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="53" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Expiration Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="0" width="47" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Periods]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="41" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[jal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="0" width="69" height="20"/>
+				<text><![CDATA[piece]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="0" width="189" height="20"/>
+				<text><![CDATA[libelle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="399" y="0" width="67" height="20"/>
+				<text><![CDATA[debit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="466" y="0" width="89" height="20"/>
+				<text><![CDATA[credit]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="1" width="53" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="53" y="1" width="47" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{period}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="1" width="41" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="1" width="69" height="20"/>
+				<textFieldExpression><![CDATA[$F{piece}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="1" width="189" height="20"/>
+				<textFieldExpression><![CDATA[$F{libelle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="399" y="0" width="67" height="20"/>
+				<textFieldExpression><![CDATA[$F{debit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="0" width="89" height="20"/>
+				<textFieldExpression><![CDATA[$F{credit}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="44" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

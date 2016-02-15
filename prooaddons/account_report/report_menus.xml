@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="account_witholding" model="ir.actions.report.xml">
+            <field name="name">Witholding</field>
+            <field name="type">ir.actions.report.xml</field>
+            <field name="model">account.voucher</field>
+            <field name="report_name">account_voucher1</field>
+            <field name="report_rml">jasper_reports/custom_reports/retenue.jrxml</field>
+            <field name="report_type">pdf</field>
+            <field name="jasper_report">True</field>
+            <field name="jasper_output">pdf</field>
+        </record>
+        
+    </data>
+</openerp>   

@@ -1,0 +1,111 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* hr_premium
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-20150210\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-14 08:55+0000\n"
+"PO-Revision-Date: 2015-02-14 08:55+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_premium
+#: field:hr.employee.premium,amount:0
+#: field:hr.premium.type,amount:0
+msgid "Amount"
+msgstr "Montant"
+
+#. module: hr_premium
+#: field:hr.employee.premium,create_uid:0
+#: field:hr.premium.type,create_uid:0
+msgid "Created by"
+msgstr "Créé par :"
+
+#. module: hr_premium
+#: field:hr.employee.premium,create_date:0
+#: field:hr.premium.type,create_date:0
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: hr_premium
+#: field:hr.employee.premium,name:0
+#: model:ir.model,name:hr_premium.model_hr_employee
+msgid "Employee"
+msgstr "Employé"
+
+#. module: hr_premium
+#: field:hr.employee.premium,id:0
+#: field:hr.premium.type,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: hr_premium
+#: field:hr.salary.rule.category,is_prime:0
+msgid "Is Prime"
+msgstr "Est un prime"
+
+#. module: hr_premium
+#: field:hr.employee.premium,write_uid:0
+#: field:hr.premium.type,write_uid:0
+msgid "Last Updated by"
+msgstr "Dernière Mise à jour par"
+
+#. module: hr_premium
+#: field:hr.employee.premium,write_date:0
+#: field:hr.premium.type,write_date:0
+msgid "Last Updated on"
+msgstr "Dernière Mise à jour le"
+
+#. module: hr_premium
+#: model:ir.ui.menu,name:hr_premium.menu_premium_list
+msgid "List of Premium"
+msgstr "Liste des Primes"
+
+#. module: hr_premium
+#: model:ir.model,name:hr_premium.model_hr_payslip
+msgid "Pay Slip"
+msgstr "Feuille de paie"
+
+#. module: hr_premium
+#: view:hr.employee:hr_premium.view_employee_premium_form
+#: field:hr.employee,premium_ids:0
+msgid "Premium"
+msgstr "Prime"
+
+#. module: hr_premium
+#: view:hr.employee.premium:hr_premium.premium_list_form_view
+#: view:hr.employee.premium:hr_premium.premium_list_tree_view
+#: model:ir.actions.act_window,name:hr_premium.action_premium_list
+msgid "Premium List"
+msgstr "Liste des Primes"
+
+#. module: hr_premium
+#: field:hr.employee.premium,premium:0
+#: view:hr.premium.type:hr_premium.hr_premium_type_form
+#: view:hr.premium.type:hr_premium.hr_premium_type_tree
+#: model:ir.actions.act_window,name:hr_premium.action_premium_type
+#: model:ir.ui.menu,name:hr_premium.menu_premium_type
+msgid "Premium Type"
+msgstr "Type de prime"
+
+#. module: hr_premium
+#: field:hr.premium.type,name:0
+msgid "Salary Rule"
+msgstr "Règles salariales"
+
+#. module: hr_premium
+#: model:ir.model,name:hr_premium.model_hr_salary_rule_category
+msgid "Salary Rule Category"
+msgstr "Catégorie de règle salariale"
+
+#. module: hr_premium
+#: view:hr.employee.premium:hr_premium.view_premium_list_filter
+msgid "Search Employee Premium"
+msgstr "Rechercher prime de l'employé"
+

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="oschool_pos_session_opening_form_view">
+            <field name="name">oschool.pos.session.opening.form.view</field>
+            <field name="model">pos.session.opening</field>
+            <field name="inherit_id" ref="point_of_sale.pos_session_opening_form_view"/>
+            <field name="mode">primary</field>
+            <field name="priority">20</field>
+            <field name="arch" type="xml">
+                <xpath expr="/form/separator[1]" position="replace"/>
+                <xpath expr="/form/button[5]" position="replace">
+                      <button name="oschool_open_session_cb" type="object" string="New Session"
+                        attrs="{'invisible' : ['|', ('pos_state', '!=', False),('pos_config_id','=',False)]}"
+                        class="oe_highlight"
+                    />
+                </xpath>
+                <xpath expr="/form/button[1]" position="replace">
+                      <button name="oschool_open_ui" type="object" string="Resume Session"
+                        attrs="{'invisible' : [('pos_state', 'not in', ('opened',))]}"
+                        class="oe_highlight"
+                    />
+                </xpath>
+                <xpath expr="/form/button[3]" position="replace">
+                       <button name="oschool_open_existing_session_cb_close" type="object" string="Close Session"
+                        attrs="{'invisible' : [('pos_state', 'not in', ('opened',))]}"
+                    />
+                </xpath>
+                <xpath expr="/form/group[1]" position="attributes">
+                    <attribute name="attrs"></attribute>
+                </xpath>
+                <xpath expr="/form/group/field[@name='pos_config_id']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                    <attribute name="options">{"no_open": True }</attribute>
+                    <attribute name="string">Votre caisse</attribute>
+                </xpath>
+            </field>
+
+        </record>
+
+        <record id="oschool_action_pos_session_opening" model="ir.actions.act_window">
+            <field name="name">Your Session</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pos.session.opening</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+             <field name="target">inline</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="oschool_action_view_pos_session_opening">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="oschool_pos_session_opening_form_view"/>
+            <field name="act_window_id" ref="oschool_action_pos_session_opening"/>
+        </record>
+
+        <menuitem action="oschool_action_pos_session_opening" parent="oschool_pos_session_management_menu"
+                  id="oschool_menu_pos_session_opening" sequence="0" groups="oschool_group_admin_scolarity,oschool_group_cashier_scolarity"/>
+
+    </data>
+</openerp>

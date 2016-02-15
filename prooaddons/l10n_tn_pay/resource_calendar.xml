@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data noupdate="1">
+        <record id="rgimeheures0" model="resource.calendar">
+            <field name="name">Régime 44 Heures</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="display_name">Régime 44 Heures</field>
+        </record>
+        <record id="attendance_lundimatin0" model="resource.calendar.attendance">
+            <field name="dayofweek">0</field>
+            <field name="name">Lundi Matin</field>
+            <field eval="8.5" name="hour_from"/>
+            <field eval="12.5" name="hour_to"/>
+            <field name="calendar_id" ref="rgimeheures0"/>
+            <field name="display_name">Lundi Matin</field>
+        </record>
+        <record id="attendance_lundiaprsmidi0" model="resource.calendar.attendance">
+            <field name="dayofweek">0</field>
+            <field name="name">Lundi Après-midi</field>
+            <field eval="14.5" name="hour_from"/>
+            <field eval="18.0" name="hour_to"/>
+            <field name="calendar_id" ref="rgimeheures0"/>
+            <field name="display_name">Lundi Après-midi</field>
+        </record>
+        <record id="attendance_mardimatin0" model="resource.calendar.attendance">
+            <field name="dayofweek">1</field>
+            <field name="name">Mardi Matin</field>
+            <field eval="8.5" name="hour_from"/>
+            <field eval="12.5" name="hour_to"/>
+            <field name="calendar_id" ref="rgimeheures0"/>
+            <field name="display_name">Mardi Matin</field>
+        </record>
+        <record id="attendance_mardiaprsmidi0" model="resource.calendar.attendance">
+            <field name="dayofweek">1</field>
+            <field name="name">Mardi Après-midi</field>
+            <field eval="14.5" name="hour_from"/>
+            <field eval="18.0" name="hour_to"/>
+            <field name="calendar_id" ref="rgimeheures0"/>
+            <field name="display_name">Mardi Après-midi</field>
+        </record>
+        <record id="attendance_mercredimatin0" model="resource.calendar.attendance">
+            <field name="dayofweek">2</field>
+            <field name="name">Mercredi Matin</field>
+            <field eval="8.5" name="hour_from"/>
+            <field eval="12.5" name="hour_to"/>
+            <field name="calendar_id" ref="rgimeheures0"/>
+            <field name="display_name">Mercredi Matin</field>
+        </record>
+        <record id="attendance_mercrediaprsmidi0" model="resource.calendar.attendance">
+            <field name="dayofweek">2</field>
+            <field name="name">Mercredi Après-midi</field>
+            <field eval="14.5" name="hour_from"/>
+            <field eval="18.0" name="hour_to"/>
+            <field name="calendar_id" ref="rgimeheures0"/>
+            <field name="display_name">Mercredi Après-midi</field>
+        </record>
+        <record id="attendance_jeudimatin0" model="resource.calendar.attendance">
+            <field name="dayofweek">3</field>
+            <field name="name">Jeudi Matin</field>
+            <field eval="8.5" name="hour_from"/>
+            <field eval="12.5" name="hour_to"/>
+            <field name="calendar_id" ref="rgimeheures0"/>
+            <field name="display_name">Jeudi Matin</field>
+        </record>
+        <record id="attendance_jeudiaprsmidi0" model="resource.calendar.attendance">
+            <field name="dayofweek">3</field>
+            <field name="name">Jeudi Après-midi</field>
+            <field eval="14.5" name="hour_from"/>
+            <field eval="18.0" name="hour_to"/>
+            <field name="calendar_id" ref="rgimeheures0"/>
+            <field name="display_name">Jeudi Après-midi</field>
+        </record>
+        <record id="attendance_vendredimatin0" model="resource.calendar.attendance">
+            <field name="dayofweek">4</field>
+            <field name="name">Vendredi Matin</field>
+            <field eval="8.5" name="hour_from"/>
+            <field eval="12.5" name="hour_to"/>
+            <field name="calendar_id" ref="rgimeheures0"/>
+            <field name="display_name">Vendredi Matin</field>
+        </record>
+        <record id="attendance_vendredimatin1" model="resource.calendar.attendance">
+            <field name="dayofweek">4</field>
+            <field name="name">Vendredi Matin</field>
+            <field eval="18.0" name="hour_from"/>
+            <field eval="13.0" name="hour_to"/>
+            <field name="calendar_id" ref="rgimeheures0"/>
+            <field name="display_name">Vendredi Matin</field>
+        </record>
+        <record id="attendance_samedi0" model="resource.calendar.attendance">
+            <field name="dayofweek">5</field>
+            <field name="name">Samedi</field>
+            <field eval="8.5" name="hour_from"/>
+            <field eval="12.5" name="hour_to"/>
+            <field name="calendar_id" ref="rgimeheures0"/>
+            <field name="display_name">Samedi</field>
+        </record>
+    </data>
+</openerp>
+

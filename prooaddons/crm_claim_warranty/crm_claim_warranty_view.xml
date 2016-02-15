@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="crm_case_claims_warranty_form_view" model="ir.ui.view">
+            <field name="name">crm.claim.form</field>
+            <field name="model">crm.claim</field>
+            <field name="inherit_id" ref="crm_claim.crm_case_claims_form_view" />
+            <field name="arch" type="xml">
+                <field name="date" position="replace">
+                    <field name="date" on_change="onchange_warranty(ref, date_start_warranty, date)"/>
+                </field>
+                <field name="ref" position="replace">
+                    <field name="ref" on_change="onchange_warranty(ref, date_start_warranty, date)"/>
+                </field>
+                <field name="ref" position="after">
+                    <group >
+                        <field name="date_start_warranty" on_change="onchange_warranty(ref, date_start_warranty, date)"/>
+                        <field name="date_end_warranty" readonly="1" />
+                        <div style="color:red;text-align:center">
+                            <h3><field name="warranty" readonly="1"/></h3>
+                        </div>
+                    </group>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

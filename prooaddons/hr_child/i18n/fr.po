@@ -1,0 +1,180 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* hr_child
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-20150210\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-14 09:07+0000\n"
+"PO-Revision-Date: 2015-02-14 09:07+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_child
+#: field:hr.child,amount:0
+msgid "Amount"
+msgstr "Montant"
+
+#. module: hr_child
+#: field:hr.child,birth:0
+msgid "Birthday"
+msgstr "Date de naissance"
+
+#. module: hr_child
+#: view:hr.employee:hr_child.child_employee_form_view
+#: field:hr.employee,childs_ids:0
+msgid "Child"
+msgstr "Enfant"
+
+#. module: hr_child
+#: model:ir.actions.act_window,name:hr_child.action_child_list
+msgid "Child List"
+msgstr "Liste des Enfants"
+
+#. module: hr_child
+#: view:hr.child:hr_child.child_list_tree_view
+msgid "Children List"
+msgstr "Liste des Enfants"
+
+#. module: hr_child
+#: view:hr.child:hr_child.view_child_list_filter
+msgid "Children of higher age 20 years"
+msgstr "Les enfants d'âge supérieur 20 ans"
+
+#. module: hr_child
+#: view:hr.child:hr_child.child_list_form_view
+#: view:hr.deduction:hr_child.hr_deduction_form_view
+msgid "Childs Amounts"
+msgstr "Les montants de l'enfant"
+
+#. module: hr_child
+#: field:hr.child,create_uid:0
+#: field:hr.deduction,create_uid:0
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: hr_child
+#: field:hr.child,create_date:0
+#: field:hr.deduction,create_date:0
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: hr_child
+#: view:hr.deduction:hr_child.hr_deduction_tree_view
+#: model:ir.ui.menu,name:hr_child.menu_hr_deduction
+msgid "Deduction"
+msgstr "Déduction d'impôt"
+
+#. module: hr_child
+#: field:hr.child,name:0
+#: model:ir.model,name:hr_child.model_hr_employee
+msgid "Employee"
+msgstr "Employé"
+
+#. module: hr_child
+#: field:hr.deduction,first_child:0
+msgid "First Child Amount"
+msgstr "Premier enfant"
+
+#. module: hr_child
+#: field:hr.deduction,fourth_child:0
+msgid "Fourth Child Amount"
+msgstr "Quatrième enfant"
+
+#. module: hr_child
+#: model:ir.actions.act_window,name:hr_child.action_hr_deduction
+msgid "HR Deduction"
+msgstr "Déduction d'impôt"
+
+#. module: hr_child
+#: field:hr.child,hand:0
+msgid "Handicapped"
+msgstr "Handicapé"
+
+#. module: hr_child
+#: field:hr.deduction,name:0
+#: field:hr.employee,householder:0
+msgid "Householder"
+msgstr "Chef de famille"
+
+#. module: hr_child
+#: field:hr.child,id:0
+#: field:hr.deduction,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: hr_child
+#: field:hr.child,write_uid:0
+#: field:hr.deduction,write_uid:0
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: hr_child
+#: field:hr.child,write_date:0
+#: field:hr.deduction,write_date:0
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: hr_child
+#: model:ir.ui.menu,name:hr_child.menu_child_list
+msgid "List of children"
+msgstr "Liste des Enfants"
+
+#. module: hr_child
+#: field:hr.child,child_name:0
+msgid "Name"
+msgstr "Nom"
+
+#. module: hr_child
+#: field:hr.child,rank:0
+msgid "Rank"
+msgstr "Rang"
+
+#. module: hr_child
+#: field:hr.child,scholar:0
+msgid "Scholarship holder"
+msgstr "Boursier"
+
+#. module: hr_child
+#: view:hr.child:hr_child.view_child_list_filter
+msgid "Search Child"
+msgstr "Recherche Enfant"
+
+#. module: hr_child
+#: field:hr.deduction,second_child:0
+msgid "Second Child Amount"
+msgstr "Deuxième enfant"
+
+#. module: hr_child
+#: view:hr.child:hr_child.view_child_list_filter
+#: field:hr.child,supported:0
+msgid "Supported"
+msgstr "Prise en Charge"
+
+#. module: hr_child
+#: field:hr.deduction,third_child:0
+msgid "Third Child Amount"
+msgstr "Troisième enfant"
+
+#. module: hr_child
+#: field:hr.employee,amount_child:0
+msgid "Total Child Amount"
+msgstr "Total Child Amount"
+
+#. module: hr_child
+#: code:addons/hr_child/hr_child.py:24
+#, python-format
+msgid "Warning !"
+msgstr "Avertissement !"
+
+#. module: hr_child
+#: code:addons/hr_child/hr_child.py:24
+#, python-format
+msgid "You must define the deductions !"
+msgstr "Vous devez définir les déductions!"
+

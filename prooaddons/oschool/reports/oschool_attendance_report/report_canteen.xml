@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+<template id="report_canteen">
+    <t t-call="report.html_container">
+            <div class="page">
+                <style type="text/css">
+                   table, th , td{margin-left:auto;margin-right:auto;margin-top:30px;
+                    border: 1px solid #A1A1A1;font-size : 0.9em;padding-right : 5px;padding-left : 5px;}
+                    td.groupe{font-size : 1.1em; text-align : center;}
+                    #name {padding-right : 10px;padding-left : 10px;}
+               </style>
+                <div class="col-xs-12" style="font-size : 1.5em;text-align : center;">
+                    <strong>Liste des élèves abonnés à la cantine pour le mois :</strong>
+                     <span t-esc="data['canteen'].month"/>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4" style="display: inline-block;">
+                         <strong>Class:</strong>
+                         <span t-esc="data['canteen'].class_id.name"/>
+                    </div>
+
+                    <div class="col-xs-4" style="display: inline-block;float:right;">
+                        <strong>Date start:</strong>
+                        <span t-esc="data['canteen'].period_id.date_start"/>
+                    </div>
+                    <div class="col-xs-4" style="display: inline-block;float:right;">
+                        <strong>Date stop:</strong>
+                          <span t-esc="data['canteen'].period_id.date_stop"/>
+                    </div>
+                </div>
+                <div class="row">
+
+                </div>
+
+
+                <div class="row">
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>N°</th>
+                                <th>Nom et prénom</th>
+                                <t t-foreach="data['res']" t-as="i">
+                                    <th><t t-esc="i"/></th>
+                                </t>
+                            </tr>
+                        </thead>
+                     <tbody>
+                         <t t-foreach="data['canteen'].presence_ids" t-as="presence">
+                            <tr>
+                                <td ><strong t-esc="presence_index + 1"/></td>
+
+                                <td >
+                                    <strong><t t-esc="presence.student_id.name"/>
+                                    <t t-esc="presence.student_id.last_name"/></strong>
+                                </td>
+                                <t t-foreach="data['res']" t-as="i">
+                                    <td></td>
+                                </t>
+                            </tr>
+                        </t>
+                     </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </t>
+
+</template>
+</data>
+</openerp>

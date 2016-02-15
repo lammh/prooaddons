@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="oschool_access_user_form">
+            <field name="name">access_user.form</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_simple_form"/>
+            <field name="mode">primary</field>
+            <field name="priority">20</field>
+            <field name="arch" type="xml">
+
+                <xpath expr="/form/sheet/group/div" position="attributes">
+                    <attribute name="attrs"></attribute>
+                </xpath>
+                <xpath expr="/form/sheet/group/div" position="replace"/>
+                <xpath expr="/form/sheet/group/label" position="before">
+                    <field name="active"/>
+                    <field name="password" password="True"/>
+                    <field name="pos_config" widget="selection" string="Cash register"/>
+                </xpath>
+                <xpath expr="/form/sheet/group/label" position="after">
+                    <div>
+                        <field name="groups_id" widget="many2many_tags" string="Group" options="{'no_create_edit':'1'}" style="display: inline;" domain="['|',('category_id','=',%(base.module_category_oschool)d),('category_id','=',%(base.module_category_human_resources)d)]"/>
+                    </div>
+                </xpath>
+                <xpath expr="/form/sheet/group/label" position="attributes">
+                    <attribute name="attrs"></attribute>
+                </xpath>
+
+                 <xpath expr="/form/sheet/group/field[@name='fax']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <!--<field name="fax" invisible="True"/>-->
+
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="oschool_access_user_tree">
+            <field name="name">access_user.view</field>
+            <field name="model">res.users</field>
+            <field name="arch" type="xml">
+                <tree string="Tree Service">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_oschool_access_user_list">
+            <field name="name">Users</field>
+            <field name="res_model">res.users</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain" eval="[('id', '>', 1)]"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Cliquez pour ajouter vos utilisateurs</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_view_user">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="oschool_access_user_form"/>
+            <field name="act_window_id" ref="action_oschool_access_user_list"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_view_user2">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="oschool_access_user_tree"/>
+            <field name="act_window_id" ref="action_oschool_access_user_list"/>
+        </record>
+
+        <menuitem id="userss_list_management_menu" name="Users" parent="security_menu"
+                  action="action_oschool_access_user_list"/>
+    </data>
+</openerp>

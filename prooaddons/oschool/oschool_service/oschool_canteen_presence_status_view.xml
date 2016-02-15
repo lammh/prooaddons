@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+         <record model="ir.ui.view" id="oschool_student_canteen_presence_tree">
+            <field name="name">oschool_student_canteen_presence_tree</field>
+            <field name="model">oschool.student_canteen_presence</field>
+            <field name="arch" type="xml">
+                <tree string="Tree" editable="top" delete="false">
+                    <field name="student_id" readonly="True" on_change="state_change(status,student_id)" />
+                    <field name="group_id" readonly="True"  />
+                    <field name="class_id" readonly="True"  />
+                    <field name="academic_year" readonly="True"  />
+                    <field name="period_id" readonly="True" />
+                    <field name="day" readonly="True" />
+                    <field name="status" on_change="state_change(status,student_id)" />
+                    <field name="canteen_tickets" options="{'no_create_edit': True, 'no_open': True}"/>
+                    <field name="oschool_tiket_id" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_oschool_canteen_presence_status" model="ir.actions.act_window">
+            <field name="name">Canteen Presence</field>
+            <field name="res_model">oschool.student_canteen_presence</field>
+            <field name="view_id" ref="oschool_student_canteen_presence_tree"/>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree_oschool_canteen_presence_quickadd</field>
+        </record>
+
+        <menuitem
+            action="action_oschool_canteen_presence_status"
+            name="Canteen presence status"
+            icon="STOCK_JUSTIFY_FILL"
+            id="oschool_canteen_presence_status_menu"
+            parent="oschool_presence_status_management_menu"
+            sequence="3"
+        />
+    </data>
+</openerp>

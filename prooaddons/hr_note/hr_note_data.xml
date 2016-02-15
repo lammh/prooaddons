@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+    
+        <record id="hr_note_00" model="hr.note">
+            <field name="name">0</field>
+            <field name="note">0</field>
+        </record>
+        <record id="hr_note_01" model="hr.note">
+            <field name="name">1</field>
+            <field name="note">0</field>
+        </record>
+        <record id="hr_note_02" model="hr.note">
+            <field name="name">2</field>
+            <field name="note">0</field>
+        </record>
+        <record id="hr_note_03" model="hr.note">
+            <field name="name">3</field>
+            <field name="note">0</field>
+        </record>
+        <record id="hr_note_04" model="hr.note">
+            <field name="name">4</field>
+            <field name="note">0</field>
+        </record>
+        <record id="hr_note_05" model="hr.note">
+            <field name="name">5</field>
+            <field name="note">0</field>
+        </record>
+        <record id="hr_note_06" model="hr.note">
+            <field name="name">6</field>
+            <field name="note">0</field>
+        </record>
+        <record id="hr_note_07" model="hr.note">
+            <field name="name">7</field>
+            <field name="note">0</field>
+        </record>
+        <record id="hr_note_08" model="hr.note">
+            <field name="name">8</field>
+            <field name="note">0</field>
+        </record>
+        <record id="hr_note_09" model="hr.note">
+            <field name="name">9</field>
+            <field name="note">0</field>
+        </record>
+        <record id="hr_note_10" model="hr.note">
+            <field name="name">10</field>
+            <field name="note">0</field>
+        </record>
+        <record id="hr_note_11" model="hr.note">
+            <field name="name">11</field>
+            <field name="note">10</field>
+        </record>
+        <record id="hr_note_12" model="hr.note">
+            <field name="name">12</field>
+            <field name="note">20</field>
+        </record>
+        <record id="hr_note_13" model="hr.note">
+            <field name="name">13</field>
+            <field name="note">30</field>
+        </record>
+        <record id="hr_note_14" model="hr.note">
+            <field name="name">14</field>
+            <field name="note">40</field>
+        </record>
+        <record id="hr_note_15" model="hr.note">
+            <field name="name">15</field>
+            <field name="note">50</field>
+        </record>
+        <record id="hr_note_16" model="hr.note">
+            <field name="name">16</field>
+            <field name="note">60</field>
+        </record>
+        <record id="hr_note_17" model="hr.note">
+            <field name="name">17</field>
+            <field name="note">70</field>
+        </record>
+        <record id="hr_note_18" model="hr.note">
+            <field name="name">18</field>
+            <field name="note">80</field>
+        </record>
+        <record id="hr_note_19" model="hr.note">
+            <field name="name">19</field>
+            <field name="note">90</field>
+        </record>
+        <record id="hr_note_20" model="hr.note">
+            <field name="name">20</field>
+            <field name="note">100</field>
+        </record>
+        
+        
+    </data>
+</openerp>

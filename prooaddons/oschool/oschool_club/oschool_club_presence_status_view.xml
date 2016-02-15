@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="oschool_student_club_presence_tree">
+            <field name="name">oschool_student_club_presence_tree</field>
+            <field name="model">oschool.student_club_presence</field>
+            <field name="arch" type="xml">
+                <tree string="Tree" editable="top">
+                    <field name="student_id" readonly="True"/>
+                    <field name="class_id" readonly="True"  />
+                    <field name="group_id" readonly="True"  />
+                    <!--<field name="club_id" readonly="True"/>-->
+                    <field name="period_id" readonly="True"/>
+                    <field name="day" readonly="True"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_oschool_club_presence_status" model="ir.actions.act_window">
+            <field name="name">Club Presence</field>
+            <field eval="1" name="sequence"/>
+            <field name="res_model">oschool.student_club_presence</field>
+            <field name="view_id" ref="oschool_student_club_presence_tree"/>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree_oschool_club_presence_quickadd</field>
+        </record>
+
+        <menuitem
+                action="action_oschool_club_presence_status"
+                name="Club presence status"
+                icon="STOCK_JUSTIFY_FILL"
+                id="oschool_club_presence_status_menu"
+                parent="oschool_presence_status_management_menu"
+                sequence="4"
+                />
+    </data>
+</openerp>

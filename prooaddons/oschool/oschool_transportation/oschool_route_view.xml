@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="product_category_route_form">
+            <field name="name">route.form</field>
+            <field name="model">pos.category</field>
+            <field name="inherit_id" ref="point_of_sale.product_pos_category_form_view"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <xpath expr="/form/sheet" position="before">
+                    <header>
+                        <button name="generate_months_routes" type="object" string="Générer les mois"/>
+                    </header>
+                </xpath>
+                <field name="image_medium" position="replace"/>
+                <field name="parent_id" position="replace"/>
+                <field name="sequence" position="replace"/>
+                <field name="name" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <xpath expr="/form/sheet" position="inside">
+                    <group>
+                        <group>
+                            <field name="parent_id" invisible="True"/>
+                            <field name="school_product_type" invisible="True"/>
+                            <field name="product_category" invisible="True"/>
+                            <field name="zone"/>
+                            <field name="shuttle"/>
+                            <field name="academic_year" required="True"/>
+                            <field name="price" required="True"/>
+                        </group>
+                        <group>
+                            <field name="date_start" required="True"/>
+                            <field name="date_stop" required="True"/>
+                            <field name="cash" />
+                        </group>
+                    </group>
+                    <notebook colspan="2">
+                        <page string="Months List">
+                            <field name="services_ids" nolabel="1">
+                                <tree string="Months" editable="bottom" create="false">
+                                    <field name="name"/>
+                                    <field name="subscription_month" string="Code" readonly="True"/>
+                                    <field name="list_price"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="product_category_route_tree">
+            <field name="name">route.view</field>
+            <field name="model">pos.category</field>
+            <field name="arch" type="xml">
+                <tree string="Tree route">
+                    <field name="name"/>
+                    <field name="price"/>
+                    <field name="academic_year"/>
+                     <field name="cash"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_category_route_list">
+            <field name="name">routes</field>
+            <field name="res_model">pos.category</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context" eval="{'default_parent_id':ref('oschool_transport_pos_category'),'default_product_category':ref('oschool_transport_product_category'),'default_school_product_type':'transport'}"/>
+            <field name="domain" eval="[('parent_id', '=', ref('oschool_transport_pos_category'))]"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Cliquez pour ajouter vos routes</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_view_route">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="product_category_route_form"/>
+            <field name="act_window_id" ref="action_category_route_list"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_view_route2">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="product_category_route_tree"/>
+            <field name="act_window_id" ref="action_category_route_list"/>
+        </record>
+
+        <menuitem id="routes_list_management_menu" name="Routes" parent="transportation_config_menu"   action="action_category_route_list"/>
+    </data>
+</openerp>

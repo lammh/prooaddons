@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        
+   
+         <record model="ir.ui.view" id="child_employee_form_view">
+            <field name="name">child.employee.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                   
+                <notebook position="inside">
+                    <page string="Child" attrs="{'invisible':[('householder','=',False)]}">
+                        <field name="childs_ids" widget="one2many_list" colspan="4" nolabel="1" mode="tree" >
+                            <tree string="Child" editable='bottom'>  
+                                <field name="rank" readonly="1"/>                                                     
+                                <field name="child_name"/> 
+                                <field name="birth"/>
+                                <field name="supported"/>
+                                <field name="scholar"/>
+                                <field name="hand"/>
+                                <field name="amount" readonly="1"/>                    
+                            </tree> 
+                        </field>
+                    </page>
+                </notebook>
+                
+                <xpath expr="//field[@name='marital']" position="after">
+                    <field name="householder"/>                    
+                </xpath>
+                <xpath expr="//field[@name='householder']" position="after">
+                    <field name="amount_child" invisible="1"/>                    
+                </xpath>
+                
+                                   
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="hr_deduction_form_view">
+            <field name="name">hr.deduction.form</field>
+            <field name="model">hr.deduction</field>
+            <field name="arch" type="xml">
+                <form string="Childs Amounts">
+                  <group>
+                    <field name="name"/>    
+                    <field name="first_child"/>                                        
+                    <field name="second_child"/>   
+                    <field name="third_child"/>                                        
+                    <field name="fourth_child"/>
+                  </group>
+                </form>
+                                           
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_deduction_tree_view">
+            <field name="name">hr.deduction.tree</field>
+            <field name="model">hr.deduction</field>
+            <field name="arch" type="xml">
+                <tree string="Deduction">
+                    <field name="name"/>  
+                    <field name="first_child"/>                                        
+                    <field name="second_child"/>   
+                    <field name="third_child"/>                                        
+                    <field name="fourth_child"/>
+                </tree>
+                                           
+            </field>
+        </record>
+        
+        
+        
+        <record model="ir.actions.act_window" id="action_hr_deduction">
+            <field name="name">HR Deduction</field>
+            <field name="res_model">hr.deduction</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+            <menuitem id="menu_hr_deduction" name="Deduction" action="action_hr_deduction" parent="hr.menu_hr_configuration" sequence="7" />
+        
+        
+        <record model="ir.ui.view" id="child_list_tree_view">
+            <field name="name">hr.child.tree</field>
+            <field name="model">hr.child</field>
+            <field name="arch" type="xml">
+                <tree string="Children List">
+                    <field name="name"/>
+                    <field name="rank"/>                                                     
+                    <field name="child_name"/>
+                    <field name="birth"/>
+                    <field name="supported"/>
+                    <field name="scholar"/>
+                    <field name="hand"/>
+                    <field name="amount"/> 
+                </tree> 
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="child_list_form_view">
+            <field name="name">child.list.form</field>
+            <field name="model">hr.child</field>
+           <field name="arch" type="xml">
+                <form string="Childs Amounts">
+                  <group>
+                    <field name="name" required="1"/>
+                    <field name="child_name"/>
+                    <field name="birth"/>
+                    <field name="supported"/>
+                    <field name="scholar"/>
+                    <field name="hand"/>
+                    <field name="amount" invisible="1"/> 
+                  </group>
+                </form>
+            </field>
+        </record>
+        
+        <record id="view_child_list_filter" model="ir.ui.view">
+            <field name="name">child.select</field>
+            <field name="model">hr.child</field>
+            <field name="arch" type="xml">
+                <search string="Search Child">
+                    <filter string="Supported" name="ch_supported" domain="[('supported','=',1)]"/>
+                    <separator/>
+                    <filter string="Children of higher age 20 years" name="major" domain="[('birth','&lt;=',((context_today() - relativedelta(years=20)).strftime('%%Y-%%m-%%d')))]"/>
+                    <group expand="0" string="Group By...">
+                        <filter name="employee" string="Employee" domain="[]" context="{'group_by':'name'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="action_child_list">
+            <field name="name">Child List</field>
+            <field name="res_model">hr.child</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{"search_default_ch_supported":1,"search_default_employee":1}</field>
+            <field name="search_view_id" ref="view_child_list_filter"/>
+        </record>
+        
+        <menuitem id="menu_child_list" name="List of children" action="action_child_list" parent="hr.menu_hr_main" sequence="7" />
+         
+    </data>
+</openerp>
+ 

@@ -1,0 +1,17 @@
+<openerp>
+    <data>
+        <record id="view_account_config_settings_withholding" model="ir.ui.view">
+            <field name="name">account.config.settings.withholding</field>
+            <field name="model">account.config.settings</field>
+            <field name="inherit_id" ref="account.view_account_config_settings"/>
+            <field name="arch" type="xml">
+                <label for="module_account_budget" position="after">
+                    <div>
+                        <field name="withholding_auto" class="oe_inline"/>
+                        <label for="withholding_auto"/>
+                    </div>
+                </label>
+            </field>
+        </record>
+    </data>
+</openerp>

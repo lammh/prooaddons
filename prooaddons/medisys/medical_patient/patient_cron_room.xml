@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data noupdate="1">
+        <record forcecreate="True" id="ir_cron_scheduler_medical" model="ir.cron">
+            <field name="name">Run Room Occupation scheduler</field>
+            <field eval="False" name="active"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field eval="False" name="doall"/>
+            <field eval="'medical.patient'" name="model"/>
+            <field eval="'run_scheduler'" name="function"/>
+            <field eval="'(False,True)'" name="args"/>
+        </record>
+    </data>
+</openerp>

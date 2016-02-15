@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_pay_stub_filter" model="ir.ui.view">
+            <field name="name">hr.pay.stub.filter</field>
+            <field name="model">hr.pay.stub</field>
+            <field name="arch" type="xml">
+                <search string="Search Pay Stub">
+                    <field name="name"/>
+                    <field name="employee_id"/>
+                    <field name="rule"/>
+                    <group  expand='0' string='Group by...'>
+                        <filter string='Payslip Batche' context="{'group_by' : 'name'}"/>
+                        <filter string='Employee' context="{'group_by' : 'employee_id'}"/>
+                        <filter string='Rule' context="{'group_by' : 'rule'}"/>
+                    </group>  
+                </search>
+            </field>
+        </record>
+
+        <record id="hr_pay_stub_form" model="ir.ui.view">
+            <field name="name">hr.pay.stub.form</field>
+            <field name="model">hr.pay.stub</field>
+            <field name="arch" type="xml">
+            <form string="Special Pay Stub">
+                <group>
+                    <field name="name" attrs="{'readonly':[('state','=','close')]}"/>
+                    <field name="mode" attrs="{'readonly':[('state','=','close')]}"/>
+                    <field name="employee_id" attrs="{'invisible':[('mode','=','category')], 'required':[('mode','=','employee')],'readonly':[('state','=','close')]}"/>
+                    <field name="category" attrs="{'invisible':[('mode','=','employee')], 'required':[('mode','=','category')],'readonly':[('state','=','close')]}"/>
+                    <field name="rule" attrs="{'readonly':[('state','=','close')]}"/>
+                </group>
+                <group>
+                    <field name="type" attrs="{'readonly':[('state','=','close')]}"/>
+                    <field name="amount"  attrs="{'invisible':[('type','=','work')], 'required':[('type','=','input')],'readonly':[('state','=','close')]}"/>
+                    <field name="hour" attrs="{'invisible':[('type','=','input')], 'required':[('type','=','work')],'readonly':[('state','=','close')]}"/>
+                    <field name="day" attrs="{'invisible':[('type','=','input')], 'required':[('type','=','work')],'readonly':[('state','=','close')]}"/>
+                    <field name="state" invisible="1"/>
+                </group>
+            </form>
+            </field>
+        </record>
+         
+        
+         <record id="hr_pay_stub_tree" model="ir.ui.view">
+            <field name="name">hr.pay.stub.tree</field>
+            <field name="model">hr.pay.stub</field>
+            <field name="arch" type="xml">
+                <tree string="Special Pay Stub">
+                    <field name="name"/>
+                    <field name="employee_id"/> 
+                    <field name="category"/> 
+                    <field name="rule"/>
+                    <field name="type"/>
+                    <field name="amount"/>
+                    <field name="hour"/>
+                    <field name="day"/>
+                </tree>
+            </field>
+        </record>
+        
+        
+        <record id="action_pay_stub" model="ir.actions.act_window">
+            <field name="name">Pay Stub</field>
+            <field name="res_model">hr.pay.stub</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem action="action_pay_stub" id="menu_hr_pay_stub" parent="hr_payroll.menu_hr_root_payroll"/>
+        
+        <record id="hr_salary_rule_category_stub_form" model="ir.ui.view">
+            <field name="name">hr.salary.rule.category.form.inherit</field>
+            <field name="model">hr.salary.rule.category</field>
+            <field name="inherit_id" ref="hr_payroll.hr_salary_rule_category_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='parent_id']" position="after">
+                    <field name="is_stub"/> 
+                </xpath>
+            </field>
+        </record>
+       
+       </data>
+</openerp>
+    

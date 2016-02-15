@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_statement_general_report_user_form" model="ir.ui.view">
+            <field name="name">statement.general.report.user.form</field>
+            <field name="model">statement.general.report.user</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+            <form string="Show sample wizard">
+                <group>
+                    <field name="name" options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"/>
+                </group>
+                <group colspan="4" col="6">
+                    <button icon="gtk-cancel" special="cancel" string="Cancel"/>
+                    <button icon="terp-gtk-go-back-rtl" string="Print" name="launch" type="object"/>
+                </group>
+            </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_statement_general_report_user_view">
+            <field name="name">Statement general report By User</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">statement.general.report.user</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="domain">[]</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="action_statement_general_report_user_act" action="action_statement_general_report_user_view" parent="account.menu_finance_receivables" sequence="15"/>
+    </data>
+</openerp>

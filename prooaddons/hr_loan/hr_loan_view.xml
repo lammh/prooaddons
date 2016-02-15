@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+        <record model="ir.ui.view" id="hr_loan_tree_view">
+            <field name="name">hr.loan.tree</field>
+            <field name="model">hr.loan</field>
+            <field name="arch" type="xml">
+                <tree string="Loan" colors="grey:state=='refused';blue:state=='accepted'">
+                    <field name="employee_id"/>  
+                    <field name="amount"/>                                        
+                    <field name="loan_date"/>   
+                    <field name="period"/>                                        
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+    
+        <record model="ir.ui.view" id="hr_loan_form_view">
+            <field name="name">hr.loan.form</field>
+            <field name="model">hr.loan</field>
+            <field name="arch" type="xml">
+                <form string="Loan" version="7.0">
+                    <header>
+                        <button name="simulate_loan" states="draft" type="object" string="Simulate" groups="base.group_hr_manager"/>
+                        <button name="accepted_loan" states="draft" type="object" string="Accepted" groups="base.group_hr_manager"/>
+                        <button name="refused_loan" states="draft" type="object" string="Refused" groups="base.group_hr_manager"/>
+                        <button name="anticipate_loan" states="accepted" type="object" string="Anticipate" groups="base.group_hr_manager"/>
+                        <field name="state" widget="statusbar" statusbar_colors='{"refused":"red","accepted":"green"}'/>
+                    </header>
+                    <sheet>
+                        <h1>
+                            <label string="Loan / "/>
+                            <field name="name" class="oe_inline"/>
+                        </h1>
+                        <div class="oe_title">
+                            <label for="description" class="oe_edit_only"/>
+                            <h1>
+                                <field name="description" required="1" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="employee_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="rule_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="amount" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="rate"  attrs="{'readonly': [('state', '!=', 'draft')]}"  groups="base.group_hr_manager"/>
+                            </group>
+                            <group>
+                                <field name="loan_date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="period" attrs="{'readonly': [('state', '!=', 'draft')]}" on_change="onchange_date(period, start_date)"/>
+                                <field name="start_date" attrs="{'readonly': [('state', '!=', 'draft')]}" on_change="onchange_date(period, start_date)" />
+                                <field name="end_date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>   
+                            </group>
+                        </group>                                    
+                        <field name="detail_ids" colspan="4" readonly="1" nolabel="1">
+                            <tree>
+                                <field name="name"/>
+                                <field name="start_date"/>
+                                <field name="base" sum='Total Base'/>
+                                <field name="benefit" sum='Total Benefit'/>
+                                <field name="total" sum = 'Total'/>
+                                <field name="state"/>
+                            </tree>
+                        </field>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    
+        <record model="ir.actions.act_window" id="action_hr_loan">
+            <field name="name">Loan</field>
+            <field name="res_model">hr.loan</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <menuitem id="menu_hr_root_loan" parent="hr.menu_hr_root" name="Loan" sequence="30" />
+        
+        <menuitem id="menu_hr_loan" action="action_hr_loan" parent="menu_hr_root_loan" sequence="1" />
+
+        <record model="ir.ui.view" id="hr_salary_rule_category_form_inherit">
+            <field name="name">hr.salary.rule.category.inherit</field>
+            <field name="model">hr.salary.rule.category</field>
+            <field name="inherit_id" ref="hr_payroll.hr_salary_rule_category_form"/>
+            <field name="arch" type="xml">
+                <field name="parent_id" position="after">
+                    <field name="is_loan"/>
+                </field>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_loan_detail_form_view">
+            <field name="name">hr.loan.detail.form</field>
+            <field name="model">hr.loan.detail</field>
+            <field name="arch" type="xml">
+                <form string="Loan Details">
+                  <header>   
+                    <button name="anticipate"  type="object" string="Anticipate" attrs="{'invisible': ['|', ('state', '=', 'done'), ('state_rel', '=', 'draft')]}" groups="base.group_hr_manager"/>
+                  </header>
+                  <sheet>
+                    <field name="name" readonly="1"/>  
+                    <field name="loan_id" readonly="1" string="Loan"/>                                        
+                    <field name="start_date" attrs="{'readonly': [('state', '=', 'done')]}"/>   
+                    <field name="base" readonly="1"/>                                        
+                    <field name="benefit" readonly="1"/>
+                    <field name="total" readonly="1"/>                                        
+                    <field name="state" readonly="1"/>
+                    <field name="state_rel" invisible="1"/>
+                  </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_loan_detail_tree_view">
+            <field name="name">hr.loan.detail.tree</field>
+            <field name="model">hr.loan.detail</field>
+            <field name="arch" type="xml">
+                <tree string="Loan Details" colors="grey:state=='done'">
+                    <field name="name"/>  
+                    <field name="loan_id" string="Loan"/>                                        
+                    <field name="start_date"/>   
+                    <field name="base"/>                                        
+                    <field name="benefit"/>
+                    <field name="total"/>                                        
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_loan_detail" model="ir.actions.act_window">
+             <field name="name">Loan Detail</field>
+             <field name="res_model">hr.loan.detail</field>
+             <field name="type">ir.actions.act_window</field>
+             <field name="view_type">form</field>
+             <field name="view_mode">tree,form</field>
+         </record>
+         <menuitem action="action_loan_detail" name="Loan Detail" id="menu_loan_detail" parent="menu_hr_root_loan"/>
+        
+
+    </data>
+</openerp>

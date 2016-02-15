@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_oschool_registration_tree">
+            <field name="name">oschool.registration.tree</field>
+            <field name="model">pos.order.line</field>
+            <field name="priority">30</field>
+            <field name="arch" type="xml">
+                <tree string="Registration"
+                      colors="red:qty==-1;orange:refunded; green:state=='paid'; green:state=='done';">
+                    <field name="parent_id"/>
+                    <field name="student_id"/>
+                    <field name="product_id" string="Registration Type"/>
+                    <field name="group_id"/>
+                    <field name="class_id"/>
+                    <field name="academic_year_id"/>
+                    <field name="type" invisible="1"/>
+                    <field name="refunded" invisible="1"/>
+                    <field name="qty" invisible="1"/>
+                    <field name="state" invisible="1"/>
+                    <field name="price_subtotal" string="Price"/>
+                    <field name="discount_on_product" groups="oschool.oschool_group_admin_scolarity"/>
+                    <field name="order_id"/>
+                    <field name="state_order"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_oschool_registration_form" model="ir.ui.view">
+            <field name="name">oschool.registration.form</field>
+            <field name="model">pos.order.line</field>
+            <field name="priority">10</field>
+            <field name="arch" type="xml">
+                <form string="Registration">
+                    <header>
+                        <button name="action_payment" string="Order" type="object"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="student_id" domain="[('is_student', '=', True),('active_student', '=', True)]"
+                                   on_change="onchange_registration(student_id,product_id, group_id)" required="1"
+                                   attrs="{'readonly': [('order_id', '!=', False)]}"
+                                   options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"/>
+                            <field name="parent_id" invisible="1"/>
+                            <field name="product_id"
+                                   options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"
+                                   on_change="onchange_registration(student_id,product_id, group_id)"
+                                   string="Registration Type"
+                                   attrs="{'readonly': [('order_id', '!=', False)]}"
+                                   domain="[('school_product_type','=', 'registration'),
+                                       ('pos_categ_id.date_start','&lt;=',current_date), ('pos_categ_id.date_stop','&gt;=',current_date)]"/>
+                            <label for="group_id"/>
+                            <div>
+                                <field name="group_id"
+                                       options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"
+                                       attrs="{'readonly': [('order_id', '!=', False)]}"
+                                       required="1" style="width: 70%%"
+                                       on_change="onchange_group(group_id,academic_year_id, context)"/>
+                                <div class="oe_edit_only" attrs="{'invisible': [('group_id', '=', False)]}">
+                                    Remaining places:
+                                    <field name="remaining_places" readnoly="1" style="width: 10%%"/>
+                                </div>
+                            </div>
+                            <field name="class_id" domain="[('group','=', group_id)]"
+                                   attrs="{'readonly': [('order_id', '!=', False)]}"
+                                   options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"/>
+                            <field name="academic_year_id" readonly="1"/>
+                            <field name="registration_price" readonly="1"/>
+                            <field name="type" invisible="1"/>
+                            <field name="price_unit" invisible="1"/>
+                            <field name="order_id" invisible="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_oschool_registration_search">
+            <field name="name">pos.order.line.search</field>
+            <field name="model">pos.order.line</field>
+            <field name="priority">30</field>
+            <field name="arch" type="xml">
+                <search string="Registration">
+                    <field name="parent_id"/>
+                    <field name="student_id"/>
+                    <field name="academic_year_id"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Academic Year" domain="[]" context="{'group_by' : 'academic_year_id'}"/>
+                        <filter string="Responsible" domain="[]" context="{'group_by': 'parent_id'}"/>
+                        <filter string="Student" domain="[]" context="{'group_by': 'student_id'}"/>
+                        <filter string="Group" domain="[]" context="{'group_by': 'group_id'}" name="group"/>
+                        <filter string="Class" domain="[]" context="{'group_by': 'class_id'}" name="class"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_oschool_registration_view">
+            <field name="name">Registration</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pos.order.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="oschool.view_oschool_registration_search"/>
+            <field name="domain" eval="[('type', '=', 'registration')]"/>
+            <field name="context">{'default_type':'registration', 'search_default_group':1}</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_oschool_registration_view_form">
+            <field name="act_window_id" ref="act_oschool_registration_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_oschool_registration_form"/>
+        </record>
+        <record model="ir.actions.act_window.view" id="act_oschool_registration_view_tree">
+            <field name="act_window_id" ref="act_oschool_registration_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_oschool_registration_tree"/>
+        </record>
+
+        <menuitem id="menu_oschool_registration" sequence="100" parent="students_management_menu"
+                  action="act_oschool_registration_view"/>
+
+        <record id="view_oschool_student_registration_form" model="ir.ui.view">
+            <field name="name">oschool.student.registration</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="view_oschool_student_form"/>
+            <field name="arch" type="xml">
+                <div name="buttons" position="inside">
+                    <button name="registration_student" type="object" class="oe_inline oe_stat_button" icon="fa-book" string="Registration"
+                            attrs="{'invisible': [('allow_registration', '=', False)]}"/>
+                </div>
+                <page name='general_student' position="after">
+                    <page string="Registration">
+                        <field name="registration_ids" colspan="4" nolabel="1" readonly="1">
+                            <tree string="Registration"  default_order="date_start desc"
+                                  colors="red:qty==-1;orange:refunded; green:state=='paid'; green:state=='done';">
+                                <field name="product_id"/>
+                                <field name="group_id"/>
+                                <field name="class_id"/>
+                                <field name="academic_year_id"/>
+                                <field name="price_subtotal" string="Price"/>
+                                <field name="discount_on_product" groups="oschool.oschool_group_admin_scolarity"/>
+                                <field name="date_start" invisible="1"/>
+                                <field name="qty" invisible="1"/>
+                                <field name="refunded" invisible="1"/>
+                                <field name="state" invisible="1"/>
+                                <field name="state_academic_year" invisible="1"/>
+                                <field name="order_id" options="{'no_open': True}"/>
+                                <button name="registration_refund" string="Refund" type="object" icon="STOCK_UNDO"
+                                        confirm="Are you sure you want to refund this record?"
+                                        groups="oschool.oschool_group_responsible_scolarity,oschool.oschool_group_admin_scolarity"/>
+                            </tree>
+                        </field>
+                    </page>
+                </page>
+            </field>
+        </record>
+
+        <record id="view_oschool_responsible_student_registration_form" model="ir.ui.view">
+            <field name="name">oschool.responsible.student.registration</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="view_responsible_property_form"/>
+            <field name="arch" type="xml">
+                <div name="buttons_student" position="inside">
+                    <button name="registration_student" type="object" class="oe_inline oe_stat_button" icon="fa-book" string="Registration"/>
+                </div>
+                <page name='general_student' position="after">
+                    <page string="Registration">
+                        <field name="registration_ids" colspan="4" nolabel="1" readonly="1">
+                            <tree string="Registration"  default_order="date_start desc"
+                                  colors="red:qty==-1;orange:refunded; green:state=='paid'; green:state=='done';">
+                                <field name="product_id"/>
+                                <field name="group_id"/>
+                                <field name="class_id"/>
+                                <field name="academic_year_id"/>
+                                <field name="price_subtotal" string="Price"/>
+                                <field name="discount_on_product" groups="oschool.oschool_group_admin_scolarity"/>
+                                <field name="date_start" invisible="1"/>
+                                <field name="qty" invisible="1"/>
+                                <field name="refunded" invisible="1"/>
+                                <field name="state" invisible="1"/>
+                                <field name="state_academic_year" invisible="1"/>
+                                <field name="order_id" options="{'no_open': True}"/>
+                                <button name="registration_refund" string="Refund" type="object" icon="STOCK_UNDO"
+                                        confirm="Are you sure you want to refund this record?"
+                                        groups="oschool.oschool_group_responsible_scolarity,oschool.oschool_group_admin_scolarity"/>
+                            </tree>
+                        </field>
+                    </page>
+                </page>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_student_registration_dialog_form">
+            <field name="name">Registration Student Wizard</field>
+            <field name="model">pos.order.line</field>
+            <field name="priority">40</field>
+            <field name="arch" type="xml">
+                <form string="Registration">
+
+                    <group>
+                        <field name="student_id" invisible="1" required="1"/>
+                        <field name="parent_id" invisible="1" />
+                        <field name="product_id"
+                               options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"
+                               on_change="onchange_registration(student_id,product_id, group_id)"
+                               string="Registration Type"
+                               attrs="{'readonly': [('order_id', '!=', False)]}"
+                               domain="[('school_product_type','=', 'registration'),
+                                       ('pos_categ_id.date_start','&lt;=',current_date), ('pos_categ_id.date_stop','&gt;=',current_date)]"/>
+                        <label for="group_id"/>
+                        <div>
+                            <field name="group_id"
+                                   options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"
+                                   attrs="{'readonly': [('order_id', '!=', False)]}"
+                                   required="1" style="width: 70%%"
+                                   on_change="onchange_group(group_id,academic_year_id, context)"/>
+                            <div class="oe_edit_only" attrs="{'invisible': [('group_id', '=', False)]}">
+                                Remaining places:
+                                <field name="remaining_places" readnoly="1" style="width: 10%%"/>
+                            </div>
+                        </div>
+                        <field name="class_id" domain="[('group','=', group_id)]"
+                               attrs="{'readonly': [('order_id', '!=', False)]}"
+                               options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"/>
+                        <field name="academic_year_id" readonly="1"/>
+                        <field name="registration_price" readonly="1"/>
+                        <field name="type" invisible="1"/>
+                        <field name="price_unit" invisible="1"/>
+                        <field name="order_id" invisible="1"/>
+                    </group>
+                    <footer>
+
+                        <button name="button_registration" string="Registration" class="oe_highlight" type="object"/>
+                        or
+                        <button name="button_registration_pay" string="Registration and payment" class="oe_highlight" type="object"/>
+
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</openerp>

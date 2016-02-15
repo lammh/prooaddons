@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<openerp>
+	<data noupdate="1">
+
+		<record id="account_treasury_type_chq" model="account.treasury.type">
+			<field name="name">Chèque</field>
+			<field eval="1" name="generate"/>
+		</record>
+
+		<record id="account_treasury_type_coupon" model="account.treasury.type">
+			<field name="name">Traite</field>
+			<field eval="1" name="generate"/>
+		</record>
+
+		<record id="account_treasury_type_transfer" model="account.treasury.type">
+			<field name="name">Virement</field>
+			<field eval="0" name="generate"/>
+		</record>
+
+		<record id="account_treasury_type_tpe" model="account.treasury.type">
+			<field name="name">TPE</field>
+			<field eval="0" name="generate"/>
+		</record>
+
+	</data>
+</openerp>
+

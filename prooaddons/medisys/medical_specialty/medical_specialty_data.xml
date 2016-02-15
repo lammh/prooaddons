@@ -1,0 +1,254 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data noupdate="1">
+        <record id="generaliste" model="medical.specialty">
+            <field name="name">GENERALISTE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="pediatre" model="medical.specialty">
+            <field name="name">PEDIATRE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="gynecologue" model="medical.specialty">
+            <field name="name">GYNECOLOGUE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="psychiatre" model="medical.specialty">
+            <field name="name">PSYCHIATRE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="ophtalmo" model="medical.specialty">
+            <field name="name">OPHTALMO</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="dermatologue" model="medical.specialty">
+            <field name="name">DERMATOLOGUE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="orthopediste" model="medical.specialty">
+            <field name="name">ORTHOPEDISTE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="neuro" model="medical.specialty">
+            <field name="name">NEURO</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="radiodiagnostic" model="medical.specialty">
+            <field name="name">RADIO DIAGNOSTIC</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="gastrologue" model="medical.specialty">
+            <field name="name">GASTROLOGUE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="rhumatologue" model="medical.specialty">
+            <field name="name">RHUMATOLOGUE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="orl" model="medical.specialty">
+            <field name="name">ORL</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="dentiste" model="medical.specialty">
+            <field name="name">DENTISTE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="kinesitherapie" model="medical.specialty">
+            <field name="name">KINESITHERAPIE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="radiotherapie" model="medical.specialty">
+            <field name="name">RADIO THERAPIE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="urologue" model="medical.specialty">
+            <field name="name">UROLOGUE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="homeopatie" model="medical.specialty">
+            <field name="name">HOMEOPATIE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="medecinedetravail" model="medical.specialty">
+            <field name="name">MEDECINE DE TRAVAIL</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="endocrinologie" model="medical.specialty">
+            <field name="name">ENDOCRINOLOGIE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="nephrologie" model="medical.specialty">
+            <field name="name">NEPHROLOGIE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="pneumologue" model="medical.specialty">
+            <field name="name">PNEUMOLOGUE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="hematologie" model="medical.specialty">
+            <field name="name">HEMATOLOGIE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="chirurgiethoraciquevasc" model="medical.specialty">
+            <field name="name">CHIRURGIE THORACIQUE VASC</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="stomatologie" model="medical.specialty">
+            <field name="name">STOMATOLOGIE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="medecineinterne" model="medical.specialty">
+            <field name="name">MEDECINE INTERNE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="medecinelegale" model="medical.specialty">
+            <field name="name">MEDECINE LEGALE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="reanimateur" model="medical.specialty">
+            <field name="name">REANIMATEUR</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="angiologie" model="medical.specialty">
+            <field name="name">ANGIOLOGIE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="divers" model="medical.specialty">
+            <field name="name">DIVERS</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="cardiologie" model="medical.specialty">
+            <field name="name">CARDIOLOGIE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="chirurgienesthetique" model="medical.specialty">
+            <field name="name">CHIRURGIEN ESTHETIQUE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="carcinologie" model="medical.specialty">
+            <field name="name">CARCINOLOGIE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="labodanalysesbio" model="medical.specialty">
+            <field name="name">LABO D'ANALYSES BIO</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="divers1" model="medical.specialty">
+            <field name="name">Divers</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="instrumentiste" model="medical.specialty">
+            <field name="name">INSTRUMENTISTE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="anesthesiste" model="medical.specialty">
+            <field name="name">ANESTHESISTE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="infirmier" model="medical.specialty">
+            <field name="name">Infirmier</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="chirurgiepediatrique" model="medical.specialty">
+            <field name="name">CHIRURGIE PEDIATRIQUE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="chirurgiemaxillofacial" model="medical.specialty">
+            <field name="name">CHIRURGIE MAXILLO-FACIAL</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="maladiesinfectieuses" model="medical.specialty">
+            <field name="name">Maladies infectieuses</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="mdecinedusport" model="medical.specialty">
+            <field name="name">Médecine du sport</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="neurochirurgie" model="medical.specialty">
+            <field name="name">Neuro-chirurgie</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="pharmacieexterne" model="medical.specialty">
+            <field name="name">PHARMACIE EXTERNE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="chirurgiencarcinologue" model="medical.specialty">
+            <field name="name">CHIRURGIEN CARCINOLOGUE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="pharmacieexternedenuit" model="medical.specialty">
+            <field name="name">PHARMACIE EXTERNE DE NUIT</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="orthophonie" model="medical.specialty">
+            <field name="name">ORTHOPHONIE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="chirurgiegenerale" model="medical.specialty">
+            <field name="name">CHIRURGIE GENERALE</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="chirurgieorthopdiqtraumatol" model="medical.specialty">
+            <field name="name">Chirurgie Orthopédiq.Traumatol</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="maladiesdesvaisseaux" model="medical.specialty">
+            <field name="name">Maladies des vaisseaux</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record id="mdphysiqueredfonction" model="medical.specialty">
+            <field name="name">Méd. physique &amp; réed. fonction</field>
+        </record>
+    </data>
+</openerp>
+

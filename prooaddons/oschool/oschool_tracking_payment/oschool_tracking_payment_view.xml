@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_oschool_payment_tree">
+            <field name="name">oschool.payment.tree</field>
+            <field name="model">pos.order.line</field>
+            <field name="priority">30</field>
+            <field name="arch" type="xml">
+               <tree create="false" delete="false">
+                   <field name="order_id"/>
+                   <field name="date_order"/>
+                    <field name="parent_id"/>
+                    <field name="student_id"/>
+                    <field name="phone"/>
+                    <field name="phone2"/>
+                    <field name="mobile"/>
+                    <field name="mobile2"/>
+                    <field name="mail"/>
+                    <field name="product_id" string=" Type"/>
+                    <field name="group_id"/>
+                    <field name="class_id"/>
+                    <field name="academic_year_id"/>
+                    <field name="type" invisible="1"/>
+                    <field name="refunded" invisible="1"/>
+
+                    <field name="qty" invisible="1"/>
+                    <field name="price_unit" string="Price"
+                           groups="oschool.oschool_group_admin_scolarity"/>
+                   <field name="discount_on_product"
+                           groups="oschool.oschool_group_admin_scolarity"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_oschool_payment_search">
+            <field name="name">pos.payment.line.search</field>
+            <field name="model">pos.order.line</field>
+            <field name="priority">30</field>
+            <field name="arch" type="xml">
+                <search string="payment">
+                    <field name="parent_id"/>
+                    <field name="student_id"/>
+                    <field name="academic_year_id"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Academic Year" domain="[]" context="{'group_by' : 'academic_year_id'}" name="academic_year"/>
+
+                        <filter string="Group" domain="[]" context="{'group_by': 'group_id'}" name="group"/>
+                        <filter string="Class" domain="[]" context="{'group_by': 'class_id'}" name="class"/>
+                        <filter string="Student" domain="[]" context="{'group_by': 'student_id'}" name="student"/>
+                        <filter string="Period" domain="[]" context="{'group_by': 'period_id'}" name="period"/>
+                        <filter string="Responsible" domain="[]" context="{'group_by': 'parent_id'}" name="responsible"/>
+                        <filter string="Type" domain="[]" context="{'group_by': 'type'}" name="type"/>
+                        <filter string="Categorie" domain="[]" context="{'group_by': 'product_category_id'}" name="categorie"/>
+                        <filter string="Product" domain="[]" context="{'group_by': 'product_id'}" name="product"/>
+
+                    </group>
+                </search>
+            </field>
+        </record>
+        <!-- liste des impayés -->
+
+        <record model="ir.actions.act_window" id="act_oschool_payment_view">
+            <field name="name">Payments Analysis</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pos.order.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="search_view_id" ref="oschool.view_oschool_payment_search"/>
+            <field name="domain" eval="[('type', '!=', 'registration'), ('order_id', '=', False)]"/>
+             <field name="context">{'search_default_period':1,'search_default_type':1,'search_default_academic_year':1}</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_oschool_payment_view_tree">
+            <field name="act_window_id" ref="act_oschool_payment_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_oschool_payment_tree"/>
+        </record>
+
+        <menuitem id="menu_oschool_payment" sequence="100" parent="tracking_management_menu"
+                  action="act_oschool_payment_view" groups="oschool_group_admin_scolarity,oschool_group_responsible_scolarity,oschool_group_cashier_scolarity"/>
+        <!-- liste des remboursements -->
+
+        <record model="ir.actions.act_window" id="act_oschool_refund_view">
+            <field name="name">Refund Analysis</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pos.order.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="search_view_id" ref="oschool.view_oschool_payment_search"/>
+            <field name="domain" eval="[('refunded', '=', True)]"/>
+             <field name="context">{'search_default_responsible':1,'search_default_academic_year':1}</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_oschool_refund_view_tree">
+            <field name="act_window_id" ref="act_oschool_refund_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_oschool_payment_tree"/>
+        </record>
+
+        <menuitem id="menu_oschool_refund" sequence="200" parent="tracking_management_menu"
+                  action="act_oschool_refund_view" groups="oschool_group_admin_scolarity,oschool_group_responsible_scolarity"/>
+
+        <!-- liste des abonnées -->
+
+        <record model="ir.actions.act_window" id="act_oschool_subscription_view">
+            <field name="name">Subscription Analysis</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pos.order.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="search_view_id" ref="oschool.view_oschool_payment_search"/>
+            <field name="domain" eval="[
+            ('type', '!=', 'registration'),
+            ('refunded', '=', False),
+            ('qty', '>', 0)]"/>
+             <field name="context">{'search_default_period':1,'search_default_type':1,'search_default_academic_year':1,'search_default_product':1}</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_oschool_subscription_view_tree">
+            <field name="act_window_id" ref="act_oschool_subscription_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_oschool_payment_tree"/>
+        </record>
+
+        <menuitem id="menu_oschool_subscription" sequence="100" parent="tracking_management_menu"
+                  action="act_oschool_subscription_view"
+                  groups="oschool_group_admin_scolarity,oschool_group_responsible_scolarity,oschool_group_cashier_scolarity"/>
+
+    </data>
+</openerp>

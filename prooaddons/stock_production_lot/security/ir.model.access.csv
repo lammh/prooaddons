@@ -1,0 +1,3 @@
+id,name,model_id/id,group_id/id,perm_write,perm_read,perm_create,perm_unlink
+access_picking_production_lot,picking_production_lot,model_picking_production_lot,base.group_sale_salesman,1,1,1,1
+access_picking_production_lot_line,picking_production_lot_line,model_picking_production_lot_line,base.group_sale_salesman,1,1,1,1

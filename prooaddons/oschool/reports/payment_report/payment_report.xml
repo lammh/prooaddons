@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+<template id="payment_report">
+    <t t-call="report.html_container">
+            <div class="page">
+                <h2>Rapport des impayés : <t t-esc="data['period_id']"/> /  <t t-esc="data['academic_year']"/></h2>
+
+                <t t-foreach="data['study']" t-as="g">
+                    <t t-foreach="data['study'][g]" t-as="c">
+                    <div><strong t-esc="g"/>/<span t-esc="c"/></div>
+
+                    <table style=" border: 1px solid green; padding: 1px;font-size:0.8em;">
+                        <tr>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;"><strong t-esc="o"/></th>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">N°</th>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Elève</th>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Groupe</th>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Classe</th>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Tel 1</th>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Tel 2</th>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Mobile 1</th>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Mobile 2</th>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">email 1</th>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">email 2</th>
+                        </tr>
+
+                        <t t-foreach="data['study'][g][c]" t-as="line">
+                            <tr>
+                                <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><strong t-esc="line_index + 1"/></td>
+                                <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><strong t-esc="line.ref"/></td>
+                                <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><t t-esc="line.display_name"/></td>
+                                <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><t t-esc="line.group_id.name"/></td>
+                                <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><t t-esc="line.class_id.name"/></td>
+
+                                <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><t t-esc="line.parent_id.phone"/></td>
+                                <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><t t-esc="line.parent_id.phone2"/></td>
+                                <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><t t-esc="line.parent_id.mobile"/></td>
+                                <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><t t-esc="line.parent_id.mobile2"/></td>
+                                <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><t t-esc="line.parent_id.email"/></td>
+                                <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><t t-esc="line.parent_id.email"/></td>
+
+                            </tr>
+                        </t>
+                    </table>
+                    <p style="page-break-after:always;">   </p>
+                </t>
+                </t>
+
+            </div>
+        </t>
+</template>
+
+</data>
+</openerp>

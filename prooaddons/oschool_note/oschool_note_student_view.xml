@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_oschool_student_note_form" model="ir.ui.view">
+            <field name="name">oschool.student.note</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="oschool.view_oschool_student_form"/>
+            <field name="arch" type="xml">
+                <page name='general_student' position="after">
+                    <page string="Notes">
+                        <field name="notes_ids" colspan="4" nolabel="1" readonly="1" domain="[('academic_year', '=', academic_year_id)]">
+                            <tree string="Notes" default_order="trimester_id,matiere_id">
+                                <field name="trimester_id"/>
+                                <field name="average"/>
+                                <field name="academic_year" invisible="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                </page>
+            </field>
+        </record>
+
+    </data>
+</openerp>

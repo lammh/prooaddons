@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="hr_cnss_form_view">
+            <field name="name">hr.cnss.form</field>
+            <field name="model">hr.cnss</field>
+            <field name="arch" type="xml">
+                <form string="CNSS Statement" version="7.0">
+                    <header>
+                        <button string="Approve" type="object" name="action_approve" states="draft" icon="terp-camera_test"/>
+                        <button string="Confirm" type="object" name="action_confirm" states="pending"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,pending,done"
+                            statusbar_colors='{"draft":"blue"}' />
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" />
+                                <field name="company_id" on_change="onchange_cnss(company_id, register_id, period, year, codexp)" attrs="{'readonly': [('state', '!=', 'draft')]}" />
+                                <field name="register_id" on_change="onchange_cnss(company_id, register_id, period, year, codexp)" attrs="{'readonly': [('state', '!=', 'draft')]}" />
+                                <field name="codexp" on_change="onchange_cnss(company_id, register_id, period, year, codexp)" attrs="{'readonly': [('state', '!=', 'draft')]}" />
+                            </group>
+                            <group>
+                                <field name="date" attrs="{'readonly': [('state', '!=', 'draft')]}" />
+                                <field name="period" on_change="onchange_cnss(company_id, register_id, period, year, codexp)" attrs="{'readonly': [('state', '!=', 'draft')]}" />
+                                <field name="year" on_change="onchange_cnss(company_id, register_id, period, year, codexp)" attrs="{'readonly': [('state', '!=', 'draft')]}" />
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <field name="detail_ids" widget="one2many_list" colspan="4" attrs="{'readonly':[('state','!=','draft')]}"
+                                    nolabel="1" mode="tree">
+                                    <tree string="Child" editable='bottom'>
+                                        <field name="name" />
+                                        <field name="line" />
+                                        <field name="sec_nbr" />
+                                        <field name="emp_name" />
+                                        <field name="matricule" />
+                                        <field name="identification_id"/>
+                                        <field name="month1" sum="month 1"/>
+                                        <field name="month2" sum="month 2"/>
+                                        <field name="month3" sum="month 3"/>
+                                        <field name="amount" sum="Total"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Notes">
+                                <field name="note" attrs="{'readonly': [('state', '!=', 'draft')]}" />
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_cnss_tree_view">
+            <field name="name">hr.cnss.tree</field>
+            <field name="model">hr.cnss</field>
+            <field name="arch" type="xml">
+                <tree string="CNSS Statement">
+                    <field name="name"/>  
+                    <field name="company_id"/>                                        
+                    <field name="date"/>   
+                    <field name="codexp"/>                                        
+                    <field name="year"/>
+                    <field name="period"/>                                        
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="action_cnss" model="ir.actions.act_window">
+            <field name="name">CNSS Statement</field>
+            <field name="res_model">hr.cnss</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem action="action_cnss" name="CNSS Statement" id="menu_cnss"
+            parent="hr_payroll.menu_hr_root_payroll" />
+
+        <record model="ir.ui.view" id="cnss_form_view">
+            <field name="name">cnss.employee.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='passport_id']" position="after">
+                    <field name="cnss"/>                  
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="res_company_cnss_form_view">
+            <field name="name">res.company.inherit.form</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='vat']" position="after">
+                    <field name="company_cnss"/>                  
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>    

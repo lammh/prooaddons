@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_customer_invoice_unpaid_form" model="ir.ui.view">
+            <field name="name">customer.invoice.unpaid.form</field>
+            <field name="model">customer.invoice.unpaid</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+            <form string="Show sample wizard">
+                <group>
+                    <field name="date" invisible="1"/>
+                </group>
+                <group colspan="4" col="6">
+                    <button icon="gtk-cancel" special="cancel" string="Cancel"/>
+                    <button icon="terp-gtk-go-back-rtl" string="Print" name="launch" type="object"/>
+                </group>
+            </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_customer_invoice_unpaid_view">
+            <field name="name">Customer Invoice unpaid</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">customer.invoice.unpaid</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="domain">[]</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="action_customer_invoice_unpaid_act" action="action_customer_invoice_unpaid_view" parent="account.menu_finance_receivables" sequence="15"/>
+    </data>
+</openerp>

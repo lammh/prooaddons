@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <report
+            id="action_report_restaurant"
+            model="oschool.restaurant.wizard"
+            string="Restaurant Report"
+            report_type="qweb-pdf"
+            name="oschool.report_restaurant"
+            file="oschool.report_restaurant"
+            menu="False"
+        />
+
+        <record id="action_report_restaurant" model="ir.actions.report.xml">
+            <field name="paperformat_id" ref="paperformat_transport"/>
+        </record>
+
+        </data>
+    </openerp>

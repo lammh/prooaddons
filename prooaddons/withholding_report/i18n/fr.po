@@ -1,0 +1,312 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* withholding_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20140804-231303\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-04 13:25+0000\n"
+"PO-Revision-Date: 2014-11-04 13:25+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "$F{original}-$F{witholding}"
+msgstr "$F{original}-$F{witholding}"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "Je soussigné, certifie exacts les renseignements figurant sur le présent certificat et m'expose aux sanctions prévues par la loi pour toute inexactitude."
+msgstr "Je soussigné, certifie exacts les renseignements figurant sur le présent certificat et m'expose aux sanctions prévues par la loi pour toute inexactitude."
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "Partner Name"
+msgstr "Partner Name"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "REPUBLIQUE TUNISIENNE          MINISTERE DU PLAN ET DES FINANCES     DIRECTION GENERALE DU CONTROLE FISCAL"
+msgstr "REPUBLIQUE TUNISIENNE          MINISTERE DU PLAN ET DES FINANCES     DIRECTION GENERALE DU CONTROLE FISCAL"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "A Sfax Le .............................."
+msgstr "A Sfax Le .............................."
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "$F{t}"
+msgstr "$F{t}"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "Adresse de résidence :"
+msgstr "Adresse de résidence :"
+
+#. module: withholding_report
+#: model:ir.actions.report.xml,name:withholding_report.account_witholding
+msgid "Witholding"
+msgstr "Retenue à la source"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "N° de la carte d'identité                 ou séjour pour les étrangers"
+msgstr "N° de la carte d'identité                 ou séjour pour les étrangers"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "CIN"
+msgstr "CIN"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "CERTIFICAT DE RETENUE                       D'IMPOT                 SUR LE REVENU     OU D'IMPOT SUR LES SOCIETES"
+msgstr "CERTIFICAT DE RETENUE                       D'IMPOT                 SUR LE REVENU     OU D'IMPOT SUR LES SOCIETES"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "RETENUE"
+msgstr "RETENUE"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "* Honoraires, commissions, courtages, vacation et loyers"
+msgstr "* Honoraires, commissions, courtages, vacation et loyers"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "$P{cvat3}"
+msgstr "$P{cvat3}"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "$F{dt}"
+msgstr "$F{dt}"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "Nom, prénom ou raison sociale :"
+msgstr "Nom, prénom ou raison sociale :"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "1) Le certificat est délivré à l'occasion de contre paiement toutefois, pour les opérations répétitives, le certificat peut être trimestriellement délivré"
+msgstr "1) Le certificat est délivré à l'occasion de contre paiement toutefois, pour les opérations répétitives, le certificat peut être trimestriellement délivré"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "* Revenus des comptes spéciaux d'épargne ouverts auprès des banques"
+msgstr "* Revenus des comptes spéciaux d'épargne ouverts auprès des banques"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "Code de Catégorie(2)"
+msgstr "Code de Catégorie(2)"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "MNT. NET"
+msgstr "MNT. NET"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "$P{vat2}"
+msgstr "$P{vat2}"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "B - RETENUES EFFECTUEES SUR :"
+msgstr "B - RETENUES EFFECTUEES SUR :"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "$P{company}"
+msgstr "$P{company}"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "$F{partner}"
+msgstr "$F{partner}"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "* Revenus des capitaux mobiliers"
+msgstr "* Revenus des capitaux mobiliers"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "$P{vat4}"
+msgstr "$P{vat4}"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "(new DecimalFormat(\"#,###,##0.000\")).format($F{witholding}.doubleValue())"
+msgstr "(new DecimalFormat(\"#,###,##0.000\")).format($F{witholding}.doubleValue())"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "select  sum(vl.amount_original)as original, sum(vl.amount_original* at.amount) as witholding, rp.name as partner,rp.street,current_date as dt, at.amount*100 as t from account_voucher av inner join account_voucher_line vl on vl.voucher_id=av.id inner join account_tax at on av.withholding = at.id inner join res_partner rp on av.partner_id = rp.id where av.id = $P{voucher_id} group by rp.vat,rp.name,rp.street,t"
+msgstr "select  sum(vl.amount_original)as original, sum(vl.amount_original* at.amount) as witholding, rp.name as partner,rp.street,current_date as dt, at.amount*100 as t from account_voucher av inner join account_voucher_line vl on vl.voucher_id=av.id inner join account_tax at on av.withholding = at.id inner join res_partner rp on av.partner_id = rp.id where av.id = $P{voucher_id} group by rp.vat,rp.name,rp.street,t"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "(new DecimalFormat(\"#,###,##0.000\")).format(($F{original}-$F{witholding}).doubleValue())"
+msgstr "(new DecimalFormat(\"#,###,##0.000\")).format(($F{original}-$F{witholding}).doubleValue())"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "* Redevances"
+msgstr "* Redevances"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "MNT. BRUT"
+msgstr "MNT. BRUT"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "Keep Original"
+msgstr "Keep Original"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "* Revenus des bons de caisse au porteur"
+msgstr "* Revenus des bons de caisse au porteur"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "Adresse :"
+msgstr "Adresse :"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "2) Code catégorie: M.personnes morales C.personne physique \"industriel et commerce\" P.professions libérales N.employeurs non soumis à                  l'impôt sur le revenu ou sur les sociétés (administrations et etablissements publics) E.établissements secondaires"
+msgstr "2) Code catégorie: M.personnes morales C.personne physique \"industriel et commerce\" P.professions libérales N.employeurs non soumis à                  l'impôt sur le revenu ou sur les sociétés (administrations et etablissements publics) E.établissements secondaires"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "C - BENEFICIAIREE"
+msgstr "C - BENEFICIAIREE"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "Adresse professionnelle :"
+msgstr "Adresse professionnelle :"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "(new DecimalFormat(\"#,###,##0.000\")).format($F{original}.doubleValue())"
+msgstr "(new DecimalFormat(\"#,###,##0.000\")).format($F{original}.doubleValue())"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "$P{cvat1}"
+msgstr "$P{cvat1}"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "A- PERSONNE OU ORGANISME PAYEUR"
+msgstr "A- PERSONNE OU ORGANISME PAYEUR"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "Total Général"
+msgstr "Total Général"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "N° Ets Secondaire"
+msgstr "N° Ets Secondaire"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "$P{street}"
+msgstr "$P{street}"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "$P{vat1}"
+msgstr "$P{vat1}"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "Cachet et signature du payeur"
+msgstr "Cachet et signature du payeur"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "$P{vat3}"
+msgstr "$P{vat3}"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "Retenue effectuée sur les factures suivantes:"
+msgstr "Retenue effectuée sur les factures suivantes:"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "$P{cvat4}"
+msgstr "$P{cvat4}"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "Dénomination de la personne ou de l'organisme payeur :"
+msgstr "Dénomination de la personne ou de l'organisme payeur :"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "$P{cvat2}"
+msgstr "$P{cvat2}"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "Code  TVA"
+msgstr "Code  TVA"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "F.N°"
+msgstr "F.N°"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "Street"
+msgstr "Street"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "$F{street}"
+msgstr "$F{street}"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "'- '+$P{city}"
+msgstr "'- '+$P{city}"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "RETENUES EFFECTUEES LE:"
+msgstr "RETENUES EFFECTUEES LE:"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "Matricule fiscal"
+msgstr "Matricule fiscal"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "IDENTIFIANT"
+msgstr "IDENTIFIANT"
+
+#. module: withholding_report
+#: report:account_voucher1:0
+msgid "$P{invoice}"
+msgstr "$P{invoice}"
+

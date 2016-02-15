@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_partner_property_form_taxes">
+            <field name="name">res.partner.form.taxes</field>
+            <field name="model">res.partner</field>
+            <field name="priority">2</field>
+            <field name="inherit_id" ref="account.view_partner_property_form" />
+            <field name="arch" type="xml">
+                <field name="bank_ids" position="before">
+                    <group col="6" colspan="6" attrs="{'invisible': [('company_id','=', False)]}">
+                        <separator string="Tax Information" colspan="6"/>
+                        <field name="vat"/>
+                        <field name="partner_registry"/>
+                        <field name="stamp_exemption"/>
+                        <field name="vat_exemption"/>
+                        <field name="fodec"/>
+                    </group>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="invoice_supplier_form2">
+            <field name="name">account.invoice.supplier.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form" />
+            <field name="arch" type="xml">
+                <field name="supplier_invoice_number" position="replace">
+                    <field name="supplier_invoice_number" required="1"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

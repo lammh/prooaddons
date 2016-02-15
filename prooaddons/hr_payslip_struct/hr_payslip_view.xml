@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="edit_holiday_new_" model="ir.ui.view">
+            <field name="name">hr.holidays.form</field>
+            <field name="model">hr.holidays</field>
+            <field name="inherit_id" ref="hr_holidays.edit_holiday_new"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="appears_on_payslip" attrs="{'invisible':[('type','=','add')]}"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="hr_payslip_run_struct_form" model="ir.ui.view">
+            <field name="name">hr.payslip.run.struct.form</field>
+            <field name="model">hr.payslip.run</field>
+            <field name="inherit_id" ref="hr_payroll.hr_payslip_run_form"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <h6>
+                        <label for="struct_id" class="oe_edit_only"/>
+                    </h6>
+                    <h1>
+                        <field name="struct_id" required="1"/>
+                    </h1>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_hr_payslip_form_struct_form" model="ir.ui.view">
+            <field name="name">hr.payslip.struct.form</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+            <field name="arch" type="xml">
+                <field name="employee_id" position="replace">
+                    <field name="employee_id" on_change="onchange_employee_id(date_from, date_to, payslip_run_id, employee_id, contract_id)"/>
+                </field>
+                <field name="payslip_run_id" position="replace">
+                    <field name="payslip_run_id" on_change="onchange_struct_id(payslip_run_id, employee_id)"
+                           domain="[('state','=','draft')]"/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="hr_contract_form_struct">
+            <field name="name">hr.contract.view.form.struct</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_payroll.hr_contract_form_inherit" />
+            <field name="arch" type="xml">
+                <data>
+                    <field name="struct_id" position="replace"/>
+                </data>
+            </field>
+        </record>
+
+       </data>
+</openerp>
+    

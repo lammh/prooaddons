@@ -1,0 +1,8 @@
+<openerp>
+    <data noupdate="1">
+        <record id="group_account_cancel" model="res.groups">
+            <field name="name">Cancel invoice and Voucher</field>
+            <field name="category_id" ref="base.module_category_hidden"/>
+        </record>
+    </data>
+</openerp>

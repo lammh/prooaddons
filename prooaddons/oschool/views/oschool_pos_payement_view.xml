@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="oschool_view_pos_payment" model="ir.ui.view">
+            <field name="name">Pay Order</field>
+            <field name="model">pos.make.payment</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_payment"/>
+            <field name="arch" type="xml">
+                <field name="journal_id" position="attributes">
+                    <attribute name="widget">selection</attribute>
+                </field>
+                <field name="journal_id" position="after">
+                    <field name="is_check" invisible="1"/>
+                </field>
+                <field name='payment_name' position="attributes">
+                    <attribute name="attrs">{'invisible': [('is_check', '=', True)]}</attribute>
+                </field>
+                <xpath expr="/form/group[1]" position="after">
+                    <group attrs="{'invisible': [('is_check', '=', False)]}">
+                        <group name="check Information">
+                            <field name="is_warranty_check" />
+                            <field name="check_number" attrs="{'required': [('is_check', '=', True)]}" />
+                            <field name="check_holder" attrs="{'required': [('is_check', '=', True)]}"/>
+                            <field name="bank_source" attrs="{'required': [('is_check', '=', True)]}"/>
+                        </group>
+                        <group>
+                            <field name="check_creation_date" attrs="{'required': [('is_check', '=', True)]}"/>
+                            <field name="check_reception_date" attrs="{'required': [('is_check', '=', True)]}"/>
+                            <field name="check_due_date" attrs="{'required': [('is_check', '=', True),('is_warranty_check', '=', False)]}"/>
+                        </group>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

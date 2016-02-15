@@ -1,0 +1,114 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* price_by_customer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-20150506\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-13 12:16+0000\n"
+"PO-Revision-Date: 2015-07-13 12:16+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: price_by_customer
+#: code:addons/price_by_customer/model.py:91
+#, python-format
+msgid "At least one pricelist has no active version !\n"
+"Please create or activate one."
+msgstr "Au moins une liste de prix n'a pas de version active !\n"
+"Créez ou activez en une."
+
+#. module: price_by_customer
+#: help:product.customerinfo,list_price:0
+msgid "Base price to compute the customer price. Sometimes called the catalog price."
+msgstr "Prix de base pour calculer le prix client. Parfois appelé prix catalogue.."
+
+#. module: price_by_customer
+#: field:product.customerinfo,create_uid:0
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: price_by_customer
+#: field:product.customerinfo,create_date:0
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: price_by_customer
+#: field:product.customerinfo,name:0
+msgid "Customer"
+msgstr "Client"
+
+#. module: price_by_customer
+#: code:addons/price_by_customer/model.py:64
+#, python-format
+msgid "Customer Prices on the product form"
+msgstr "Prix client dans la fiche produit"
+
+#. module: price_by_customer
+#: field:product.template,customerinfo:0
+msgid "Customers"
+msgstr "Clients"
+
+#. module: price_by_customer
+#: field:product.customerinfo,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: price_by_customer
+#: field:product.customerinfo,write_uid:0
+msgid "Last Updated by"
+msgstr "Dernière modification par"
+
+#. module: price_by_customer
+#: field:product.customerinfo,write_date:0
+msgid "Last Updated on"
+msgstr "Dernière modification le"
+
+#. module: price_by_customer
+#: code:addons/price_by_customer/model.py:62
+#, python-format
+msgid "Other Pricelist"
+msgstr "Autre liste de prix"
+
+#. module: price_by_customer
+#: model:ir.model,name:price_by_customer.model_product_pricelist
+msgid "Pricelist"
+msgstr "Liste de prix"
+
+#. module: price_by_customer
+#: model:ir.model,name:price_by_customer.model_product_pricelist_item
+msgid "Pricelist item"
+msgstr "Élément de la liste de prix"
+
+#. module: price_by_customer
+#: field:product.customerinfo,product_id:0
+msgid "Product"
+msgstr "Produit"
+
+#. module: price_by_customer
+#: model:ir.model,name:price_by_customer.model_product_template
+msgid "Product Template"
+msgstr "Modèle d'article"
+
+#. module: price_by_customer
+#: field:product.customerinfo,list_price:0
+msgid "Sale Price"
+msgstr "Prix de vente"
+
+#. module: price_by_customer
+#: code:addons/price_by_customer/model.py:63
+#, python-format
+msgid "Supplier Prices on the product form"
+msgstr "Prix client dans la fiche produit"
+
+#. module: price_by_customer
+#: code:addons/price_by_customer/model.py:91
+#, python-format
+msgid "Warning!"
+msgstr "Avertissement!"
+

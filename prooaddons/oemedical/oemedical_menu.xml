@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<menuitem id="oemedical_root" name="OeMedical" sequence="10" />
+
+
+<!--Menu Patient-->
+
+		<menuitem id="oemedical_patient_root" name="Patient" parent="oemedical_root"
+			sequence="10" />
+
+<!--Appointment-->
+
+		<menuitem id="oemedical_appoitment_root" name="Appoitment"
+			parent="oemedical_root" sequence="20" />
+
+<!--Prescriptions-->
+
+		<menuitem id="oemedical_prescription_root" name="Prescription"
+			parent="oemedical_root" sequence="30" />
+
+<!--       Laboratory    -->
+		<menuitem name="Laboratory" id="oemedical_laboratory_menu" 
+            parent="oemedical_root" sequence="4"/>
+
+
+<!--Configurations-->
+
+		<menuitem id="oemedical_root_sub" name="Configuration"
+			parent="oemedical_root" sequence="100" />
+
+<!--       Laboratory       -->
+		<menuitem name="Laboratory" id="oemedical_conf_laboratory" 
+            parent="oemedical_root_sub" sequence="3"/>
+
+
+<!-- Diseases -->
+
+		<menuitem id="oemedical_root_disease" name="Disease"
+			parent="oemedical_root_sub" sequence="10" />
+
+<!--  Menu of Pathology-->
+
+
+		<menuitem id="oemedical_root_disease_cat" name="Categories"
+			parent="oemedical_root_disease" sequence="100" />
+
+
+<!-- Misc -->
+
+		<menuitem id="oemedical_root_misc" name="Misc"
+			parent="oemedical_root_sub" sequence="200" />
+
+<!-- Occupation  ( Config/misc/Occupation) )--> 
+
+
+<!-- Medical Specialty  ( Config/misc/specialty) )--> 
+
+
+
+<!-- Ethnicity  ( Config/misc/Ethnicity) )--> 
+
+
+
+
+<!--Medicaments-->
+
+		<menuitem id="oemedical_medicament_root" name="Medicaments"
+			parent="oemedical_root_sub" sequence="50" />
+
+
+<!--Hospital Centers-->
+
+		<menuitem id="oemedical_health_center_root" name="Health Center"
+			parent="oemedical_root_sub" sequence="10" />
+
+<!--    Physician Conf    -->
+
+        <menuitem name="Health Professionals" id="oemedical_conf_physicians"
+            parent="oemedical_root_sub" sequence="20" />
+
+<!--    Insurance     -->
+
+        <menuitem name="Insurances" id="oemedical_conf_insurances"
+            parent="oemedical_root_misc" sequence="20" />
+
+<!-- Genetics -->
+        <menuitem name="Genetics" id="oemedical_conf_genetics"
+            parent="oemedical_root_misc" sequence="20" />
+	</data>
+</openerp>

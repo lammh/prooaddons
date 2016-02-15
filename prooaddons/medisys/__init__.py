@@ -1,0 +1,8 @@
+import res_partner
+import product
+import invoice
+import medical_specialty
+import medical_doctor
+import medical_room
+import medical_service
+import medical_patient

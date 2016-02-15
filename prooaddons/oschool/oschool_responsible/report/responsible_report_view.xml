@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <record id="view_order_pos_tree" model="ir.ui.view">
+         <field name="name">pos.report.tree</field>
+         <field name="model">pos.report</field>
+         <field name="arch" type="xml">
+             <tree string="Customer Statement Analysis" colors="blue:order_id!=False">
+                 <field name="parent_id" invisible="1"/>
+                 <field name="period_id"/>
+                 <field name="student_id"/>
+                 <field name="product_id"/>
+                 <field name="price_subtotal" sum="Total"/>
+                 <field name="order_id"/>
+             </tree>
+         </field>
+    </record>
+
+    <record id="view_order_pos_search" model="ir.ui.view">
+        <field name="name">pos.report.search</field>
+        <field name="model">pos.report</field>
+        <field name="arch" type="xml">
+            <search string="Unpaid Analysis">
+                <field name="date_order"/>
+                <field name="parent_id"/>
+                <field name="student_id"/>
+                <field name="product_id"/>
+                <group expand="1" string="Group By">
+                    <filter string="Period" name="period" context="{'group_by':'period_id'}"/>
+                    <filter string="Student" name="student" context="{'group_by':'student_id'}"/>
+                    <filter string="Product" name="product" context="{'group_by':'product_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_pos_report_all" model="ir.actions.act_window">
+        <field name="name">Unpaid Analysis</field>
+        <field name="res_model">pos.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">graph</field>
+        <field name="search_view_id" ref="view_order_pos_search"/>
+        <field name="view_id" ref="view_order_pos_tree"/>
+    </record>
+
+    <act_window
+        id="act_unpaid_pos_relation"
+        name="Unpaid"
+        context="{'search_default_parent_id':[active_id],'search_default_period':1,'search_default_student':1}"
+        res_model="pos.report"
+        src_model="res.partner"
+        view_mode="tree"/>
+
+</data>
+</openerp>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="res_partner_outstanding_form_view">
+            <field name="name">res.partner.outstanding</field>
+            <field name="model">res.partner</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="account.view_partner_property_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Warranty">
+                        <field name="warranty" colspan="4" nolabel="1" context="{'partner_id':id}">
+                            <tree string="Warranty">
+                                <field name="bank_source"/>
+                                <field name="name"/>
+                                <field name="amount"/>
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
+    </data>
+</openerp>

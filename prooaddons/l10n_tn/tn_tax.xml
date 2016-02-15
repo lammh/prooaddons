@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+    <record id="tva_exo" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_tn_pcg_chart_template"/>
+      <field name="name">Exonere de TVA</field>
+      <field name="type_tax_use">all</field>
+      <field name="account_collected_id"/>
+      <field name="account_paid_id"/>
+      <field name="amount">0</field>
+      <field name="type">none</field>
+      
+    </record>
+
+    <!-- Ventes - TVA collectee sur le debit  -->
+    <record id="tva_col_debit_29" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_tn_pcg_chart_template"/>
+      <field name="name">29%</field>
+      <field name="description">29%</field>
+      <field name="amount" eval="0.29"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="tax_col_29_ht"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="tax_col_29"/>
+      <field name="tax_sign" eval="1"/>
+      <field name="account_collected_id" ref="pcg_4367110"/>
+      <field name="account_paid_id" ref="pcg_4367110"/>
+      <field name="ref_base_code_id" ref="tax_col_29_ht"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="tax_col_29"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="sequence" eval="0"/>
+      <field name="type_tax_use">sale</field>
+    </record>
+
+    <record id="tva_col_debit_18" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_tn_pcg_chart_template"/>
+      <field name="name">18%</field>
+      <field name="description">18%</field>
+      <field name="amount" eval="0.18"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="tax_col_18_ht"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="tax_col_18"/>
+      <field name="tax_sign" eval="1"/>
+      <field name="account_collected_id" ref="pcg_4367111"/>
+      <field name="account_paid_id" ref="pcg_4367111"/>
+      <field name="ref_base_code_id" ref="tax_col_18_ht"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="tax_col_18"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="sequence" eval="0"/>
+      <field name="type_tax_use">sale</field>
+    </record>
+
+    <record id="tva_col_debit_12" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_tn_pcg_chart_template"/>
+      <field name="name">12%</field>
+      <field name="description">12%</field>
+      <field name="amount" eval="0.12"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="tax_col_12_ht"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="tax_col_12"/>
+      <field name="tax_sign" eval="1"/>
+      <field name="account_collected_id" ref="pcg_4367112"/>
+      <field name="account_paid_id" ref="pcg_4367112"/>
+      <field name="ref_base_code_id" ref="tax_col_12_ht"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="tax_col_12"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="sequence" eval="0"/>
+      <field name="type_tax_use">sale</field>
+    </record>
+
+    <record id="tva_col_debit_6" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_tn_pcg_chart_template"/>
+      <field name="name">6%</field>
+      <field name="description">6%</field>
+      <field name="amount" eval="0.06"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="tax_col_6_ht"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="tax_col_6"/>
+      <field name="tax_sign" eval="1"/>
+      <field name="account_collected_id" ref="pcg_4367113"/>
+      <field name="account_paid_id" ref="pcg_4367113"/>
+      <field name="ref_base_code_id" ref="tax_col_6_ht"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="tax_col_6"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="sequence" eval="0"/>
+      <field name="type_tax_use">sale</field>
+    </record>
+
+    <!-- Achats - TVA sur autres biens et services -->
+    <record id="tva_acq_29" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_tn_pcg_chart_template"/>
+      <field name="name">29 %</field>
+      <field name="description">29 %</field>
+      <field name="amount" eval="0.29"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="tax_acq_29_ht"/>
+      <field name="base_sign" eval="-1"/>
+      <field name="tax_code_id" ref="tax_acq_29"/>
+      <field name="tax_sign" eval="-1"/>
+      <field name="account_collected_id" ref="pcg_436660"/>
+      <field name="account_paid_id" ref="pcg_436660"/>
+      <field name="ref_base_code_id" ref="tax_acq_29_ht"/>
+      <field name="ref_base_sign" eval="1"/>
+      <field name="ref_tax_code_id" ref="tax_acq_29"/>
+      <field name="ref_tax_sign" eval="1"/>
+      <field name="sequence" eval="0"/>
+      <field name="type_tax_use">purchase</field>
+    </record>
+
+    <record id="tva_acq_18" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_tn_pcg_chart_template"/>
+      <field name="name">18 %</field>
+      <field name="description">18 %</field>
+      <field name="amount" eval="0.18"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="tax_acq_18_ht"/>
+      <field name="base_sign" eval="-1"/>
+      <field name="tax_code_id" ref="tax_acq_18"/>
+      <field name="tax_sign" eval="-1"/>
+      <field name="account_collected_id" ref="pcg_436661"/>
+      <field name="account_paid_id" ref="pcg_436661"/>
+      <field name="ref_base_code_id" ref="tax_acq_18_ht"/>
+      <field name="ref_base_sign" eval="1"/>
+      <field name="ref_tax_code_id" ref="tax_acq_18"/>
+      <field name="ref_tax_sign" eval="1"/>
+      <field name="sequence" eval="0"/>
+      <field name="type_tax_use">purchase</field>
+    </record>
+
+    <record id="tva_acq_12" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_tn_pcg_chart_template"/>
+      <field name="name">12 %</field>
+      <field name="description">12 %</field>
+      <field name="amount" eval="0.12"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="tax_acq_12_ht"/>
+      <field name="base_sign" eval="-1"/>
+      <field name="tax_code_id" ref="tax_acq_12"/>
+      <field name="tax_sign" eval="-1"/>
+      <field name="account_collected_id" ref="pcg_436662"/>
+      <field name="account_paid_id" ref="pcg_436662"/>
+      <field name="ref_base_code_id" ref="tax_acq_12_ht"/>
+      <field name="ref_base_sign" eval="1"/>
+      <field name="ref_tax_code_id" ref="tax_acq_12"/>
+      <field name="ref_tax_sign" eval="1"/>
+      <field name="sequence" eval="0"/>
+      <field name="type_tax_use">purchase</field>
+    </record>
+
+    <record id="tva_acq_6" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_tn_pcg_chart_template"/>
+      <field name="name">6 %</field>
+      <field name="description">6 %</field>
+      <field name="amount" eval="0.06"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="tax_acq_6_ht"/>
+      <field name="base_sign" eval="-1"/>
+      <field name="tax_code_id" ref="tax_acq_6"/>
+      <field name="tax_sign" eval="-1"/>
+      <field name="account_collected_id" ref="pcg_436663"/>
+      <field name="account_paid_id" ref="pcg_436663"/>
+      <field name="ref_base_code_id" ref="tax_acq_6_ht"/>
+      <field name="ref_base_sign" eval="1"/>
+      <field name="ref_tax_code_id" ref="tax_acq_6"/>
+      <field name="ref_tax_sign" eval="1"/>
+      <field name="sequence" eval="0"/>
+      <field name="type_tax_use">purchase</field>
+    </record>
+
+    <!-- Achats - Immobilisations -->
+    <record id="tva_imm_29" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_tn_pcg_chart_template"/>
+      <field name="name">Immobilisation 29%</field>
+      <field name="description">IMMO-29%</field>
+      <field name="amount" eval="0.29"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="tax_imm_29_ht"/>
+      <field name="base_sign" eval="-1"/>
+      <field name="tax_code_id" ref="tax_imm_29"/>
+      <field name="tax_sign" eval="-1"/>
+      <field name="account_collected_id" ref="pcg_436620"/>
+      <field name="account_paid_id" ref="pcg_436620"/>
+      <field name="ref_base_code_id" ref="tax_imm_29_ht"/>
+      <field name="ref_base_sign" eval="1"/>
+      <field name="ref_tax_code_id" ref="tax_imm_29"/>
+      <field name="ref_tax_sign" eval="1"/>
+      <field name="sequence" eval="10"/>
+      <field name="type_tax_use">purchase</field>
+    </record>
+
+    <record id="tva_imm_18" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_tn_pcg_chart_template"/>
+      <field name="name">Immo 18%</field>
+      <field name="description">IMMO-18%</field>
+      <field name="amount" eval="0.18"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="tax_imm_18_ht"/>
+      <field name="base_sign" eval="-1"/>
+      <field name="tax_code_id" ref="tax_imm_18"/>
+      <field name="tax_sign" eval="-1"/>
+      <field name="account_collected_id" ref="pcg_436621"/>
+      <field name="account_paid_id" ref="pcg_436621"/>
+      <field name="ref_base_code_id" ref="tax_imm_18_ht"/>
+      <field name="ref_base_sign" eval="1"/>
+      <field name="ref_tax_code_id" ref="tax_imm_18"/>
+      <field name="ref_tax_sign" eval="1"/>
+      <field name="sequence" eval="10"/>
+      <field name="type_tax_use">purchase</field>
+    </record>
+
+    <record id="tva_imm_12" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_tn_pcg_chart_template"/>
+      <field name="name">Immo 12%</field>
+      <field name="description">IMMO-12%</field>
+      <field name="amount" eval="0.12"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="tax_imm_12_ht"/>
+      <field name="base_sign" eval="-1"/>
+      <field name="tax_code_id" ref="tax_imm_12"/>
+      <field name="tax_sign" eval="-1"/>
+      <field name="account_collected_id" ref="pcg_436622"/>
+      <field name="account_paid_id" ref="pcg_436622"/>
+      <field name="ref_base_code_id" ref="tax_imm_12_ht"/>
+      <field name="ref_base_sign" eval="1"/>
+      <field name="ref_tax_code_id" ref="tax_imm_12"/>
+      <field name="ref_tax_sign" eval="1"/>
+      <field name="sequence" eval="10"/>
+      <field name="type_tax_use">purchase</field>
+    </record>
+
+    <record id="tva_imm_6" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_tn_pcg_chart_template"/>
+      <field name="name">Immo 6%</field>
+      <field name="description">IMMO-6%</field>
+      <field name="amount" eval="0.06"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="tax_imm_6_ht"/>
+      <field name="base_sign" eval="-1"/>
+      <field name="tax_code_id" ref="tax_imm_6"/>
+      <field name="tax_sign" eval="-1"/>
+      <field name="account_collected_id" ref="pcg_436623"/>
+      <field name="account_paid_id" ref="pcg_436623"/>
+      <field name="ref_base_code_id" ref="tax_imm_6_ht"/>
+      <field name="ref_base_sign" eval="1"/>
+      <field name="ref_tax_code_id" ref="tax_imm_6"/>
+      <field name="ref_tax_sign" eval="1"/>
+      <field name="sequence" eval="10"/>
+      <field name="type_tax_use">purchase</field>
+    </record>
+
+<!-- Timbre Fiscale -->
+
+    <record model="account.tax.template" id="tva_tim_vente">
+      <field name="chart_template_id" ref="l10n_tn_pcg_chart_template"/>
+      <field name="name">Timbre Fiscale</field>
+      <field name="description">TIMBRE FISCALE</field>
+      <field name="amount" eval="0.5"/>
+      <field name="type">fixed</field>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="tim_vente"/>
+      <field name="tax_sign" eval="1"/>
+      <field name="account_collected_id" ref="pcg_4366801"/>
+      <field name="account_paid_id" ref="pcg_4366801"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="tim_vente"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="sequence" eval="10000"/>
+      <field name="type_tax_use">sale</field>
+      <field name="stamp" eval="1"/>
+    </record>
+	
+    <record model="account.tax.template" id="tva_tim_achat">
+      <field name="chart_template_id" ref="l10n_tn_pcg_chart_template"/>
+      <field name="name">Droits d'enregistrement et de timbre</field>
+      <field name="description">TIMBRE FISCALE</field>
+      <field name="amount" eval="0.5"/>
+      <field name="type">fixed</field>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="tim_achat"/>
+      <field name="tax_sign" eval="1"/>
+      <field name="account_collected_id" ref="pcg_6654"/>
+      <field name="account_paid_id" ref="pcg_6654"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="tim_achat"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="sequence" eval="10000"/>
+      <field name="type_tax_use">purchase</field>
+      <field name="stamp" eval="1"/>
+    </record>
+
+ <!-- FODEC -->
+
+    <record model="account.tax.template" id="tva_tim_fodec">
+      <field name="chart_template_id" ref="l10n_tn_pcg_chart_template"/>
+      <field name="name">FODEC</field>
+      <field name="description">FODEC</field>
+      <field name="amount" eval="0.1"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="base_fodec"/>
+      <field name="base_sign" eval="-1"/>
+      <field name="tax_code_id" ref="fodec"/>
+      <field name="tax_sign" eval="-1"/>
+      <field name="account_collected_id" ref="pcg_43652"/>
+      <field name="account_paid_id" ref="pcg_43652"/>
+      <field name="ref_base_code_id" ref="base_fodec"/>
+      <field name="ref_base_sign" eval="1"/>
+      <field name="ref_tax_code_id" ref="fodec"/>
+      <field name="ref_tax_sign" eval="1"/>
+      <field name="sequence" eval="10000"/>
+      <field name="type_tax_use">purchase</field>
+      <field name="fodec" eval="1"/>
+    </record>
+
+ <!-- Retenue à la source Achat -->
+
+    <record id="retenue1_achat" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_tn.l10n_tn_pcg_chart_template"/>
+      <field name="name">Retenue Achat 1.5%</field>
+      <field name="description">RETA 1.5</field>
+      <field name="amount" eval="0.015"/>
+      <field name="type">percent</field>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="tax_retenue_achat"/>
+      <field name="tax_sign" eval="1"/>
+      <field name="account_collected_id" ref="pcg_4341"/>
+      <field name="account_paid_id" ref="pcg_4341"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="tax_retenue_achat"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="sequence" eval="10000"/>
+      <field name="type_tax_use">purchase</field>
+      <field name="is_wht" eval="1"/>
+      <field name="withholding_amount" eval="10000"/>
+    </record>
+
+    <record id="retenue5_achat" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_tn.l10n_tn_pcg_chart_template"/>
+      <field name="name">Retenue Achat 5%</field>
+      <field name="description">RETA 5</field>
+      <field name="amount" eval="0.05"/>
+      <field name="type">percent</field>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="tax_retenue_achat"/>
+      <field name="tax_sign" eval="1"/>
+      <field name="account_collected_id" ref="pcg_4341"/>
+      <field name="account_paid_id" ref="pcg_4341"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="tax_retenue_achat"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="sequence" eval="10000"/>
+      <field name="type_tax_use">purchase</field>
+      <field name="is_wht" eval="1"/>
+      <field name="withholding_amount" eval="10000"/>
+    </record>
+
+    <record id="retenue15_achat" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_tn.l10n_tn_pcg_chart_template"/>
+      <field name="name">Retenue Achat 15%</field>
+      <field name="description">RETA 15</field>
+      <field name="amount" eval="0.15"/>
+      <field name="type">percent</field>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="tax_retenue_achat"/>
+      <field name="tax_sign" eval="1"/>
+      <field name="account_collected_id" ref="pcg_4341"/>
+      <field name="account_paid_id" ref="pcg_4341"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="tax_retenue_achat"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="sequence" eval="10000"/>
+      <field name="type_tax_use">purchase</field>
+      <field name="is_wht" eval="1"/>
+      <field name="withholding_amount" eval="10000"/>
+    </record>
+
+ <!-- Retenue à la source Vente -->
+
+    <record id="retenue1_vente" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_tn.l10n_tn_pcg_chart_template"/>
+      <field name="name">Retenue Vente 1.5%</field>
+      <field name="description">RETV 1.5</field>
+      <field name="amount" eval="0.015"/>
+      <field name="type">percent</field>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="tax_retenue_vente"/>
+      <field name="tax_sign" eval="1"/>
+      <field name="account_collected_id" ref="pcg_4341"/>
+      <field name="account_paid_id" ref="pcg_4341"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="tax_retenue_achat"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="sequence" eval="10000"/>
+      <field name="type_tax_use">sale</field>
+      <field name="is_wht" eval="1"/>
+      <field name="withholding_amount" eval="10000"/>
+    </record>
+
+    <record id="retenue5_vente" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_tn.l10n_tn_pcg_chart_template"/>
+      <field name="name">Retenue Vente 5%</field>
+      <field name="description">RETV 5</field>
+      <field name="amount" eval="0.05"/>
+      <field name="type">percent</field>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="tax_retenue_vente"/>
+      <field name="tax_sign" eval="1"/>
+      <field name="account_collected_id" ref="pcg_4341"/>
+      <field name="account_paid_id" ref="pcg_4341"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="tax_retenue_achat"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="sequence" eval="10000"/>
+      <field name="type_tax_use">sale</field>
+      <field name="is_wht" eval="1"/>
+      <field name="withholding_amount" eval="10000"/>
+    </record>
+
+    <record id="retenue15_vente" model="account.tax.template">
+      <field name="chart_template_id" ref="l10n_tn.l10n_tn_pcg_chart_template"/>
+      <field name="name">Retenue Vente 15%</field>
+      <field name="description">RETV 15</field>
+      <field name="amount" eval="0.15"/>
+      <field name="type">percent</field>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="tax_retenue_vente"/>
+      <field name="tax_sign" eval="1"/>
+      <field name="account_collected_id" ref="pcg_4341"/>
+      <field name="account_paid_id" ref="pcg_4341"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="tax_retenue_achat"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="sequence" eval="10000"/>
+      <field name="type_tax_use">sale</field>
+      <field name="is_wht" eval="1"/>
+      <field name="withholding_amount" eval="10000"/>
+    </record>
+
+  </data>
+</openerp>

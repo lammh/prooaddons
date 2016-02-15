@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="account_picking_model" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="567" leftMargin="14" rightMargin="14" topMargin="20" bottomMargin="20" isFloatColumnFooter="true">
+	<property name="ireport.zoom" value="1.3310000000000064"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="48"/>
+	<parameter name="invoice_id" class="java.lang.Integer"/>
+	<parameter name="total" class="java.lang.String"/>
+	<parameter name="total1" class="java.lang.Number"/>
+	<parameter name="dir_images" class="java.lang.String"/>
+	<parameter name="user" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+  stock_picking.move_type AS picking_type,
+  stock_picking.state AS stat_picking,
+  stock_picking.name AS name_picking,
+  stock_picking.date AS picking_date,
+  stock_picking.origin AS picking_origin,
+  stock_picking.invoice_state AS state_pickinf,
+  stock_picking_type.code AS tupe_piking_type,
+  product_product.default_code AS code_article,
+  product_product.name_template AS nom_article,
+  res_partner.name AS nom_client,
+  res_partner.street AS street_client,
+  res_partner.city AS city_client,
+  res_partner.display_name AS nomaffi_client,
+  res_partner.zip AS zip_client,
+  res_partner.title AS titre_client,
+  res_partner.function AS fonction_client,
+  res_partner.street2 AS street2_client,
+  res_partner.fax AS fax_client,
+  res_partner.ref AS ref_client,
+  res_partner.email AS email_client,
+  res_partner.mobile AS mobile_client,
+  res_partner.phone AS phone_client,
+  res_partner.vat AS tva_client,
+  res_company.name AS nom_societe,
+  res_company.rml_header1 AS rib_societe,
+  res_company.company_registry AS rc_societe,
+  compnay.street AS street_societe,
+  compnay.city AS city_societe,
+  compnay.display_name AS nomaff_societe,
+  compnay.zip AS zip_societe,
+  compnay.ref AS ref_societe,
+  compnay.website AS website_societe,
+  compnay.street2 AS street2_societe,
+  compnay.phone AS phone_societe,
+  compnay.fax AS mobile_fax,
+  compnay.vat AS tva_societe,
+  res_company.company_registry AS rc_societe,
+  stock_production_lot.name AS lot_produit,
+  stock_pack_operation.product_qty AS qte_produit,
+  product_uom.name AS unite_mesure
+FROM
+  public.stock_picking inner join public.stock_picking_type on stock_picking.picking_type_id = stock_picking_type.id
+  inner join    public.stock_pack_operation on stock_picking.id =  stock_pack_operation.picking_id
+  inner join    product_product  on stock_pack_operation.product_id   = product_product.id
+  inner join    public.product_template on   product_template.id = product_product.product_tmpl_id
+  inner join    public.product_uom  on product_uom.id = stock_pack_operation.product_uom_id
+  inner join    public.res_partner on stock_picking.partner_id = res_partner.id
+  inner join    public.res_company on   res_company.id = stock_picking.company_id
+  inner join  	public.res_partner compnay on    res_company.partner_id = compnay.id
+  left outer join public.stock_production_lot on stock_pack_operation.lot_id  = stock_production_lot.id
+ WHERE
+ stock_picking.id = $P{invoice_id}
+ order by product_product.default_code]]>
+	</queryString>
+	<field name="picking_type" class="java.lang.String"/>
+	<field name="stat_picking" class="java.lang.String"/>
+	<field name="name_picking" class="java.lang.String"/>
+	<field name="picking_date" class="java.sql.Timestamp"/>
+	<field name="picking_origin" class="java.lang.String"/>
+	<field name="state_pickinf" class="java.lang.String"/>
+	<field name="tupe_piking_type" class="java.lang.String"/>
+	<field name="code_article" class="java.lang.String"/>
+	<field name="nom_article" class="java.lang.String"/>
+	<field name="nom_client" class="java.lang.String"/>
+	<field name="street_client" class="java.lang.String"/>
+	<field name="city_client" class="java.lang.String"/>
+	<field name="nomaffi_client" class="java.lang.String"/>
+	<field name="zip_client" class="java.lang.String"/>
+	<field name="titre_client" class="java.lang.Integer"/>
+	<field name="fonction_client" class="java.lang.String"/>
+	<field name="street2_client" class="java.lang.String"/>
+	<field name="fax_client" class="java.lang.String"/>
+	<field name="ref_client" class="java.lang.String"/>
+	<field name="email_client" class="java.lang.String"/>
+	<field name="mobile_client" class="java.lang.String"/>
+	<field name="phone_client" class="java.lang.String"/>
+	<field name="tva_client" class="java.lang.String"/>
+	<field name="nom_societe" class="java.lang.String"/>
+	<field name="rib_societe" class="java.lang.String"/>
+	<field name="rc_societe" class="java.lang.String"/>
+	<field name="street_societe" class="java.lang.String"/>
+	<field name="city_societe" class="java.lang.String"/>
+	<field name="nomaff_societe" class="java.lang.String"/>
+	<field name="zip_societe" class="java.lang.String"/>
+	<field name="ref_societe" class="java.lang.String"/>
+	<field name="website_societe" class="java.lang.String"/>
+	<field name="street2_societe" class="java.lang.String"/>
+	<field name="phone_societe" class="java.lang.String"/>
+	<field name="mobile_fax" class="java.lang.String"/>
+	<field name="tva_societe" class="java.lang.String"/>
+	<field name="lot_produit" class="java.lang.String"/>
+	<field name="qte_produit" class="java.math.BigDecimal"/>
+	<field name="unite_mesure" class="java.lang.String"/>
+	<background>
+		<band height="730">
+			<rectangle>
+				<reportElement x="0" y="253" width="566" height="414" forecolor="#C0C0C0"/>
+			</rectangle>
+			<line>
+				<reportElement x="96" y="253" width="1" height="414" forecolor="#C0C0C0"/>
+			</line>
+			<line>
+				<reportElement x="453" y="253" width="1" height="414" forecolor="#C0C0C0"/>
+			</line>
+			<line>
+				<reportElement x="349" y="253" width="1" height="414" forecolor="#C0C0C0"/>
+			</line>
+			<line>
+				<reportElement x="398" y="254" width="1" height="414" forecolor="#C0C0C0"/>
+			</line>
+		</band>
+	</background>
+	<pageHeader>
+		<band height="240">
+			<frame>
+				<reportElement mode="Transparent" x="319" y="78" width="235" height="141"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<staticText>
+					<reportElement x="3" y="56" width="76" height="13"/>
+					<textElement lineSpacing="Single">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CODE CLIENT:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="70" width="76" height="15"/>
+					<textElement lineSpacing="Single">
+						<font fontName="SansSerif" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CODE TVA  :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="3" y="4" width="228" height="52"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{nom_client}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="3" y="85" width="76" height="13"/>
+					<textElement lineSpacing="Single">
+						<font fontName="SansSerif" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ADRESSE   :]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="80" y="56" width="151" height="14"/>
+					<textElement lineSpacing="Single"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{ref_client}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement x="441" y="55" width="24" height="20"/>
+				<textElement lineSpacing="Single">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Du:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="319" y="18" width="245" height="37" forecolor="#000000">
+					<printWhenExpression><![CDATA[new Boolean($F{tupe_piking_type}=="incoming")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bon de Réception]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="1" y="219" width="46" height="20"/>
+				<textElement textAlignment="Right" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Page "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="47" y="219" width="40" height="20"/>
+				<textElement lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<image onErrorType="Blank">
+				<reportElement x="12" y="5" width="270" height="60"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{dir_images}+$F{nom_societe}+"sigle.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="319" y="18" width="245" height="37" forecolor="#000000">
+					<printWhenExpression><![CDATA[new Boolean($F{tupe_piking_type}=="outgoing")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bon de livraison]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="319" y="18" width="245" height="37" forecolor="#000000">
+					<printWhenExpression><![CDATA[new Boolean($F{tupe_piking_type}=="internal")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bon de Transfert ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="319" y="55" width="122" height="20"/>
+				<textElement lineSpacing="Single">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{name_picking}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="399" y="148" width="151" height="15"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{tva_client}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="399" y="163" width="151" height="55"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{street_client}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="79" width="309" height="26"/>
+				<textElement lineSpacing="Single">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nom_societe}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="12" y="105" width="250" height="12"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{street_societe}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="47" y="130" width="215" height="12"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{tva_societe}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="47" y="143" width="215" height="12"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{rc_societe}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="47" y="167" width="215" height="12"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{phone_societe}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="108" y="117" width="100" height="12"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{zip_societe}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="13" y="117" width="94" height="12"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{city_societe}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="13" y="130" width="34" height="12"/>
+				<textElement lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MF:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="143" width="34" height="12"/>
+				<textElement lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RC:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="167" width="34" height="12"/>
+				<textElement lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tél:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="179" width="34" height="12"/>
+				<textElement lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fax:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="191" width="34" height="12"/>
+				<textElement lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RIB:]]></text>
+			</staticText>
+			<elementGroup>
+				<textField isBlankWhenNull="true">
+					<reportElement x="47" y="191" width="215" height="12"/>
+					<textElement lineSpacing="Single"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{rib_societe}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="47" y="179" width="215" height="12"/>
+					<textElement lineSpacing="Single"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{mobile_fax}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<staticText>
+				<reportElement x="13" y="155" width="34" height="12"/>
+				<textElement lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CD:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="47" y="155" width="215" height="12"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{tva_societe}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="467" y="55" width="87" height="20"/>
+				<textElement lineSpacing="Single">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{picking_date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22">
+			<rectangle>
+				<reportElement x="0" y="2" width="567" height="20" backcolor="#C0C0C0"/>
+			</rectangle>
+			<line>
+				<reportElement x="96" y="2" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="349" y="2" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="398" y="2" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="453" y="2" width="1" height="20"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="7" width="85" height="13" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REFERENCE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="155" y="7" width="141" height="13" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESIGNATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="7" width="38" height="13" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qté]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="407" y="7" width="34" height="13" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Unité]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="465" y="7" width="87" height="13" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lot]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="27" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="1" height="26"/>
+			</line>
+			<line>
+				<reportElement x="349" y="0" width="1" height="26"/>
+			</line>
+			<line>
+				<reportElement x="566" y="0" width="1" height="26"/>
+			</line>
+			<line>
+				<reportElement x="96" y="0" width="1" height="26"/>
+			</line>
+			<line>
+				<reportElement x="453" y="0" width="1" height="26"/>
+			</line>
+			<line>
+				<reportElement x="398" y="0" width="1" height="26"/>
+			</line>
+			<line>
+				<reportElement x="0" y="26" width="567" height="1"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="454" y="0" width="110" height="26"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{lot_produit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="398" y="0" width="55" height="27"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{unite_mesure}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="0" width="48" height="26"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{qte_produit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="0" width="93" height="26"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{code_article}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="99" y="0" width="248" height="26"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nom_article}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="124">
+			<rectangle radius="10">
+				<reportElement x="7" y="17" width="554" height="98"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="83" y="33" width="117" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<text><![CDATA[Cachet & Signature
+]]></text>
+			</staticText>
+			<line>
+				<reportElement x="294" y="17" width="2" height="98"/>
+			</line>
+			<staticText>
+				<reportElement x="407" y="21" width="54" height="12"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CLIENT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="74" y="21" width="134" height="12"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SERVICE  COMMERCIAL]]></text>
+			</staticText>
+			<elementGroup/>
+		</band>
+	</lastPageFooter>
+</jasperReport>

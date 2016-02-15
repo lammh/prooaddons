@@ -1,0 +1,53 @@
+<openerp>
+    <data>
+
+        <!-- Debut gestion des groupes -->
+        <record model="ir.ui.view" id="groups_form_view">
+            <field name="name">groups.form</field>
+            <field name="model">oschool.groups</field>
+            <field name="arch" type="xml">
+                <form string="New group form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="code"/>
+                                <!--<field name="academic_year"/>-->
+                                <field name="number_of_places"/>
+                                <field name="seq"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="groups_tree_view">
+            <field name="name">groups.tree</field>
+            <field name="model">oschool.groups</field>
+            <field name="arch" type="xml">
+                <tree string="Groups Tree">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <!--<field name="academic_year"/>-->
+                    <field name="number_of_places"/>
+                    <field name="seq"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="groups_list_action">
+            <field name="name">groups</field>
+            <field name="res_model">oschool.groups</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click to add new group</p>
+            </field>
+        </record>
+        <!-- Fin gestion des groupes -->
+
+        <menuitem id="groups_management_menu" name="Groups" parent="configuration_menu" action="groups_list_action"/>
+
+    </data>
+</openerp>

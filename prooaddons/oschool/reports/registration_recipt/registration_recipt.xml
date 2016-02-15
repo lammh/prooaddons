@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <report
+            id="action_registration_recipt_report"
+            model="pos.order"
+            string="Registration recipt"
+            report_type="qweb-pdf"
+            name="oschool.report_registration_recipt"
+            file="oschool.report_registration_recipt"
+            menu="True"
+        />
+
+        <report
+            id="action_timbre_recipt_report"
+            model="pos.order"
+            string="Etude recipt"
+            report_type="qweb-pdf"
+            name="oschool.report_timbre_recipt"
+            file="oschool.report_registration_recipt"
+            menu="True"
+        />
+
+        <report
+            id="action_no_timbre_recipt_report"
+            model="pos.order"
+            string="Service recipt"
+            report_type="qweb-pdf"
+            name="oschool.report_no_timbre_recipt"
+            file="oschool.report_registration_recipt"
+            menu="True"
+        />
+
+
+        <record id="paperformat_registration_recipt" model="report.paperformat">
+            <field name="name">paperformat registration recipt</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_height">153</field>
+            <field name="page_width">190</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">0</field>
+            <field name="margin_bottom">3</field>
+            <field name="margin_left">1</field>
+            <field name="margin_right">1</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">3</field>
+            <field name="dpi">80</field>
+        </record>
+
+        <record id="action_registration_recipt_report" model="ir.actions.report.xml">
+            <field name="paperformat_id" ref="paperformat_registration_recipt"/>
+        </record>
+
+        <record id="action_timbre_recipt_report" model="ir.actions.report.xml">
+            <field name="paperformat_id" ref="paperformat_registration_recipt"/>
+        </record>
+
+        <record id="action_no_timbre_recipt_report" model="ir.actions.report.xml">
+            <field name="paperformat_id" ref="paperformat_registration_recipt"/>
+        </record>
+
+    </data>
+</openerp>

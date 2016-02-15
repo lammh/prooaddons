@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <report
+            id="action_report_ticket"
+            model="oschool.ticket.wizard"
+            string="Ticket Report"
+            report_type="qweb-pdf"
+            name="oschool.report_ticket"
+            file="oschool.report_ticket"
+            menu="False"
+        />
+
+        <record id="action_report_ticket" model="ir.actions.report.xml">
+            <field name="paperformat_id" ref="paperformat_transport"/>
+        </record>
+
+        </data>
+    </openerp>

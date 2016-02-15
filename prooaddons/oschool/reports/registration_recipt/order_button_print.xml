@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="oschool_pos_order_button_print" model="ir.ui.view">
+            <field name="name">oschool.pos.order.button_print</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="oschool.view_oschool_registration_pos_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='state']" position="before">
+                    <button name="%(action_registration_recipt_report)d" string="Print" class="oe_highlight" type="action"   attrs="{'invisible': [('type','!=','registration')]}"/>
+                    <button name="%(action_timbre_recipt_report)d" string="Print" class="oe_highlight" type="action"   attrs="{'invisible': [('type','!=','Service')]}"/>
+                    <button name="%(action_no_timbre_recipt_report)d" string="Print" class="oe_highlight" type="action"   attrs="{'invisible': [('type','!=','Extra')]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

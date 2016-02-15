@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+		<record model="ir.ui.view" id="oschool_zone_form_view">
+			<field name="name">zone.form</field>
+			<field name="model">oschool.zone</field>
+			<field name="arch" type="xml">
+				<form string="Zone Form">
+					<sheet>
+						<group>
+							<field name="name" />
+							<field name="description" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="oschool_zone_search_view">
+			<field name="name">zone.search</field>
+			<field name="model">oschool.zone</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+					<field name="description" />
+				</search>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="oschool_zone_tree_view">
+			<field name="name">zone.tree</field>
+			<field name="model">oschool.zone</field>
+			<field name="arch" type="xml">
+				<tree string="Zone Tree">
+					<field name="name" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="oschool_zone_list_action">
+			<field name="name">Zone</field>
+			<field name="res_model">oschool.zone</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Cliquez pour ajouter vos zones
+				</p>
+			</field>
+		</record>
+
+        <menuitem id="zone_list_management_menu" name="Zones" parent="transportation_config_menu"  action="oschool_zone_list_action"/>
+    </data>
+</openerp>

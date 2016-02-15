@@ -1,0 +1,18 @@
+<openerp>
+    <data>
+
+        <record id="account_invoice_importation_view" model="ir.ui.view">
+            <field name="name">account.invoice</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="purchase_landed_cost.account_invoice_supplier_related"/>
+            <field name="arch" type="xml">
+                <field name="invoices" position="after">
+                    <!--<field name="withholding" nolabel="1" mode="tree"/>-->
+                    <button name="importation_file" string="Import Folder" type="object" class="oe_link oe_right" attrs="{'invisible':[('state','!=','open')]}"/> /
+                    <button name="cancel_file" string="Cancel Import" type="object" class="oe_link oe_right" attrs="{'invisible':[('state','!=','open')]}"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <menuitem id="medical_root" name="Medical" sequence="10" />
+        <menuitem id="medical_root_sub" name="Configuration" sequence="100" />
+        <menuitem id="medical_root_doctors" name="Doctor" sequence="20" />
+        <menuitem id="medical_menu_doctor" name="Doctor" parent="medical_root_doctors" sequence="10" />
+
+<!--Menu Patient-->
+
+        <menuitem id="medical_patient_root" name="Patient" parent="medical_root" sequence="10" />
+
+<!--Configurations-->
+
+
+
+    </data>
+</openerp>

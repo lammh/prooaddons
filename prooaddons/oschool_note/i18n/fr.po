@@ -1,0 +1,261 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* oschool_note
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-20150713\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-01 10:05+0000\n"
+"PO-Revision-Date: 2015-09-01 10:05+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oschool_note
+#: field:oschool.note.details,absent:0
+msgid "Absent"
+msgstr "Absent"
+
+#. module: oschool_note
+#: field:oschool.note,academic_year:0
+msgid "Academic Year"
+msgstr "Année scolaire"
+
+#. module: oschool_note
+#: field:oschool.note,class_id:0
+msgid "Class"
+msgstr "Classe"
+
+#. module: oschool_note
+#: field:oschool.matiere.group.details,coefficient:0
+msgid "Coefficient"
+msgstr "Coefficient"
+
+#. module: oschool_note
+#: model:ir.ui.menu,name:oschool_note.configuration_note_menu
+msgid "Configuration"
+msgstr "Configuration"
+
+#. module: oschool_note
+#: field:oschool.matiere,create_uid:0
+#: field:oschool.matiere.group,create_uid:0
+#: field:oschool.matiere.group.details,create_uid:0
+#: field:oschool.matiere.type,create_uid:0
+#: field:oschool.note,create_uid:0
+#: field:oschool.note.details,create_uid:0
+#: field:oschool.trimester,create_uid:0
+msgid "Created by"
+msgstr "Crée par"
+
+#. module: oschool_note
+#: field:oschool.matiere,create_date:0
+#: field:oschool.matiere.group,create_date:0
+#: field:oschool.matiere.group.details,create_date:0
+#: field:oschool.matiere.type,create_date:0
+#: field:oschool.note,create_date:0
+#: field:oschool.note.details,create_date:0
+#: field:oschool.trimester,create_date:0
+msgid "Created on"
+msgstr "Crée le"
+
+#. module: oschool_note
+#: field:oschool.matiere.group,details_ids:0
+#: field:oschool.note,details_ids:0
+msgid "Details"
+msgstr "Détails"
+
+#. module: oschool_note
+#: view:oschool.matiere.group:oschool_note.oschool_matiere_group_search_view
+#: field:oschool.matiere.group,group_id:0
+#: field:oschool.note,group_id:0
+msgid "Group"
+msgstr "Groupe"
+
+#. module: oschool_note
+#: view:oschool.matiere:oschool_note.oschool_matiere_search_view
+#: view:oschool.matiere.group:oschool_note.oschool_matiere_group_search_view
+msgid "Group By..."
+msgstr "Grouper Par..."
+
+#. module: oschool_note
+#: field:oschool.matiere,id:0
+#: field:oschool.matiere.group,id:0
+#: field:oschool.matiere.group.details,id:0
+#: field:oschool.matiere.type,id:0
+#: field:oschool.note,id:0
+#: field:oschool.note.details,id:0
+#: field:oschool.trimester,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: oschool_note
+#: field:oschool.matiere,write_uid:0
+#: field:oschool.matiere.group,write_uid:0
+#: field:oschool.matiere.group.details,write_uid:0
+#: field:oschool.matiere.type,write_uid:0
+#: field:oschool.note,write_uid:0
+#: field:oschool.note.details,write_uid:0
+#: field:oschool.trimester,write_uid:0
+msgid "Last Updated by"
+msgstr "Dernière modification par"
+
+#. module: oschool_note
+#: field:oschool.matiere,write_date:0
+#: field:oschool.matiere.group,write_date:0
+#: field:oschool.matiere.group.details,write_date:0
+#: field:oschool.matiere.type,write_date:0
+#: field:oschool.note,write_date:0
+#: field:oschool.note.details,write_date:0
+#: field:oschool.trimester,write_date:0
+msgid "Last Updated on"
+msgstr "Dernière modification le"
+
+#. module: oschool_note
+#: field:oschool.matiere.group.details,mandatory:0
+msgid "Mandatory"
+msgstr "Obligatoire"
+
+#. module: oschool_note
+#: model:ir.actions.act_window,name:oschool_note.oschool_matiere_action
+#: model:ir.ui.menu,name:oschool_note.oschool_matiere_menu
+#: view:oschool.matiere:oschool_note.oschool_matiere_search_view
+#: view:oschool.matiere.group:oschool_note.oschool_matiere_group_search_view
+#: field:oschool.matiere.group,matiere_id:0
+msgid "Matiere"
+msgstr "Matière"
+
+#. module: oschool_note
+#: view:oschool.matiere:oschool_note.oschool_matiere_form_view
+msgid "Matiere Form"
+msgstr "Formulaire Matière"
+
+#. module: oschool_note
+#: model:ir.actions.act_window,name:oschool_note.oschool_matiere_group_action
+#: model:ir.ui.menu,name:oschool_note.oschool_matiere_group_menu
+#: field:oschool.matiere.group.details,name:0
+#: field:oschool.note.details,matiere_group:0
+msgid "Matiere Group"
+msgstr "Groupe Matière"
+
+#. module: oschool_note
+#: view:oschool.matiere.group:oschool_note.oschool_matiere_group_form_view
+msgid "Matiere Group Form"
+msgstr "Formulaire Groupe Matière"
+
+#. module: oschool_note
+#: view:oschool.matiere.group:oschool_note.oschool_matiere_group_tree_view
+msgid "Matiere Group Tree"
+msgstr "Arbre Groupe Matière"
+
+#. module: oschool_note
+#: view:oschool.matiere.group:oschool_note.oschool_matiere_group_search_view
+msgid "Matiere Groupe"
+msgstr "Groupe Matière"
+
+#. module: oschool_note
+#: view:oschool.matiere:oschool_note.oschool_matiere_tree_view
+msgid "Matiere Tree"
+msgstr "Matière arbre"
+
+#. module: oschool_note
+#: model:ir.actions.act_window,name:oschool_note.oschool_matiere_type_action
+#: model:ir.ui.menu,name:oschool_note.oschool_matiere_type_menu
+msgid "Matiere Type"
+msgstr "Type Matière"
+
+#. module: oschool_note
+#: view:oschool.matiere.type:oschool_note.oschool_matiere_type_form_view
+msgid "Matiere Type Form"
+msgstr "Formulaire Type Matière"
+
+#. module: oschool_note
+#: view:oschool.matiere.type:oschool_note.oschool_matiere_type_tree_view
+msgid "Matiere Type Tree"
+msgstr "Arbre Type Matière"
+
+#. module: oschool_note
+#: sql_constraint:oschool.matiere.group:0
+msgid "Matiere/Group must be unique"
+msgstr "Matière/Groupe doit être unique"
+
+#. module: oschool_note
+#: field:oschool.matiere,name:0
+#: field:oschool.matiere.type,name:0
+#: field:oschool.trimester,name:0
+msgid "Name"
+msgstr "Nom"
+
+#. module: oschool_note
+#: model:ir.actions.act_window,name:oschool_note.oschool_note_action
+#: model:ir.ui.menu,name:oschool_note.note_menu
+#: model:ir.ui.menu,name:oschool_note.oschool_note_menu
+#: field:oschool.note.details,name:0
+#: field:oschool.note.details,note:0
+msgid "Note"
+msgstr "Note"
+
+#. module: oschool_note
+#: view:oschool.note:oschool_note.oschool_note_form_view
+msgid "Note Form"
+msgstr "Formulaire Note"
+
+#. module: oschool_note
+#: view:oschool.note:oschool_note.oschool_note_tree_view
+msgid "Note Tree"
+msgstr "Arbre Note"
+
+#. module: oschool_note
+#: sql_constraint:oschool.note:0
+msgid "Note must be unique"
+msgstr "Note doit être unique"
+
+#. module: oschool_note
+#: model:ir.ui.menu,name:oschool_note.main_oschool_note_menu
+msgid "School Note Management"
+msgstr "Gestion Note de l'école"
+
+#. module: oschool_note
+#: field:oschool.matiere,sequence:0
+#: field:oschool.matiere.group,sequence:0
+#: field:oschool.matiere.type,sequence:0
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: oschool_note
+#: field:oschool.note.details,student_id:0
+msgid "Student"
+msgstr "Étudiant"
+
+#. module: oschool_note
+#: model:ir.actions.act_window,name:oschool_note.oschool_trimester_action
+#: model:ir.ui.menu,name:oschool_note.oschool_trimester_menu
+#: field:oschool.matiere.group.details,trimester_id:0
+#: field:oschool.note,trimester_id:0
+msgid "Trimester"
+msgstr "Trimestre"
+
+#. module: oschool_note
+#: view:oschool.trimester:oschool_note.oschool_trimester_form_view
+msgid "Trimester Form"
+msgstr "Formulaire trimestre"
+
+#. module: oschool_note
+#: view:oschool.trimester:oschool_note.oschool_trimester_tree_view
+msgid "Trimester Tree"
+msgstr "Arbre trimestre"
+
+#. module: oschool_note
+#: view:oschool.matiere:oschool_note.oschool_matiere_search_view
+#: field:oschool.matiere,type:0
+msgid "Type"
+msgstr "Type"
+
+#. module: oschool_note
+#: model:res.groups,name:oschool_note.oschool_group_note
+msgid "oschool Note"
+msgstr "Note Scolaire"
+

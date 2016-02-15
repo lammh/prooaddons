@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data noupdate="0">
+        <!-- Categorie d'article de point de vente-->
+        <record model="pos.category" id="oschool_service_pos_category">
+            <field name="name">Service</field>
+            <field name="company_id"></field>
+        </record>
+        <record model="pos.category" id="oschool_inscription_pos_category">
+            <field name="name">Inscription</field>
+            <field name="company_id"></field>
+        </record>
+        <record model="pos.category" id="oschool_club_pos_category">
+            <field name="name">Club</field>
+            <field name="company_id"></field>
+        </record>
+        <record model="pos.category" id="oschool_event_pos_category">
+            <field name="name">Event</field>
+            <field name="company_id"></field>
+        </record>
+        <record model="pos.category" id="oschool_study_pos_category">
+            <field name="name">Study</field>
+            <field name="company_id"></field>
+        </record>
+        <record model="pos.category" id="oschool_transport_pos_category">
+            <field name="name">Transport</field>
+            <field name="company_id"></field>
+        </record>
+        <!-- Categorie d'article de vente-->
+        <record model="product.category" id="oschool_service_product_category">
+            <field name="name">Service</field>
+        </record>
+        <record model="product.category" id="oschool_service_restaurant_product_category">
+            <field name="name">Restaurant</field>
+            <field name="parent_id" ref='oschool_service_product_category'/>
+        </record>
+        <record model="product.category" id="oschool_service_panier_product_category">
+            <field name="name">Panier</field>
+            <field name="parent_id" ref='oschool_service_product_category'/>
+        </record>
+        <record model="product.category" id="oschool_service_garderie_product_category">
+            <field name="name">Garderie</field>
+            <field name="parent_id" ref='oschool_service_product_category'/>
+        </record>
+        <record model="product.category" id="oschool_inscription_product_category">
+            <field name="name">Inscription</field>
+        </record>
+        <record model="product.category" id="oschool_club_product_category">
+            <field name="name">Club</field>
+        </record>
+        <record model="product.category" id="oschool_event_product_category">
+            <field name="name">Event</field>
+        </record>
+        <record model="product.category" id="oschool_study_product_category">
+            <field name="name">Study</field>
+        </record>
+        <record model="product.category" id="oschool_transport_product_category">
+            <field name="name">Transport</field>
+        </record>
+        <!--Navette-->
+        <record model="oschool.shuttle" id="oschool_half_shuttle">
+            <field name="name">Half shuttle</field>
+            <field name="number_shuttle" eval="1"/>
+        </record>
+        <record model="oschool.shuttle" id="oschool_simple_shuttle">
+            <field name="name">Simple shuttle</field>
+            <field name="number_shuttle" eval="2"/>
+        </record>
+        <record model="oschool.shuttle" id="oschool_double_shuttle">
+            <field name="name">Double shuttle</field>
+            <field name="number_shuttle" eval="4"/>
+        </record>
+        <!--  Compte Template -->
+        <record id="pcg_7050001" model="account.account.template">
+            <field name="name">oschool Scolarité</field>
+            <field name="code">7050001</field>
+            <field name="type">other</field>
+            <field name="reconcile">1</field>
+            <field name="user_type" ref="account.data_account_type_income"/>
+            <field name="parent_id" ref="l10n_tn.pcg_70"/>
+        </record>
+        <record id="pcg_7050002" model="account.account.template">
+            <field name="name">oschool Restauration</field>
+            <field name="code">7050002</field>
+            <field name="type">other</field>
+            <field name="reconcile">1</field>
+            <field name="user_type" ref="account.data_account_type_income"/>
+            <field name="parent_id" ref="l10n_tn.pcg_70"/>
+        </record>
+        <record id="pcg_7050003" model="account.account.template">
+            <field name="name">oschool Transport</field>
+            <field name="code">7050003</field>
+            <field name="type">other</field>
+            <field name="reconcile">1</field>
+            <field name="user_type" ref="account.data_account_type_income"/>
+            <field name="parent_id" ref="l10n_tn.pcg_70"/>
+        </record>
+        <record id="pcg_7050004" model="account.account.template">
+            <field name="name">oschool Inscription</field>
+            <field name="code">7050004</field>
+            <field name="type">other</field>
+            <field name="reconcile">1</field>
+            <field name="user_type" ref="account.data_account_type_income"/>
+            <field name="parent_id" ref="l10n_tn.pcg_70"/>
+        </record>
+        <record id="pcg_7050005" model="account.account.template">
+            <field name="name">oschool Extras</field>
+            <field name="code">7050005</field>
+            <field name="type">other</field>
+            <field name="reconcile">1</field>
+            <field name="user_type" ref="account.data_account_type_income"/>
+            <field name="parent_id" ref="l10n_tn.pcg_70"/>
+        </record>
+         <!-- Employee jobs-->
+        <record id="oschool_hostess_employee" model="hr.job">
+            <field name="name">Hostess</field>
+        </record>
+         <record id="oschool_driver_employee" model="hr.job">
+            <field name="name">Driver</field>
+        </record>
+        <!--Bus schedule-->
+         <record model="oschool.bus_schedule" id="oschool_bus_schedule_8h">
+            <field name="name">8h</field>
+        </record>
+        <record model="oschool.bus_schedule" id="oschool_bus_schedule_12h">
+            <field name="name">12h</field>
+        </record>
+        <record model="oschool.bus_schedule" id="oschool_bus_schedule_14h">
+            <field name="name">14h</field>
+        </record>
+        <record model="oschool.bus_schedule" id="oschool_bus_schedule_16h">
+            <field name="name">16h30</field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_oschool_pos_line_generate" model="ir.ui.view">
+            <field name="name">Generate Transport</field>
+            <field name="model">pos.order.line.generate</field>
+            <field name="arch" type="xml">
+                <form string="Transport">
+                    <group>
+                        <field name="transport_id"
+                               on_change="onchange_service(transport_id, context)"
+                               options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}" required="1"/>
+                        <field name="discount_transport"/>
+                        <field name="bus_schedule_generate" widget="many2many_tags" options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}" required="1"/>
+                        <field name="period_ids" widget="many2many_tags" options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}" required="1"/>
+                    </group>
+                    <footer>
+                        <button name="generate" string="Generate" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+       <record id="view_oschool_pos_line_wizard" model="ir.ui.view">
+            <field name="name">Update Transport</field>
+            <field name="model">pos.order.line.update</field>
+            <field name="arch" type="xml">
+                <form string="Transport">
+                    <group>
+                        <field name="transport_id" options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"/>
+                        <field name="bus_schedule_wizard" widget="many2many_tags" options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"/>
+                        <field name="subscriber" />
+                        <field name="discount_transport" />
+                    </group>
+                    <footer>
+                        <button name="move_line" string="Update" type="object" class="oe_highlight"  />
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</openerp>

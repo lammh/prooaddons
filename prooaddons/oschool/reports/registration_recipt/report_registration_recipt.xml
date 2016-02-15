@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+<template id="report_registration_recipt">
+    <t t-call="report.html_container">
+        <t t-call="report.internal_layout">
+            <div class="page">
+                <style type="text/css">
+
+                #recipt-div {
+                    margin-bottom: 20px;
+                    margin-left: 150px;
+                    margin-top: 20px;
+                }
+                #matricule {
+                    display: inline-block;
+                    margin-left: 22px;
+                }
+                #name-div {
+                    margin-bottom: 40px;
+                    margin-left: 149px;
+                }
+                #class {
+                    display: inline-block;
+                    margin-left: 58px;
+                }
+                .libele-div {
+                    margin-left: 26px;
+                }
+                .libele {
+                    display: inline-block;
+                    width: 241px;
+                }
+                .montant {
+                    display: inline-block;
+                    margin-left: 27px;
+                    width: 60px;
+                }
+                #total {
+                    margin-left: 395px;
+                    top: 470px;
+                }
+                #reg {
+                    clear: both;
+                    display: inline;
+                    float: right;
+                    left: 400px;
+                    position: absolute;
+                    width: 150px;
+                }
+                #nb {
+                    margin-left: 20px;
+                    margin-top: 30px;
+                }
+                #total2 {
+                    margin-left: 20px;
+                    margin-top: 22px;
+                    top: 490px;
+                    width: 200px;
+                }
+                #report {
+                    font-size: 10px;
+                    height: 400px;
+                    padding-left: 15px;
+                    padding-top: 35px;
+                    width: 600px;
+                }
+                .content {
+                    height: 142px;
+                }
+                .lines {
+                    clear: both;
+                    display: inline-table;
+                    float: left;
+                    width: 374px;
+                }
+                #name {
+                    display: inline-block;
+                    width: 226px;
+                }
+                #recipt {
+                    display: inline-block;
+                    width: 200px;
+                }
+                #last-name {
+                    margin-left: 10px;
+                }
+
+                </style>
+                <t t-foreach="data" t-as="o">
+                    <div id="report">
+                        <div style="position:absolute;diplay:inline-block;" >Date de commande : <strong><t t-esc="order_date(o.date_order)"/></strong></div>
+                        <div style="position:absolute;left:480px;diplay:inline-block;">
+                            <t t-if="o.nb_print > 1">
+                                <span> Duplicata</span>
+                            </t>
+
+                        </div>
+                        <div id="recipt-div">
+                            <div id="recipt"><t t-esc="o.name"/></div>
+                            <div id="matricule"><t t-esc="o.student_id.ref"/></div>
+                        </div>
+                        <div id="name-div">
+                            <div id="name"><span><t t-esc="o.student_id.name"/></span><span id="last-name"><t t-esc="o.student_id.last_name"/></span></div>
+                            <div id="class">
+                                <span><t t-esc="o.student_id.group_id.name"/></span>
+                                /<span ><t t-esc="o.student_id.class_id.name"/></span>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="lines">
+                                <t t-foreach="o.lines" t-as="line">
+                                    <div class="libele-div">
+                                        <div class="libele"><t t-esc="line.product_id.name"/></div>
+                                        <div class="montant"><t t-esc="line.price_subtotal_incl"/></div>
+                                    </div>
+                                </t>
+
+                            </div>
+
+                        <div id="reg">
+                                <t t-foreach="o.statement_ids" t-as="statement">
+                                    <strong ><t t-esc="statement.journal_id.name"/></strong><br/>
+                                    <span><t t-esc="statement.amount"/></span><br/>
+                                </t>
+                            </div>
+                        </div>
+                        <div id="total">
+                            <span><t t-esc="o.amount_total"/></span>
+                        </div>
+                        <div id="total2">
+                            <span><t t-esc="amount_to_text_tn(o.amount_total,o.pricelist_id.currency_id)"/></span>
+                        </div>
+                        <div id="nb">
+                            <span>NB :En cas d'annulation d'inscription ce montant ne peut pas être remboursé.</span>
+                        </div>
+                    </div>
+                    <p style="page-break-after:always;">   </p>
+                </t>
+
+            </div>
+        </t>
+    </t>
+</template>
+    <!--  timbre -->
+
+    <template id="report_timbre_recipt">
+    <t t-call="report.html_container">
+        <t t-call="report.internal_layout">
+            <div class="page">
+                <style type="text/css">
+
+                #recipt-div {
+                    margin-bottom: 20px;
+                    margin-left: 150px;
+                    margin-top: 20px;
+                }
+                #matricule {
+                    display: inline-block;
+                    margin-left: 22px;
+                }
+                #name-div {
+                    margin-bottom: 40px;
+                    margin-left: 149px;
+                }
+                #class {
+                    display: inline-block;
+                    margin-left: 58px;
+                }
+                .libele-div {
+                    margin-left: 26px;
+                }
+                .libele {
+                    display: inline-block;
+                    width: 241px;
+                }
+                .montant {
+                    display: inline-block;
+                    margin-left: 27px;
+                    width: 60px;
+                }
+                #total {
+                    margin-left: 395px;
+                    top: 470px;
+                }
+                #reg {
+                    clear: both;
+                    display: inline;
+                    float: right;
+                    left: 400px;
+                    position: absolute;
+                    width: 150px;
+                }
+                #nb {
+                    margin-left: 20px;
+                    margin-top: 30px;
+                }
+                #total2 {
+                    margin-left: 20px;
+                    margin-top: 22px;
+                    top: 490px;
+                    width: 200px;
+                }
+                #report {
+                    font-size: 10px;
+                    height: 400px;
+                    padding-left: 15px;
+                    padding-top: 35px;
+                    width: 600px;
+                }
+                .content {
+                    height: 142px;
+                }
+                .lines {
+                    clear: both;
+                    display: inline-table;
+                    float: left;
+                    width: 374px;
+                }
+                #name {
+                    display: inline-block;
+                    width: 226px;
+                }
+                #recipt {
+                    display: inline-block;
+                    width: 200px;
+                }
+                #last-name {
+                    margin-left: 10px;
+                }
+
+                </style>
+                <t t-foreach="data" t-as="o">
+                    <div id="report">
+
+                        <div style="position:absolute;diplay:inline-block;" >Date de commande : <strong><t t-esc="order_date(o.date_order)"/></strong></div>
+                        <div style="position:absolute;left:480px;diplay:inline-block;">
+                            <t t-if="o.nb_print > 1">
+                                <span> Duplicata</span>
+                            </t>
+
+                        </div>
+
+                        <div id="recipt-div">
+                            <div id="recipt"><t t-esc="o.name"/></div>
+                            <div id="matricule"><t t-esc="o.student_id.ref"/></div>
+                        </div>
+                        <div id="name-div">
+                            <div id="name"><span><t t-esc="o.student_id.name"/></span><span id="last-name"><t t-esc="o.student_id.last_name"/></span></div>
+                            <div id="class">
+                                <span><t t-esc="o.student_id.group_id.name"/></span>
+                                /<span ><t t-esc="o.student_id.class_id.name"/></span>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="lines">
+                                <t t-foreach="o.lines" t-as="line">
+                                    <div class="libele-div">
+                                        <div class="libele"><t t-esc="line.product_id.name"/></div>
+                                        <div class="montant"><t t-esc="line.price_subtotal_incl"/></div>
+                                    </div>
+                                </t>
+
+                            </div>
+
+                        <div id="reg">
+                                <t t-foreach="o.statement_ids" t-as="statement">
+                                    <strong ><t t-esc="statement.journal_id.name"/></strong><br/>
+                                    <span><t t-esc="statement.amount"/></span><br/>
+                                </t>
+                            </div>
+                        </div>
+                        <div id="total">
+                            <span><t t-esc="o.amount_total"/></span>
+                        </div>
+                        <div id="total2">
+                            <span><t t-esc="amount_to_text_tn(o.amount_total,o.pricelist_id.currency_id)"/></span>
+                        </div>
+                        <div id="nb">
+                            <span>NB : Timbre fiscale 0,5 DT.</span>
+                        </div>
+                    </div>
+                    <p style="page-break-after:always;">   </p>
+                </t>
+
+            </div>
+        </t>
+    </t>
+</template>
+    <!-- No timbre -->
+    <template id="report_no_timbre_recipt">
+    <t t-call="report.html_container">
+        <t t-call="report.internal_layout">
+            <div class="page">
+                <style type="text/css">
+
+                #recipt-div {
+                    margin-bottom: 20px;
+                    margin-left: 150px;
+                    margin-top: 20px;
+                }
+                #matricule {
+                    display: inline-block;
+                    margin-left: 22px;
+                }
+                #name-div {
+                    margin-bottom: 40px;
+                    margin-left: 149px;
+                }
+                #class {
+                    display: inline-block;
+                    margin-left: 58px;
+                }
+                .libele-div {
+                    margin-left: 26px;
+                }
+                .libele {
+                    display: inline-block;
+                    width: 241px;
+                }
+                .montant {
+                    display: inline-block;
+                    margin-left: 27px;
+                    width: 60px;
+                }
+                #total {
+                    margin-left: 395px;
+                    top: 470px;
+                }
+                #reg {
+                    clear: both;
+                    display: inline;
+                    float: right;
+                    left: 400px;
+                    position: absolute;
+                    width: 150px;
+                }
+                #nb {
+                    margin-left: 20px;
+                    margin-top: 30px;
+                }
+                #total2 {
+                    margin-left: 20px;
+                    margin-top: 22px;
+                    top: 490px;
+                    width: 200px;
+                }
+                #report {
+                    font-size: 10px;
+                    height: 400px;
+                    padding-left: 15px;
+                    padding-top: 35px;
+                    width: 600px;
+                }
+                .content {
+                    height: 142px;
+                }
+                .lines {
+                    clear: both;
+                    display: inline-table;
+                    float: left;
+                    width: 374px;
+                }
+                #name {
+                    display: inline-block;
+                    width: 226px;
+                }
+                #recipt {
+                    display: inline-block;
+                    width: 200px;
+                }
+                #last-name {
+                    margin-left: 10px;
+                }
+
+                </style>
+                <t t-foreach="data" t-as="o">
+                    <div id="report">
+                       <div style="position:absolute;diplay:inline-block;" >Date de commande : <strong><t t-esc="order_date(o.date_order)"/></strong></div>
+                        <div style="position:absolute;left:480px;diplay:inline-block;">
+                            <t t-if="o.nb_print > 1">
+                                <span> Duplicata</span>
+                            </t>
+
+                        </div>
+                        <div id="recipt-div">
+                            <div id="recipt"><t t-esc="o.name"/></div>
+                            <div id="matricule"><t t-esc="o.student_id.ref"/></div>
+                        </div>
+                        <div id="name-div">
+                            <div id="name"><span><t t-esc="o.student_id.name"/></span><span id="last-name"><t t-esc="o.student_id.last_name"/></span></div>
+                            <div id="class">
+                                <span><t t-esc="o.student_id.group_id.name"/></span>
+                                /<span ><t t-esc="o.student_id.class_id.name"/></span>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="lines">
+                                <t t-foreach="o.lines" t-as="line">
+                                    <div class="libele-div">
+                                        <div class="libele"><t t-esc="line.product_id.name"/></div>
+                                        <div class="montant"><t t-esc="line.price_subtotal_incl"/></div>
+                                    </div>
+                                </t>
+
+                            </div>
+
+                        <div id="reg">
+                                <t t-foreach="o.statement_ids" t-as="statement">
+                                    <strong ><t t-esc="statement.journal_id.name"/></strong><br/>
+                                    <span><t t-esc="statement.amount"/></span><br/>
+                                </t>
+                            </div>
+                        </div>
+                        <div id="total">
+                            <span><t t-esc="o.amount_total"/></span>
+                        </div>
+                        <div id="total2">
+                            <span><t t-esc="amount_to_text_tn(o.amount_total,o.pricelist_id.currency_id)"/></span>
+                        </div>
+                        <div id="nb">
+                            <span></span>
+                        </div>
+                    </div>
+                    <p style="page-break-after:always;">   </p>
+                </t>
+
+            </div>
+        </t>
+    </t>
+</template>
+</data>
+</openerp>

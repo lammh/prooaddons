@@ -1,0 +1,6 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_oschool_trimester_user,oschool.trimester.user,model_oschool_trimester,oschool_group_note,1,0,0,0
+access_oschool_matiere_type_user,oschool.matiere.type.user,model_oschool_matiere_type,oschool_group_note,1,1,1,1
+access_oschool_matiere_user,oschool.matiere.user,model_oschool_matiere,oschool_group_note,1,1,1,1
+access_oschool_matiere_group_user,oschool.matiere.group.user,model_oschool_matiere_group,oschool_group_note,1,1,1,1
+access_oschool_note_user,oschool.note.user,model_oschool_note,oschool_group_note,1,1,1,1

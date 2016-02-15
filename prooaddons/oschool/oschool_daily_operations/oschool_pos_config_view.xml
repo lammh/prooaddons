@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+
+        <!-- Top menu item -->
+        <record model="ir.ui.view" id="view_oschool_pos_config_form">
+            <field name="name">pos.oschool.config.form.view</field>
+            <field name="model">pos.config</field>
+            <field name="arch" type="xml">
+                <form string="Point of Sale Configuration">
+                    <header>
+                        <button string="Set to Active" name="set_active" type="object" states="inactive,deprecated"/>
+                        <button string="Set to Inactive" name="set_inactive" type="object" states="active" />
+                        <button string="Set to Deprecated" name="set_deprecate" type="object" states="active,inactive" />
+                        <div class="oe_right">
+                            <field name="state" widget="statusbar" statusbar_visible="active,inactive,deprecated" statusbar_colors='{"deprecated" : "red"}' nolabel="1"/>
+                        </div>
+                    </header>
+
+                    <sheet>
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                        <group col="4">
+                            <field name="picking_type_id" widget="selection" groups="stock.group_locations"
+                                on_change="onchange_picking_type_id(picking_type_id)"/>
+                            <!--<field name="stock_location_id" groups="stock.group_locations"/>-->
+                            <field name="company_id" groups="base.group_multi_company"/>
+                            <field name="pricelist_id" groups="product.group_sale_pricelist"/>
+                            <field name="journal_id" widget="selection"/>
+                            <field name="group_by" groups="account.group_account_user"/>
+                            <field name="currency_id" invisible="1"/>
+                        </group>
+                        <separator string="Available Payment Methods" colspan="4"/>
+                        <field name="journal_ids" colspan="4" nolabel="1">
+                            <tree string="Journals">
+                                <field name="code" />
+                                <field name="name" />
+                                <field name="type" />
+                                <field name="cash_control" />
+                            </tree>
+                        </field>
+
+
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_oschool_pos_config_tree">
+            <field name="name">pos.oschool.config.tree.view</field>
+            <field name="model">pos.config</field>
+            <field name="arch" type="xml">
+                <tree string="Point of Sale Configuration" colors="grey:state == 'inactive'">
+                    <field name="name" />
+                    <field name="stock_location_id" groups="stock.group_locations"/>
+                    <field name="state" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_oschool_pos_config_search">
+            <field name="name">pos.oschool.config.search.view</field>
+            <field name="model">pos.config</field>
+            <field name="arch" type="xml">
+                <search string="Point of Sale Config">
+                    <field name="name" />
+                    <filter string="Active" domain="[('state', '=', 'active')]" />
+                    <filter string="Inactive" domain="[('state', '=', 'inactive')]" />
+                    <field name="stock_location_id" groups="stock.group_locations" />
+                </search>
+            </field>
+        </record>
+
+        <!-- Sessions -->
+
+        <!--<act_window-->
+            <!--id="act_oschool_pos_config_sessions"-->
+            <!--name="Sessions"-->
+            <!--src_model="pos.config"-->
+            <!--res_model="pos.session"-->
+            <!--domain="[('config_id', '=', active_id)]" />-->
+
+        <record model="ir.actions.act_window" id="action_oschool_pos_config_pos">
+            <field name="name">Point of Sales</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pos.config</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_oschool_pos_config_search" />
+        </record>
+
+
+        <record model="ir.actions.act_window.view" id="action_view_config_pos">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_oschool_pos_config_form"/>
+            <field name="act_window_id" ref="action_oschool_pos_config_pos"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_view_config_pos2">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_oschool_pos_config_tree"/>
+            <field name="act_window_id" ref="action_oschool_pos_config_pos"/>
+        </record>
+
+        <menuitem parent="oschool_pos_session_management_menu" id="menu_oschool_pos_config_pos" action="action_oschool_pos_config_pos" sequence="4" groups="oschool_group_admin_scolarity"/>
+
+    </data>
+</openerp>

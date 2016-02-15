@@ -1,0 +1,3 @@
+Pour utiliser ces functions ajouter dans dans votre fichier .py:
+
+from wct_addons.wct_tools import amount_to_text

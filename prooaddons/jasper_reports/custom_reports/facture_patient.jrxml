@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="573" leftMargin="11" rightMargin="11" topMargin="11" bottomMargin="11" isFloatColumnFooter="true">
+	<property name="ireport.zoom" value="1.8150000000000053"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="242"/>
+	<subDataset name="dataset1">
+		<parameter name="invoice_id" class="java.lang.Integer"/>
+		<queryString>
+			<![CDATA[SELECT
+  account_invoice_tax.name,
+  case when pec = True then tax_amount when pec = False then 0 end as tva_pec,
+  case when pec = False then tax_amount when pec = True then 0 end as tva_patient
+FROM
+  public.account_invoice_tax
+WHERE
+  account_invoice_tax.invoice_id = $P{invoice_id}]]>
+		</queryString>
+		<field name="name" class="java.lang.String"/>
+		<field name="tva_pec" class="java.math.BigDecimal"/>
+		<field name="tva_patient" class="java.math.BigDecimal"/>
+		<variable name="tva_patient_1" class="java.math.BigDecimal" resetType="None" calculation="Sum">
+			<variableExpression><![CDATA[$F{tva_patient}]]></variableExpression>
+		</variable>
+	</subDataset>
+	<parameter name="ref" class="java.lang.String"/>
+	<parameter name="socpec" class="java.lang.String"/>
+	<parameter name="timbre_patient" class="java.lang.Double"/>
+	<parameter name="timbre_pec" class="java.lang.Double"/>
+	<parameter name="nompatient" class="java.lang.String"/>
+	<parameter name="matricule" class="java.lang.String"/>
+	<parameter name="date_entree" class="java.lang.String"/>
+	<parameter name="date_sortie" class="java.lang.String"/>
+	<parameter name="invoice_id" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="forfait_name" class="java.lang.String"/>
+	<parameter name="montant_pec" class="java.lang.Double"/>
+	<parameter name="montant_pec_lettre" class="java.lang.String"/>
+	<parameter name="montant_patient" class="java.lang.Double"/>
+	<parameter name="montant_patient_lettre" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/home/wis/workspace/medical/openerp/addons/medical_edition/report/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="montant_timbre" class="java.lang.Double"/>
+	<parameter name="montant_tva" class="java.lang.Double"/>
+	<parameter name="montant_patient_htva" class="java.lang.Double"/>
+	<parameter name="num_fact" class="java.lang.String"/>
+	<parameter name="dir_images" class="java.lang.String"/>
+	<parameter name="tva_patient" class="java.lang.Double"/>
+	<parameter name="tva_pec" class="java.lang.Double"/>
+	<parameter name="date_facture" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+'Prestation Clinique' as Titre,
+  account_invoice_line.create_date as create_date,
+  account_invoice_line.name as Prestation,
+  account_invoice_line.quantity as Qte,
+  account_invoice_line.price_unit as PU,
+  case when pec = True then price_subtotal when pec = False then 0 end as montant_pec,
+  case when pec = False then price_subtotal when pec = True then 0 end as Montant_patient,
+  account_tax.name as TVA,
+  account_invoice_line.price_subtotal*(account_tax.amount + 1) as TTC, 1  as order_column
+FROM
+  public.account_invoice_line,
+  public.account_invoice_line_tax,
+  public.account_tax,
+  public.product_product
+WHERE
+  account_invoice_line.id = account_invoice_line_tax.invoice_line_id AND
+  product_product.id = account_invoice_line.product_id AND
+  account_tax.id = account_invoice_line_tax.tax_id AND
+  account_invoice_line.invoice_id =  $P{invoice_id}
+
+union all
+
+SELECT
+   'Honoraire Médecin' as Titre,medical_honoraire.create_date,
+   res_partner.name, 1,
+   medical_honoraire.amount_original,
+  case when pec = True then amount_original when pec = False then 0 end as montant_pec,
+  case when pec = False then amount_original when pec = True then 0 end as Montant_patient,
+  '0',
+  medical_honoraire.amount_original, 2  as order_column
+FROM
+  public.medical_honoraire,
+  public.res_partner
+WHERE
+  res_partner.id = medical_honoraire.medecin_id AND
+  medical_honoraire.name = $P{invoice_id}
+  order by order_column,create_date]]>
+	</queryString>
+	<field name="titre" class="java.lang.String"/>
+	<field name="create_date" class="java.sql.Timestamp"/>
+	<field name="prestation" class="java.lang.String"/>
+	<field name="qte" class="java.lang.Double"/>
+	<field name="pu" class="java.math.BigDecimal"/>
+	<field name="montant_pec" class="java.math.BigDecimal"/>
+	<field name="montant_patient" class="java.math.BigDecimal"/>
+	<field name="tva" class="java.lang.String"/>
+	<field name="ttc" class="java.math.BigDecimal"/>
+	<field name="order_column" class="java.lang.Integer"/>
+	<variable name="montant_pec_1" class="java.math.BigDecimal" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{montant_pec}]]></variableExpression>
+	</variable>
+	<variable name="montant_patient_1" class="java.math.BigDecimal" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{montant_patient}]]></variableExpression>
+	</variable>
+	<variable name="variable1" class="java.lang.Double" calculation="Sum"/>
+	<variable name="variable2" class="java.lang.String"/>
+	<group name="titre">
+		<groupExpression><![CDATA[$F{titre}]]></groupExpression>
+		<groupHeader>
+			<band height="20">
+				<textField>
+					<reportElement x="44" y="0" width="475" height="20"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{titre}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="215" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="212" y="117" width="350" height="66"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="150" y="68" width="127" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Facture N°:]]></text>
+			</staticText>
+			<image>
+				<reportElement x="103" y="2" width="367" height="65"/>
+				<imageExpression><![CDATA[$P{dir_images}+"logo_cli_imen.png"]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement x="277" y="68" width="157" height="36"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{num_fact}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="217" y="124" width="109" height="24"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dossier N°]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="344" y="124" width="210" height="24"/>
+				<textElement verticalAlignment="Top">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ref}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="217" y="148" width="109" height="24"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nom Prénom]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="344" y="148" width="210" height="24"/>
+				<textElement verticalAlignment="Top">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nompatient}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="326" y="124" width="17" height="24"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="326" y="148" width="17" height="24"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="193" width="103" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Hospitalisation du:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="321" y="193" width="23" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Au:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="344" y="193" width="189" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{date_sortie}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="132" y="193" width="189" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{date_entree}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="277" y="104" width="157" height="13"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat('dd-MM-yyyy').format(new SimpleDateFormat("yyyy-MM-dd").parse($P{date_facture}))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="150" y="104" width="127" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Date Facture:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="23">
+			<staticText>
+				<reportElement x="346" y="2" width="71" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[HT Patient]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="44" y="2" width="179" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="2" width="43" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[QTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="266" y="2" width="80" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prix UN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="448" y="2" width="71" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TTC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="417" y="2" width="31" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TVA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<textField>
+				<reportElement x="346" y="0" width="71" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{montant_patient}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="44" y="0" width="179" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{prestation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="0" width="43" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{qte}.intValue()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="266" y="0" width="80" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{pu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="0" width="31" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tva}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="448" y="0" width="71" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[(new DecimalFormat("#,###,##0.000")).format($F{ttc}.doubleValue())]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="61">
+			<textField>
+				<reportElement x="253" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="333" y="0" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="373" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Edité le:"]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="453" y="0" width="102" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy h.mm").format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="31" width="555" height="15"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Société Anonyme SA / Capital: 1 000 000,000TND/ RC:B 1736982012 / MF: 1235675 Z A M 000/ RIB: 10 800 0211196775 788 05]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="46" width="555" height="15"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Rue Ibn khaldoun Doualy Gafsa  Tél :76 225 444  Fax : 76 226 444]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="199">
+			<staticText>
+				<reportElement x="366" y="29" width="81" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL HT  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="49" width="81" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL TVA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="69" width="81" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Timbre       :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="89" width="81" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL TTC:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="124" width="334" height="20"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Arrêté la présente facture à la somme de :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="10" y="144" width="540" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{montant_patient_lettre}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="44" y="8" width="69" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="113" y="8" width="81" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Montant TVA ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="447" y="9" width="71" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Patient]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="447" y="29" width="71" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[(new DecimalFormat("#,###,##0.000")).format($V{montant_patient_1}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="447" y="69" width="71" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[(new DecimalFormat("#,###,##0.000")).format($P{timbre_patient}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="447" y="49" width="71" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[(new DecimalFormat("#,###,##0.000")).format(($P{tva_patient}.doubleValue()-$P{timbre_patient}))]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="447" y="89" width="71" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[(new DecimalFormat("#,###,##0.000")).format($P{montant_patient}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="43" y="28" width="151" height="21" isPrintWhenDetailOverflows="true"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataset1">
+						<datasetParameter name="invoice_id">
+							<datasetParameterExpression><![CDATA[$P{invoice_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="21" width="151">
+						<textField>
+							<reportElement x="1" y="0" width="69" height="20"/>
+							<box>
+								<pen lineWidth="0.5"/>
+								<topPen lineWidth="0.5"/>
+								<leftPen lineWidth="0.5"/>
+								<bottomPen lineWidth="0.5"/>
+								<rightPen lineWidth="0.5"/>
+							</box>
+							<textElement/>
+							<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="70" y="0" width="81" height="20"/>
+							<box>
+								<pen lineWidth="0.5"/>
+								<topPen lineWidth="0.5"/>
+								<leftPen lineWidth="0.5"/>
+								<bottomPen lineWidth="0.5"/>
+								<rightPen lineWidth="0.5"/>
+							</box>
+							<textElement textAlignment="Right"/>
+							<textFieldExpression><![CDATA[$F{tva_patient}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,178 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* hr_pay_stub
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-20150210\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-14 09:02+0000\n"
+"PO-Revision-Date: 2015-02-14 09:02+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_pay_stub
+#: field:hr.pay.stub,amount:0
+msgid "Amount"
+msgstr "Montant"
+
+#. module: hr_pay_stub
+#: selection:hr.pay.stub,mode:0
+msgid "By employee"
+msgstr "Par Employée"
+
+#. module: hr_pay_stub
+#: selection:hr.pay.stub,mode:0
+msgid "By employee category"
+msgstr "Par catégorie d'employé"
+
+#. module: hr_pay_stub
+#: field:hr.pay.stub,create_uid:0
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: hr_pay_stub
+#: field:hr.pay.stub,create_date:0
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: hr_pay_stub
+#: selection:hr.pay.stub,state:0
+msgid "Done"
+msgstr "Terminé"
+
+#. module: hr_pay_stub
+#: selection:hr.pay.stub,state:0
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: hr_pay_stub
+#: view:hr.pay.stub:hr_pay_stub.view_pay_stub_filter
+#: field:hr.pay.stub,employee_id:0
+msgid "Employee"
+msgstr "Employée"
+
+#. module: hr_pay_stub
+#: field:hr.pay.stub,category:0
+msgid "Employee Category"
+msgstr "Categorie Employée"
+
+#. module: hr_pay_stub
+#: view:hr.pay.stub:hr_pay_stub.view_pay_stub_filter
+msgid "Group by..."
+msgstr "Grouper Par..."
+
+#. module: hr_pay_stub
+#: field:hr.pay.stub,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: hr_pay_stub
+#: selection:hr.pay.stub,type:0
+msgid "Inputs"
+msgstr "Entrées"
+
+#. module: hr_pay_stub
+#: field:hr.salary.rule.category,is_stub:0
+msgid "Is Stub"
+msgstr "Est un bordereau"
+
+#. module: hr_pay_stub
+#: field:hr.pay.stub,write_uid:0
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: hr_pay_stub
+#: field:hr.pay.stub,write_date:0
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: hr_pay_stub
+#: field:hr.pay.stub,mode:0
+msgid "Mode"
+msgstr "Mode"
+
+#. module: hr_pay_stub
+#: field:hr.pay.stub,day:0
+msgid "Number of days"
+msgstr "Nombre de jours"
+
+#. module: hr_pay_stub
+#: field:hr.pay.stub,hour:0
+msgid "Number of hours"
+msgstr "Nombre d'heures"
+
+#. module: hr_pay_stub
+#: model:ir.model,name:hr_pay_stub.model_hr_payslip
+msgid "Pay Slip"
+msgstr "Feuille de paie"
+
+#. module: hr_pay_stub
+#: model:ir.actions.act_window,name:hr_pay_stub.action_pay_stub
+#: model:ir.ui.menu,name:hr_pay_stub.menu_hr_pay_stub
+msgid "Pay Stub"
+msgstr "Bordereau de paie"
+
+#. module: hr_pay_stub
+#: view:hr.pay.stub:hr_pay_stub.view_pay_stub_filter
+#: field:hr.pay.stub,name:0
+msgid "Payslip Batche"
+msgstr "Lots de bulletins de paie"
+
+#. module: hr_pay_stub
+#: view:hr.pay.stub:hr_pay_stub.view_pay_stub_filter
+msgid "Rule"
+msgstr "Règle"
+
+#. module: hr_pay_stub
+#: field:hr.pay.stub,rule:0
+msgid "Salary Rule"
+msgstr "Règle des salaires"
+
+#. module: hr_pay_stub
+#: model:ir.model,name:hr_pay_stub.model_hr_salary_rule_category
+msgid "Salary Rule Category"
+msgstr "Catégorie de règle salariale"
+
+#. module: hr_pay_stub
+#: view:hr.pay.stub:hr_pay_stub.view_pay_stub_filter
+msgid "Search Pay Stub"
+msgstr "Recherche Bordereau"
+
+#. module: hr_pay_stub
+#: view:hr.pay.stub:hr_pay_stub.hr_pay_stub_form
+#: view:hr.pay.stub:hr_pay_stub.hr_pay_stub_tree
+msgid "Special Pay Stub"
+msgstr "Bordereau spécial de paie"
+
+#. module: hr_pay_stub
+#: field:hr.pay.stub,state:0
+msgid "State"
+msgstr "État"
+
+#. module: hr_pay_stub
+#: field:hr.pay.stub,type:0
+msgid "Type"
+msgstr "Type"
+
+#. module: hr_pay_stub
+#: code:addons/hr_pay_stub/hr_pay_stub.py:39
+#, python-format
+msgid "Warning!"
+msgstr "Avertissement!"
+
+#. module: hr_pay_stub
+#: selection:hr.pay.stub,type:0
+msgid "Worked Day"
+msgstr "Jour de Travail"
+
+#. module: hr_pay_stub
+#: code:addons/hr_pay_stub/hr_pay_stub.py:39
+#, python-format
+msgid "You cannot delete a Stub which is not draft !"
+msgstr "Vous ne pouvez pas supprimer un bordereau spécial de paie qui ne soit pas brouillon!"
+

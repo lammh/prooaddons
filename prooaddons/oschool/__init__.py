@@ -1,0 +1,20 @@
+#import whitecape
+import oschool
+import oschool_transportation
+#import erp-sys
+import oschool_responsible
+import oschool_student
+# import oschool_cashier
+import oschool_extra
+import oschool_registration
+import oschool_study
+import oschool_service
+import oschool_club
+import oschool_event
+#import whitecape
+import oschool_tracking_registrations
+import reports
+import oschool_treasury
+import oschool_configuration
+import oschool_abstract
+import oschool_tracking_payment

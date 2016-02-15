@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!--  Run Schedulers -->
+
+        <record id="view_invoiced_pos_wizard" model="ir.ui.view">
+            <field name="name">Invoiced Point Of Sale Order</field>
+            <field name="model">pos.invoiced</field>
+            <field name="arch" type="xml">
+                <form string="Invoiced Point Of Sale Order" version="7.0">
+                    <group>
+                        <field name="partner_id" required="1"/>
+                    </group>
+                    <newline/>
+                    <group>
+                        <field name="order_ids" domain="[('state','=','done')]" nolabel="1"/>
+                    </group>
+                    <footer>
+                        <button name="invoiced_pos" string="Create" type="object"  class="oe_highlight"  />
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+         <record id="action_invoiced_pos" model="ir.actions.act_window">
+             <field name="name">Create Invoice</field>
+             <field name="res_model">pos.invoiced</field>
+             <field name="type">ir.actions.act_window</field>
+             <field name="view_type">form</field>
+             <field name="view_mode">form</field>
+             <field name="view_id" ref="view_invoiced_pos_wizard"/>
+             <field name="context">{}</field>
+             <field name="target">new</field>
+       </record>
+
+        <menuitem action="action_invoiced_pos" id="menu_invoiced_pos" parent="point_of_sale.menu_point_of_sale" sequence="20" groups="account.group_account_invoice"/>
+
+    </data>
+</openerp>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_oschool_service_generate" model="ir.ui.view">
+            <field name="name">Generate Service</field>
+            <field name="model">oschool.service.generate</field>
+            <field name="arch" type="xml">
+                <form string="Transport">
+                    <group>
+                        <field name="service_id" on_change="onchange_service(service_id, context)"
+                               options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}" required="1"/>
+                        <field name="discount_service"/>
+                        <field name="period_ids" widget="many2many_tags" domain="[('code', '=', '0')]"
+                               options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}" required="1"/>
+                    </group>
+                    <footer>
+                        <button name="generate" string="Generate" type="object" class="oe_highlight"  />
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_oschool_service_wizard" model="ir.ui.view">
+            <field name="name">Update Service</field>
+            <field name="model">oschool.service.update</field>
+            <field name="arch" type="xml">
+                <form string="Study">
+                    <group>
+                        <field name="subscriber" />
+                        <field name="discount"/>
+                    </group>
+                    <footer>
+                        <button name="move_line" string="Update" type="object" class="oe_highlight"  />
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</openerp>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="template" xml:space="preserve">
+    
+    <t t-name="OschoolServicePresenceQuickAdd">
+        <div class="oe_oschool_quickadd ui-toolbar" style="margin-bottom:0px;">
+
+            <div class="oe_form_dropdown_section">
+                <h4>Class :</h4>
+                <select class="oe_oschool_select_class" >
+                    
+                </select>
+            </div>
+            <div class="oe_form_dropdown_section">
+                <h4>Period :</h4>
+                <select class="oe_oschool_select_period" >
+
+                </select>
+            </div>
+            <div class="oe_form_dropdown_section">
+                <h4>Day :</h4>
+                <select class="oe_oschool_select_day" >
+
+                </select>
+            </div>
+            <div class="oe_form_dropdown_section" style="float:right; margin-top: 20px;">
+                <button class="oe_button oe_form_button oe_oschool_print" type="button">
+                    <img width="16" height="16" src="/web/static/src/img/icons/gtk-print.png"/>
+                    <span>Print attendance report</span>
+                </button>
+            </div>
+        </div>
+    </t>
+</templates>

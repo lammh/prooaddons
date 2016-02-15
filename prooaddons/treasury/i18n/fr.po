@@ -1,0 +1,1032 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* treasury
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-20150713\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-09 09:19+0000\n"
+"PO-Revision-Date: 2015-10-09 09:19+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: treasury
+#: report:cash_vesement:0
+#: report:vesement:0
+msgid "\"N°: \"+$F{name}"
+msgstr "\"N°: \"+$F{name}"
+
+#. module: treasury
+#: report:cash_vesement:0
+#: report:vesement:0
+msgid "$F{amount_in_word}"
+msgstr "$F{amount_in_word}"
+
+#. module: treasury
+#: report:cash_vesement:0
+#: report:vesement:0
+msgid "$F{amount}"
+msgstr "$F{amount}"
+
+#. module: treasury
+#: report:cash_vesement:0
+msgid "$F{bank_name}"
+msgstr "$F{bank_name}"
+
+#. module: treasury
+#: report:vesement:0
+msgid "$F{bank}"
+msgstr "$F{bank}"
+
+#. module: treasury
+#: report:vesement:0
+msgid "$F{chq}"
+msgstr "$F{chq}"
+
+#. module: treasury
+#: report:cash_vesement:0
+#: report:vesement:0
+msgid "$F{date_vesement}"
+msgstr "$F{date_vesement}"
+
+#. module: treasury
+#: report:cash_vesement:0
+#: report:vesement:0
+msgid "$F{fax}"
+msgstr "$F{fax}"
+
+#. module: treasury
+#: report:vesement:0
+msgid "$F{holder}"
+msgstr "$F{holder}"
+
+#. module: treasury
+#: report:cash_vesement:0
+#: report:vesement:0
+msgid "$F{partner}"
+msgstr "$F{partner}"
+
+#. module: treasury
+#: report:cash_vesement:0
+#: report:vesement:0
+msgid "$F{phone}"
+msgstr "$F{phone}"
+
+#. module: treasury
+#: report:cash_vesement:0
+#: report:vesement:0
+msgid "$F{rib}"
+msgstr "$F{rib}"
+
+#. module: treasury
+#: report:vesement:0
+msgid "$V{Somme}"
+msgstr "$V{Somme}"
+
+#. module: treasury
+#: report:vesement:0
+msgid "$V{nombre}"
+msgstr "$V{nombre}"
+
+#. module: treasury
+#: field:account.treasury,third_party_partner:0
+msgid "3rd Party Partner"
+msgstr "3e partenaire parti"
+
+#. module: treasury
+#: field:account.vesement,move_id:0
+#: field:account.vesement.cash,move_id:0
+#: field:account.withdrawal.cash,move_id:0
+msgid "Account Entry"
+msgstr "Pièce comptable"
+
+#. module: treasury
+#: model:ir.model,name:treasury.model_account_voucher
+msgid "Accounting Voucher"
+msgstr "Justificatif comptable"
+
+#. module: treasury
+#: report:cash_vesement:0
+msgid "Agence:"
+msgstr "Agence:"
+
+#. module: treasury
+#: field:account.treasury,amount:0
+#: report:cash_vesement:0
+#: report:vesement:0
+msgid "Amount"
+msgstr "Montant"
+
+#. module: treasury
+#: field:account.vesement,amount_in_word:0
+#: field:account.vesement.cash,amount_in_word:0
+#: field:account.withdrawal.cash,amount_in_word:0
+#: report:cash_vesement:0
+#: report:vesement:0
+msgid "Amount in Word"
+msgstr "Montant En lettres"
+
+#. module: treasury
+#: field:account.vesement,treasury_ids:0
+msgid "Associated Document"
+msgstr "Document Associé"
+
+#. module: treasury
+#: field:account.voucher,treasury_ids:0
+msgid "Associated Treasuries"
+msgstr "Trésoreries associés"
+
+#. module: treasury
+#: field:account.treasury,voucher_ids:0
+msgid "Associated Vouchers"
+msgstr "Paiements Associés"
+
+#. module: treasury
+#: report:cash_vesement:0
+msgid "BORDEREAU DE VERSEMENT"
+msgstr "BORDEREAU DE VERSEMENT"
+
+#. module: treasury
+#: view:account.vesement:treasury.view_vesement_filter
+#: report:vesement:0
+msgid "Bank"
+msgstr "Banque"
+
+#. module: treasury
+#: report:cash_vesement:0
+msgid "Bank Name"
+msgstr "Nom Banque"
+
+#. module: treasury
+#: report:vesement:0
+msgid "Banque tirée"
+msgstr "Banque tirée"
+
+#. module: treasury
+#: view:account.treasury:treasury.account_treasury_form
+#: view:account.vesement:treasury.account_vesement_form
+#: selection:account.vesement,state:0
+#: view:account.vesement.cash:treasury.account_vesement_cash_form
+#: selection:account.vesement.cash,state:0
+#: view:account.withdrawal.cash:treasury.account_withdrawal_cash_form
+#: selection:account.withdrawal.cash,state:0
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: treasury
+#: view:account.treasury:treasury.view_treasury_filter
+#: view:account.vesement:treasury.view_vesement_filter
+#: view:account.vesement.cash:treasury.view_vesement_cash_filter
+#: view:account.withdrawal.cash:treasury.view_withdrawal_cash_filter
+msgid "Cancelled"
+msgstr "Annulé"
+
+#. module: treasury
+#: view:account.treasury:treasury.account_treasury_form
+msgid "Cash Register"
+msgstr "Caisse"
+
+#. module: treasury
+#: model:ir.actions.report.xml,name:treasury.account_vesement_cash
+#: model:ir.model,name:treasury.model_account_vesement_cash
+#: model:ir.ui.menu,name:treasury.vesement_cash_document
+msgid "Cash Vesement"
+msgstr "Versement Espèce"
+
+#. module: treasury
+#: model:ir.actions.act_window,name:treasury.account_action_form_vesement_cash
+msgid "Cash Vesement Documents"
+msgstr "Documents Versement Espèce"
+
+#. module: treasury
+#: model:ir.model,name:treasury.model_account_withdrawal_cash
+msgid "Cash Withdrawal"
+msgstr "Retrait Espèce"
+
+#. module: treasury
+#: model:ir.ui.menu,name:treasury.withdrawal_cash_document
+msgid "Cash withdrawal"
+msgstr "Retrait Espèce"
+
+#. module: treasury
+#: model:ir.actions.act_window,name:treasury.account_action_form_withdrawal_cash
+msgid "Cash withdrawal Documents"
+msgstr "Documents Retrait Espèce"
+
+#. module: treasury
+#: field:account.treasury,cashier_id:0
+msgid "Cashier"
+msgstr "Caissier"
+
+#. module: treasury
+#: view:account.treasury:treasury.view_treasury_filter
+msgid "Check"
+msgstr "Chèque"
+
+#. module: treasury
+#: view:account.treasury:treasury.account_treasury_form
+#: view:account.treasury:treasury.view_treasury_filter
+#: selection:account.treasury,state:0
+msgid "Clearing"
+msgstr "Liquidation"
+
+#. module: treasury
+#: view:account.treasury:treasury.view_treasury_filter
+#: field:account.treasury,clearing_date:0
+#: field:account.voucher,clearing_date:0
+msgid "Clearing Date"
+msgstr "Grouper par Date de Compensation"
+
+#. module: treasury
+#: field:account.treasury,company_id:0
+#: field:account.vesement,company_id:0
+#: field:account.vesement.cash,company_id:0
+#: field:account.withdrawal.cash,company_id:0
+msgid "Company"
+msgstr "Société"
+
+#. module: treasury
+#: help:account.treasury,company_id:0
+msgid "Company related to this treasury"
+msgstr "Société liée à ce trésorerie"
+
+#. module: treasury
+#: code:addons/treasury/vesement.py:49
+#: code:addons/treasury/vesement.py:270
+#: code:addons/treasury/vesement.py:415
+#, python-format
+msgid "Configuration Error !"
+msgstr "Erreur de paramétrage !"
+
+#. module: treasury
+#: view:account.treasury:treasury.view_treasury_filter
+msgid "Coupon"
+msgstr "Traite"
+
+#. module: treasury
+#: field:account.treasury,create_uid:0
+#: field:account.treasury.type,create_uid:0
+#: field:account.vesement,create_uid:0
+#: field:account.vesement.cash,create_uid:0
+#: field:account.withdrawal.cash,create_uid:0
+msgid "Created by"
+msgstr "Creé par"
+
+#. module: treasury
+#: field:account.treasury,create_date:0
+#: field:account.treasury.type,create_date:0
+#: field:account.vesement,create_date:0
+#: field:account.vesement.cash,create_date:0
+#: field:account.withdrawal.cash,create_date:0
+msgid "Created on"
+msgstr "Creé le"
+
+#. module: treasury
+#: selection:account.treasury,type_transaction:0
+msgid "Customer payment"
+msgstr "Règlement client"
+
+#. module: treasury
+#: report:vesement:0
+msgid "DEPOT DE CHEQUES"
+msgstr "DEPOT DE CHEQUES"
+
+#. module: treasury
+#: view:account.vesement:treasury.view_vesement_filter
+#: view:account.vesement.cash:treasury.view_vesement_cash_filter
+#: view:account.withdrawal.cash:treasury.view_withdrawal_cash_filter
+msgid "Date"
+msgstr "Date"
+
+#. module: treasury
+#: report:cash_vesement:0
+#: report:vesement:0
+msgid "Date et Signature du Bénéficiaire:"
+msgstr "Date et Signature du Bénéficiaire:"
+
+#. module: treasury
+#: help:account.treasury,message_last_post:0
+#: help:account.vesement,message_last_post:0
+#: help:account.vesement.cash,message_last_post:0
+#: help:account.withdrawal.cash,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr "Date du dernier message posté sur cet enregistrement."
+
+#. module: treasury
+#: field:account.treasury,name:0
+#: field:account.voucher,id_document:0
+msgid "Document ID"
+msgstr "ID Document"
+
+#. module: treasury
+#: field:account.treasury,type:0
+#: field:account.voucher,type_document:0
+msgid "Document Type"
+msgstr "Type de Document"
+
+#. module: treasury
+#: help:account.treasury,third_party_partner:0
+msgid "Document coming from or endorsed to a third party partner"
+msgstr "Document provenant ou endossés à un partenaire tiers"
+
+#. module: treasury
+#: code:addons/treasury/vesement.py:146
+#, python-format
+msgid "Document number %s for %s is not clearing !"
+msgstr "Document Numéro %s de %s n'est pas en état liquidation !"
+
+#. module: treasury
+#: code:addons/treasury/vesement.py:132
+#, python-format
+msgid "Document number %s for %s is not draft or validate !"
+msgstr "Document Numéro %s de %s n'est pas en état brouillon ou valide !"
+
+#. module: treasury
+#: view:account.vesement:treasury.view_vesement_filter
+#: view:account.vesement.cash:treasury.view_vesement_cash_filter
+#: view:account.withdrawal.cash:treasury.view_withdrawal_cash_filter
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: treasury
+#: model:ir.model,name:treasury.model_account_treasury
+msgid "Email Thread"
+msgstr "Discussion par courriel"
+
+#. module: treasury
+#: field:account.vesement,date_to:0
+msgid "End Date"
+msgstr "Date Fin"
+
+#. module: treasury
+#: code:addons/treasury/vesement.py:53
+#: code:addons/treasury/vesement.py:128
+#: code:addons/treasury/vesement.py:132
+#: code:addons/treasury/vesement.py:146
+#: code:addons/treasury/vesement.py:274
+#: code:addons/treasury/vesement.py:419
+#, python-format
+msgid "Error!"
+msgstr "Erreur!"
+
+#. module: treasury
+#: view:account.treasury:treasury.account_treasury_form
+#: view:account.treasury:treasury.view_treasury_filter
+#: selection:account.treasury,state:0
+msgid "Expected"
+msgstr "Escompté"
+
+#. module: treasury
+#: report:cash_vesement:0
+#: report:vesement:0
+msgid "Fax"
+msgstr "Fax"
+
+#. module: treasury
+#: report:cash_vesement:0
+#: report:vesement:0
+msgid "Fax:"
+msgstr "Fax:"
+
+#. module: treasury
+#: field:account.treasury,message_follower_ids:0
+#: field:account.vesement,message_follower_ids:0
+#: field:account.vesement.cash,message_follower_ids:0
+#: field:account.withdrawal.cash,message_follower_ids:0
+msgid "Followers"
+msgstr "Abonnés"
+
+#. module: treasury
+#: field:account.treasury.type,generate:0
+msgid "Generate Treasury Document"
+msgstr "Générer des documents du Trésorerie"
+
+#. module: treasury
+#: view:account.treasury:treasury.view_treasury_filter
+#: view:account.vesement:treasury.view_vesement_filter
+#: view:account.vesement.cash:treasury.view_vesement_cash_filter
+#: view:account.withdrawal.cash:treasury.view_withdrawal_cash_filter
+msgid "Group By..."
+msgstr "Grouper Par..."
+
+#. module: treasury
+#: field:account.treasury,holder:0
+#: field:account.voucher,holder:0
+#: report:vesement:0
+msgid "Holder"
+msgstr "Titulaire"
+
+#. module: treasury
+#: help:account.treasury,holder:0
+#: help:account.voucher,holder:0
+msgid "Holder who made the pay with this document."
+msgstr "Titulaire qui fait le paiement de ce document."
+
+#. module: treasury
+#: help:account.treasury,message_summary:0
+#: help:account.vesement,message_summary:0
+#: help:account.vesement.cash,message_summary:0
+#: help:account.withdrawal.cash,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr "Contient le résumé de la discussion (nombre de messages, ...). Ce résumé est au format HTML pour permettre son utilisation dans la vue kanban"
+
+#. module: treasury
+#: report:cash_vesement:0
+msgid "How do you call a Customer"
+msgstr "Comment appelez-vous un client"
+
+#. module: treasury
+#: field:account.treasury,id:0
+#: field:account.treasury.type,id:0
+#: field:account.vesement,id:0
+#: field:account.vesement.cash,id:0
+#: field:account.withdrawal.cash,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: treasury
+#: help:account.treasury,message_unread:0
+#: help:account.vesement,message_unread:0
+#: help:account.vesement.cash,message_unread:0
+#: help:account.withdrawal.cash,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr "Si coché, de nouveaux messages requièrent votre attention."
+
+#. module: treasury
+#: model:ir.model,name:treasury.model_account_invoice
+msgid "Invoice"
+msgstr "Facture"
+
+#. module: treasury
+#: field:account.treasury,message_is_follower:0
+#: field:account.vesement,message_is_follower:0
+#: field:account.vesement.cash,message_is_follower:0
+#: field:account.withdrawal.cash,message_is_follower:0
+msgid "Is a Follower"
+msgstr "Est abonné"
+
+#. module: treasury
+#: field:account.vesement,journal_id:0
+msgid "Journal"
+msgstr "Journal"
+
+#. module: treasury
+#: view:account.vesement:treasury.account_vesement_form
+#: view:account.vesement.cash:treasury.account_vesement_cash_form
+#: view:account.voucher:treasury.view_treasury_voucher_form
+#: view:account.voucher:treasury.view_treasury_voucher_payment_form
+#: view:account.voucher:treasury.view_treasury_voucher_purchase_form
+#: view:account.voucher:treasury.view_treasury_voucher_receipt_form
+#: view:account.voucher:treasury.view_treasury_voucher_sale_form
+#: view:account.withdrawal.cash:treasury.account_withdrawal_cash_form
+#: model:ir.model,name:treasury.model_account_move_line
+msgid "Journal Items"
+msgstr "Ècritures comptable"
+
+#. module: treasury
+#: view:account.vesement.cash:treasury.view_vesement_cash_filter
+#: field:account.vesement.cash,journal_source:0
+#: field:account.withdrawal.cash,journal_source:0
+msgid "Journal Source"
+msgstr "Journal Source"
+
+#. module: treasury
+#: field:account.vesement.cash,journal_target:0
+#: field:account.withdrawal.cash,journal_target:0
+msgid "Journal Target"
+msgstr "Journal Cible"
+
+#. module: treasury
+#: view:account.withdrawal.cash:treasury.view_withdrawal_cash_filter
+msgid "Journal Traget"
+msgstr "Journal Cible"
+
+#. module: treasury
+#: field:account.treasury,message_last_post:0
+#: field:account.vesement,message_last_post:0
+#: field:account.vesement.cash,message_last_post:0
+#: field:account.withdrawal.cash,message_last_post:0
+msgid "Last Message Date"
+msgstr "Date du dernier message"
+
+#. module: treasury
+#: field:account.treasury,write_uid:0
+#: field:account.treasury.type,write_uid:0
+#: field:account.vesement,write_uid:0
+#: field:account.vesement.cash,write_uid:0
+#: field:account.withdrawal.cash,write_uid:0
+msgid "Last Updated by"
+msgstr "Dernière modification par"
+
+#. module: treasury
+#: field:account.treasury,write_date:0
+#: field:account.treasury.type,write_date:0
+#: field:account.vesement,write_date:0
+#: field:account.vesement.cash,write_date:0
+#: field:account.withdrawal.cash,write_date:0
+msgid "Last Updated on"
+msgstr "Dernière modification le"
+
+#. module: treasury
+#: field:account.treasury,message_ids:0
+#: field:account.vesement,message_ids:0
+#: field:account.vesement.cash,message_ids:0
+#: field:account.withdrawal.cash,message_ids:0
+msgid "Messages"
+msgstr "Messages"
+
+#. module: treasury
+#: help:account.treasury,message_ids:0
+#: help:account.vesement,message_ids:0
+#: help:account.vesement.cash,message_ids:0
+#: help:account.withdrawal.cash,message_ids:0
+msgid "Messages and communication history"
+msgstr "Historique des messages et communications"
+
+#. module: treasury
+#: report:cash_vesement:0
+#: report:vesement:0
+msgid "Montant en toutes lettres:"
+msgstr "Montant en toutes lettres:"
+
+#. module: treasury
+#: report:vesement:0
+msgid "Montant encaissé"
+msgstr "Montant encaissé"
+
+#. module: treasury
+#: field:account.treasury.type,name:0
+msgid "Name"
+msgstr "Nom"
+
+#. module: treasury
+#: report:cash_vesement:0
+#: report:vesement:0
+msgid "Nom du Bénéficiaire:"
+msgstr "Nom du Bénéficiaire:"
+
+#. module: treasury
+#: report:vesement:0
+msgid "Nom du tireur"
+msgstr "Nom du tireur"
+
+#. module: treasury
+#: report:vesement:0
+msgid "Nombre de chèques:"
+msgstr "Nombre de chèques:"
+
+#. module: treasury
+#: view:account.treasury:treasury.account_treasury_form
+#: field:account.treasury,note:0
+#: view:account.vesement:treasury.account_vesement_form
+#: field:account.vesement,note:0
+#: view:account.vesement.cash:treasury.account_vesement_cash_form
+#: field:account.vesement.cash,note:0
+#: view:account.withdrawal.cash:treasury.account_withdrawal_cash_form
+#: field:account.withdrawal.cash,note:0
+msgid "Notes"
+msgstr "Notes"
+
+#. module: treasury
+#: view:account.treasury:treasury.account_treasury_form
+#: view:account.treasury:treasury.view_treasury_filter
+#: selection:account.treasury,state:0
+msgid "Notice"
+msgstr "Préavis"
+
+#. module: treasury
+#: field:account.withdrawal.cash,number:0
+msgid "Number"
+msgstr "Numéro"
+
+#. module: treasury
+#: report:vesement:0
+msgid "N°: Chèque"
+msgstr "N°: Chèque"
+
+#. module: treasury
+#: selection:account.treasury,state:0
+msgid "Offset"
+msgstr "rejeter"
+
+#. module: treasury
+#: selection:account.treasury,state:0
+#: selection:account.vesement,state:0
+#: selection:account.vesement.cash,state:0
+#: selection:account.withdrawal.cash,state:0
+msgid "Open"
+msgstr "Ouvert"
+
+#. module: treasury
+#: view:account.treasury:treasury.account_treasury_form
+#: view:account.treasury:treasury.view_treasury_filter
+#: selection:account.treasury,state:0
+msgid "Paid"
+msgstr "Payé"
+
+#. module: treasury
+#: view:account.treasury:treasury.view_treasury_filter
+#: field:account.treasury,partner_id:0
+#: model:ir.model,name:treasury.model_res_partner
+msgid "Partner"
+msgstr "Grouper par Partnaire"
+
+#. module: treasury
+#: field:account.treasury,partner_steed:0
+msgid "Partner Steed"
+msgstr "Coursier Partenaire"
+
+#. module: treasury
+#: help:account.treasury,partner_id:0
+msgid "Partner who made the pay with this document."
+msgstr "Partenaire qui a fait le paiement de ce document."
+
+#. module: treasury
+#: view:account.treasury:treasury.view_treasury_filter
+msgid "Payment"
+msgstr "Paiment"
+
+#. module: treasury
+#: report:cash_vesement:0
+#: report:vesement:0
+msgid "Phone"
+msgstr "Tél."
+
+#. module: treasury
+#: code:addons/treasury/vesement.py:50
+#: code:addons/treasury/vesement.py:271
+#: code:addons/treasury/vesement.py:416
+#, python-format
+msgid "Please activate the sequence of selected journal !"
+msgstr "Veuillez activer la sequence du journal sélectionné"
+
+#. module: treasury
+#: code:addons/treasury/vesement.py:54
+#: code:addons/treasury/vesement.py:275
+#: code:addons/treasury/vesement.py:420
+#, python-format
+msgid "Please define a sequence on the journal."
+msgstr "Veuillez définir une séquence sur ce journal."
+
+#. module: treasury
+#: view:account.treasury:treasury.view_treasury_filter
+#: field:account.treasury,user_id:0
+msgid "Possessor"
+msgstr "Possesseur"
+
+#. module: treasury
+#: report:cash_vesement:0
+#: report:vesement:0
+msgid "R.I.B du Bénéficiaire:"
+msgstr "R.I.B du Bénéficiaire:"
+
+#. module: treasury
+#: view:account.treasury:treasury.view_treasury_filter
+msgid "Receipt"
+msgstr "réception"
+
+#. module: treasury
+#: field:account.treasury,reception_date:0
+msgid "Reception Date"
+msgstr "Date de Réception"
+
+#. module: treasury
+#: field:account.vesement,name:0
+#: field:account.vesement.cash,name:0
+#: field:account.withdrawal.cash,name:0
+msgid "Reference"
+msgstr "Réference"
+
+#. module: treasury
+#: view:account.treasury:treasury.account_treasury_form
+#: view:account.treasury:treasury.view_treasury_filter
+#: selection:account.treasury,state:0
+msgid "Rejected"
+msgstr "Rejeté"
+
+#. module: treasury
+#: view:account.treasury:treasury.account_treasury_form
+#: view:account.vesement:treasury.account_vesement_form
+#: view:account.vesement.cash:treasury.account_vesement_cash_form
+#: view:account.withdrawal.cash:treasury.account_withdrawal_cash_form
+msgid "Set to Draft"
+msgstr "Mettre en brouillon"
+
+#. module: treasury
+#: field:account.treasury,done_date:0
+msgid "Solved Date"
+msgstr "date de résolu"
+
+#. module: treasury
+#: field:account.treasury,bank_source:0
+#: field:account.voucher,bank_source:0
+msgid "Source Bank"
+msgstr "Banque Source"
+
+#. module: treasury
+#: field:account.vesement,date_from:0
+msgid "Start Date"
+msgstr "Date Début"
+
+#. module: treasury
+#: view:account.treasury:treasury.view_treasury_filter
+#: field:account.treasury,state:0
+#: view:account.vesement:treasury.view_vesement_filter
+#: field:account.vesement,state:0
+#: view:account.vesement.cash:treasury.view_vesement_cash_filter
+#: field:account.vesement.cash,state:0
+#: view:account.withdrawal.cash:treasury.view_withdrawal_cash_filter
+#: field:account.withdrawal.cash,state:0
+msgid "State"
+msgstr "Grouper par État"
+
+#. module: treasury
+#: field:account.treasury,steed_id:0
+msgid "Steed"
+msgstr "Coursier"
+
+#. module: treasury
+#: field:account.treasury,message_summary:0
+#: field:account.vesement,message_summary:0
+#: field:account.vesement.cash,message_summary:0
+#: field:account.withdrawal.cash,message_summary:0
+msgid "Summary"
+msgstr "Résumé"
+
+#. module: treasury
+#: selection:account.treasury,type_transaction:0
+msgid "Supplier payment"
+msgstr "Paiement Fournisseur"
+
+#. module: treasury
+#: report:cash_vesement:0
+#: report:vesement:0
+msgid "TOTAL:"
+msgstr "TOTAL:"
+
+#. module: treasury
+#: field:account.treasury,bank_target:0
+#: field:account.vesement,bank_target:0
+#: field:account.vesement.cash,bank_target:0
+#: field:account.withdrawal.cash,bank_source:0
+msgid "Target Bank"
+msgstr "Banque Cible"
+
+#. module: treasury
+#: view:account.treasury:treasury.account_treasury_tree
+#: field:account.vesement.cash,amount:0
+#: field:account.withdrawal.cash,amount:0
+msgid "Total"
+msgstr "Total"
+
+#. module: treasury
+#: field:account.treasury,type_transaction:0
+msgid "Transaction Type"
+msgstr "Type Transaction"
+
+#. module: treasury
+#: view:account.voucher:treasury.view_treasury_voucher_form
+#: view:account.voucher:treasury.view_treasury_voucher_payment_form
+#: view:account.voucher:treasury.view_treasury_voucher_purchase_form
+#: view:account.voucher:treasury.view_treasury_voucher_receipt_form
+#: view:account.voucher:treasury.view_treasury_voucher_sale_form
+msgid "Treasuries"
+msgstr "trésoreries"
+
+#. module: treasury
+#: view:account.vesement:treasury.account_vesement_form
+msgid "Treasury"
+msgstr "trésorerie"
+
+#. module: treasury
+#: view:account.treasury:treasury.account_treasury_calendar
+#: view:account.treasury:treasury.account_treasury_form
+#: view:account.treasury:treasury.account_treasury_tree
+msgid "Treasury Document"
+msgstr "document du Trésorerie"
+
+#. module: treasury
+#: model:ir.actions.act_window,name:treasury.account_action_form_treasury
+#: model:ir.actions.act_window,name:treasury.act_treasury_partner
+#: model:ir.ui.menu,name:treasury.treasury_document
+msgid "Treasury Documents"
+msgstr "Documents du Trésorerie"
+
+#. module: treasury
+#: view:account.treasury:treasury.view_treasury_filter
+msgid "Treasury Search"
+msgstr "recherche Trésorerie"
+
+#. module: treasury
+#: model:ir.actions.act_window,name:treasury.account_treasury_type_action
+#: model:ir.ui.menu,name:treasury.account_treasury_type_menu
+msgid "Treasury Type"
+msgstr "Type Document de Trésorerie"
+
+#. module: treasury
+#: view:account.treasury:treasury.account_treasury_form
+msgid "Treasury information"
+msgstr "Informations du Trésorerie"
+
+#. module: treasury
+#: view:account.treasury:treasury.view_treasury_filter
+msgid "Type"
+msgstr "Grouper Par Type"
+
+#. module: treasury
+#: view:account.treasury:treasury.view_treasury_filter
+msgid "Type Transaction"
+msgstr "Grouper par Type Transaction"
+
+#. module: treasury
+#: report:cash_vesement:0
+#: report:vesement:0
+msgid "Téléphone:"
+msgstr "Téléphone:"
+
+#. module: treasury
+#: field:account.treasury,message_unread:0
+#: field:account.vesement,message_unread:0
+#: field:account.vesement.cash,message_unread:0
+#: field:account.withdrawal.cash,message_unread:0
+msgid "Unread Messages"
+msgstr "Messages non lus"
+
+#. module: treasury
+#: help:account.treasury,user_id:0
+msgid "User who receive this document."
+msgstr "L'utilisateur qui a reçu ce document."
+
+#. module: treasury
+#: view:account.treasury:treasury.view_treasury_filter
+#: selection:account.treasury,state:0
+#: view:account.vesement:treasury.view_vesement_filter
+#: view:account.vesement.cash:treasury.view_vesement_cash_filter
+#: view:account.withdrawal.cash:treasury.view_withdrawal_cash_filter
+msgid "Valid"
+msgstr "Valide"
+
+#. module: treasury
+#: view:account.treasury:treasury.account_treasury_form
+#: view:account.vesement:treasury.account_vesement_form
+#: selection:account.vesement,state:0
+#: view:account.vesement.cash:treasury.account_vesement_cash_form
+#: selection:account.vesement.cash,state:0
+#: view:account.withdrawal.cash:treasury.account_withdrawal_cash_form
+#: selection:account.withdrawal.cash,state:0
+msgid "Validate"
+msgstr "valider"
+
+#. module: treasury
+#: help:account.treasury,amount:0
+msgid "Value of the Treasure"
+msgstr "Valeur du Trésorerie"
+
+#. module: treasury
+#: model:ir.actions.report.xml,name:treasury.account_vesement
+#: model:ir.model,name:treasury.model_account_vesement
+#: model:ir.ui.menu,name:treasury.vesement_document
+msgid "Vesement"
+msgstr "Dêpot de chèques"
+
+#. module: treasury
+#: field:account.vesement,date_vesement:0
+#: field:account.vesement.cash,date_vesement:0
+#: report:cash_vesement:0
+#: report:vesement:0
+msgid "Vesement Date"
+msgstr "Date Versement"
+
+#. module: treasury
+#: view:account.vesement:treasury.account_vesement_form
+#: view:account.vesement:treasury.account_vesement_tree
+#: view:account.vesement.cash:treasury.account_vesement_cash_form
+#: view:account.vesement.cash:treasury.account_vesement_cash_tree
+msgid "Vesement Document"
+msgstr "Document Versement"
+
+#. module: treasury
+#: model:ir.actions.act_window,name:treasury.account_action_form_vesement
+msgid "Vesement Documents"
+msgstr "Documents Versement"
+
+#. module: treasury
+#: view:account.vesement:treasury.view_vesement_filter
+#: view:account.vesement.cash:treasury.view_vesement_cash_filter
+msgid "Vesement Search"
+msgstr "Recherche Versement"
+
+#. module: treasury
+#: code:addons/treasury/vesement.py:158
+#: code:addons/treasury/vesement.py:250
+#, python-format
+msgid "Vesement created"
+msgstr "Versement creé"
+
+#. module: treasury
+#: view:account.treasury:treasury.account_treasury_form
+msgid "Vouchers"
+msgstr "Paiement"
+
+#. module: treasury
+#: code:addons/treasury/treasury.py:103
+#: code:addons/treasury/vesement.py:164
+#: code:addons/treasury/vesement.py:257
+#: code:addons/treasury/vesement.py:402
+#: code:addons/treasury/voucher.py:21
+#, python-format
+msgid "Warning!"
+msgstr "Avertissement!"
+
+#. module: treasury
+#: view:account.treasury:treasury.account_treasury_form
+#: view:account.treasury:treasury.view_treasury_filter
+#: selection:account.treasury,state:0
+#: view:res.partner:treasury.res_partner_outstanding_form_view
+#: field:res.partner,warranty:0
+msgid "Warranty"
+msgstr "Garantie"
+
+#. module: treasury
+#: field:account.withdrawal.cash,date_withdrawal:0
+msgid "Withdrawal Date"
+msgstr "Date Retrait"
+
+#. module: treasury
+#: view:account.withdrawal.cash:treasury.account_withdrawal_cash_form
+#: view:account.withdrawal.cash:treasury.account_withdrawal_cash_tree
+msgid "Withdrawal Document"
+msgstr "Document Retrait"
+
+#. module: treasury
+#: view:account.withdrawal.cash:treasury.view_withdrawal_cash_filter
+msgid "Withdrawal Search"
+msgstr "Recherche Retrait"
+
+#. module: treasury
+#: code:addons/treasury/vesement.py:395
+#, python-format
+msgid "Withdrawal created"
+msgstr "Retrait crée"
+
+#. module: treasury
+#: code:addons/treasury/voucher.py:21
+#, python-format
+msgid "You cannot delete Treasury Document number %s !"
+msgstr "Vous ne pouvez pas supprimer le document du Trésorerie numéro %s !"
+
+#. module: treasury
+#: code:addons/treasury/treasury.py:103
+#, python-format
+msgid "You cannot delete this Document !"
+msgstr "Vous ne pouvez pas supprimer ce document!"
+
+#. module: treasury
+#: code:addons/treasury/vesement.py:257
+#, python-format
+msgid "You cannot delete this cash vesement !"
+msgstr "Vous ne pouvez pas supprimer ce dêpot !"
+
+#. module: treasury
+#: code:addons/treasury/vesement.py:402
+#, python-format
+msgid "You cannot delete this cash withdrawal !"
+msgstr "Vous ne pouvez pas supprimer ce retrait !"
+
+#. module: treasury
+#: code:addons/treasury/vesement.py:164
+#, python-format
+msgid "You cannot delete this vesement !"
+msgstr "Vous ne pouvez pas supprimer ce versement !"
+
+#. module: treasury
+#: view:account.withdrawal.cash:treasury.view_withdrawal_cash_filter
+msgid "bank Source"
+msgstr "banque Source"
+
+#. module: treasury
+#: view:account.vesement.cash:treasury.view_vesement_cash_filter
+msgid "bank Target"
+msgstr "banque Cible"
+
+#. module: treasury
+#: code:addons/treasury/vesement.py:128
+#, python-format
+msgid "no treasury line !"
+msgstr "Aucune ligne de trésorerie !"
+
+#. module: treasury
+#: report:vesement:0
+msgid "select av.name, rpb.acc_number rib, rc.name partner, rp.phone, rp.fax, av.date_vesement, av.amount_in_word, rb.name as bank, at.name chq, at.holder, at.amount from account_vesement av inner join res_company rc on rc.id = av.company_id inner join res_partner rp on rp.id = rc.partner_id inner join res_partner_bank rpb on rpb.id = av.bank_target inner join account_vesement_treasury_rel rel on rel.vesement_id = av.id inner join account_treasury at on at.id = rel.treasury_id inner join res_bank rb on rb.id = at.bank_source where av.id = $P{vesement_id} order by at.clearing_date"
+msgstr "select av.name, rpb.acc_number rib, rc.name partner, rp.phone, rp.fax, av.date_vesement, av.amount_in_word, rb.name as bank, at.name chq, at.holder, at.amount from account_vesement av inner join res_company rc on rc.id = av.company_id inner join res_partner rp on rp.id = rc.partner_id inner join res_partner_bank rpb on rpb.id = av.bank_target inner join account_vesement_treasury_rel rel on rel.vesement_id = av.id inner join account_treasury at on at.id = rel.treasury_id inner join res_bank rb on rb.id = at.bank_source where av.id = $P{vesement_id} order by at.clearing_date"
+
+#. module: treasury
+#: report:cash_vesement:0
+msgid "select av.name, rpb.bank_name, rpb.acc_number rib, rc.name partner, rp.phone, rp.fax, av.date_vesement, av.amount, av.amount_in_word from account_vesement_cash av inner join res_company rc on rc.id = av.company_id inner join res_partner rp on rp.id = rc.partner_id inner join res_partner_bank rpb on rpb.id = av.bank_target where av.id = $P{vesement_id}"
+msgstr "select av.name, rpb.bank_name, rpb.acc_number rib, rc.name partner, rp.phone, rp.fax, av.date_vesement, av.amount, av.amount_in_word from account_vesement_cash av inner join res_company rc on rc.id = av.company_id inner join res_partner rp on rp.id = rc.partner_id inner join res_partner_bank rpb on rpb.id = av.bank_target where av.id = $P{vesement_id}"
+

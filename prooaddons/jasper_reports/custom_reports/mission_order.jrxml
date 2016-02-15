@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="mission_order" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="3.452271214393105"/>
+	<property name="ireport.x" value="397"/>
+	<property name="ireport.y" value="186"/>
+	<parameter name="mission_id" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select rp.name as company, rp.street, rp.city, rp.zip, rco.name as country, rc.phone, rc.email, rp.fax, rp.vat, rc.company_registry,
+mo.name mission, mo.date_start, mo.date_end, he.name_related as employee, fv.name, mo.route,
+case when pp.default_code is not null then '[' || pp.default_code || '] ' || pp.name_template else pp.name_template  end as product, spl.name || '/' || spl.name2 IMEI, sum(sk.qty) as Qty
+from mission_order mo
+inner join stock_location sl on sl.id = mo.location_id
+inner join hr_employee he on he.id = mo.employee_id
+inner join fleet_vehicle fv on fv.id = mo.vehicle_id
+inner join stock_quant sk on sk.location_id = sl.id
+left outer join stock_production_lot spl on spl.id = sk.lot_id
+inner join product_product pp on pp.id = sk.product_id
+inner join res_company rc on rc.id = sk.company_id
+inner join res_partner rp on rp.id = rc.partner_id
+left outer join res_country rco on rco.id = rp.country_id
+where mo.id=$P{mission_id}
+group by company, street, city, zip, country, rc.phone, rc.email, fax, vat, rc.company_registry, mo.name, mo.date_start, mo.date_end, he.name_related, fv.name, mo.route, product, spl.name || '/' || spl.name2
+order by product]]>
+	</queryString>
+	<field name="company" class="java.lang.String"/>
+	<field name="street" class="java.lang.String">
+		<fieldDescription><![CDATA[Street]]></fieldDescription>
+	</field>
+	<field name="city" class="java.lang.String">
+		<fieldDescription><![CDATA[City]]></fieldDescription>
+	</field>
+	<field name="zip" class="java.lang.String">
+		<fieldDescription><![CDATA[Zip]]></fieldDescription>
+	</field>
+	<field name="country" class="java.lang.String">
+		<fieldDescription><![CDATA[Country]]></fieldDescription>
+	</field>
+	<field name="phone" class="java.lang.String">
+		<fieldDescription><![CDATA[Phone]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[Email]]></fieldDescription>
+	</field>
+	<field name="fax" class="java.lang.String">
+		<fieldDescription><![CDATA[Fax]]></fieldDescription>
+	</field>
+	<field name="vat" class="java.lang.String">
+		<fieldDescription><![CDATA[TIN]]></fieldDescription>
+	</field>
+	<field name="company_registry" class="java.lang.String">
+		<fieldDescription><![CDATA[Company Registry]]></fieldDescription>
+	</field>
+	<field name="mission" class="java.lang.String"/>
+	<field name="date_start" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[Start Date]]></fieldDescription>
+	</field>
+	<field name="date_end" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[Date End]]></fieldDescription>
+	</field>
+	<field name="employee" class="java.lang.String">
+		<fieldDescription><![CDATA[Employee]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String"/>
+	<field name="route" class="java.lang.String">
+		<fieldDescription><![CDATA[Route]]></fieldDescription>
+	</field>
+	<field name="product" class="java.lang.String"/>
+	<field name="imei" class="java.lang.String"/>
+	<field name="qty" class="java.lang.Double">
+		<fieldDescription><![CDATA[Quantity]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="250" splitType="Stretch">
+			<rectangle>
+				<reportElement x="260" y="175" width="295" height="65"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="179" width="124" height="60"/>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="0" width="285" height="15"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{company}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="15" width="285" height="15"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{street}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="30" width="285" height="15"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{city}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="60" width="285" height="15"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{country}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="90" width="48" height="15"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single"/>
+				<text><![CDATA[Phone:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="105" width="48" height="15"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single"/>
+				<text><![CDATA[Mail:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="119" width="200" height="1"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="48" y="90" width="152" height="15"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{phone}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="48" y="105" width="152" height="15"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="130" width="555" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BON DE SORTIE VEHICULE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="56" y="179" width="66" height="20"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{mission}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="179" width="48" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single"/>
+				<text><![CDATA[Numéro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="199" width="48" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single"/>
+				<text><![CDATA[Date Du]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="219" width="48" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single"/>
+				<text><![CDATA[Au]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="56" y="199" width="66" height="20"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{date_start}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="56" y="219" width="66" height="20"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{date_end}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="199" width="124" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="218" width="124" height="1"/>
+			</line>
+			<line>
+				<reportElement x="50" y="179" width="1" height="60"/>
+			</line>
+			<textField>
+				<reportElement x="333" y="179" width="170" height="20"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{employee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="199" width="170" height="20"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="333" y="219" width="170" height="20"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{route}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="268" y="179" width="62" height="20"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single"/>
+				<text><![CDATA[Chauffeur:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="199" width="62" height="20"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single"/>
+				<text><![CDATA[Véhicule:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="219" width="62" height="20"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single"/>
+				<text><![CDATA[Parcours:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="45" width="285" height="15"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{zip}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="75" width="48" height="15"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single"/>
+				<text><![CDATA[M.F:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="48" y="75" width="152" height="15"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{vat}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="200" y="75" width="30" height="15"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single"/>
+				<text><![CDATA[R.C:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="229" y="75" width="100" height="15"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{company_registry}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="300" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Article]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="80" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quantité]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="1" width="555" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="555" y="0" width="1" height="20"/>
+			</line>
+			<staticText>
+				<reportElement x="384" y="0" width="171" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[IMEI]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="20"/>
+			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement x="15" y="0" width="280" height="20"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{product}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0">
+				<reportElement x="302" y="0" width="65" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{qty}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="300" y="-18" width="1" height="38"/>
+			</line>
+			<line>
+				<reportElement x="383" y="-18" width="1" height="38"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="384" y="0" width="171" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{imei}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="40" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="1" width="555" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Tél.: " + $F{phone} + "| Fax: " + $F{fax} + "| Numéro fiscal: " + $F{vat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="232" y="20" width="80" height="20"/>
+				<textElement textAlignment="Right" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Page "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="312" y="20" width="40" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

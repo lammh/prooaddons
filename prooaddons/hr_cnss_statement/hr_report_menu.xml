@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="hr_cnss_statement" model="ir.actions.report.xml">
+			<field name="name">Declaration trimestrielle CNSS</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">hr.cnss</field>
+			<field name="report_name">hr_cnss_statement</field>
+			<field name="report_rml">jasper_reports/custom_reports/report1.jrxml</field>
+			<field name="report_type">pdf</field>
+			<field name="jasper_report">True</field>
+			<field name="jasper_output">pdf</field>
+		</record>
+	</data>
+</openerp>    
+

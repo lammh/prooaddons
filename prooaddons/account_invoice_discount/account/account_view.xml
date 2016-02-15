@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+
+        <record id="account_invoice_discount" model="ir.ui.view">
+            <field name="name">account.invoice.discount.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <group class="oe_subtotal_footer oe_right" position="before">
+                    <group class="oe_subtotal_footer oe_left">
+                        <field name="discount_method" groups="account.group_account_invoice" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        <field name="global_discount" groups="account.group_account_invoice" attrs="{'readonly': [('state', '!=', 'draft')],'invisible':[('discount_method','=','amount')]}"/>
+                        <label for="global_discount_amount" attrs="{'invisible':[('discount_method','=','percentage')]}"/>
+                        <div>
+                            <field name="global_discount_amount" groups="account.group_account_invoice" class="oe_inline"
+                                   attrs="{'readonly': [('state', '!=', 'draft')],'invisible':[('discount_method','=','percentage')]}"/>
+                            <button name="discount_apply" states="draft" string="(Apply)" class="oe_link oe_edit_only" type="object" groups="account.group_account_invoice"/>
+                        </div>
+                    </group>
+                </group>
+            </field>
+        </record>
+
+        <record id="account_invoice_supplier_discount" model="ir.ui.view">
+            <field name="name">account.invoice.discount.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+                <group class="oe_subtotal_footer oe_right" position="before">
+                    <group class="oe_subtotal_footer oe_left">
+                        <field name="discount_method" groups="account.group_account_invoice" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        <field name="global_discount" groups="account.group_account_invoice" attrs="{'readonly': [('state', '!=', 'draft')],'invisible':[('discount_method','=','amount')]}"/>
+                        <label for="global_discount_amount" attrs="{'invisible':[('discount_method','=','percentage')]}"/>
+                        <div>
+                            <field name="global_discount_amount" groups="account.group_account_invoice" class="oe_inline"
+                                   attrs="{'readonly': [('state', '!=', 'draft')],'invisible':[('discount_method','=','percentage')]}"/>
+                            <button name="discount_apply" states="draft" string="(Apply)" class="oe_link oe_edit_only" type="object" groups="account.group_account_invoice"/>
+                        </div>
+                    </group>
+                </group>
+            </field>
+        </record>
+
+        <record id="account_account_discount" model="ir.ui.view">
+            <field name="name">account.account.discount.form</field>
+            <field name="model">account.account</field>
+            <field name="inherit_id" ref="account.view_account_form"/>
+            <field name="arch" type="xml">
+                <field name="active" position="after">
+                    <field name="flag_discount" groups="account.group_account_user" />
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

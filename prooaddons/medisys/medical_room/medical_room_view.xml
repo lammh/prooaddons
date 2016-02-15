@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_medical_room_tree" model="ir.ui.view">
+            <field name="name">medical.room.tree</field>
+            <field name="model">medical.room</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="medical room">
+                    <field name="name" />
+                    <field name="categ_id" />
+                    <field name="state" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_medical_room_form" model="ir.ui.view">
+            <field name="name">medical.room.form</field>
+            <field name="model">medical.room</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="medical room">
+                    <header>
+                        <field name="state" widget="statusbar" clickable="True"/>
+                    </header>
+                    <sheet>
+                        <group colspan="2" >
+                            <field name="name" />
+                            <field name="categ_id" widget="selection"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_medical_room_search" model="ir.ui.view">
+            <field name="name">medical.room.search</field>
+            <field name="model">medical.room</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <search string="medical room">
+                    <field name="name" />
+                    <field name="categ_id" />
+                    <newline />
+                    <group expand="0" string="Group By...">
+                        <filter string="Category" domain="[]" context="{'group_by':'categ_id'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_medical_room_view">
+            <field name="name">Room</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">medical.room</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_medical_room_search" />
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_medical_room_view_form">
+            <field name="act_window_id" ref="act_open_medical_room_view" />
+            <field name="sequence" eval="20" />
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_medical_room_form" />
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_medical_room_view_tree">
+            <field name="act_window_id" ref="act_open_medical_room_view" />
+            <field name="sequence" eval="10" />
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_medical_room_tree" />
+        </record>
+
+        <menuitem id="medical_config_room" name="Room" parent="medical_root_sub"
+            sequence="10" />
+
+        <menuitem id="medical_room" name="Room" parent="medical_config_room"
+            sequence="10" action="act_open_medical_room_view" />
+
+    </data>
+</openerp>

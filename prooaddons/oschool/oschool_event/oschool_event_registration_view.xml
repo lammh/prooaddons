@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_oschool_event_registration_tree">
+            <field name="name">oschool.event.registration.tree</field>
+            <field name="model">pos.order.line</field>
+            <field name="priority">40</field>
+            <field name="arch" type="xml">
+                <tree string="Event Registration"
+                      colors="blue:state_order == 'draft';gray:state_order in ('done','cancel');black:state_order not in('done','cancel')">
+                    <field name="parent_id"/>
+                    <field name="student_id"/>
+                    <field name="product_id" string="Event"/>
+                    <field name="academic_year_id"/>
+                    <field name="price_unit" />
+                    <field name="discount_on_product" groups="oschool.oschool_group_admin_scolarity"/>
+                    <!--<field name="registration_price"/>-->
+                    <field name="order_id"/>
+                    <field name="state_order"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_oschool_event_registration_form" model="ir.ui.view">
+            <field name="name">oschool.event.registration.form</field>
+            <field name="model">pos.order.line</field>
+            <field name="priority">40</field>
+            <field name="arch" type="xml">
+                <form string="Registration">
+                    <header>
+                        <button name="action_payment" string="Order" type="object"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="product_id"
+                                   options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"
+                                   string="Event"
+                                   attrs="{'readonly': [('order_id', '!=', False)]}"
+                                   domain="[('categ_id', '=', %(oschool.oschool_event_product_category)d),('academic_year.state','=','current')]"/>
+                            <field name="remaining_places" class="oe_edit_only" attrs="{'invisible': [('product_id', '=', False)]}"/>
+                            <field name="student_id" domain="[('is_student', '=', True),('active_student', '=', True),('group_id', '!=', False)]"
+                                   required="1"
+                                   attrs="{'readonly': [('order_id', '!=', False)]}"
+                                   options="{'no_open': True,'no_quick_create':True,'no_create_edit':True}"/>
+                            <field name="parent_id" invisible="1"/>
+                            <field name="product_category_id" invisible="1"/>
+                            <field name="event_price" readonly="1"/>
+                            <field name="price_unit" />
+                            <field name="discount_on_product" groups="oschool.oschool_group_admin_scolarity"/>
+                            <field name="order_id" invisible="1"/>
+                            <field name="type" invisible="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_oschool_event_registration_search">
+            <field name="name">pos.order.line.event.search</field>
+            <field name="model">pos.order.line</field>
+            <field name="priority">30</field>
+            <field name="arch" type="xml">
+                <search string="Registration">
+                    <field name="parent_id"/>
+                    <field name="student_id"/>
+                    <field name="academic_year_id"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Academic Year" domain="[]" context="{'group_by' : 'academic_year_id'}"/>
+                        <filter string="Responsible" domain="[]" context="{'group_by': 'parent_id'}"/>
+                        <filter string="Student" domain="[]" context="{'group_by': 'student_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_oschool_event_registration_view">
+            <field name="name">Event Registration</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pos.order.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="oschool.view_oschool_event_registration_search"/>
+            <field name="domain" eval="[('product_category_id', '=', ref('oschool_event_product_category'))]"/>
+            <field name="context"
+                   eval="{'default_product_category_id':ref('oschool_event_product_category'),'default_type':'event','search_default_group':1}"></field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_oschool_event_registration_view_form">
+            <field name="act_window_id" ref="act_oschool_event_registration_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_oschool_event_registration_form"/>
+        </record>
+        <record model="ir.actions.act_window.view" id="act_oschool_event_registration_view_tree">
+            <field name="act_window_id" ref="act_oschool_event_registration_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_oschool_event_registration_tree"/>
+        </record>
+
+        <menuitem id="menu_oschool_event_registration" sequence="100" parent="students_management_menu"
+                  action="act_oschool_event_registration_view"/>
+
+        <record id="view_oschool_student_event_registration_form" model="ir.ui.view">
+            <field name="name">oschool.student.event.registration</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="view_oschool_student_form"/>
+            <field name="arch" type="xml">
+                 <page name='general_student' position="after">
+                    <page string="Event">
+                        <field name="event_registration_ids" colspan="4" nolabel="1" readonly="1">
+                            <tree string="Event" editable="bottom"  colors="red:qty==-1" >
+                                <field name="product_id"/>
+                                <field name="academic_year_id"/>
+                                <field name="price_unit"/>
+                                <field name="discount_on_product" groups="oschool.oschool_group_admin_scolarity"/>
+                                <field name="qty" invisible="1"/>
+                                <field name="product_category_id" invisible="1"/>
+                                <field name="order_id" options="{'no_open': True}"/>
+                                <button name="registration_event_refund" string="Refund" type="object" icon="STOCK_UNDO"
+                                        confirm="Are you sure you want to refund this record?"
+                                        groups="oschool.oschool_group_responsible_scolarity,oschool.oschool_group_admin_scolarity"/>
+
+                            </tree>
+                        </field>
+                    </page>
+                </page>
+            </field>
+        </record>
+
+        <record id="view_oschool_responsible_student_event_registration_form" model="ir.ui.view">
+            <field name="name">oschool.responsible.student.event.registration</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="view_responsible_property_form"/>
+            <field name="arch" type="xml">
+                <page name='general_student' position="after">
+                    <page string="Event">
+                        <field name="event_registration_ids" colspan="4" nolabel="1" readonly="1">
+                            <tree string="Event" editable="bottom" colors="red:qty==-1">
+                                <field name="product_id"/>
+                                <field name="academic_year_id"/>
+                                <field name="price_unit"/>
+                                <field name="qty" invisible="1"/>
+                                <field name="product_category_id" invisible="1"/>
+                                <field name="order_id" options="{'no_open': True}"/>
+                                <button name="registration_refund" string="Refund" type="object" icon="STOCK_UNDO"
+                                        confirm="Are you sure you want to refund this record?"
+                                        groups="oschool.oschool_group_responsible_scolarity,oschool.oschool_group_admin_scolarity"/>
+                            </tree>
+                        </field>
+                    </page>
+                </page>
+            </field>
+        </record>
+    </data>
+</openerp>

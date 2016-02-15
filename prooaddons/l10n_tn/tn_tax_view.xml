@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_template_tax_form">
+            <field name="name">account.tax.template.form</field>
+            <field name="model">account.tax.template</field>
+            <field name="inherit_id" ref="account.view_account_tax_template_form" />
+            <field name="arch" type="xml">
+                <field name="price_include" position="after">
+                    <field name="stamp"/>
+                    <field name="is_wht" />
+                    <field name="withholding_amount" attrs="{'invisible':[('is_wht','=',False)]}" />
+                    <field name="fodec"/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_tax_form_taxes">
+            <field name="name">account.tax.form.tax</field>
+            <field name="model">account.tax</field>
+            <field name="inherit_id" ref="account.view_tax_form" />
+            <field name="arch" type="xml">
+                <field name="active" position="after">
+                    <field name="stamp"/>
+                    <field name="is_wht" />
+                    <field name="withholding_amount" attrs="{'invisible':[('is_wht','=',False)]}" />
+                    <field name="fodec"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

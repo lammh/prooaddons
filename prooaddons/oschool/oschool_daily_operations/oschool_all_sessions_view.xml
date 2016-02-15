@@ -1,0 +1,65 @@
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="oschool_pos_session_form">
+            <field name="name">oschool.pos.session.form</field>
+            <field name="model">pos.session</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_session_form"/>
+            <field name="mode">primary</field>
+            <field name="priority">20</field>
+            <field name="arch" type="xml">
+                <xpath expr="/form/header/button[2]" position="replace">
+                     <button name="oschool_open_frontend_cb" type="object" string="Continue Selling" states="opened"
+                            class="oe_highlight"/>
+                </xpath>
+                <field name="user_id" position="attributes">
+                    <attribute name="options">{"no_open": True }</attribute>
+                </field>
+                <field name="config_id" position="attributes">
+                    <attribute name="options">{"no_open": True }</attribute>
+                </field>
+                <xpath expr="//tree[@string='Statements']" position="attributes">
+                    <attribute name="editable">bottom</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="oschool_pos_session_tree">
+            <field name="name">oschool.pos.session.tree</field>
+            <field name="model">pos.session</field>
+            <field name="arch" type="xml">
+                <tree string="Tree Sessions" create="false" >
+                    <field name="config_id"/>
+                    <field name="name"/>
+                    <field name="user_id"/>
+                    <field name="start_at"/>
+                    <field name="stop_at"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="oschool_action_pos_all_sessions">
+            <field name="name">All sessions</field>
+            <field name="res_model">pos.session</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="oschool_action_view_session">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="oschool_pos_session_form"/>
+            <field name="act_window_id" ref="oschool_action_pos_all_sessions"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="oschool_action_view_session2">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="oschool_pos_session_tree"/>
+            <field name="act_window_id" ref="oschool_action_pos_all_sessions"/>
+        </record>
+
+        <menuitem parent="oschool_pos_session_management_menu" action="oschool_action_pos_all_sessions" id="oschool_menu_pos_session_all" sequence="1" groups="oschool_group_admin_scolarity,oschool_group_responsible_scolarity"/>
+
+    </data>
+</openerp>

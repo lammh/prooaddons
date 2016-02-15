@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <report
+            id="action_today_payment_report"
+            model="pos.order"
+            string="Journal de caisse"
+            report_type="qweb-pdf"
+            name="oschool.today_payment_report"
+            file="oschool.today_payment_report"
+            menu="True"
+        />
+
+        <record id="paperformat_today_payment_recipt" model="report.paperformat">
+            <field name="name">paperformat today payment recipt</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_height">297</field>
+            <field name="page_width">210</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">10</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_left">5</field>
+            <field name="margin_right">5</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">3</field>
+            <field name="dpi">80</field>
+        </record>
+
+        <record id="action_today_payment_report" model="ir.actions.report.xml">
+            <field name="paperformat_id" ref="paperformat_today_payment_recipt"/>
+        </record>
+
+    </data>
+</openerp>

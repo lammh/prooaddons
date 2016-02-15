@@ -1,0 +1,216 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* stock_move_split
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-20150904\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-17 09:27+0000\n"
+"PO-Revision-Date: 2015-09-17 09:27+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_move_split
+#: view:stock.move.split:stock_move_split.view_split_in_lots
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: stock_move_split
+#: help:stock.move.split,use_exist:0
+msgid "Check this option to select existing serial numbers in the list below, otherwise you should enter new ones line by line."
+msgstr "Cochez cette option pour sélectionner les numéros de série existant dans la liste ci-dessous, sinon vous devez saisir nouvelle ligne de ceux par ligne."
+
+#. module: stock_move_split
+#: field:stock.move.split,create_uid:0
+#: field:stock.move.split.lines,create_uid:0
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: stock_move_split
+#: field:stock.move.split,create_date:0
+#: field:stock.move.split.lines,create_date:0
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: stock_move_split
+#: code:addons/stock_move_split/stock_transfer_details.py:60
+#, python-format
+msgid "Data Error!"
+msgstr "Erreur de données!"
+
+#. module: stock_move_split
+#: code:addons/stock_move_split/stock_move_split.py:100
+#, python-format
+msgid "Error!"
+msgstr "Erreur!"
+
+#. module: stock_move_split
+#: field:stock.move.split,use_exist:0
+msgid "Existing Serial Numbers"
+msgstr "Numéros de série existante"
+
+#. module: stock_move_split
+#: field:stock.transfer_details_items,first_lot:0
+msgid "First Lot"
+msgstr "Première Lot"
+
+#. module: stock_move_split
+#: field:stock.move.split,id:0
+#: field:stock.move.split.lines,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: stock_move_split
+#: field:stock.transfer_details_items,last_lot:0
+msgid "Last Lot"
+msgstr "Dernière Lot"
+
+#. module: stock_move_split
+#: field:stock.move.split,write_uid:0
+#: field:stock.move.split.lines,write_uid:0
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: stock_move_split
+#: field:stock.move.split,write_date:0
+#: field:stock.move.split.lines,write_date:0
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: stock_move_split
+#: model:ir.model,name:stock_move_split.model_stock_production_lot
+msgid "Lot/Serial"
+msgstr "Lot/N° série"
+
+#. module: stock_move_split
+#: field:stock.move.split.lines,wizard_id:0
+msgid "Parent Wizard"
+msgstr "Parent Wizard"
+
+#. module: stock_move_split
+#: field:stock.move.split.lines,wizard_exist_id:0
+msgid "Parent Wizard (for existing lines)"
+msgstr "Parent Wizard (for existing lines)"
+
+#. module: stock_move_split
+#: model:ir.model,name:stock_move_split.model_stock_transfer_details
+msgid "Picking wizard"
+msgstr "Assistant de préparation"
+
+#. module: stock_move_split
+#: model:ir.model,name:stock_move_split.model_stock_transfer_details_items
+msgid "Picking wizard items"
+msgstr "Ligne d'assistant de préparation"
+
+#. module: stock_move_split
+#: code:addons/stock_move_split/stock_move_split.py:74
+#, python-format
+msgid "Processing Error!"
+msgstr "Erreur de traitement!"
+
+#. module: stock_move_split
+#: field:stock.move.split,product_id:0
+msgid "Product"
+msgstr "Produit"
+
+#. module: stock_move_split
+#: field:stock.move.split,qty:0
+#: field:stock.move.split.lines,quantity:0
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: stock_move_split
+#: code:addons/stock_move_split/stock_transfer_details.py:60
+#, python-format
+msgid "Quantity in lots between %s and %s is %s"
+msgstr "Quantité dans le lots entre %s et %s est %s"
+
+#. module: stock_move_split
+#: view:stock.move:stock_move_split.view_move_split_picking_tree
+msgid "Scrap Products"
+msgstr "Mettre au rebut"
+
+#. module: stock_move_split
+#: field:stock.move.split.lines,name:0
+#: field:stock.move.split.lines,prodlot_id:0
+msgid "Serial Number"
+msgstr "Numéro de série"
+
+#. module: stock_move_split
+#: view:stock.move.split:stock_move_split.view_split_in_lots
+#: field:stock.move.split,line_ids:0
+msgid "Serial Numbers"
+msgstr "Numéros de série"
+
+#. module: stock_move_split
+#: code:addons/stock_move_split/stock_move_split.py:100
+#, python-format
+msgid "Serial number %s is not exist for %s!"
+msgstr "Numéro de série %s inexistant pour %s!"
+
+#. module: stock_move_split
+#: code:addons/stock_move_split/stock_move_split.py:74
+#, python-format
+msgid "Serial number quantity %d of %s is larger than available quantity (%d)!"
+msgstr "Quantity Numéro de série %d pour %s est plus grande que la quantité disponible (%d)!"
+
+#. module: stock_move_split
+#: field:stock.move.split,location_id:0
+msgid "Source Location"
+msgstr "Emplacement Source"
+
+#. module: stock_move_split
+#: view:stock.move.split:stock_move_split.view_split_in_lots
+msgid "Split"
+msgstr "Divisé"
+
+#. module: stock_move_split
+#: model:ir.actions.act_window,name:stock_move_split.track_line
+#: model:ir.model,name:stock_move_split.model_stock_move_split
+#: view:stock.move.split:stock_move_split.view_split_in_lots
+msgid "Split in Serial Numbers"
+msgstr "Divisé dans les numéros de série"
+
+#. module: stock_move_split
+#: view:stock.move:stock_move_split.view_move_split_picking_tree
+msgid "Split in serial numbers"
+msgstr "Divisé dans les numéros de série"
+
+#. module: stock_move_split
+#: model:ir.model,name:stock_move_split.model_stock_move_split_lines
+msgid "Stock move Split lines"
+msgstr "Lignes divisés mouvements de stocks"
+
+#. module: stock_move_split
+#: code:addons/stock_move_split/stock_move_split.py:83
+#, python-format
+msgid "Unable to assign all lots to this move!"
+msgstr "Impossible d'attribuer tous les lots de ce mouvement!"
+
+#. module: stock_move_split
+#: field:stock.move.split,product_uom:0
+msgid "Unit of Measure"
+msgstr "Unité de mesure"
+
+#. module: stock_move_split
+#: code:addons/stock_move_split/stock_transfer_details.py:81
+#, python-format
+msgid "Warning!"
+msgstr "Avertissement!"
+
+#. module: stock_move_split
+#: code:addons/stock_move_split/stock_transfer_details.py:81
+#, python-format
+msgid "non-existent serial number %s for %s."
+msgstr "Numéro de série %s inexistante pour %s."
+
+#. module: stock_move_split
+#: view:stock.move.split:stock_move_split.view_split_in_lots
+msgid "or"
+msgstr "ou"
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="account_vesement" model="ir.actions.report.xml">
+            <field name="name">Vesement</field>
+            <field name="type">ir.actions.report.xml</field>
+            <field name="model">account.vesement</field>
+            <field name="report_name">vesement</field>
+            <field name="report_rml">jasper_reports/custom_reports/vesement.jrxml</field>
+            <field name="report_type">pdf</field>
+            <field name="jasper_report">True</field>
+            <field name="jasper_output">pdf</field>
+        </record>
+
+        <record id="account_vesement_cash" model="ir.actions.report.xml">
+            <field name="name">Cash Vesement</field>
+            <field name="type">ir.actions.report.xml</field>
+            <field name="model">account.vesement.cash</field>
+            <field name="report_name">cash_vesement</field>
+            <field name="report_rml">jasper_reports/custom_reports/vesement_cash.jrxml</field>
+            <field name="report_type">pdf</field>
+            <field name="jasper_report">True</field>
+            <field name="jasper_output">pdf</field>
+        </record>
+        
+    </data>
+</openerp>   

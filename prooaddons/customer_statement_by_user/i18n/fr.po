@@ -1,0 +1,224 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* customer_statement_by_user
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-20150713\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-19 12:31+0000\n"
+"PO-Revision-Date: 2015-09-19 12:31+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "\" \" + $V{PAGE_NUMBER}"
+msgstr "\" \" + $V{PAGE_NUMBER}"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "\"Page \"+$V{PAGE_NUMBER}+\" de\""
+msgstr "\"Page \"+$V{PAGE_NUMBER}+\" de\""
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "$F{amount_total}"
+msgstr "$F{amount_total}"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "$F{date_invoice}"
+msgstr "$F{date_invoice}"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "$F{number}"
+msgstr "$F{number}"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "$F{partner}"
+msgstr "$F{partner}"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "$F{residual}"
+msgstr "$F{residual}"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "$F{type}"
+msgstr "$F{type}"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "$F{type} == \"Facture\" ? $F{amount_total} : -$F{amount_total}"
+msgstr "$F{type} == \"Facture\" ? $F{amount_total} : -$F{amount_total}"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "$F{type} == \"Facture\" ? $F{residual} : -$F{residual}"
+msgstr "$F{type} == \"Facture\" ? $F{residual} : -$F{residual}"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "$F{user}"
+msgstr "$F{user}"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "$V{amount_total_grouped}"
+msgstr "$V{amount_total_grouped}"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "$V{amount_total_report_grouped}"
+msgstr "$V{amount_total_report_grouped}"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "$V{residual_grouped}"
+msgstr "$V{residual_grouped}"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "$V{residual_report_grouped}"
+msgstr "$V{residual_report_grouped}"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "Balance"
+msgstr "Balance"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "Balance des Factures Clients"
+msgstr "Balance des Factures Clients"
+
+#. module: customer_statement_by_user
+#: view:statement.general.report.user:customer_statement_by_user.view_statement_general_report_user_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "Client"
+msgstr "Client"
+
+#. module: customer_statement_by_user
+#: field:statement.general.report.user,create_uid:0
+msgid "Created by"
+msgstr "Crée par"
+
+#. module: customer_statement_by_user
+#: field:statement.general.report.user,create_date:0
+msgid "Created on"
+msgstr "Crée le"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "Date"
+msgstr "Date"
+
+#. module: customer_statement_by_user
+#: field:statement.general.report.user,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "Internal Type"
+msgstr "Type"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "Invoice Date"
+msgstr "Date"
+
+#. module: customer_statement_by_user
+#: field:statement.general.report.user,write_uid:0
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: customer_statement_by_user
+#: field:statement.general.report.user,write_date:0
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "Number"
+msgstr "Numéro"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "Numéro"
+msgstr "Numéro"
+
+#. module: customer_statement_by_user
+#: view:statement.general.report.user:customer_statement_by_user.view_statement_general_report_user_form
+msgid "Print"
+msgstr "Imprimer"
+
+#. module: customer_statement_by_user
+#: model:ir.actions.report.xml,name:customer_statement_by_user.statement_by_user
+#: model:ir.model,name:customer_statement_by_user.model_statement_general_report_user
+msgid "Report Statement By User"
+msgstr "Balance Client Par Vendeur"
+
+#. module: customer_statement_by_user
+#: view:statement.general.report.user:customer_statement_by_user.view_statement_general_report_user_form
+msgid "Show sample wizard"
+msgstr "Show sample wizard"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "Source Document"
+msgstr "Source"
+
+#. module: customer_statement_by_user
+#: model:ir.actions.act_window,name:customer_statement_by_user.action_statement_general_report_user_view
+#: model:ir.ui.menu,name:customer_statement_by_user.action_statement_general_report_user_act
+msgid "Statement general report By User"
+msgstr "Balance Client Par Vendeur"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "Total"
+msgstr "Total"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "Totaux:"
+msgstr "Totaux:"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "Type"
+msgstr "Type"
+
+#. module: customer_statement_by_user
+#: field:statement.general.report.user,name:0
+msgid "User"
+msgstr "Vendeur"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "Username"
+msgstr "Vendeur"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "new java.util.Date()"
+msgstr "new java.util.Date()"
+
+#. module: customer_statement_by_user
+#: report:statement_by_user:0
+msgid "select ai.id, res_user.name as user, case when ai.type = 'out_invoice' then 'Facture' else 'Avoir' end as type, rp.name partner, ai.date_invoice, ai.number, ai.origin, ai.residual, ai.amount_total from account_invoice ai inner join res_partner rp on rp.id = ai.partner_id inner join res_users ru on ru.id = ai.user_id inner join res_partner as res_user on res_user.id = ru.partner_id where ai.residual != 0 and ai.user_id = $P{user_id} order by ai.partner_id"
+msgstr "select ai.id, res_user.name as user, case when ai.type = 'out_invoice' then 'Facture' else 'Avoir' end as type, rp.name partner, ai.date_invoice, ai.number, ai.origin, ai.residual, ai.amount_total from account_invoice ai inner join res_partner rp on rp.id = ai.partner_id inner join res_users ru on ru.id = ai.user_id inner join res_partner as res_user on res_user.id = ru.partner_id where ai.residual != 0 and ai.user_id = $P{user_id} order by ai.partner_id"
+

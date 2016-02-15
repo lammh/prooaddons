@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+    <record id="view_account_statement_report_tree" model="ir.ui.view">
+         <field name="name">account.statement.report.tree</field>
+         <field name="model">account.statement.report</field>
+         <field name="arch" type="xml">
+             <tree string="Customer Statement Analysis" colors="blue:debit==0">
+                 <field name="partner_id" invisible="1"/>
+                 <field name="partner"/>
+                 <field name="date"/>
+                 <field name="description"/>
+                 <field name="price_unit"/>
+                 <field name="number"/>
+                 <field name="debit"/>
+                 <field name="credit"/>
+                 <field name="solde"/>
+             </tree>
+         </field>
+    </record>
+
+    <record id="view_account_statement_report_search" model="ir.ui.view">
+        <field name="name">account.statement.report.search</field>
+        <field name="model">account.statement.report</field>
+        <field name="arch" type="xml">
+            <search string="Customer Statement Analysis">
+                <field name="date"/>
+                <filter string="This Year" name="thisyear" domain="['|', ('date', '=', False), '&amp;',('date','&lt;=', time.strftime('%%Y-12-31')),('date','&gt;=',time.strftime('%%Y-01-01'))]"/>
+                <separator/>
+                <field name="partner_id"/>
+                <group expand="1" string="Group By">
+                    <filter string="Partner" name="partner" context="{'group_by':'partner_id'}"/>
+                    <separator orientation="vertical" />
+                    <filter string="Date" name="year" context="{'group_by':'date'}"/>
+                    <separator orientation="vertical" />
+                    <filter string="Number" name="number" context="{'group_by':'number'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <act_window
+        id="act_account_statement_partner_relation"
+        name="Statement"
+        context="{'search_default_partner_id':[active_id],'search_default_thisyear':1}"
+        res_model="account.statement.report"
+        src_model="res.partner"
+        view_mode="tree"/>
+
+
+        <record id="view_account_statement_report_general_tree" model="ir.ui.view">
+         <field name="name">account.statement.report.general.tree</field>
+         <field name="model">account.statement.report.general</field>
+         <field name="arch" type="xml">
+             <tree string="Customer Statement Analysis" colors="blue:debit==0">
+                 <field name="partner_id" invisible="1"/>
+                 <field name="partner"/>
+                 <field name="date"/>
+                 <field name="description"/>
+                 <field name="number"/>
+                 <field name="debit"/>
+                 <field name="credit"/>
+                 <field name="solde"/>
+             </tree>
+         </field>
+    </record>
+
+    <record id="view_account_statement_report_general_search" model="ir.ui.view">
+        <field name="name">account.statement.report.general.search</field>
+        <field name="model">account.statement.report.general</field>
+        <field name="arch" type="xml">
+            <search string="Customer Statement Analysis">
+                <field name="date"/>
+                <filter string="This Year" name="thisyear" domain="['|', ('date', '=', False), '&amp;',('date','&lt;=', time.strftime('%%Y-12-31')),('date','&gt;=',time.strftime('%%Y-01-01'))]"/>
+                <separator/>
+                <field name="partner_id"/>
+                <group expand="1" string="Group By">
+                    <filter string="Partner" name="partner" context="{'group_by':'partner_id'}"/>
+                    <separator orientation="vertical" />
+                    <filter string="Date" name="year" context="{'group_by':'date'}"/>
+                    <separator orientation="vertical" />
+                    <filter string="Number" name="number" context="{'group_by':'number'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <act_window
+        id="act_account_statement_general_partner_relation"
+        name="General statement"
+        context="{'search_default_partner_id':[active_id],'search_default_thisyear':1}"
+        res_model="account.statement.report.general"
+        src_model="res.partner"
+        view_mode="tree"/>
+
+</data>
+</openerp>

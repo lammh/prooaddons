@@ -1,0 +1,7 @@
+<openerp>
+    <data>
+        <record id="group_stewardship" model="res.groups">
+            <field name="name">Stewardship / Manager</field>
+        </record>
+    </data>
+</openerp>

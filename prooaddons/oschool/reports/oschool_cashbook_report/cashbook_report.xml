@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+<template id="report_cashbook">
+    <t t-call="report.html_container">
+
+
+    <div class="page">
+        <h2>Journal des caisses pour la période  de : <t t-esc="data['date_start']"/> à  <t t-esc="data['date_stop']"/></h2>
+        <table style=" border: 1px solid green; padding: 1px;">
+            <tr>
+                <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Type</th>
+                <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Total</th>
+            </tr>
+            <t t-foreach="data['total']" t-as="o">
+                <tr>
+                    <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><t t-esc="o"/></td>
+                    <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><t t-esc="data['total'][o]"/> DT</td>
+                </tr>
+            </t>
+                <tr>
+                    <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: blue;color: white;">Total Payé</td>
+                    <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: blue;color: white;"><t t-esc="data['x_p']"/> DT</td>
+                </tr>
+                 <tr>
+                    <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: red;color: white;">Total non Payé</td>
+                    <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: red;color: white;"><t t-esc="data['x_n']"/> DT</td>
+                </tr>
+                <tr>
+                    <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: brown;color: white;">Total Correction</td>
+                    <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: brown;color: white;"><t t-esc="data['x_refund']"/> DT</td>
+                </tr>
+                 <tr>
+                    <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: orange;color: white;">Total remboursé</td>
+                    <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: orange;color: white;"><t t-esc="data['x_r']"/> DT</td>
+                </tr>
+                <tr>
+                    <td style=" border: 1px solid white; padding: 1px;font-size:0.8em;background-color: green;color: white;">Total en main(+ timbre fiscal)</td>
+                    <td style=" border: 1px solid white; padding: 1px;font-size:0.8em;background-color: green;color: white;"><t t-esc="data['x_hand']"/> DT</td>
+                </tr>
+        </table>
+        <br/>
+        <table style=" border: 1px solid green; padding: 1px;">
+            <tr>
+                <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Type</th>
+                <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Total</th>
+            </tr>
+            <t t-foreach="data['reg_total']" t-as="o">
+                <tr>
+                    <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><t t-esc="o"/></td>
+                    <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><t t-esc="data['reg_total'][o]"/> DT</td>
+                </tr>
+            </t>
+        </table>
+        <t t-foreach="data['reg_detail']" t-as="o">
+            <br/>
+            <t t-esc="o"/>
+            <table style=" border: 1px solid green; padding: 1px;">
+                <tr>
+                    <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Type</th>
+                    <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Total</th>
+                </tr>
+                <t t-foreach="data['reg_detail'][o]" t-as="p">
+                    <tr>
+                        <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><t t-esc="p"/></td>
+                        <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><t t-esc="data['reg_detail'][o][p]"/> DT</td>
+                    </tr>
+                </t>
+            </table>
+        </t>
+                <t t-foreach="data['detail']" t-as="o">
+                    <br/>
+
+                    <div><strong t-esc="o"/></div>
+
+                    <table style=" border: 1px solid green; padding: 1px;font-size:0.8em;">
+                        <thead>
+                        <tr>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;"></th>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">N°</th>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Date</th>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Elève</th>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Produit</th>
+				            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Etat</th>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Mode de réglement</th>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Prix</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <t t-foreach="data['detail'][o]['detail']" t-as="line">
+                            <tr>
+                                <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><strong t-esc="line_index + 1"/></td>
+                                <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><t t-esc="line.order_id.name"/></td>
+                                <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><t t-esc="line.order_id.date_order"/></td>
+                                <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><span><t t-esc="line.student_id.name"/></span>
+                                    <span style="padding-left: 2px;"><t t-esc="line.student_id.last_name"/></span>
+                                </td>
+                                <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><t t-esc="line.product_id.name"/></td>
+                                <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><t t-esc="line.state"/></td>
+				                <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;">
+                                    <t t-foreach="line.order_id.statement_ids" t-as="s">
+                                        <span><t t-esc="s.journal_id.name"/></span>
+                                        <span><t t-esc="s.amount"/></span>/
+                                    </t>
+                                </td>
+                                <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><t t-esc="line.price_subtotal_incl"/> DT</td>
+
+
+                            </tr>
+                        </t>
+                            <tr>
+                                <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;">Total</td>
+                                <td style=" background-color: red;color: white"></td>
+                                <td style=" background-color: red;color: white"></td>
+                                <td style=" background-color: red;color: white"></td>
+                                <td style=" background-color: red;color: white"></td>
+                                <td style=" background-color: red;color: white"></td>
+                                <td style=" background-color: red;color: white">
+                                    <t t-esc="data['detail'][o]['total']"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </t>
+                <br/>
+                <table style=" border: 1px solid green; padding: 1px;font-size:0.8em;">
+                    <thead>
+                        <tr>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Remboursement</th>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">N°</th>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Elève</th>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Produit</th>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Mode de réglement</th>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Etat</th>
+                            <th style=" border: 1px solid green; padding: 1px;font-size:0.8em;background-color: green;color: white;">Prix</th>
+                        </tr>
+                    </thead>
+                <t t-foreach="data['ref']" t-as="line">
+                    <tbody>
+                        <tr>
+                            <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><strong t-esc="line_index + 1"/></td>
+                            <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><t t-esc="line.order_id.name"/></td>
+                            <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><span><t t-esc="line.student_id.name"/></span>
+                                <span style="padding-left: 2px;"><t t-esc="line.student_id.last_name"/></span>
+                            </td>
+                            <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><t t-esc="line.product_id.name"/></td>
+                            <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;">
+                                <t t-foreach="line.order_id.statement_ids" t-as="s">
+                                    <span><t t-esc="s.journal_id.name"/></span>
+                                    <span><t t-esc="s.amount"/></span>/
+                                </t>
+                            </td>
+                            <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><t t-esc="line.state"/></td>
+                            <td style=" border: 1px solid green; padding: 1px;font-size:0.8em;"><t t-esc="line.price_subtotal_incl"/> DT</td>
+
+                        </tr>
+                    </tbody>
+                </t></table>
+            </div>
+        </t>
+</template>
+
+</data>
+</openerp>

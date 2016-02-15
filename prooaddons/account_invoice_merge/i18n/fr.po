@@ -1,0 +1,93 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* account_invoice_merge
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20140804-231303\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-30 16:01+0000\n"
+"PO-Revision-Date: 2014-10-30 16:01+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_invoice_merge
+#: view:invoice.merge:0
+msgid "_Cancel"
+msgstr "_Annuler"
+
+#. module: account_invoice_merge
+#: code:addons/account_invoice_merge/invoice.py:44
+#, python-format
+msgid "You can merge only invoices in draft state."
+msgstr "Vous pouvez fusionner uniquement les factures a l'état brouillon."
+
+#. module: account_invoice_merge
+#: view:invoice.merge:0
+msgid "Search Invoices"
+msgstr "Recherche Factures"
+
+#. module: account_invoice_merge
+#: model:ir.model,name:account_invoice_merge.model_account_invoice
+msgid "Invoice"
+msgstr "Facture"
+
+#. module: account_invoice_merge
+#: view:invoice.merge:0
+#: field:invoice.merge,invoices:0
+msgid "Invoices"
+msgstr "Factures"
+
+#. module: account_invoice_merge
+#: model:ir.actions.act_window,name:account_invoice_merge.action_invoice_merge
+#: model:ir.actions.act_window,name:account_invoice_merge.product_margin_act_window
+msgid "Merge invoices"
+msgstr "Fusionner Factures"
+
+#. module: account_invoice_merge
+#: model:ir.model,name:account_invoice_merge.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Lignes de facture"
+
+#. module: account_invoice_merge
+#: code:addons/account_invoice_merge/invoice.py:41
+#, python-format
+msgid "Can not merge invoice(s) on different partners or states !."
+msgstr "Vous ne pouvez pas fusionner les factures sur différents partenaires ou états!"
+
+#. module: account_invoice_merge
+#: code:addons/account_invoice_merge/invoice.py:41
+#, python-format
+msgid "Partners don't match!"
+msgstr "Les partenaires ne correspondent pas!"
+
+#. module: account_invoice_merge
+#: help:invoice.merge,merge_lines:0
+msgid "Merge invoice lines with same product at the same price."
+msgstr "Fusionner les lignes de facture avec un même produit au même prix."
+
+#. module: account_invoice_merge
+#: view:invoice.merge:0
+msgid "_Merge invoices"
+msgstr "_Fusionner Factures"
+
+#. module: account_invoice_merge
+#: model:ir.model,name:account_invoice_merge.model_invoice_merge
+msgid "Merge Partner Invoice"
+msgstr "Fusion de factures"
+
+#. module: account_invoice_merge
+#: code:addons/account_invoice_merge/invoice.py:44
+#, python-format
+msgid "Invalid action !"
+msgstr "Action invalide !"
+
+#. module: account_invoice_merge
+#: field:invoice.merge,merge_lines:0
+msgid "Merge invoice lines"
+msgstr "Fusionner les lignes de Facture"
+

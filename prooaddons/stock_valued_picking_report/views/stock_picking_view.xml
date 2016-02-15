@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <!-- Inherited from : /addons/stock/stock_view.xml -->
+        <record model="ir.ui.view" id="view_picking_form_valued">
+            <field name="name">Valued Stock Picking</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock_picking_taxes.view_picking_form"/>
+            <field name="arch" type="xml">
+                <group name="subtotal_footer" position="before">
+                    <group class="oe_subtotal_footer oe_right" name="valued_info">
+                        <field name="valued" invisible="1"/>
+                    </group>
+                </group>
+                <group name="subtotal_footer" position="attributes">
+                    <attribute name="attrs">{'invisible': [('valued', '=', False)]}</attribute>
+                </group>
+                <page string="Taxes" position="attributes">
+                    <attribute name="attrs">{'invisible': [('valued', '=', False)]}</attribute>
+                </page>
+            </field>
+        </record>
+
+    </data>
+</openerp>

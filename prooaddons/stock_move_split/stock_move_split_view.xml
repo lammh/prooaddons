@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_split_in_lots" model="ir.ui.view">
+                <field name="name">Split in Serial Numbers</field>
+                <field name="model">stock.move.split</field>
+                <field name="arch" type="xml">
+                <form string="Split in Serial Numbers">
+                    <group>
+                        <field name="product_id" readonly="1"/>
+                        <label for="qty"/>
+                        <div>
+                            <field name="qty" readonly="1" class="oe_inline"/>
+                            <field name="product_uom" readonly="1" class="oe_inline"/>
+                        </div>
+                        <field name="location_id" invisible="1"/>
+                        <field name="use_exist"/>
+                    </group>
+                    <field name="line_ids">
+                        <tree string="Serial Numbers" editable="bottom">
+                            <field name="name"/>
+                            <field name="quantity" />
+                        </tree>
+                    </field>
+                    <footer>
+                        <button name="split_lot" string="Split" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+                </field>
+            </record>
+
+            <record id="track_line" model="ir.actions.act_window">
+                <field name="name">Split in Serial Numbers</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">stock.move.split</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">form</field>
+                <field name="target">new</field>
+                <field name="context">{'form_view_ref': False}</field>
+            </record>
+
+        <record id="view_move_split_picking_tree" model="ir.ui.view">
+            <field name="name">stock.move.split.tree</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_picking_tree" />
+            <field name="arch" type="xml">
+                <button string="Scrap Products" position="before">
+                    <button name="%(track_line)d"
+                            string="Split in serial numbers" type="action"
+                            icon="STOCK_PREFERENCES"
+                            states="draft,waiting,confirmed,assigned"/>
+                </button>
+            </field>
+        </record>
+
+    </data>
+</openerp>

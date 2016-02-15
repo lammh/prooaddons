@@ -1,0 +1,263 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* hr_loan
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-20150210\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-14 11:21+0000\n"
+"PO-Revision-Date: 2015-02-14 11:21+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_loan
+#: help:hr.loan,rate:0
+msgid "A rate of 0.08 is equal to 8 %"
+msgstr "Un taux de 0,08 équivaux à 8%"
+
+#. module: hr_loan
+#: view:hr.loan:hr_loan.hr_loan_form_view
+#: selection:hr.loan,state:0
+#: selection:hr.loan.detail,state_rel:0
+msgid "Accepted"
+msgstr "Accepter"
+
+#. module: hr_loan
+#: field:hr.loan,amount:0
+msgid "Amount"
+msgstr "Montant"
+
+#. module: hr_loan
+#: view:hr.loan:hr_loan.hr_loan_form_view
+#: view:hr.loan.detail:hr_loan.hr_loan_detail_form_view
+msgid "Anticipate"
+msgstr "Anticipation"
+
+#. module: hr_loan
+#: field:hr.loan,loan_date:0
+msgid "Approval Date"
+msgstr "Date d'Approbation"
+
+#. module: hr_loan
+#: field:hr.loan.detail,base:0
+msgid "Base"
+msgstr "Base"
+
+#. module: hr_loan
+#: field:hr.loan.detail,benefit:0
+msgid "Benefit"
+msgstr "Bénefice"
+
+#. module: hr_loan
+#: field:hr.loan,create_uid:0
+#: field:hr.loan.detail,create_uid:0
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: hr_loan
+#: field:hr.loan,create_date:0
+#: field:hr.loan.detail,create_date:0
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: hr_loan
+#: field:hr.loan.detail,start_date:0
+msgid "Date"
+msgstr "Date"
+
+#. module: hr_loan
+#: field:hr.loan,description:0
+#: field:hr.loan.detail,name:0
+msgid "Description"
+msgstr "Description"
+
+#. module: hr_loan
+#: field:hr.loan,detail_ids:0
+msgid "Details"
+msgstr "Détails"
+
+#. module: hr_loan
+#: selection:hr.loan,state:0
+#: selection:hr.loan.detail,state:0
+#: selection:hr.loan.detail,state_rel:0
+msgid "Done"
+msgstr "Terminer"
+
+#. module: hr_loan
+#: selection:hr.loan,state:0
+#: selection:hr.loan.detail,state:0
+#: selection:hr.loan.detail,state_rel:0
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: hr_loan
+#: field:hr.loan,employee_id:0
+msgid "Employee"
+msgstr "Employée"
+
+#. module: hr_loan
+#: field:hr.loan,end_date:0
+msgid "End Date"
+msgstr "Date Fin"
+
+#. module: hr_loan
+#: field:hr.loan,id:0
+#: field:hr.loan.detail,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: hr_loan
+#: field:hr.loan,write_uid:0
+#: field:hr.loan.detail,write_uid:0
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: hr_loan
+#: field:hr.loan,write_date:0
+#: field:hr.loan.detail,write_date:0
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: hr_loan
+#: view:hr.loan:hr_loan.hr_loan_form_view
+#: view:hr.loan:hr_loan.hr_loan_tree_view
+#: view:hr.loan.detail:hr_loan.hr_loan_detail_form_view
+#: view:hr.loan.detail:hr_loan.hr_loan_detail_tree_view
+#: field:hr.loan.detail,loan_id:0
+#: field:hr.salary.rule.category,is_loan:0
+#: model:ir.actions.act_window,name:hr_loan.action_hr_loan
+#: model:ir.ui.menu,name:hr_loan.menu_hr_loan
+#: model:ir.ui.menu,name:hr_loan.menu_hr_root_loan
+msgid "Loan"
+msgstr "Prêt"
+
+#. module: hr_loan
+#: view:hr.loan:hr_loan.hr_loan_form_view
+msgid "Loan /"
+msgstr "Prêt /"
+
+#. module: hr_loan
+#: model:ir.actions.act_window,name:hr_loan.action_loan_detail
+#: model:ir.ui.menu,name:hr_loan.menu_loan_detail
+msgid "Loan Detail"
+msgstr "Détails Prêt"
+
+#. module: hr_loan
+#: view:hr.loan.detail:hr_loan.hr_loan_detail_form_view
+#: view:hr.loan.detail:hr_loan.hr_loan_detail_tree_view
+msgid "Loan Details"
+msgstr "Détails Prêt"
+
+#. module: hr_loan
+#: field:hr.loan,rule_id:0
+msgid "Loan Type"
+msgstr "Type de Prêt"
+
+#. module: hr_loan
+#: field:hr.loan,name:0
+msgid "Number"
+msgstr "Nombre"
+
+#. module: hr_loan
+#: model:ir.model,name:hr_loan.model_hr_payslip
+msgid "Pay Slip"
+msgstr "Feuille de paie"
+
+#. module: hr_loan
+#: model:ir.model,name:hr_loan.model_hr_payslip_run
+msgid "Payslip Batches"
+msgstr "Lots de bulletins de paie"
+
+#. module: hr_loan
+#: field:hr.loan,period:0
+msgid "Period"
+msgstr "Période"
+
+#. module: hr_loan
+#: field:hr.loan,rate:0
+msgid "Rate"
+msgstr "Taux"
+
+#. module: hr_loan
+#: view:hr.loan:hr_loan.hr_loan_form_view
+#: selection:hr.loan,state:0
+#: selection:hr.loan.detail,state_rel:0
+msgid "Refused"
+msgstr "Refuser"
+
+#. module: hr_loan
+#: model:ir.model,name:hr_loan.model_hr_salary_rule_category
+msgid "Salary Rule Category"
+msgstr "Catégorie de règle salariale"
+
+#. module: hr_loan
+#: view:hr.loan:hr_loan.hr_loan_form_view
+msgid "Simulate"
+msgstr "Simulation"
+
+#. module: hr_loan
+#: field:hr.loan,start_date:0
+msgid "Start Date"
+msgstr "Date Début"
+
+#. module: hr_loan
+#: field:hr.loan,state:0
+#: field:hr.loan.detail,state:0
+#: field:hr.loan.detail,state_rel:0
+msgid "State"
+msgstr "État"
+
+#. module: hr_loan
+#: view:hr.loan:hr_loan.hr_loan_form_view
+#: field:hr.loan.detail,total:0
+msgid "Total"
+msgstr "Total"
+
+#. module: hr_loan
+#: view:hr.loan:hr_loan.hr_loan_form_view
+msgid "Total Base"
+msgstr "Total Base"
+
+#. module: hr_loan
+#: view:hr.loan:hr_loan.hr_loan_form_view
+msgid "Total Benefit"
+msgstr "Bénifice Total"
+
+#. module: hr_loan
+#: code:addons/hr_loan/hr_loan.py:39
+#: code:addons/hr_loan/hr_loan.py:103
+#: code:addons/hr_loan/hr_loan.py:172
+#: code:addons/hr_loan/hr_loan.py:179
+#, python-format
+msgid "Warning!"
+msgstr "Avertissement!"
+
+#. module: hr_loan
+#: code:addons/hr_loan/hr_loan.py:39
+#, python-format
+msgid "You cannot accept a loan without defining the rate, the period and the start date !"
+msgstr "Vous ne pouvez pas accepter un prêt sans définir le taux, la période et la date de début!"
+
+#. module: hr_loan
+#: code:addons/hr_loan/hr_loan.py:179
+#, python-format
+msgid "You cannot anticipate a Loan with anterior date !"
+msgstr "Vous ne pouvez pas anticiper un prêt avec une date antérieure!"
+
+#. module: hr_loan
+#: code:addons/hr_loan/hr_loan.py:172
+#, python-format
+msgid "You cannot delete a Loan which is not draft !"
+msgstr "Vous ne pouvez pas supprimer un prêt qui n'est pas Brouillon!"
+
+#. module: hr_loan
+#: code:addons/hr_loan/hr_loan.py:103
+#, python-format
+msgid "You cannot delete this loan !"
+msgstr "Vous ne pouvez pas supprimer ce prêt!"
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- vim:fdn=3:
+-->
+<openerp>
+    <data>
+        <template id="assets_backend" name="oschool assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/oschool/static/src/css/oschool_student_transport_presence_quickadd.css"/>
+
+                <script type="text/javascript" src="/oschool/static/src/js/oschool_student_presence_quickadd.js"></script>
+                <!--<script type="text/javascript" src="/oschool/static/src/js/oschool_student_presence_quickadd.js"></script>-->
+                <!--<script type="text/javascript" src="/oschool/static/src/js/oschool_student_service_presence_quickadd.js"></script>-->
+            </xpath>
+        </template>
+    </data>
+</openerp>

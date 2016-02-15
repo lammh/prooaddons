@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="stock_picking_location_form_view" model="ir.ui.view">
+            <field name="name">stock.picking.location.form</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form" />
+            <field name="arch" type="xml">
+                <button name="action_assign" position="replace"/>
+                <field name="partner_id" position="after">
+                    <group col="6" colspan="4">
+                        <field name="location" colspan="5"/>
+                        <button states="confirmed,assigned" name="update_location" type="object" string="(Apply)" class="oe_link oe_edit_only"/>
+                    </group>
+                    <group col="6" colspan="4">
+                        <field name="location_dest"/>
+                        <button states="confirmed,assigned" name="update_location" type="object" string="(Apply)" class="oe_link oe_edit_only"/>
+                    </group>
+                </field>
+                <field name="move_lines" position="replace">
+                    <field name="move_lines" 
+                           context="{'address_in_id': partner_id, 'form_view_ref':'stock.view_move_picking_form', 'tree_view_ref':'stock.view_move_picking_tree', 'default_picking_type_id': picking_type_id,'default_picking_id': active_id, 'default_location_id':location,'default_location_dest_id': location_dest}"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="stock_picking_move_qty_form_view" model="ir.ui.view">
+            <field name="name">stock.move.qty.form</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_picking_form" />
+            <field name="arch" type="xml">
+                <field name="location_id" position="replace">
+                    <field name="location_id" on_change="onchange_location(product_id, location_id, location_dest_id)"/>
+                    <div class="oe_edit_only" style="color:red;text-align:center">
+                        <h4>Quantity Source <field name="qty_source" style="width:30%%"/></h4>
+                    </div>
+                    <newline/>
+                </field>
+                <field name="location_dest_id" position="replace">
+                    <field name="location_dest_id" on_change="onchange_location(product_id, location_id, location_dest_id)"/>
+                    <div class="oe_edit_only" style="color:green;text-align:center">
+                        <h4>Quantity Destination <field name="qty_dest" style="width:30%%"/></h4>
+                    </div>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

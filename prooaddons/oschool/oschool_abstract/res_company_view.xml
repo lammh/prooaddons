@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="task_company" model="ir.ui.view">
+            <field name="name">res.company.task.config</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='account_grp']" position="after">
+                    <group name="project_grp" string="Configuration">
+                        <div>
+                            <field name="activate_check_minimum_age_registration" class="oe_inline"
+                                eval="1" />
+                            <label for="activate_check_minimum_age_registration" />
+					    </div>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+
+    </data>
+</openerp>
+
+

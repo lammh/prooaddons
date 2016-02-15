@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_refund_multiple_subscription_tree">
+            <field name="name">refund_multiple_subscription.tree</field>
+            <field name="model">pos.order.line</field>
+            <field name="priority">30</field>
+            <field name="arch" type="xml">
+               <tree create="false" >
+                    <field name="parent_id"/>
+                    <field name="student_id"/>
+                    <field name="phone"/>
+                    <field name="phone2"/>
+                    <field name="mobile"/>
+                    <field name="mobile2"/>
+                    <field name="mail"/>
+                    <field name="product_id" string=" Type"/>
+                    <field name="group_id"/>
+                    <field name="class_id"/>
+                    <field name="academic_year_id"/>
+                    <field name="type" invisible="1"/>
+                    <field name="refunded" invisible="1"/>
+
+                    <field name="qty" invisible="1"/>
+                    <field name="price_unit" string="Price"
+                           groups="oschool.oschool_group_admin_scolarity"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- retour multiple des abonnements -->
+
+        <record model="ir.actions.act_window" id="act_refund_multiple_subscription_view">
+            <field name="name">Refund multiple subscription</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pos.order.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="search_view_id" ref="oschool.view_oschool_payment_search"/>
+            <field name="domain" eval="[('type', 'not in', ['registration','study','extra']), ('order_id', '=', False)]"/>
+             <field name="context">{
+                 'search_default_group':1,
+                 'search_default_type':1,
+                 'search_default_academic_year':1,
+                 'search_default_class':1,
+                 'search_default_student':1}</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_refund_multiple_subscription_view_tree">
+            <field name="act_window_id" ref="act_refund_multiple_subscription_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_refund_multiple_subscription_tree"/>
+        </record>
+
+        <menuitem id="menu_refund_multiple_subscription" sequence="300" parent="tracking_management_menu"
+                  action="act_refund_multiple_subscription_view" groups="oschool_group_admin_scolarity,oschool_group_responsible_scolarity"/>
+
+    </data>
+</openerp>

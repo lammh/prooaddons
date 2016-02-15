@@ -1,0 +1,61 @@
+<openerp>
+    <data>
+
+        <!-- Debut gestion des classes -->
+        <record model="ir.ui.view" id="class_form_view">
+            <field name="name">classes.form</field>
+            <field name="model">oschool.classes</field>
+            <field name="arch" type="xml">
+                <form string="New class form">
+                    <sheet>
+                        <group>
+                            <field name="group"/>
+                        </group>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="class_tree_view">
+            <field name="name">classes.tree</field>
+            <field name="model">oschool.classes</field>
+            <field name="arch" type="xml">
+                <tree string="Classes Tree">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="group"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_class_tree_view_search" model="ir.ui.view">
+            <field name="name">classes.search</field>
+            <field name="model">oschool.classes</field>
+            <field name="arch" type="xml">
+                <search string="Class Search">
+                    <group expand="1" string="Group By">
+                        <filter string="Group" name="group" context="{'group_by':'group'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="classes_list_action">
+            <field name="name">classes</field>
+            <field name="res_model">oschool.classes</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+             <field name="search_view_id" ref="view_class_tree_view_search"/>
+            <field name="context">{'search_default_group':1}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click to add new class</p>
+            </field>
+        </record>
+        <!-- Fin gestion des classes -->
+
+        <menuitem id="classes_management_menu" name="Classes" parent="configuration_menu" action="classes_list_action"/>
+
+    </data>
+</openerp>

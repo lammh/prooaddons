@@ -1,0 +1,109 @@
+<openerp>
+    <data noupdate="1">
+        <record id="oschool_group_cashier_scolarity" model="res.groups">
+            <field name="name">oschool Cashier Scolarity</field>
+            <field name="category_id" ref="base.module_category_oschool"/>
+        </record>
+        <record id="oschool_group_responsible_scolarity" model="res.groups">
+            <field name="name">OSchool Responsable Scolarity</field>
+            <field name="category_id" ref="base.module_category_oschool"/>
+        </record>
+        <record id="oschool_group_admin_scolarity" model="res.groups">
+            <field name="name">oschool Admin Scolarity</field>
+            <field name="category_id" ref="base.module_category_oschool"/>
+        </record>
+    </data>
+    <data noupdate="0">
+
+
+        <record id="oschool_pos_category_rule" model="ir.rule">
+            <field name="name">Oschool Pos Category Multi-company</field>
+            <field name="model_id" ref="model_pos_category"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',user.company_id.id),('company_id','=',False)]</field>
+        </record>
+        <record id="oschool_pos_order_line_rule" model="ir.rule">
+            <field name="name">Oschool Pos Order Line Multi-company</field>
+            <field name="model_id" ref="model_pos_order_line"/>
+            <field name="domain_force">['|',('company_id','=',user.company_id.id),('company_id','=',False)]</field>
+        </record>
+        <record id="oschool_pos_session_rule" model="ir.rule">
+            <field name="name">Oschool Pos Session Line Multi-company</field>
+            <field name="model_id" ref="model_pos_session"/>
+            <field name="domain_force">['|',('company_id','=',user.company_id.id),('company_id','=',False)]</field>
+        </record>
+        <record id="oschool_pos_order_rule" model="ir.rule">
+            <field name="name">Oschool Pos Order Multi-company</field>
+            <field name="model_id" ref="model_pos_order"/>
+            <field name="domain_force">['|',('company_id','=',user.company_id.id),('company_id','=',False)]</field>
+        </record>
+        <record id="oschool_academic_year_rule" model="ir.rule">
+            <field name="name">Oschool Academic Year Multi-company</field>
+            <field name="model_id" ref="model_oschool_academic_year"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',user.company_id.id),('company_id','=',False)]</field>
+        </record>
+        <record id="oschool_groups_rule" model="ir.rule">
+            <field name="name">Oschool Groups Multi-company</field>
+            <field name="model_id" ref="model_oschool_groups"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',user.company_id.id),('company_id','=',False)]</field>
+        </record>
+        <record id="oschool_classes_rule" model="ir.rule">
+            <field name="name">Oschool Classes Multi-company</field>
+            <field name="model_id" ref="model_oschool_classes"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',user.company_id.id),('company_id','=',False)]</field>
+        </record>
+        <record id="oschool_zones_rule" model="ir.rule">
+            <field name="name">Oschool Zones Multi-company</field>
+            <field name="model_id" ref="model_oschool_zone"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',user.company_id.id),('company_id','=',False)]</field>
+        </record>
+        <record id="oschool_bus_rule" model="ir.rule">
+            <field name="name">Oschool Bus Multi-company</field>
+            <field name="model_id" ref="model_oschool_bus"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',user.company_id.id),('company_id','=',False)]</field>
+        </record>
+        <record id="oschool_hr_employee_rule" model="ir.rule">
+            <field name="name">Oschool Hr Employee Multi-company</field>
+            <field name="model_id" ref="model_hr_employee"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',user.company_id.id),('company_id','=',False)]</field>
+        </record>
+        <record id="oschool_driver_hostess_assignment_rule" model="ir.rule">
+            <field name="name">Oschool Driver Hostess Assignment Multi-company</field>
+            <field name="model_id" ref="model_oschool_driver_hostess_assignment"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',user.company_id.id),('company_id','=',False)]</field>
+        </record>
+        <record id="oschool_assign_bus_to_zone_rule" model="ir.rule">
+            <field name="name">Oschool Assign Bus To Zone Multi-company</field>
+            <field name="model_id" ref="model_oschool_assign_bus_to_zone"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',user.company_id.id),('company_id','=',False)]</field>
+        </record>
+
+        <record id="oschool_treasury_rule" model="ir.rule">
+            <field name="name">Oschool treasury Multi-company</field>
+            <field name="model_id" ref="treasury.model_account_treasury"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',user.company_id.id),('company_id','=',False)]</field>
+        </record>
+
+        <record id="oschool_report_oschool_registrations_rule" model="ir.rule">
+            <field name="name">Oschool report oschool registrations Multi-company</field>
+            <field name="model_id" ref="model_report_oschool_registrations"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',user.company_id.id),('company_id','=',False)]</field>
+        </record>
+        <record id="oschool_next_year_registration" model="ir.rule">
+            <field name="name">Oschool Next Year Registration Multi-company</field>
+            <field name="model_id" ref="model_oschool_next_year_registration"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',user.company_id.id),('company_id','=',False)]</field>
+        </record>
+    </data>
+</openerp>

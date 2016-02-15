@@ -1,0 +1,14 @@
+/__init__.pyc
+/admission_analysis_report.pyc
+/book_barcode.pyc
+/exam_student_lable.pyc
+/generate_exam_allocation.pyc
+/id_card.pyc
+/library_card.pyc
+/marksheet_report.pyc
+/student_attendance.pyc
+/student_bonafide_certificate.pyc
+/student_hall_ticket_report.pyc
+/time_table_report.pyc
+/time_table_teacher.pyc
+/transport_detail.pyc

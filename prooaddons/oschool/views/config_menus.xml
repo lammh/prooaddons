@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="base.menu_reporting" model="ir.ui.menu">
+        <!-- Use the special many2many value syntax to add a child record,
+             and the `ref()` method to resolve the group XML ID -->
+        <field name="groups_id" eval="[(4,ref('oschool_group_admin_scolarity'))]"/>
+        </record>
+        <record id="point_of_sale.menu_point_rep" model="ir.ui.menu">
+        <field name="groups_id" eval="[(4,ref('oschool_group_admin_scolarity'))]"/>
+        </record>
+        <record id="account.menu_finance_reporting" model="ir.ui.menu">
+        <field name="groups_id" eval="[(4,ref('oschool_group_admin_scolarity'))]"/>
+        </record>
+        <record id="stock.next_id_61" model="ir.ui.menu">
+        <field name="groups_id" eval="[(4,ref('oschool_group_admin_scolarity'))]"/>
+        </record>
+
+
+        <menuitem id="main_oschool_menu" name="School Management" groups="oschool_group_admin_scolarity,oschool_group_responsible_scolarity,oschool_group_cashier_scolarity"/>
+
+            <menuitem id="students_management_menu" name="Students Management" parent="main_oschool_menu" sequence="1" groups="oschool_group_admin_scolarity,oschool_group_responsible_scolarity,oschool_group_cashier_scolarity"/>
+
+            <menuitem id="tutors_management_menu" name="Tutors Management" parent="main_oschool_menu" sequence="2" groups="oschool_group_admin_scolarity,oschool_group_responsible_scolarity,oschool_group_cashier_scolarity"/>
+
+            <menuitem id="tracking_management_menu" name="Tracking Oschool" parent="base.menu_reporting" sequence="3" groups="oschool_group_admin_scolarity,oschool_group_responsible_scolarity,oschool_group_cashier_scolarity"/>
+
+            <menuitem id="oschool_pos_session_management_menu" name="Daily operations" parent="main_oschool_menu" sequence="0" groups="oschool_group_admin_scolarity,oschool_group_responsible_scolarity,oschool_group_cashier_scolarity"/>
+
+            <menuitem id="oschool_presence_status_management_menu" name="Presence status" parent="main_oschool_menu" sequence="4" groups="oschool_group_admin_scolarity,oschool_group_cashier_scolarity"/>
+
+                <!--<menuitem action="point_of_sale.action_pos_session_opening" parent="oschool_pos_session_management_menu" id="oschool_menu_pos_session_opening" sequence="0"/>-->
+
+
+            <menuitem id="configuration_menu" name="Configuration" parent="main_oschool_menu" groups="oschool_group_admin_scolarity"/>
+
+                <menuitem id="extra_products_config_menu" name="Gestion des extra scolaire" parent="configuration_menu"/>
+
+                <menuitem id="transportation_config_menu" name="Transportation Management" parent="configuration_menu"/>
+
+                <menuitem id="transportation_config_menu" name="Transportation Management" parent="configuration_menu"/>
+
+            <menuitem id="security_menu" name="Security" parent="main_oschool_menu" groups="oschool_group_admin_scolarity"/>
+
+    </data>
+</openerp>

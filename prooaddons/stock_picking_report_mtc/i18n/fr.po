@@ -1,0 +1,137 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* stock_picking_report_mtc
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-20150904\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-29 11:35+0000\n"
+"PO-Revision-Date: 2015-09-29 11:35+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_picking_report_mtc
+#: view:website:stock_picking_report_mtc.report_picking_valued
+msgid "Amount"
+msgstr "Montant"
+
+#. module: stock_picking_report_mtc
+#: view:website:stock_picking_report_mtc.report_picking_valued
+msgid "Barcode"
+msgstr "Code-barres"
+
+#. module: stock_picking_report_mtc
+#: view:website:stock_picking_report_mtc.report_picking_valued
+msgid "Base"
+msgstr "Base de calcul"
+
+#. module: stock_picking_report_mtc
+#: view:website:stock_picking_report_mtc.report_picking_valued
+msgid "Commitment Date"
+msgstr "Date d'engagement"
+
+#. module: stock_picking_report_mtc
+#: view:website:stock_picking_report_mtc.report_picking_valued
+msgid "Customer Address:"
+msgstr "Adresse du client :"
+
+#. module: stock_picking_report_mtc
+#: view:website:stock_picking_report_mtc.report_picking_valued
+msgid "Delivery Address:"
+msgstr "Adresse de livraison :"
+
+#. module: stock_picking_report_mtc
+#: view:website:stock_picking_report_mtc.report_picking_valued
+msgid "Destination"
+msgstr "Destination"
+
+#. module: stock_picking_report_mtc
+#: view:website:stock_picking_report_mtc.report_picking_valued
+msgid "Disc.(%)"
+msgstr "Rem.(%)"
+
+#. module: stock_picking_report_mtc
+#: view:website:stock_picking_report_mtc.report_picking_valued
+msgid "Order (Origin)"
+msgstr "Commande (origine)"
+
+#. module: stock_picking_report_mtc
+#: view:website:stock_picking_report_mtc.report_picking_valued
+msgid "Price"
+msgstr "Prix HT"
+
+#. module: stock_picking_report_mtc
+#: view:website:stock_picking_report_mtc.report_picking_valued
+msgid "Product"
+msgstr "Article"
+
+#. module: stock_picking_report_mtc
+#: view:website:stock_picking_report_mtc.report_picking_valued
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: stock_picking_report_mtc
+#: view:website:stock_picking_report_mtc.report_picking_valued
+msgid "Scheduled Date"
+msgstr "Date prévue"
+
+#. module: stock_picking_report_mtc
+#: view:website:stock_picking_report_mtc.report_picking_valued
+msgid "Source"
+msgstr "Origine"
+
+#. module: stock_picking_report_mtc
+#: view:website:stock_picking_report_mtc.report_picking_valued
+msgid "State"
+msgstr "État"
+
+#. module: stock_picking_report_mtc
+#: view:website:stock_picking_report_mtc.report_picking_valued
+msgid "Supplier Address:"
+msgstr "Adresse fournisseur :"
+
+#. module: stock_picking_report_mtc
+#: view:website:stock_picking_report_mtc.report_picking_valued
+msgid "Tax"
+msgstr "Taxes"
+
+#. module: stock_picking_report_mtc
+#: view:website:stock_picking_report_mtc.report_picking_valued
+msgid "Taxes"
+msgstr "Taxes"
+
+#. module: stock_picking_report_mtc
+#: view:website:stock_picking_report_mtc.report_picking_valued
+msgid "Total"
+msgstr "Total"
+
+#. module: stock_picking_report_mtc
+#: view:website:stock_picking_report_mtc.report_picking_valued
+msgid "Total Without Taxes"
+msgstr "Total HT"
+
+#. module: stock_picking_report_mtc
+#: view:website:stock_picking_report_mtc.report_picking_valued
+msgid "Unit Price"
+msgstr "Prix unitaire TTC"
+
+#. module: stock_picking_report_mtc
+#: view:website:stock_picking_report_mtc.report_picking_valued
+msgid "VAT:"
+msgstr "TVA :"
+
+#. module: stock_picking_report_mtc
+#: model:ir.actions.report.xml,name:stock_picking_report_mtc.action_report_picking_valued
+msgid "Valued Picking"
+msgstr "Oépartion de manutention valorisée"
+
+#. module: stock_picking_report_mtc
+#: view:website:stock_picking_report_mtc.report_picking_valued
+msgid "Warehouse Address:"
+msgstr "Adresse de l'entrepôt :"
+
